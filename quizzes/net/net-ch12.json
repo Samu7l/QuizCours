@@ -1,0 +1,692 @@
+{
+  "id": "net-ch12",
+  "type": "module",
+  "title": "Chapitre 12 - Routing",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "net-ch12-q1",
+      "question": "What is routing in packet-switched networks?",
+      "type": "single",
+      "options": [
+        { "text": "Routing is the process of assigning IP addresses to hosts on a LAN.", "isCorrect": false },
+        { "text": "Routing is the process of switching frames based on MAC addresses only.", "isCorrect": false },
+        { "text": "Routing is the process of selecting a path for packets to travel from source to destination across a network.", "isCorrect": true },
+        { "text": "Routing is the process of encrypting packets end-to-end before transmission.", "isCorrect": false }
+      ],
+      "explanation": "Routing is the process of selecting a path for packets to travel from source to destination across a network."
+    },
+    {
+      "id": "net-ch12-q2",
+      "question": "Why is routing considered complex and crucial?",
+      "type": "single",
+      "options": [
+        { "text": "Because it decides how emails are stored on a mail server.", "isCorrect": false },
+        { "text": "Because it directly affects performance, reliability, and efficiency of packet-switched networks.", "isCorrect": true },
+        { "text": "Because it is mainly about user interface design for network tools.", "isCorrect": false },
+        { "text": "Because it determines the VLAN tagging scheme used on trunk links.", "isCorrect": false }
+      ],
+      "explanation": "Because it directly affects performance, reliability, and efficiency of packet-switched networks."
+    },
+    {
+      "id": "net-ch12-q3",
+      "question": "What characteristics are required for good routing?",
+      "type": "single",
+      "options": [
+        { "text": "Correctness and simplicity; Robustness and stability; Fairness and optimality; Efficiency.", "isCorrect": true },
+        { "text": "Fragmentation, reassembly, and checksum verification.", "isCorrect": false },
+        { "text": "Switching, trunking, and spanning tree.", "isCorrect": false },
+        { "text": "Encryption, authentication, and key exchange.", "isCorrect": false }
+      ],
+      "explanation": "Correctness and simplicity; Robustness and stability; Fairness and optimality; Efficiency."
+    },
+    {
+      "id": "net-ch12-q4",
+      "question": "What does correctness and simplicity mean in routing?",
+      "type": "single",
+      "options": [
+        { "text": "Routes must be correct and the algorithm should be easy to implement and understand.", "isCorrect": false },
+        { "text": "The network must continue to function despite failures or changes in topology.", "isCorrect": false },
+        { "text": "Routes must be correct and the algorithm should be easy to implement and understand.", "isCorrect": true },
+        { "text": "No node should be unfairly favored, and routes should be optimal according to chosen metrics.", "isCorrect": false }
+      ],
+      "explanation": "Routes must be correct and the algorithm should be easy to implement and understand."
+    },
+    {
+      "id": "net-ch12-q5",
+      "question": "What does robustness and stability mean in routing?",
+      "type": "single",
+      "options": [
+        { "text": "The network must continue to function despite failures or changes in topology.", "isCorrect": false },
+        { "text": "No node should be unfairly favored, and routes should be optimal according to chosen metrics.", "isCorrect": false },
+        { "text": "Routing should minimize overhead and make efficient use of network resources.", "isCorrect": false },
+        { "text": "The network must continue to function despite failures or changes in topology.", "isCorrect": true }
+      ],
+      "explanation": "The network must continue to function despite failures or changes in topology."
+    },
+    {
+      "id": "net-ch12-q6",
+      "question": "What does fairness and optimality mean in routing?",
+      "type": "single",
+      "options": [
+        { "text": "Routing should minimize overhead and make efficient use of network resources.", "isCorrect": false },
+        { "text": "No node should be unfairly favored, and routes should be optimal according to chosen metrics.", "isCorrect": true },
+        { "text": "Routes must be correct and the algorithm should be easy to implement and understand.", "isCorrect": false },
+        { "text": "The network must continue to function despite failures or changes in topology.", "isCorrect": false }
+      ],
+      "explanation": "No node should be unfairly favored, and routes should be optimal according to chosen metrics."
+    },
+    {
+      "id": "net-ch12-q7",
+      "question": "What does efficiency mean in routing?",
+      "type": "single",
+      "options": [
+        { "text": "Routing should minimize overhead and make efficient use of network resources.", "isCorrect": false },
+        { "text": "Routes must be correct and the algorithm should be easy to implement and understand.", "isCorrect": false },
+        { "text": "The network must continue to function despite failures or changes in topology.", "isCorrect": false },
+        { "text": "Routing should minimize overhead and make efficient use of network resources.", "isCorrect": true }
+      ],
+      "explanation": "Routing should minimize overhead and make efficient use of network resources."
+    },
+    {
+      "id": "net-ch12-q8",
+      "question": "What are common metrics used for route selection?",
+      "type": "single",
+      "options": [
+        { "text": "Minimum hop count; Least cost.", "isCorrect": true },
+        { "text": "Queue length at the local router only.", "isCorrect": false },
+        { "text": "Port number of the destination application.", "isCorrect": false },
+        { "text": "MAC address of the next-hop switch.", "isCorrect": false }
+      ],
+      "explanation": "Minimum hop count; Least cost. Metrics such as hop count and cost are used to compare routes and select the best one."
+    },
+    {
+      "id": "net-ch12-q9",
+      "question": "What is a routing strategy?",
+      "type": "single",
+      "options": [
+        { "text": "A general method used to determine how routes are selected in a network.", "isCorrect": false },
+        { "text": "A specific procedure used to calculate the best path between networks.", "isCorrect": false },
+        { "text": "A general method used to determine how routes are selected in a network.", "isCorrect": true },
+        { "text": "A message describing the state and cost of a router’s links.", "isCorrect": false }
+      ],
+      "explanation": "A general method used to determine how routes are selected in a network."
+    },
+    {
+      "id": "net-ch12-q10",
+      "question": "What are the main routing strategies?",
+      "type": "single",
+      "options": [
+        { "text": "Fragmentation, reassembly, and checksum verification.", "isCorrect": false },
+        { "text": "Fixed routing; Flooding; Random routing; Adaptive routing.", "isCorrect": true },
+        { "text": "Encryption, authentication, and key exchange.", "isCorrect": false },
+        { "text": "Switching, trunking, and spanning tree.", "isCorrect": false }
+      ],
+      "explanation": "Fixed routing; Flooding; Random routing; Adaptive routing."
+    },
+    {
+      "id": "net-ch12-q11",
+      "question": "What is fixed routing?",
+      "type": "single",
+      "options": [
+        { "text": "A strategy where a single permanent route is defined for each source-destination pair.", "isCorrect": false },
+        { "text": "Each packet is sent to every neighboring node in the network.", "isCorrect": false },
+        { "text": "Routes change continuously based on congestion measurements.", "isCorrect": false },
+        { "text": "A strategy where a single permanent route is defined for each source-destination pair.", "isCorrect": true }
+      ],
+      "explanation": "A strategy where a single permanent route is defined for each source-destination pair."
+    },
+    {
+      "id": "net-ch12-q12",
+      "question": "How are routes determined in fixed routing?",
+      "type": "single",
+      "options": [
+        { "text": "Using a least-cost algorithm based on network topology.", "isCorrect": true },
+        { "text": "By flooding each packet to every neighbor until it reaches the destination.", "isCorrect": false },
+        { "text": "By selecting an outgoing link randomly for each incoming packet.", "isCorrect": false },
+        { "text": "By changing decisions based on failures, congestion, and traffic load.", "isCorrect": false }
+      ],
+      "explanation": "Using a least-cost algorithm based on network topology. Metrics such as hop count and cost are used to compare routes and select the best one."
+    },
+    {
+      "id": "net-ch12-q13",
+      "question": "When do fixed routes change?",
+      "type": "single",
+      "options": [
+        { "text": "Whenever queue length exceeds a threshold on any router.", "isCorrect": false },
+        { "text": "Only when there is a change in network topology.", "isCorrect": false },
+        { "text": "Only when there is a change in network topology.", "isCorrect": true },
+        { "text": "After every periodic routing-table update regardless of topology.", "isCorrect": false }
+      ],
+      "explanation": "Only when there is a change in network topology."
+    },
+    {
+      "id": "net-ch12-q14",
+      "question": "What is a disadvantage of fixed routing?",
+      "type": "single",
+      "options": [
+        { "text": "It cannot adapt to congestion or failures dynamically.", "isCorrect": false },
+        { "text": "It requires no routing information, so it cannot work in real networks.", "isCorrect": false },
+        { "text": "It always generates duplicate packets that must be discarded.", "isCorrect": false },
+        { "text": "It cannot adapt to congestion or failures dynamically.", "isCorrect": true }
+      ],
+      "explanation": "It cannot adapt to congestion or failures dynamically."
+    },
+    {
+      "id": "net-ch12-q15",
+      "question": "What is flooding routing?",
+      "type": "single",
+      "options": [
+        { "text": "A strategy where each packet is sent to every neighboring node.", "isCorrect": true },
+        { "text": "A strategy where a single permanent route is defined for each source-destination pair.", "isCorrect": false },
+        { "text": "A strategy where decisions change based on network conditions like congestion.", "isCorrect": false },
+        { "text": "A strategy where a node forwards a packet on a randomly chosen outgoing link.", "isCorrect": false }
+      ],
+      "explanation": "A strategy where each packet is sent to every neighboring node. Flooding is robust because it tries all possible routes, but it must control duplicates and load."
+    },
+    {
+      "id": "net-ch12-q16",
+      "question": "Does flooding require network information?",
+      "type": "single",
+      "options": [
+        { "text": "Yes, flooding requires a complete network map before it can forward packets.", "isCorrect": false },
+        { "text": "No, it requires no routing information.", "isCorrect": true },
+        { "text": "Yes, it requires periodic copies of the entire routing table.", "isCorrect": false },
+        { "text": "Yes, it requires LSAs flooded throughout the internetwork.", "isCorrect": false }
+      ],
+      "explanation": "No, it requires no routing information. Flooding is robust because it tries all possible routes, but it must control duplicates and load."
+    },
+    {
+      "id": "net-ch12-q17",
+      "question": "How does flooding prevent infinite looping?",
+      "type": "single",
+      "options": [
+        { "text": "By using a three-way handshake to create a session and then closing it with FIN.", "isCorrect": false },
+        { "text": "By computing a shortest-path tree and discarding non-tree links.", "isCorrect": false },
+        { "text": "Each packet is uniquely numbered and duplicates are discarded.", "isCorrect": true },
+        { "text": "By using only a single fixed route for each source-destination pair.", "isCorrect": false }
+      ],
+      "explanation": "Each packet is uniquely numbered and duplicates are discarded. Flooding is robust because it tries all possible routes, but it must control duplicates and load."
+    },
+    {
+      "id": "net-ch12-q18",
+      "question": "How can flooding control network load?",
+      "type": "single",
+      "options": [
+        { "text": "By sending only the changes to the routing table after convergence.", "isCorrect": false },
+        { "text": "Nodes remember forwarded packets and may use a hop count.", "isCorrect": false },
+        { "text": "By selecting a random outgoing link with probability weighting.", "isCorrect": false },
+        { "text": "Nodes remember forwarded packets and may use a hop count.", "isCorrect": true }
+      ],
+      "explanation": "Nodes remember forwarded packets and may use a hop count. Flooding is robust because it tries all possible routes, but it must control duplicates and load."
+    },
+    {
+      "id": "net-ch12-q19",
+      "question": "What are the properties of flooding routing?",
+      "type": "single",
+      "options": [
+        { "text": "All possible routes are tried; Very robust; At least one packet takes the minimum hop path.", "isCorrect": false },
+        { "text": "Routes are always least-cost and never duplicate packets.", "isCorrect": false },
+        { "text": "All possible routes are tried; Very robust; At least one packet takes the minimum hop path.", "isCorrect": true },
+        { "text": "Decisions change based on congestion, failures, and traffic load.", "isCorrect": false }
+      ],
+      "explanation": "All possible routes are tried; Very robust; At least one packet takes the minimum hop path. Flooding is robust because it tries all possible routes, but it must control duplicates and load."
+    },
+    {
+      "id": "net-ch12-q20",
+      "question": "What are typical uses of flooding?",
+      "type": "single",
+      "options": [
+        { "text": "Virtual circuit setup; Routing information distribution.", "isCorrect": true },
+        { "text": "Email storage and retrieval across mail servers.", "isCorrect": false },
+        { "text": "VLAN tagging and trunk negotiation between switches.", "isCorrect": false },
+        { "text": "TCP segmentation and reliable in-order delivery.", "isCorrect": false }
+      ],
+      "explanation": "Virtual circuit setup; Routing information distribution. Flooding is robust because it tries all possible routes, but it must control duplicates and load."
+    },
+    {
+      "id": "net-ch12-q21",
+      "question": "What is random routing?",
+      "type": "single",
+      "options": [
+        { "text": "A strategy where a node forwards a packet on a randomly chosen outgoing link.", "isCorrect": false },
+        { "text": "A strategy where a node forwards a packet on a randomly chosen outgoing link.", "isCorrect": true },
+        { "text": "A strategy where each packet is sent to every neighboring node.", "isCorrect": false },
+        { "text": "A strategy where decisions change based on network conditions.", "isCorrect": false }
+      ],
+      "explanation": "A strategy where a node forwards a packet on a randomly chosen outgoing link."
+    },
+    {
+      "id": "net-ch12-q22",
+      "question": "Does random routing require network information?",
+      "type": "single",
+      "options": [
+        { "text": "Yes, it requires LSAs flooded to all routers.", "isCorrect": false },
+        { "text": "Yes, it requires periodic full routing tables from every neighbor.", "isCorrect": false },
+        { "text": "No, it requires no global network knowledge.", "isCorrect": true },
+        { "text": "Yes, it requires a complete topology database before forwarding.", "isCorrect": false }
+      ],
+      "explanation": "No, it requires no global network knowledge."
+    },
+    {
+      "id": "net-ch12-q23",
+      "question": "Is random routing optimal?",
+      "type": "single",
+      "options": [
+        { "text": "Yes, it always produces least-cost routes.", "isCorrect": false },
+        { "text": "No, routes are typically neither least-cost nor minimum hop.", "isCorrect": true },
+        { "text": "Yes, because it tries all possible routes at once.", "isCorrect": false },
+        { "text": "Yes, because it builds a shortest-path tree using SPF.", "isCorrect": false }
+      ],
+      "explanation": "No, routes are typically neither least-cost nor minimum hop."
+    },
+    {
+      "id": "net-ch12-q24",
+      "question": "What is adaptive routing?",
+      "type": "single",
+      "options": [
+        { "text": "A routing strategy where decisions change based on network conditions.", "isCorrect": true },
+        { "text": "A routing strategy where a single permanent route is defined for each source-destination pair.", "isCorrect": false },
+        { "text": "A routing strategy where each packet is sent to every neighboring node.", "isCorrect": false },
+        { "text": "A routing strategy where a node forwards packets using a random outgoing link.", "isCorrect": false }
+      ],
+      "explanation": "A routing strategy where decisions change based on network conditions. Adaptive routing changes decisions based on conditions like failures and congestion, at the cost of more overhead."
+    },
+    {
+      "id": "net-ch12-q25",
+      "question": "What conditions influence adaptive routing?",
+      "type": "single",
+      "options": [
+        { "text": "Link failures; Congestion; Traffic load.", "isCorrect": false },
+        { "text": "Only MAC address changes and VLAN trunk negotiation.", "isCorrect": false },
+        { "text": "Only DNS server availability and URL formatting.", "isCorrect": false },
+        { "text": "Link failures; Congestion; Traffic load.", "isCorrect": true }
+      ],
+      "explanation": "Link failures; Congestion; Traffic load. Adaptive routing changes decisions based on conditions like failures and congestion, at the cost of more overhead."
+    },
+    {
+      "id": "net-ch12-q26",
+      "question": "Why is adaptive routing widely used?",
+      "type": "single",
+      "options": [
+        { "text": "Because it reacts dynamically to changes and improves network performance.", "isCorrect": true },
+        { "text": "Because it never requires any network information.", "isCorrect": false },
+        { "text": "Because it guarantees minimum-hop routes without any overhead.", "isCorrect": false },
+        { "text": "Because it defines a single permanent route for every pair of nodes.", "isCorrect": false }
+      ],
+      "explanation": "Because it reacts dynamically to changes and improves network performance. Adaptive routing changes decisions based on conditions like failures and congestion, at the cost of more overhead."
+    },
+    {
+      "id": "net-ch12-q27",
+      "question": "What is a tradeoff in adaptive routing?",
+      "type": "single",
+      "options": [
+        { "text": "Better routing decisions vs higher overhead for network information.", "isCorrect": false },
+        { "text": "Higher overhead for network information vs better routing decisions.", "isCorrect": false },
+        { "text": "Better routing decisions vs higher overhead for network information.", "isCorrect": true },
+        { "text": "Lower overhead vs poorer decisions because routes never change.", "isCorrect": false }
+      ],
+      "explanation": "Better routing decisions vs higher overhead for network information. Adaptive routing changes decisions based on conditions like failures and congestion, at the cost of more overhead."
+    },
+    {
+      "id": "net-ch12-q28",
+      "question": "How can adaptive routing be classified?",
+      "type": "single",
+      "options": [
+        { "text": "Based on information sources: Local (isolated); Adjacent nodes; All nodes.", "isCorrect": false },
+        { "text": "Based on information sources: Local (isolated); Adjacent nodes; All nodes.", "isCorrect": true },
+        { "text": "Based on encapsulation types: Ethernet, PPP, and HDLC.", "isCorrect": false },
+        { "text": "Based on transport protocols: TCP, UDP, and ICMP.", "isCorrect": false }
+      ],
+      "explanation": "Based on information sources: Local (isolated); Adjacent nodes; All nodes. Adaptive routing changes decisions based on conditions like failures and congestion, at the cost of more overhead."
+    },
+    {
+      "id": "net-ch12-q29",
+      "question": "What is local (isolated) adaptive routing?",
+      "type": "single",
+      "options": [
+        { "text": "Routing decisions are based only on local information such as queue length.", "isCorrect": false },
+        { "text": "Routing decisions are based only on local information such as queue length.", "isCorrect": true },
+        { "text": "Routing decisions are based on a complete network map from LSAs.", "isCorrect": false },
+        { "text": "Routing decisions are made using a single permanent least-cost route.", "isCorrect": false }
+      ],
+      "explanation": "Routing decisions are based only on local information such as queue length. Adaptive routing changes decisions based on conditions like failures and congestion, at the cost of more overhead."
+    },
+    {
+      "id": "net-ch12-q30",
+      "question": "Why is isolated adaptive routing rarely used?",
+      "type": "single",
+      "options": [
+        { "text": "It does not use easily available network information.", "isCorrect": true },
+        { "text": "It always floods each packet to every neighbor.", "isCorrect": false },
+        { "text": "It requires a complete topology map from all routers.", "isCorrect": false },
+        { "text": "It only supports classful routing with no metrics.", "isCorrect": false }
+      ],
+      "explanation": "It does not use easily available network information. Adaptive routing changes decisions based on conditions like failures and congestion, at the cost of more overhead."
+    },
+    {
+      "id": "net-ch12-q31",
+      "question": "What is a routing algorithm?",
+      "type": "single",
+      "options": [
+        { "text": "A specific procedure used to calculate the best path between networks.", "isCorrect": false },
+        { "text": "A message describing the state and cost of a router’s links.", "isCorrect": false },
+        { "text": "A specific procedure used to calculate the best path between networks.", "isCorrect": true },
+        { "text": "A general method used to determine how routes are selected in a network.", "isCorrect": false }
+      ],
+      "explanation": "A specific procedure used to calculate the best path between networks."
+    },
+    {
+      "id": "net-ch12-q32",
+      "question": "What are the two main routing algorithm families?",
+      "type": "single",
+      "options": [
+        { "text": "Distance Vector; Link State.", "isCorrect": true },
+        { "text": "Fixed routing; Flooding.", "isCorrect": false },
+        { "text": "Random routing; Adaptive routing.", "isCorrect": false },
+        { "text": "Minimum hop; Least cost.", "isCorrect": false }
+      ],
+      "explanation": "Distance Vector; Link State."
+    },
+    {
+      "id": "net-ch12-q33",
+      "question": "What is a distance vector routing algorithm?",
+      "type": "single",
+      "options": [
+        { "text": "A method where routers exchange routing tables with neighbors.", "isCorrect": false },
+        { "text": "A method where routers exchange routing tables with neighbors.", "isCorrect": true },
+        { "text": "A method where routers flood LSAs to all routers to build a complete network map.", "isCorrect": false },
+        { "text": "A method where each packet is sent to every neighboring node.", "isCorrect": false }
+      ],
+      "explanation": "A method where routers exchange routing tables with neighbors. Distance vector routers share information with neighbors and choose the lowest-metric route based on received updates."
+    },
+    {
+      "id": "net-ch12-q34",
+      "question": "What other name is used for distance vector algorithms?",
+      "type": "single",
+      "options": [
+        { "text": "Dijkstra’s Shortest Path First (SPF) algorithm.", "isCorrect": false },
+        { "text": "Bellman-Ford algorithm.", "isCorrect": false },
+        { "text": "Flooding algorithm.", "isCorrect": false },
+        { "text": "Bellman-Ford algorithm.", "isCorrect": true }
+      ],
+      "explanation": "Bellman-Ford algorithm. Distance vector routers share information with neighbors and choose the lowest-metric route based on received updates."
+    },
+    {
+      "id": "net-ch12-q35",
+      "question": "What information does a distance vector router maintain?",
+      "type": "single",
+      "options": [
+        { "text": "Destination networks; Distance (metric); Direction (next hop).", "isCorrect": false },
+        { "text": "Link states; Metrics; Complete topology map.", "isCorrect": false },
+        { "text": "Destination networks; Distance (metric); Direction (next hop).", "isCorrect": true },
+        { "text": "VLAN IDs; MAC tables; Frame check sequences.", "isCorrect": false }
+      ],
+      "explanation": "Destination networks; Distance (metric); Direction (next hop). Distance vector routers share information with neighbors and choose the lowest-metric route based on received updates."
+    },
+    {
+      "id": "net-ch12-q36",
+      "question": "How often do distance vector routers send updates?",
+      "type": "single",
+      "options": [
+        { "text": "Only when a link-state change triggers an LSA.", "isCorrect": false },
+        { "text": "Only when the administrator manually forces an update.", "isCorrect": false },
+        { "text": "Periodically to adjacent neighbors.", "isCorrect": true },
+        { "text": "Continuously for every packet forwarded.", "isCorrect": false }
+      ],
+      "explanation": "Periodically to adjacent neighbors. Distance vector routers share information with neighbors and choose the lowest-metric route based on received updates."
+    },
+    {
+      "id": "net-ch12-q37",
+      "question": "How does a router update distance vector metrics?",
+      "type": "single",
+      "options": [
+        { "text": "It adds its own distance to the received metric.", "isCorrect": true },
+        { "text": "It subtracts its own hop count from the received metric.", "isCorrect": false },
+        { "text": "It replaces all metrics with a fixed cost of 1.", "isCorrect": false },
+        { "text": "It uses only link costs from LSAs and runs SPF.", "isCorrect": false }
+      ],
+      "explanation": "It adds its own distance to the received metric. Distance vector routers share information with neighbors and choose the lowest-metric route based on received updates."
+    },
+    {
+      "id": "net-ch12-q38",
+      "question": "Do distance vector routers know the full topology?",
+      "type": "single",
+      "options": [
+        { "text": "Yes, they build a complete network map from LSAs.", "isCorrect": false },
+        { "text": "No, only information from neighbors.", "isCorrect": false },
+        { "text": "No, only information from neighbors.", "isCorrect": true },
+        { "text": "Yes, they compute a shortest-path tree rooted at each router.", "isCorrect": false }
+      ],
+      "explanation": "No, only information from neighbors. Distance vector routers share information with neighbors and choose the lowest-metric route based on received updates."
+    },
+    {
+      "id": "net-ch12-q39",
+      "question": "How does a distance vector router choose the best route?",
+      "type": "single",
+      "options": [
+        { "text": "It selects the route with the lowest metric.", "isCorrect": false },
+        { "text": "It selects the route with the highest metric for maximum redundancy.", "isCorrect": false },
+        { "text": "It always chooses the route with the fewest routers, regardless of cost.", "isCorrect": false },
+        { "text": "It selects the route with the lowest metric.", "isCorrect": true }
+      ],
+      "explanation": "It selects the route with the lowest metric. Distance vector routers share information with neighbors and choose the lowest-metric route based on received updates."
+    },
+    {
+      "id": "net-ch12-q40",
+      "question": "What are limitations of distance vector routing?",
+      "type": "single",
+      "options": [
+        { "text": "Slow convergence; Limited scalability; Does not support VLSM or super-netting.", "isCorrect": true },
+        { "text": "Higher CPU usage; Higher memory requirements; Complex administration.", "isCorrect": false },
+        { "text": "No routing information required; All possible routes are tried.", "isCorrect": false },
+        { "text": "Only changes are sent after convergence rather than whole tables.", "isCorrect": false }
+      ],
+      "explanation": "Slow convergence; Limited scalability; Does not support VLSM or super-netting. Distance vector routers share information with neighbors and choose the lowest-metric route based on received updates."
+    },
+    {
+      "id": "net-ch12-q41",
+      "question": "Why do distance vector protocols converge slowly?",
+      "type": "single",
+      "options": [
+        { "text": "Because updates propagate gradually through the network.", "isCorrect": false },
+        { "text": "Because routers must first flood LSAs to all routers.", "isCorrect": false },
+        { "text": "Because updates propagate gradually through the network.", "isCorrect": true },
+        { "text": "Because every router waits for a full topology database rebuild after each packet.", "isCorrect": false }
+      ],
+      "explanation": "Because updates propagate gradually through the network. Distance vector routers share information with neighbors and choose the lowest-metric route based on received updates."
+    },
+    {
+      "id": "net-ch12-q42",
+      "question": "Give examples of distance vector routing protocols.",
+      "type": "single",
+      "options": [
+        { "text": "OSPF; IS-IS; NLSP; OSPFv3.", "isCorrect": false },
+        { "text": "RIP; IGRP; EIGRP; BGP.", "isCorrect": true },
+        { "text": "HTTP; FTP; SMTP; DNS.", "isCorrect": false },
+        { "text": "STP; 802.1Q; LACP; CDP.", "isCorrect": false }
+      ],
+      "explanation": "RIP; IGRP; EIGRP; BGP. Distance vector routers share information with neighbors and choose the lowest-metric route based on received updates."
+    },
+    {
+      "id": "net-ch12-q43",
+      "question": "What is a link-state routing algorithm?",
+      "type": "single",
+      "options": [
+        { "text": "A method where routers share link information to build a complete network map.", "isCorrect": false },
+        { "text": "A method where routers exchange routing tables periodically with adjacent neighbors only.", "isCorrect": false },
+        { "text": "A method where a node forwards a packet on a random outgoing link.", "isCorrect": false },
+        { "text": "A method where routers share link information to build a complete network map.", "isCorrect": true }
+      ],
+      "explanation": "A method where routers share link information to build a complete network map. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q44",
+      "question": "Which algorithm is used by link-state routing?",
+      "type": "single",
+      "options": [
+        { "text": "Bellman-Ford algorithm.", "isCorrect": false },
+        { "text": "Dijkstra’s Shortest Path First (SPF) algorithm.", "isCorrect": true },
+        { "text": "Flooding algorithm with hop-count limitation.", "isCorrect": false },
+        { "text": "Random routing algorithm with round-robin selection.", "isCorrect": false }
+      ],
+      "explanation": "Dijkstra’s Shortest Path First (SPF) algorithm. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q45",
+      "question": "How does link-state routing distribute information?",
+      "type": "single",
+      "options": [
+        { "text": "Using link-state advertisements (LSAs) flooded to all routers.", "isCorrect": false },
+        { "text": "By sending entire routing tables periodically to adjacent neighbors only.", "isCorrect": false },
+        { "text": "Using link-state advertisements (LSAs) flooded to all routers.", "isCorrect": true },
+        { "text": "By selecting a random outgoing link so routes emerge naturally.", "isCorrect": false }
+      ],
+      "explanation": "Using link-state advertisements (LSAs) flooded to all routers. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q46",
+      "question": "What information does a link-state database contain?",
+      "type": "single",
+      "options": [
+        { "text": "Link states; Metrics; Network topology.", "isCorrect": false },
+        { "text": "Destination networks; Next hops; Periodic table updates.", "isCorrect": false },
+        { "text": "Link states; Metrics; Network topology.", "isCorrect": true },
+        { "text": "Only the local router’s queue lengths and interface speeds.", "isCorrect": false }
+      ],
+      "explanation": "Link states; Metrics; Network topology. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q47",
+      "question": "How does a router compute best paths in link-state routing?",
+      "type": "single",
+      "options": [
+        { "text": "By running the SPF algorithm on its topology database.", "isCorrect": true },
+        { "text": "By adding its own distance to the received metric from neighbors.", "isCorrect": false },
+        { "text": "By using a single permanent route fixed at configuration time.", "isCorrect": false },
+        { "text": "By retransmitting each packet on every link except the incoming link.", "isCorrect": false }
+      ],
+      "explanation": "By running the SPF algorithm on its topology database. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q48",
+      "question": "What structure results from SPF computation?",
+      "type": "single",
+      "options": [
+        { "text": "A shortest-path tree rooted at the local router.", "isCorrect": false },
+        { "text": "A routing table that is identical on all routers.", "isCorrect": false },
+        { "text": "A set of duplicate packets that explore all possible routes.", "isCorrect": false },
+        { "text": "A shortest-path tree rooted at the local router.", "isCorrect": true }
+      ],
+      "explanation": "A shortest-path tree rooted at the local router. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q49",
+      "question": "What is a link-state advertisement (LSA)?",
+      "type": "single",
+      "options": [
+        { "text": "A message describing the state and cost of a router’s links.", "isCorrect": false },
+        { "text": "A message describing the state and cost of a router’s links.", "isCorrect": true },
+        { "text": "A message used to establish a TCP session between two hosts.", "isCorrect": false },
+        { "text": "A command that forces fixed routing to recompute permanent routes.", "isCorrect": false }
+      ],
+      "explanation": "A message describing the state and cost of a router’s links. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q50",
+      "question": "What types of LSAs exist?",
+      "type": "single",
+      "options": [
+        { "text": "Router LSA; Link LSA.", "isCorrect": true },
+        { "text": "SYN LSA; FIN LSA.", "isCorrect": false },
+        { "text": "Access LSA; Trunk LSA.", "isCorrect": false },
+        { "text": "Broadcast LSA; Unicast LSA.", "isCorrect": false }
+      ],
+      "explanation": "Router LSA; Link LSA. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q51",
+      "question": "What information is in a Router LSA?",
+      "type": "single",
+      "options": [
+        { "text": "Router ID; Interface IPs; Interface status; Link cost.", "isCorrect": false },
+        { "text": "Subnet masks, hostnames, DNS servers, and application ports.", "isCorrect": false },
+        { "text": "Router ID; Interface IPs; Interface status; Link cost.", "isCorrect": true },
+        { "text": "Only destination networks with hop counts and next hops.", "isCorrect": false }
+      ],
+      "explanation": "Router ID; Interface IPs; Interface status; Link cost. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q52",
+      "question": "What is a topological database?",
+      "type": "single",
+      "options": [
+        { "text": "A data structure storing all LSAs received by a router.", "isCorrect": false },
+        { "text": "A data structure storing all LSAs received by a router.", "isCorrect": true },
+        { "text": "A periodic copy of a distance vector routing table sent to neighbors.", "isCorrect": false },
+        { "text": "A list of forwarded flooding packets remembered to control load.", "isCorrect": false }
+      ],
+      "explanation": "A data structure storing all LSAs received by a router. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q53",
+      "question": "How do link-state protocols handle topology changes?",
+      "type": "single",
+      "options": [
+        { "text": "They ignore changes until the next manual reconfiguration.", "isCorrect": false },
+        { "text": "LSAs are flooded and routes are recalculated dynamically.", "isCorrect": false },
+        { "text": "LSAs are flooded and routes are recalculated dynamically.", "isCorrect": true },
+        { "text": "They rely on random routing to find alternative paths.", "isCorrect": false }
+      ],
+      "explanation": "LSAs are flooded and routes are recalculated dynamically. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q54",
+      "question": "Why are link-state protocols more efficient in updates?",
+      "type": "single",
+      "options": [
+        { "text": "Because only changes are sent after convergence.", "isCorrect": false },
+        { "text": "Because they always send the entire routing table periodically.", "isCorrect": false },
+        { "text": "Because they never send any routing information.", "isCorrect": false },
+        { "text": "Because only changes are sent after convergence.", "isCorrect": true }
+      ],
+      "explanation": "Because only changes are sent after convergence. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q55",
+      "question": "What are advantages of link-state routing?",
+      "type": "single",
+      "options": [
+        { "text": "Faster convergence; Better bandwidth utilization; Support for CIDR, VLSM, super-netting.", "isCorrect": true },
+        { "text": "Slow convergence and limited scalability in large networks.", "isCorrect": false },
+        { "text": "Does not support CIDR/VLSM because it is classful.", "isCorrect": false },
+        { "text": "Only periodic full-table updates even after convergence.", "isCorrect": false }
+      ],
+      "explanation": "Faster convergence; Better bandwidth utilization; Support for CIDR, VLSM, super-netting. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q56",
+      "question": "What are limitations of link-state routing?",
+      "type": "single",
+      "options": [
+        { "text": "Higher CPU usage; Higher memory requirements; Complex administration.", "isCorrect": false },
+        { "text": "Higher CPU usage; Higher memory requirements; Complex administration.", "isCorrect": true },
+        { "text": "Cannot react to topology changes because it has no advertisements.", "isCorrect": false },
+        { "text": "Only supports classful routing and never uses subnet masks.", "isCorrect": false }
+      ],
+      "explanation": "Higher CPU usage; Higher memory requirements; Complex administration. Link-state routers build a topology database from flooded advertisements and run SPF to compute best paths."
+    },
+    {
+      "id": "net-ch12-q57",
+      "question": "What is the key takeaway about routing algorithms?",
+      "type": "single",
+      "options": [
+        { "text": "Distance vector is simpler but slower, while link-state is faster and more scalable but resource-intensive.", "isCorrect": false },
+        { "text": "Link-state is simpler but slower, while distance vector is faster and more scalable.", "isCorrect": false },
+        { "text": "Distance vector is simpler but slower, while link-state is faster and more scalable but resource-intensive.", "isCorrect": true },
+        { "text": "Random routing is always optimal, while flooding is never robust.", "isCorrect": false }
+      ],
+      "explanation": "Distance vector is simpler but slower, while link-state is faster and more scalable but resource-intensive."
+    }
+  ]
+}

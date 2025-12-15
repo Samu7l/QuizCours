@@ -1,0 +1,560 @@
+{
+  "id": "net-ch1",
+  "type": "module",
+  "title": "Chapter 1 - Introduction to Data Communication Model",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "net-ch1-q1",
+      "question": "What are the main topics covered in the Introduction to Data Communication Model module?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Software Engineering, Circuit Analysis, and Programming Logic.",
+          "isCorrect": false
+        },
+        {
+          "text": "Data Communication Model, Data Communication, Networking, Protocols, and Protocol Architecture.",
+          "isCorrect": true
+        },
+        {
+          "text": "Cloud Computing, Database Management, and User Interface Design.",
+          "isCorrect": false
+        },
+        {
+          "text": "Signal Processing, Wireless Frequencies, and Satellite Orbit Mechanics.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The main topics outlined in the course structure are the Introduction to Data Communication Model, Data Communication, Networking, Protocols, and Protocol Architecture."
+    },
+    {
+      "id": "net-ch1-q2",
+      "question": "What are the specific learning outcomes for this chapter?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Write complex code for network security and configure firewalls.",
+          "isCorrect": false
+        },
+        {
+          "text": "Calculate the exact voltage requirements for transmission lines.",
+          "isCorrect": false
+        },
+        {
+          "text": "Explain networking details with technology/architecture and explain communication protocols.",
+          "isCorrect": true
+        },
+        {
+          "text": "Design a physical router chassis and solder motherboard components.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The stated learning outcomes are to explain the Networking details with the technology and architecture, and to explain the communication protocols in Computer Networks."
+    },
+    {
+      "id": "net-ch1-q3",
+      "question": "Which set of key terms are you expected to be able to use correctly after mastering this topic?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Networking, Entity, System, Protocol, Syntax, Semantics, PDU.",
+          "isCorrect": true
+        },
+        {
+          "text": "Broadband, WiFi, 5G, LTE, Fiber Optics, Bluetooth.",
+          "isCorrect": false
+        },
+        {
+          "text": "Router, Switch, Hub, Bridge, Gateway, Repeater.",
+          "isCorrect": false
+        },
+        {
+          "text": "Algorithm, Variable, Class, Object, Loop, Function.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The key terms identified in the course that students must be able to use are Networking, Entity, System, Protocol, Syntax, Semantics, and PDU."
+    },
+    {
+      "id": "net-ch1-q4",
+      "question": "Which of the following correctly lists the components of the Data Communications Model?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Input, Processing, Storage, Output, User.",
+          "isCorrect": false
+        },
+        {
+          "text": "Source, Router, Cloud, Firewall, Destination.",
+          "isCorrect": false
+        },
+        {
+          "text": "Sender, Message, Medium, Protocol, Feedback.",
+          "isCorrect": false
+        },
+        {
+          "text": "Source, Transmitter, Transmission System, Receiver, Destination.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "The Data Communications Model consists of the Source (generates data), Transmitter (converts data to signals), Transmission System (carries signals), Receiver (converts signals to data), and Destination (takes incoming data)."
+    },
+    {
+      "id": "net-ch1-q5",
+      "question": "Why is direct point-to-point communication often considered impractical for connecting many devices?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It requires devices to use incompatible operating systems.",
+          "isCorrect": false
+        },
+        {
+          "text": "Devices are too far apart and a large set of devices would require an impractical number of connections.",
+          "isCorrect": true
+        },
+        {
+          "text": "The data transfer speeds are significantly slower than wireless networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "It consumes too much electrical power to maintain a single link.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Point-to-point communication is not practical because devices are often too far apart, and connecting a large set of devices would require an impractical number of physical connections. The solution is a communications network."
+    },
+    {
+      "id": "net-ch1-q6",
+      "question": "Which of the following is a characteristic of a Wide Area Network (WAN)?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It covers a large geographical area and relies in part on common carrier circuits.",
+          "isCorrect": true
+        },
+        {
+          "text": "It is restricted to a single building or small campus environment.",
+          "isCorrect": false
+        },
+        {
+          "text": "It typically offers much higher data rates than Local Area Networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "It is usually owned entirely by the same organization that owns the attached devices.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "WANs are characterized by covering a large geographical area, crossing public rights of way, relying on common carrier circuits, and utilizing technologies like circuit switching, packet switching, or frame relay."
+    },
+    {
+      "id": "net-ch1-q7",
+      "question": "Which of the following describes a characteristic of a Local Area Network (LAN)?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It uses public rights of way to connect cities.",
+          "isCorrect": false
+        },
+        {
+          "text": "It relies heavily on circuit switching and common carrier circuits.",
+          "isCorrect": false
+        },
+        {
+          "text": "It has a smaller scope, is usually owned by one organization, and has high data rates.",
+          "isCorrect": true
+        },
+        {
+          "text": "It is designed primarily for low-speed communication over vast distances.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "LANs are characterized by a smaller scope (building or campus), are usually owned by the same organization as the devices, and have data rates much higher than WANs."
+    },
+    {
+      "id": "net-ch1-q8",
+      "question": "In networking terminology, what is an 'Entity'?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The physical cable connecting two computers.",
+          "isCorrect": false
+        },
+        {
+          "text": "A distinct physical object like a computer or terminal.",
+          "isCorrect": false
+        },
+        {
+          "text": "The set of rules governing data exchange.",
+          "isCorrect": false
+        },
+        {
+          "text": "Anything capable of sending or receiving information, such as an application program.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "An Entity is defined as anything capable of sending or receiving information. Examples include application programs, file transfer packages, and email packages."
+    },
+    {
+      "id": "net-ch1-q9",
+      "question": "In networking terminology, what is a 'System'?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A specialized software for error detection.",
+          "isCorrect": false
+        },
+        {
+          "text": "A physically distinct object that contains one or more entities.",
+          "isCorrect": true
+        },
+        {
+          "text": "The timing mechanism used to synchronize signals.",
+          "isCorrect": false
+        },
+        {
+          "text": "A specific format for data headers.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A System is a physically distinct object that contains one or more entities. Examples include computers, terminals, and remote sensors."
+    },
+    {
+      "id": "net-ch1-q10",
+      "question": "What three things must two entities agree on to communicate successfully?",
+      "type": "single",
+      "options": [
+        {
+          "text": "What is communicated, How it is communicated, and When it is communicated.",
+          "isCorrect": true
+        },
+        {
+          "text": "Who is the sender, Who is the receiver, and Who is the administrator.",
+          "isCorrect": false
+        },
+        {
+          "text": "The brand of hardware, the operating system, and the power source.",
+          "isCorrect": false
+        },
+        {
+          "text": "The password, the encryption key, and the user ID.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "For successful communication, entities must agree on what is communicated, how it is communicated, and when it is communicated. This agreement is established through protocols."
+    },
+    {
+      "id": "net-ch1-q11",
+      "question": "What are the key elements of a protocol?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Hardware, Software, and Firmware.",
+          "isCorrect": false
+        },
+        {
+          "text": "Input, Processing, and Output.",
+          "isCorrect": false
+        },
+        {
+          "text": "Syntax, Semantics, and Timing.",
+          "isCorrect": true
+        },
+        {
+          "text": "Packets, Frames, and Bits.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The key elements of protocols are Syntax (data formats/signal levels), Semantics (control info/error handling), and Timing (speed matching/sequencing)."
+    },
+    {
+      "id": "net-ch1-q12",
+      "question": "How are communication tasks typically structured in protocol architecture (e.g., for file transfer)?",
+      "type": "single",
+      "options": [
+        {
+          "text": "They are combined into a single monolithic program.",
+          "isCorrect": false
+        },
+        {
+          "text": "They are broken up into modules, such as file transfer, communication service, and network access.",
+          "isCorrect": true
+        },
+        {
+          "text": "They are handled entirely by the hardware without software modules.",
+          "isCorrect": false
+        },
+        {
+          "text": "They are distributed randomly across different network nodes.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Communication tasks are broken up into modules. For example, a file transfer might use a File Transfer Application module, a Communication Service module, and a Network Access module."
+    },
+    {
+      "id": "net-ch1-q13",
+      "question": "What are the two levels of addressing requirements in communication architecture?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Email address and website URL.",
+          "isCorrect": false
+        },
+        {
+          "text": "Physical address and GPS coordinates.",
+          "isCorrect": false
+        },
+        {
+          "text": "Admin password and user password.",
+          "isCorrect": false
+        },
+        {
+          "text": "A unique network address for the computer and a unique address (SAP) for the application.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "The architecture requires two levels of addressing: each computer needs a unique network address, and each application on a multitasking computer needs a unique address, known as a Service Access Point (SAP)."
+    },
+    {
+      "id": "net-ch1-q14",
+      "question": "What is a Protocol Data Unit (PDU)?",
+      "type": "single",
+      "options": [
+        {
+          "text": "User data plus control information added at each layer.",
+          "isCorrect": true
+        },
+        {
+          "text": "The physical cable used to transmit the signal.",
+          "isCorrect": false
+        },
+        {
+          "text": "The raw binary stream without any headers or formatting.",
+          "isCorrect": false
+        },
+        {
+          "text": "The software license required to use the network.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A Protocol Data Unit (PDU) consists of the user data along with the control information (header) added at a specific layer of the protocol architecture."
+    },
+    {
+      "id": "net-ch1-q15",
+      "question": "Which items are typically found in a Transport PDU?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Voltage levels, pin configurations, and cable type.",
+          "isCorrect": false
+        },
+        {
+          "text": "Router IP address, subnet mask, and gateway.",
+          "isCorrect": false
+        },
+        {
+          "text": "Destination SAP, sequence number, and error detection code.",
+          "isCorrect": true
+        },
+        {
+          "text": "User password, file name, and file size only.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A Transport layer PDU typically includes the destination Service Access Point (SAP), a sequence number for ordering, and an error detection code."
+    },
+    {
+      "id": "net-ch1-q16",
+      "question": "Which of the following represents a principle of the OSI Reference Model?",
+      "type": "single",
+      "options": [
+        {
+          "text": "All layers must function simultaneously using the same hardware.",
+          "isCorrect": false
+        },
+        {
+          "text": "Each layer performs a subset of functions and relies on the next lower layer.",
+          "isCorrect": true
+        },
+        {
+          "text": "Changes in one layer require rewriting the code for all other layers.",
+          "isCorrect": false
+        },
+        {
+          "text": "Higher layers provide services to the lower layers.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The OSI model is a layered model where each layer performs a subset of functions, relies on the lower layer for primitive functions, provides services to the higher layer, and allows changes in one layer without affecting others."
+    },
+    {
+      "id": "net-ch1-q17",
+      "question": "Which list correctly identifies the layers of the OSI Reference Model?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Input, Processing, Storage, Output, Feedback, Control, User.",
+          "isCorrect": false
+        },
+        {
+          "text": "Network Access, Internet, Transport, Application.",
+          "isCorrect": false
+        },
+        {
+          "text": "Source, Transmitter, System, Receiver, Destination, Signal, Data.",
+          "isCorrect": false
+        },
+        {
+          "text": "Application, Presentation, Session, Transport, Network, Data Link, Physical.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "The 7 layers of the OSI Reference Model are: Application, Presentation, Session, Transport, Network, Data Link, and Physical."
+    },
+    {
+      "id": "net-ch1-q18",
+      "question": "What is the origin of the TCP/IP Protocol Suite?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It was developed by US DoD research and specified before the OSI model.",
+          "isCorrect": true
+        },
+        {
+          "text": "It was created by the International Organization for Standardization (ISO).",
+          "isCorrect": false
+        },
+        {
+          "text": "It was developed specifically for internal use in local area networks only.",
+          "isCorrect": false
+        },
+        {
+          "text": "It was a commercial product released by Microsoft in the 1990s.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The TCP/IP Protocol Suite was developed by research funded by the US Department of Defense, was specified before the OSI model, and became the dominant commercial architecture used by the Internet."
+    },
+    {
+      "id": "net-ch1-q19",
+      "question": "What are the layers of the TCP/IP Protocol Suite?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Application, Session, Presentation, Transport.",
+          "isCorrect": false
+        },
+        {
+          "text": "Physical, Data Link, Network, Transport, Session.",
+          "isCorrect": false
+        },
+        {
+          "text": "Application, Transport, Internet, Network Access/Physical.",
+          "isCorrect": true
+        },
+        {
+          "text": "Start, Link, Path, End.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The TCP/IP Protocol Suite consists of the Application Layer, Transport Layer (TCP/UDP), Internet Layer (IP), and the Network Access/Physical Layer."
+    },
+    {
+      "id": "net-ch1-q20",
+      "question": "What is the function of the Application Layer in the TCP/IP suite?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It manages the voltage and signal encoding on the wire.",
+          "isCorrect": false
+        },
+        {
+          "text": "It handles communication between processes or applications.",
+          "isCorrect": true
+        },
+        {
+          "text": "It routes data packets across different networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "It provides error detection for the physical medium.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In the TCP/IP suite, the Application Layer is responsible for communication between processes or applications."
+    },
+    {
+      "id": "net-ch1-q21",
+      "question": "What is the function of the Transport Layer in the TCP/IP suite?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It facilitates end-to-end transfer of data and may include reliability mechanisms.",
+          "isCorrect": true
+        },
+        {
+          "text": "It defines the mechanical and electrical specifications of the interface.",
+          "isCorrect": false
+        },
+        {
+          "text": "It determines the best path for data to travel across the internet.",
+          "isCorrect": false
+        },
+        {
+          "text": "It directly converts digital data into analog signals.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Transport Layer (e.g., TCP) handles end-to-end transfer of data, hides the details of the underlying network, and may include reliability mechanisms."
+    },
+    {
+      "id": "net-ch1-q22",
+      "question": "What is the primary function of the Internet Layer (IP) in the TCP/IP suite?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It provides the user interface for applications.",
+          "isCorrect": false
+        },
+        {
+          "text": "It manages the physical connection to the cable.",
+          "isCorrect": false
+        },
+        {
+          "text": "It handles the sequencing of data packets for applications.",
+          "isCorrect": false
+        },
+        {
+          "text": "It handles the routing of data.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "The Internet Layer (IP) is responsible for the routing of data across the network."
+    },
+    {
+      "id": "net-ch1-q23",
+      "question": "What does the Network Access Layer in the TCP/IP suite do?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It provides the logical interface between the end system and the network.",
+          "isCorrect": true
+        },
+        {
+          "text": "It manages the dialogue and synchronization between applications.",
+          "isCorrect": false
+        },
+        {
+          "text": "It ensures that data is encrypted for secure transmission.",
+          "isCorrect": false
+        },
+        {
+          "text": "It is responsible for the high-level logic of the application software.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Network Access Layer provides the logical interface between the end system and the network, and it handles physical aspects such as the transmission medium, signal rate, and encoding."
+    }
+  ]
+}

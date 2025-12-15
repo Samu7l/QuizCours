@@ -1,0 +1,512 @@
+{
+  "id": "net-ch2",
+  "type": "module",
+  "title": "Chapter 2 - Protocols in Data Communication (I)",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "net-ch2-q1",
+      "question": "What is a protocol in data communication?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A document that provides requirements and specifications to ensure systems are fit for purpose.",
+          "isCorrect": false
+        },
+        {
+          "text": "A set of rules for communication that must be agreed on by both the sender and the receiver.",
+          "isCorrect": true
+        },
+        {
+          "text": "A seven-layer communication structure proposed by ISO to standardize network functions.",
+          "isCorrect": false
+        },
+        {
+          "text": "A transport-layer mechanism that guarantees error-free, sequenced delivery of an entire message.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In the course, a protocol is defined as a set of rules for communication that both the sender and receiver must agree on. Without shared rules, devices cannot interpret addresses, data, or actions consistently."
+    },
+    {
+      "id": "net-ch2-q2",
+      "question": "What are the elements of a protocol?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Data rate, topology, and transmission medium.",
+          "isCorrect": false
+        },
+        {
+          "text": "Compression, encryption, and protocol translation.",
+          "isCorrect": false
+        },
+        {
+          "text": "MAC, LLC, and IP addressing.",
+          "isCorrect": false
+        },
+        {
+          "text": "Syntax, semantics, and timing.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "The course presents three protocol elements: syntax (data structure/format), semantics (meaning and required actions), and timing (when and how fast data is sent). These elements ensure that data can be correctly formed, interpreted, and coordinated between endpoints."
+    },
+    {
+      "id": "net-ch2-q3",
+      "question": "What is the Peer Layer Concept in protocol design?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Entities on each layer communicate with their equivalent (peer) on the other side.",
+          "isCorrect": true
+        },
+        {
+          "text": "Each layer uses the service of the next lower layer and provides service to the layer above.",
+          "isCorrect": false
+        },
+        {
+          "text": "Each layer is implemented independently within standards and does not need to know how other layers work.",
+          "isCorrect": false
+        },
+        {
+          "text": "Each layer adds headers as data moves down the stack and removes them on the way up.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The peer layer concept means that a layer on the source node logically communicates with the same layer on the destination node. This peer-to-peer relationship is how protocols are defined at each layer."
+    },
+    {
+      "id": "net-ch2-q4",
+      "question": "What is the Service Concept in protocol design?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Entities on each layer communicate with their equivalent (peer) layer on the other side, and only the matching layer can remove its own information before passing data upward.",
+          "isCorrect": false
+        },
+        {
+          "text": "Each layer communicates only with the application layer to request user services.",
+          "isCorrect": false
+        },
+        {
+          "text": "Each layer uses the service provided by the lower layer and provides service to the layer above.",
+          "isCorrect": true
+        },
+        {
+          "text": "Each layer is only concerned with end-to-end delivery of the entire message.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In the service concept, every layer depends on the services of the layer below it and, in turn, offers services to the layer above it. This creates a modular, layered design where responsibilities are separated."
+    },
+    {
+      "id": "net-ch2-q5",
+      "question": "What is the Independence Concept in protocol design?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Each layer must share its internal implementation details with adjacent layers to ensure compatibility.",
+          "isCorrect": false
+        },
+        {
+          "text": "Each layer is independent: it performs its task independently, implementation is independent within standards, and it doesn’t need to know how other layers work.",
+          "isCorrect": true
+        },
+        {
+          "text": "Each layer uses the service provided by the next lower layer, provides service to the next higher layer, and this modular separation helps synchronize communication.",
+          "isCorrect": false
+        },
+        {
+          "text": "Each layer is responsible for encrypting data so unauthorized users cannot read it.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The independence concept emphasizes modularity: each OSI layer can be implemented independently as long as it follows the standards. A layer provides and consumes services without needing to know how other layers achieve their tasks."
+    },
+    {
+      "id": "net-ch2-q6",
+      "question": "What is a standard in data communication?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A document that provides requirements, specifications, guidelines, or characteristics to ensure products/processes/services are fit for purpose and interoperable.",
+          "isCorrect": true
+        },
+        {
+          "text": "A set of communication rules that must be agreed on by both sender and receiver.",
+          "isCorrect": false
+        },
+        {
+          "text": "A unique hardware address permanently burned into a network interface card (NIC).",
+          "isCorrect": false
+        },
+        {
+          "text": "A standard proposed by ISO called the OSI model, made up of seven layers where each layer adds header information as data moves through the stack.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The course defines a standard as a document describing requirements and specifications used consistently so systems and services are fit for purpose. In networking, standards are crucial so packets can be structured and interpreted correctly across devices."
+    },
+    {
+      "id": "net-ch2-q7",
+      "question": "What is the difference between protocols and standards?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Protocols are ISO documents; standards are the sequence of OSI layers used to transmit data.",
+          "isCorrect": false
+        },
+        {
+          "text": "Protocols define the physical medium; standards define MAC addresses burned into NICs.",
+          "isCorrect": false
+        },
+        {
+          "text": "Protocols are the seven OSI layers used to transmit data, while standards are the dialog modes (full-duplex, half-duplex, simplex) chosen during a session.",
+          "isCorrect": false
+        },
+        {
+          "text": "Protocols are the rules for communication; standards are documented requirements/specifications that ensure interoperability.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Protocols describe how entities communicate (rules and behaviors). Standards are formal documents that specify requirements so different products and systems can work together reliably."
+    },
+    {
+      "id": "net-ch2-q8",
+      "question": "Which organizations create communication standards?",
+      "type": "single",
+      "options": [
+        {
+          "text": "ISO, IEEE, X.500, and FTAM.",
+          "isCorrect": false
+        },
+        {
+          "text": "ANSI, ITU-T, MAC, and LLC.",
+          "isCorrect": false
+        },
+        {
+          "text": "ISO, ANSI, IEEE, and ITU-T.",
+          "isCorrect": true
+        },
+        {
+          "text": "OSI, TCP/IP, FTAM, and X.400.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The course lists major standardization bodies for communications: ISO, ANSI, IEEE, and ITU-T. These organizations publish standards that enable interoperability across network equipment and software."
+    },
+    {
+      "id": "net-ch2-q9",
+      "question": "What is the OSI model in data communications?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A standard proposed by ISO called the Open Systems Interconnection (OSI) Model, consisting of seven layers that structure communication.",
+          "isCorrect": true
+        },
+        {
+          "text": "A document that provides requirements, specifications, guidelines, or characteristics used consistently so packets can be properly transmitted and received across different systems.",
+          "isCorrect": false
+        },
+        {
+          "text": "A physical addressing scheme permanently burned into a NIC.",
+          "isCorrect": false
+        },
+        {
+          "text": "A document that defines directory services, file transfer, and message handling at the application layer.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In the course, the OSI model is introduced as an ISO-proposed standard that organizes networking into seven layers. Each layer handles a specific part of communication and adds/removes headers as data moves through the stack."
+    },
+    {
+      "id": "net-ch2-q10",
+      "question": "What is the function of the Physical Layer in OSI?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Provide node-to-node delivery and divide responsibilities into MAC and LLC sublayers.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transmit a stream of bits over a physical medium, handling media characteristics, signal encoding, data rate, synchronization, line configuration, topology, and transmission mode.",
+          "isCorrect": true
+        },
+        {
+          "text": "Deliver packets across multiple networks using logical (IP) addresses; routers forward packets and QoS can prioritize high-bandwidth applications such as live video.",
+          "isCorrect": false
+        },
+        {
+          "text": "Deliver packets across multiple networks using logical (IP) addresses and support routing.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The physical layer’s role is to move raw bits across the medium. The course highlights concerns such as how bits are represented as signals, data rate, synchronization, topology, and whether transmission is full- or half-duplex."
+    },
+    {
+      "id": "net-ch2-q11",
+      "question": "What is the function of the Data Link Layer in OSI?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Transmit bits over the medium and encode them into electrical/optical/radio signals.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ensure complete message transfer end-to-end with sequencing and duplicate handling.",
+          "isCorrect": false
+        },
+        {
+          "text": "Responsible for node-to-node delivery and reliable transit over a physical link; divided into MAC and LLC sublayers.",
+          "isCorrect": true
+        },
+        {
+          "text": "Deliver packets across multiple networks using logical (IP) addressing and routers.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The data link layer connects a sender to a receiver on the same network and focuses on reliable delivery over a single physical link. In the course it is split into MAC (physical addressing/access) and LLC (logical control and interface upward)."
+    },
+    {
+      "id": "net-ch2-q12",
+      "question": "What is MAC addressing?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Logical addressing at the network layer uses a network/IP address to reach destinations across multiple networks, and routers use this information to decide how to forward packets.",
+          "isCorrect": false
+        },
+        {
+          "text": "A session-layer mechanism that uses checkpoints to recover after communication failures.",
+          "isCorrect": false
+        },
+        {
+          "text": "A presentation-layer method that converts data between different protocols and platforms.",
+          "isCorrect": false
+        },
+        {
+          "text": "Physical addressing handled at the MAC sublayer: each NIC has a permanently burned-in MAC address used to identify it on the local network and allocate access.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "MAC addressing belongs to the MAC sublayer of the data link layer. The course describes the MAC address as permanently stored on the NIC (burned-in) and used for physical addressing and media access control on the local network."
+    },
+    {
+      "id": "net-ch2-q13",
+      "question": "What is the function of the LLC sublayer in Data Link?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Encodes bits into signals and defines data rate and synchronization on the medium.",
+          "isCorrect": false
+        },
+        {
+          "text": "Defines the logical topology, manages traffic (flow and error control), and provides an interface between the MAC sublayer and the network layer.",
+          "isCorrect": true
+        },
+        {
+          "text": "Uses logical (IP) addressing to route packets across multiple networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Establishes and terminates sessions and chooses dialog modes (full/half/simplex).",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "At the LLC sublayer, the course explains that logical topology is defined and traffic is managed through flow and error control. LLC also acts as the interface between MAC and the network layer above."
+    },
+    {
+      "id": "net-ch2-q14",
+      "question": "What is the function of the Network Layer in OSI?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Deliver packets to their destinations across multiple networks using logical (IP) addresses; supports routers and QoS prioritization.",
+          "isCorrect": true
+        },
+        {
+          "text": "Provide reliable node-to-node delivery across a single physical link using MAC and LLC.",
+          "isCorrect": false
+        },
+        {
+          "text": "Format data for exchange by compression, encryption, and protocol translation.",
+          "isCorrect": false
+        },
+        {
+          "text": "Provide remote login and file transfer services directly to the user.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The network layer is responsible for moving packets across network boundaries. The course notes it uses logical/IP addressing, allows routers to forward packets, and supports prioritization via QoS for high-bandwidth traffic like live video."
+    },
+    {
+      "id": "net-ch2-q15",
+      "question": "What is the function of the Transport Layer in OSI?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Transmit a stream of bits over a physical medium, including how bits are encoded into signals, the data rate, synchronization, topology, and whether transmission is full- or half-duplex.",
+          "isCorrect": false
+        },
+        {
+          "text": "Establish, manage, and terminate communication sessions and place checkpoints in the data stream.",
+          "isCorrect": false
+        },
+        {
+          "text": "Ensure the entire message is delivered end-to-end in order; segment data; provide error-free delivery, sequencing, and duplicate handling (connection-oriented or connectionless).",
+          "isCorrect": true
+        },
+        {
+          "text": "Handle physical characteristics of the medium and represent bits as signals.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The course contrasts the transport layer with the network layer: network treats packets individually, while transport looks at the whole message. Transport also segments data and provides sequencing, error control, and duplicate handling, using connection-oriented or connectionless methods."
+    },
+    {
+      "id": "net-ch2-q16",
+      "question": "What is flow control in the Transport Layer?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Allocating access to the network by computers at the MAC sublayer.",
+          "isCorrect": false
+        },
+        {
+          "text": "Converting data into an encoded form to prevent unauthorized reading.",
+          "isCorrect": false
+        },
+        {
+          "text": "The session layer’s dialog control decides whether communication is full-duplex, half-duplex, or simplex, and it also uses checkpoints so only data after the last marker must be resent.",
+          "isCorrect": false
+        },
+        {
+          "text": "Managing transmission so the sender does not send more data than the receiver can process, supporting proper sequencing and validity of packets.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Flow control is described in the course as a transport-layer function that prevents the sender from overwhelming the receiver. It helps keep delivery reliable by supporting sequencing and ensuring packet validity during end-to-end transfer."
+    },
+    {
+      "id": "net-ch2-q17",
+      "question": "What is the function of the Session Layer in OSI?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Establish, manage, and terminate communication sessions, using checkpoints (markers) for recovery and providing dialog control.",
+          "isCorrect": true
+        },
+        {
+          "text": "Reduce data size and secure data through compression and encryption before transmission.",
+          "isCorrect": false
+        },
+        {
+          "text": "Provide end-to-end error-free delivery of the entire message through segmentation and sequencing.",
+          "isCorrect": false
+        },
+        {
+          "text": "Deliver packets across multiple networks using IP addresses and routing decisions.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The session layer manages the life cycle of a communication session between applications. The course explains it uses checkpoints for recovery after failures and controls the dialog mode (full-duplex, half-duplex, simplex)."
+    },
+    {
+      "id": "net-ch2-q18",
+      "question": "What are dialog modes in the Session Layer?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Connection-oriented, connectionless, and best-effort.",
+          "isCorrect": false
+        },
+        {
+          "text": "Syntax, semantics, and timing.",
+          "isCorrect": false
+        },
+        {
+          "text": "Full-duplex, half-duplex, and simplex.",
+          "isCorrect": true
+        },
+        {
+          "text": "MAC, LLC, and QoS.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The course lists three dialog modes handled by the session layer: full-duplex (both directions simultaneously), half-duplex (both directions but one at a time), and simplex (one direction only)."
+    },
+    {
+      "id": "net-ch2-q19",
+      "question": "What is the function of the Presentation Layer in OSI?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Ensure complete message transfer in sequence and perform flow control end-to-end.",
+          "isCorrect": false
+        },
+        {
+          "text": "Format data for exchange by handling data compression, data encryption, and protocol translation.",
+          "isCorrect": true
+        },
+        {
+          "text": "Provide node-to-node delivery and reliable transit across a physical link.",
+          "isCorrect": false
+        },
+        {
+          "text": "Determine the destination network and forward packets using routers.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The presentation layer is responsible for how data is represented for exchange between systems. In the course, its key functions are compression (reduce size), encryption (secure data), and protocol translation (convert between platforms/operating systems)."
+    },
+    {
+      "id": "net-ch2-q20",
+      "question": "What is the function of the Application Layer in OSI?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Define the logical topology and provide flow/error control over the physical medium.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transmit a stream of bits and handle encoding, data rate, and synchronization.",
+          "isCorrect": false
+        },
+        {
+          "text": "Format data for exchange by defining the representation of data, including compression to reduce size, encryption to secure it, and protocol translation between dissimilar platforms or operating systems.",
+          "isCorrect": false
+        },
+        {
+          "text": "Allow a human or software application to access the network and provide services such as email, file transfer, and remote login (network virtual terminal).",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "The application layer provides the user-facing network services. The course describes it as the interface for services such as email, file transfer, and remote login via a network virtual terminal."
+    },
+    {
+      "id": "net-ch2-q21",
+      "question": "What are examples of OSI Application Layer standards?",
+      "type": "single",
+      "options": [
+        {
+          "text": "X.500, FTAM, and X.400.",
+          "isCorrect": true
+        },
+        {
+          "text": "MAC, LLC, and IP.",
+          "isCorrect": false
+        },
+        {
+          "text": "ISO, ANSI, IEEE, and ITU-T.",
+          "isCorrect": false
+        },
+        {
+          "text": "Compression, encryption, and protocol translation.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "As examples of application-layer standards, the course lists X.500 (directory services), FTAM (File Transfer Access Method), and X.400 (message handling systems)."
+    }
+  ]
+}

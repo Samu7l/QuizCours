@@ -1,0 +1,1304 @@
+{
+    "id": "net-ch11",
+    "type": "module",
+    "title": "Chapter 11 - IPv6 Addressing",
+    "passPercentage": 70,
+    "questions": [
+        {
+            "id": "net-ch11-q1",
+            "question": "Why was IPv6 developed?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "IPv6 was developed because IPv4 is running out of addresses and cannot support the growing Internet population and IoT.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "To replace Ethernet switching with a new Layer 2 standard.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "To make all Internet traffic encrypted by default.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "To eliminate the need for routing by using MAC addresses only.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "IPv6 was developed because IPv4 is running out of addresses and cannot support the growing Internet population and IoT."
+        },
+        {
+            "id": "net-ch11-q2",
+            "question": "What is the address size of IPv6?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "IPv6 uses a 32-bit address space, like IPv4.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "IPv6 uses a 128-bit address space, providing a vastly larger number of addresses than IPv4.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "IPv6 uses a 64-bit address space.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "IPv6 uses a 48-bit address space, like an Ethernet MAC.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "IPv6 uses a 128-bit address space, providing a vastly larger number of addresses than IPv4."
+        },
+        {
+            "id": "net-ch11-q3",
+            "question": "Why must IPv4 and IPv6 coexist?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Because the transition to IPv6 will take several years and IPv4 networks still exist.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Because IPv6 cannot be deployed on LANs and is WAN-only.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "Because IPv4 supports more addresses than IPv6.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Because routers cannot run IPv6 at the same time as IPv4.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Because the transition to IPv6 will take several years and IPv4 networks still exist."
+        },
+        {
+            "id": "net-ch11-q4",
+            "question": "What are the three IPv6 transition mechanisms?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Dual Stack Tunneling Translation (NAT64).",
+                    "isCorrect": true
+                },
+                {
+                    "text": "SLAAC, DHCPv6, and Duplicate Address Detection (DAD).",
+                    "isCorrect": false
+                },
+                {
+                    "text": "VLANs, trunking, and Spanning Tree Protocol (STP).",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Subnetting, supernetting, and route summarization.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Dual Stack Tunneling Translation (NAT64)."
+        },
+        {
+            "id": "net-ch11-q5",
+            "question": "What is dual stack?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "It encapsulates IPv4 packets inside IPv6 packets across an IPv6-only network.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "It translates IPv4-only devices into IPv6-only devices using NAT44.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "It forces hosts to use only link-local addresses for all traffic.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Devices run both IPv4 and IPv6 protocol stacks simultaneously.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "Devices run both IPv4 and IPv6 protocol stacks simultaneously."
+        },
+        {
+            "id": "net-ch11-q6",
+            "question": "What is IPv6 tunneling?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Transporting an IPv6 packet inside an IPv4 packet across an IPv4 network.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Transporting an IPv4 packet inside an IPv6 packet across an IPv6 network.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "Assigning a /64 prefix using a stateful DHCPv6 server.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Converting multicast traffic into broadcast traffic on a LAN.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Transporting an IPv6 packet inside an IPv4 packet across an IPv4 network."
+        },
+        {
+            "id": "net-ch11-q7",
+            "question": "What is NAT64?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "A translation method that allows IPv6-only devices to communicate with IPv4-only devices.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A method that tags IPv6 frames with VLAN IDs to cross a trunk link.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A process that replaces leading zeros with a double colon in addresses.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A technique that allows IPv4-only devices to communicate with each other using IPv6 headers.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "A translation method that allows IPv6-only devices to communicate with IPv4-only devices."
+        },
+        {
+            "id": "net-ch11-q8",
+            "question": "What is the preferred long-term goal of IPv6 migration?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Keeping IPv4 permanently and using NAT everywhere.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Using tunneling for all traffic even when native IPv6 is possible.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Using only translation (NAT64) end-to-end in every network.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Native IPv6 communication from source to destination.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "Native IPv6 communication from source to destination."
+        },
+        {
+            "id": "net-ch11-q9",
+            "question": "How are IPv6 addresses written?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "In hexadecimal using eight groups of four hex digits separated by colons.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "In decimal using four octets separated by dots (x.x.x.x).",
+                    "isCorrect": false
+                },
+                {
+                    "text": "In binary using 128 digits grouped in bytes.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "In hexadecimal using six groups like a MAC address.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "In hexadecimal using eight groups of four hex digits separated by colons."
+        },
+        {
+            "id": "net-ch11-q10",
+            "question": "What is a hextet in IPv6?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "An 8-bit segment represented by two hexadecimal digits.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A 32-bit segment represented by eight hexadecimal digits.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A 48-bit segment represented by twelve hexadecimal digits.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A 16-bit segment represented by four hexadecimal digits.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "A 16-bit segment represented by four hexadecimal digits."
+        },
+        {
+            "id": "net-ch11-q11",
+            "question": "What is Rule 1 for IPv6 address representation?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Omit trailing zeros in each hextet to shorten the address.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Replace any repeated digit with a single digit to compress the address.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Convert the hexadecimal address into dotted-decimal notation.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Omit leading zeros in each hextet.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "Omit leading zeros in each hextet."
+        },
+        {
+            "id": "net-ch11-q12",
+            "question": "Why can trailing zeros not be omitted in IPv6?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Because it would make the address ambiguous.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "Because IPv6 requires all hextets to be exactly four digits long.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Because routers drop packets with trailing zeros in the address.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Because trailing zeros indicate a multicast address.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Because it would make the address ambiguous."
+        },
+        {
+            "id": "net-ch11-q13",
+            "question": "What is Rule 2 for IPv6 address representation?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Use :: to replace one contiguous sequence of zero hextets.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Use :: to replace any non-contiguous zeros anywhere in the address.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "Use :: to replace any hextet that contains the letter 'a'.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Use :: to replace exactly two hextets, no more and no less.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Use :: to replace one contiguous sequence of zero hextets."
+        },
+        {
+            "id": "net-ch11-q14",
+            "question": "How many times can :: be used in an IPv6 address?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "It can be used any number of times as long as the address stays 128 bits.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "It can be used twice, once for the network and once for the host portion.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "It must be used at least once in every IPv6 address.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Only once.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "Only once."
+        },
+        {
+            "id": "net-ch11-q15",
+            "question": "What are the three main types of IPv6 addresses?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Broadcast, unicast, and localcast.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Unicast, broadcast, and geocast.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Anycast, broadcast, and loopback.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Unicast Multicast Anycast.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "Unicast Multicast Anycast."
+        },
+        {
+            "id": "net-ch11-q16",
+            "question": "Does IPv6 support broadcast addresses?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Yes, IPv6 uses broadcast just like IPv4.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "No, IPv6 replaces broadcast with multicast.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "Yes, but only for link-local communication.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Yes, broadcast is required for Router Advertisements.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "No, IPv6 replaces broadcast with multicast."
+        },
+        {
+            "id": "net-ch11-q17",
+            "question": "What is an IPv6 unicast address?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "An address used to reach all devices on the local link.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "An address that uniquely identifies one interface.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "An address used to reach all routers on the local link.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "An address used to reach the nearest device in a group.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "An address that uniquely identifies one interface."
+        },
+        {
+            "id": "net-ch11-q18",
+            "question": "What is an IPv6 multicast address?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "An address that uniquely identifies one interface.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A special address that is routed only to the nearest device.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "An address used to send to every device using broadcast.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "An address used to send packets to multiple destinations.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "An address used to send packets to multiple destinations."
+        },
+        {
+            "id": "net-ch11-q19",
+            "question": "What is an IPv6 anycast address?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "A unicast address assigned to multiple devices where packets go to the nearest device.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A multicast address that sends packets to all devices in a group.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A broadcast address used to reach every node on a subnet.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "A link-local address used only within the same switch.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "A unicast address assigned to multiple devices where packets go to the nearest device."
+        },
+        {
+            "id": "net-ch11-q20",
+            "question": "How is an IPv6 prefix length written?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Using dotted-decimal masks like 255.255.255.0.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Using VLAN IDs like VLAN 10.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Using hexadecimal masks like ffff:ffff:ffff:ffff.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Using slash notation, such as /64.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "Using slash notation, such as /64."
+        },
+        {
+            "id": "net-ch11-q21",
+            "question": "What is the recommended IPv6 prefix length for LANs?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "/64",
+                    "isCorrect": false
+                },
+                {
+                    "text": "/48, because it always matches ISP allocations.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "/96, because it simplifies NAT64 translation.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "/128, because hosts should not have network bits.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "/64"
+        },
+        {
+            "id": "net-ch11-q22",
+            "question": "Why is /64 recommended for IPv6 LANs?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Because SLAAC requires a 64-bit Interface ID and simplifies subnetting.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Because IPv6 requires a 32-bit Interface ID for every host.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Because /64 prevents the use of link-local addresses.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "Because /64 is the only prefix that supports multicast.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Because SLAAC requires a 64-bit Interface ID and simplifies subnetting."
+        },
+        {
+            "id": "net-ch11-q23",
+            "question": "What unicast addresses does an IPv6 device usually have?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "One global unicast and one broadcast address.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A multicast address and an anycast address only.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Only a single link-local address, never a global address.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Global Unicast Address (GUA) Link-Local Address (LLA).",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "Global Unicast Address (GUA) Link-Local Address (LLA)."
+        },
+        {
+            "id": "net-ch11-q24",
+            "question": "What is a Global Unicast Address (GUA)?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "A globally unique and internet-routable IPv6 address.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "An address used only on the same local link and never routed.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "An address reserved for all routers on a link.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "An address that always starts with fe80.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "A globally unique and internet-routable IPv6 address."
+        },
+        {
+            "id": "net-ch11-q25",
+            "question": "What prefix range is currently used for GUAs?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "fe80::/10, because GUAs are link-local.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "ff00::/8, because GUAs are multicast.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "0000::/0, because any prefix is globally routable.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "2000::/3 (addresses starting with 2 or 3).",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "2000::/3 (addresses starting with 2 or 3)."
+        },
+        {
+            "id": "net-ch11-q26",
+            "question": "What are the three parts of an IPv6 GUA?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Network ID, Host ID, and Broadcast ID.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "MAC address, VLAN ID, and EtherType.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Global Routing Prefix Subnet ID Interface ID.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "Prefix length, checksum, and TTL.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Global Routing Prefix Subnet ID Interface ID."
+        },
+        {
+            "id": "net-ch11-q27",
+            "question": "What is the role of the Subnet ID in IPv6?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "It identifies subnets within an organization.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "It identifies the vendor of the network interface card.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "It indicates the multicast group the host belongs to.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "It replaces the interface ID to uniquely identify a host.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "It identifies subnets within an organization."
+        },
+        {
+            "id": "net-ch11-q28",
+            "question": "What is an IPv6 Link-Local Address (LLA)?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "An address used for communication on the same link only.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "An address that is always publicly reachable on the Internet.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "An address used to send traffic to multiple destinations.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "A special address used for broadcast messages.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "An address used for communication on the same link only."
+        },
+        {
+            "id": "net-ch11-q29",
+            "question": "Can IPv6 LLAs be routed?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "No, they are limited to a single link.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Yes, LLAs are globally routable by default.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "Yes, but only within the same autonomous system.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Yes, if the prefix length is /64.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "No, they are limited to a single link."
+        },
+        {
+            "id": "net-ch11-q30",
+            "question": "What prefix is used for IPv6 link-local addresses?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "fe80::/10",
+                    "isCorrect": true
+                },
+                {
+                    "text": "2000::/3",
+                    "isCorrect": false
+                },
+                {
+                    "text": "ff00::/8",
+                    "isCorrect": false
+                },
+                {
+                    "text": "fd00::/8",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "fe80::/10"
+        },
+        {
+            "id": "net-ch11-q31",
+            "question": "How are IPv6 GUAs statically configured on a router?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Using the command ipv6 address ipv6-address/prefix-length",
+                    "isCorrect": true
+                },
+                {
+                    "text": "ip address ipv4-address subnet-mask",
+                    "isCorrect": false
+                },
+                {
+                    "text": "ipv6 unicast-routing interface-id",
+                    "isCorrect": false
+                },
+                {
+                    "text": "ipv6 dhcp pool ipv6-address",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Using the command ipv6 address ipv6-address/prefix-length"
+        },
+        {
+            "id": "net-ch11-q32",
+            "question": "Why is the router LLA recommended as default gateway?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Because it is always reachable on the local link.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Because it is globally routable and reachable from any network.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Because it changes frequently to improve privacy.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Because it eliminates the need for Router Advertisements.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "Because it is always reachable on the local link."
+        },
+        {
+            "id": "net-ch11-q33",
+            "question": "How can an IPv6 LLA be manually configured?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Using ipv6 address ipv6-link-local-address link-local",
+                    "isCorrect": true
+                },
+                {
+                    "text": "ipv6 address ipv6-address/prefix-length",
+                    "isCorrect": false
+                },
+                {
+                    "text": "ipv6 route ::/0 fe80::1",
+                    "isCorrect": false
+                },
+                {
+                    "text": "ip address fe80::1 255.255.255.0",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Using ipv6 address ipv6-link-local-address link-local"
+        },
+        {
+            "id": "net-ch11-q34",
+            "question": "What protocol is used for dynamic IPv6 address configuration?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "ARP",
+                    "isCorrect": false
+                },
+                {
+                    "text": "ICMPv4",
+                    "isCorrect": false
+                },
+                {
+                    "text": "FTP",
+                    "isCorrect": false
+                },
+                {
+                    "text": "ICMPv6",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "ICMPv6"
+        },
+        {
+            "id": "net-ch11-q35",
+            "question": "What is a Router Solicitation (RS) message?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "A message sent by a host to discover IPv6 routers.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A message sent by routers to announce routing tables to other routers.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A message sent by switches to elect a root bridge.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A message sent by hosts to request DNS name resolution.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "A message sent by a host to discover IPv6 routers."
+        },
+        {
+            "id": "net-ch11-q36",
+            "question": "What is a Router Advertisement (RA) message?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "A message sent by routers to tell hosts how to obtain IPv6 addresses.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A message sent by hosts to discover IPv6 routers.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A message sent by routers to translate IPv4 to IPv6.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "A message sent by DHCPv4 servers to lease IPv4 addresses.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "A message sent by routers to tell hosts how to obtain IPv6 addresses."
+        },
+        {
+            "id": "net-ch11-q37",
+            "question": "What information can RA messages provide?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Network prefix Prefix length Default gateway DNS information.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "MAC address vendor code and Ethernet speed.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "VLAN ID and trunk encapsulation type.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Hop count and routing metric.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Network prefix Prefix length Default gateway DNS information."
+        },
+        {
+            "id": "net-ch11-q38",
+            "question": "What are the three IPv6 dynamic configuration methods?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Dual stack, tunneling, and translation (NAT64).",
+                    "isCorrect": false
+                },
+                {
+                    "text": "EUI-64, DAD, and NAT66.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Static routing, OSPFv3, and RIPng.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "SLAAC SLAAC with stateless DHCPv6 Stateful DHCPv6.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "SLAAC SLAAC with stateless DHCPv6 Stateful DHCPv6."
+        },
+        {
+            "id": "net-ch11-q39",
+            "question": "What is SLAAC?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "A method where routers assign IPv6 addresses using stateful DHCPv6 only.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A translation technology that allows IPv6-only to talk to IPv4-only.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A method where hosts manually configure a global routing prefix.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A method where hosts configure IPv6 addresses without DHCPv6.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "A method where hosts configure IPv6 addresses without DHCPv6."
+        },
+        {
+            "id": "net-ch11-q40",
+            "question": "How does SLAAC generate the Interface ID?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Using only the subnet ID field provided by the ISP.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Using DHCPv4 options to build the address.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Using the default gateway address as the interface ID.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Using EUI-64 or a randomly generated 64-bit value.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "Using EUI-64 or a randomly generated 64-bit value."
+        },
+        {
+            "id": "net-ch11-q41",
+            "question": "What is the EUI-64 process?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Inserts fffe into the MAC address and flips the 7th bit.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "Removes fffe from the MAC address and flips the last bit.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Inserts 0000 into the MAC address and keeps all bits unchanged.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Converts the MAC address into decimal and appends it to the prefix.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Inserts fffe into the MAC address and flips the 7th bit."
+        },
+        {
+            "id": "net-ch11-q42",
+            "question": "Why do some OSes use random Interface IDs?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "To reduce the IPv6 header size and speed up routing.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "To improve privacy and security.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "Because IPv6 forbids using MAC addresses in interface IDs.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "To ensure all devices share the same interface ID for easier management.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "To improve privacy and security."
+        },
+        {
+            "id": "net-ch11-q43",
+            "question": "What is Duplicate Address Detection (DAD)?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "A process to ensure an IPv6 address is unique on the network.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A method used to compress IPv6 addresses with :: notation.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A process that assigns the subnet ID automatically from the ISP.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "A technique to tunnel IPv6 packets inside IPv4 packets.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "A process to ensure an IPv6 address is unique on the network."
+        },
+        {
+            "id": "net-ch11-q44",
+            "question": "How are IPv6 LLAs dynamically created?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Using fe80::/10 plus an Interface ID.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "Using 2000::/3 plus the global routing prefix.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Using ff00::/8 plus the multicast group ID.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Using 0.0.0.0/0 plus a dotted-decimal host ID.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Using fe80::/10 plus an Interface ID."
+        },
+        {
+            "id": "net-ch11-q45",
+            "question": "How do Cisco routers generate LLAs by default?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Random 64-bit generation only, never using the MAC address.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Stateful DHCPv6 allocation for every interface ID.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Manual configuration is required before any LLA exists.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Using the EUI-64 process.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "Using the EUI-64 process."
+        },
+        {
+            "id": "net-ch11-q46",
+            "question": "What prefix is used for IPv6 multicast addresses?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "fe80::/10",
+                    "isCorrect": false
+                },
+                {
+                    "text": "2000::/3",
+                    "isCorrect": false
+                },
+                {
+                    "text": "ff00::/8",
+                    "isCorrect": true
+                },
+                {
+                    "text": "ff02::/16",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "ff00::/8"
+        },
+        {
+            "id": "net-ch11-q47",
+            "question": "Can multicast addresses be used as source addresses?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "No, only as destination addresses.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Yes, multicast can be a source as long as it is link-local.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "Yes, but only for Router Advertisements.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Yes, if the address starts with ff02.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "No, only as destination addresses."
+        },
+        {
+            "id": "net-ch11-q48",
+            "question": "What is the all-nodes multicast address?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "ff02::2",
+                    "isCorrect": false
+                },
+                {
+                    "text": "fe80::1",
+                    "isCorrect": false
+                },
+                {
+                    "text": "ff00::1",
+                    "isCorrect": false
+                },
+                {
+                    "text": "ff02::1",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "ff02::1"
+        },
+        {
+            "id": "net-ch11-q49",
+            "question": "What is the all-routers multicast address?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "ff02::2",
+                    "isCorrect": false
+                },
+                {
+                    "text": "ff02::1",
+                    "isCorrect": false
+                },
+                {
+                    "text": "2001:db8::2",
+                    "isCorrect": true
+                },
+                {
+                    "text": "ff00::2",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "ff02::2"
+        },
+        {
+            "id": "net-ch11-q50",
+            "question": "What is a solicited-node multicast address used for?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Efficient neighbor discovery without broadcasting.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Delivering packets to every device using IPv6 broadcast.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Assigning global unicast addresses to hosts via DHCPv4.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "Electing the root bridge in a switched IPv6 network.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "Efficient neighbor discovery without broadcasting."
+        },
+        {
+            "id": "net-ch11-q51",
+            "question": "How does IPv6 support subnetting?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "Using a separate Subnet ID field in the GUA.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "By using broadcast addresses to discover subnets.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "By increasing the TTL field for each subnet.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "By requiring NAT on every subnet boundary.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "Using a separate Subnet ID field in the GUA."
+        },
+        {
+            "id": "net-ch11-q52",
+            "question": "How many /64 subnets can be created from a /48 prefix?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "256 subnets.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "4,096 subnets.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "1,024 subnets.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "65,536 subnets.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "( 2^16 = 65,536 ) subnets."
+        },
+        {
+            "id": "net-ch11-q53",
+            "question": "What is incremented when creating IPv6 subnets?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "The Subnet ID hextet.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "The Interface ID portion.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "The Global Routing Prefix assigned by the ISP.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "The multicast prefix ff00::/8.",
+                    "isCorrect": true
+                }
+            ],
+            "explanation": "The Subnet ID hextet."
+        },
+        {
+            "id": "net-ch11-q54",
+            "question": "What is the key takeaway of IPv6 addressing?",
+            "type": "single",
+            "options": [
+                {
+                    "text": "IPv6 provides scalable addressing, built-in subnetting, simplified configuration, and long-term Internet growth.",
+                    "isCorrect": true
+                },
+                {
+                    "text": "It uses the fe80::/10 prefix for link-local communication only.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "It relies on Router Advertisements (RA) to provide network information.",
+                    "isCorrect": false
+                },
+                {
+                    "text": "It uses the 2000::/3 range for global unicast addressing.",
+                    "isCorrect": false
+                }
+            ],
+            "explanation": "IPv6 provides scalable addressing, built-in subnetting, simplified configuration, and long-term Internet growth."
+        }
+    ]
+}

@@ -166,7 +166,7 @@ nav button:hover { background: rgba(255,255,255,0.2); text-decoration: none; }
 }
 
 /* Views & Animation */
-.view { display: none; max-width: 900px; margin: 0 auto; animation: fadeIn 0.4s ease-out; }
+.view { display: none; max-width: 1300px; margin: 0 auto; animation: fadeIn 0.4s ease-out; }
 .view.active { display: block; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -480,6 +480,81 @@ h1, h2, h3 { font-family: var(--font-heading); color: var(--primary); }
     text-align: center;
     padding-top: 2rem;
     border-top: 1px dashed var(--border-color);
+}
+
+/* --- Quiz : layout 2 colonnes --- */
+#view-quiz {
+  padding: 18px;
+}
+
+.quiz-layout {
+  display: grid;
+  grid-template-columns: minmax(520px, 1fr) 360px;
+  gap: 18px;
+
+  /* important : on force la vue à rentrer dans l'écran */
+  height: calc(100vh - 90px); /* ajuste 90px selon la hauteur réelle de ton header */
+  min-height: 520px;
+}
+
+/* Colonne gauche : question scrollable, boutons visibles */
+.quiz-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* permet le scroll interne */
+}
+
+.quiz-main .question-card {
+  flex: 1;
+  overflow: auto;          /* scroll interne si besoin */
+  min-height: 0;
+}
+
+.quiz-controls {
+  margin-top: 12px;
+  position: sticky;
+  bottom: 0;
+  background: #fff;        /* évite transparence quand ça sticky */
+  padding-top: 12px;
+}
+
+/* Colonne droite : infos + map */
+.quiz-side {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: auto;
+  position: sticky;
+  top: 12px;
+  align-self: start;
+  max-height: calc(100vh - 110px); /* ajuste avec ton header */
+  padding-right: 6px;
+}
+
+/* Optionnel : la map peut scroller si très longue */
+#question-nav-map {
+  margin-top: 14px;
+  overflow: auto;
+  padding-bottom: 10px;
+}
+
+/* Responsive : sur petit écran, on repasse en 1 colonne */
+@media (max-width: 980px) {
+  .quiz-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .quiz-side {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    order: -1; /* affiche les infos au-dessus si tu veux */
+  }
+
+  .quiz-controls {
+    position: static;
+  }
 }
 
 /* --- CUSTOM BUILDER --- */

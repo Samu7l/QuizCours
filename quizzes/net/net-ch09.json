@@ -1,0 +1,248 @@
+{
+  "id": "net-ch9",
+  "type": "module",
+  "title": "Chapter 9 - Switching and Routing",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "net-ch9-q1",
+      "question": "What is the goal of selecting switching and routing protocols?",
+      "type": "single",
+      "options": [
+        { "text": "To minimize the number of switches and routers used in a network.", "isCorrect": false },
+        { "text": "To choose protocols that best match a customer’s business goals and technical requirements.", "isCorrect": true },
+        { "text": "To always select vendor-proprietary protocols for better performance.", "isCorrect": false },
+        { "text": "To reduce cabling costs by limiting network scalability.", "isCorrect": false }
+      ],
+      "explanation": "Protocol selection must align with both business objectives and technical requirements so that the resulting network design is scalable, reliable, and fit for purpose."
+    },
+    {
+      "id": "net-ch9-q2",
+      "question": "Why is protocol selection important in network design?",
+      "type": "single",
+      "options": [
+        { "text": "It determines the color-coding and labeling of cables.", "isCorrect": false },
+        { "text": "It ensures scalability, reliability, and performance while helping select the most appropriate switch or router.", "isCorrect": true },
+        { "text": "It eliminates the need for documentation and testing.", "isCorrect": false },
+        { "text": "It guarantees zero latency across the network.", "isCorrect": false }
+      ],
+      "explanation": "Choosing the right protocols helps ensure the network can grow, perform well, and remain reliable while matching hardware capabilities to design goals."
+    },
+    {
+      "id": "net-ch9-q3",
+      "question": "What systematic process is recommended for protocol selection?",
+      "type": "single",
+      "options": [
+        { "text": "Using trial-and-error testing in a production network.", "isCorrect": false },
+        { "text": "Selecting protocols based solely on vendor popularity.", "isCorrect": false },
+        { "text": "Using decision tables that match protocols to business and technical goals.", "isCorrect": true },
+        { "text": "Choosing the newest protocol available.", "isCorrect": false }
+      ],
+      "explanation": "Decision tables provide a structured way to compare protocol features against business and technical requirements, improving design decisions."
+    },
+    {
+      "id": "net-ch9-q4",
+      "question": "What is a switching protocol?",
+      "type": "single",
+      "options": [
+        { "text": "A protocol that controls how Layer 2 switches forward frames and avoid loops.", "isCorrect": true },
+        { "text": "A protocol used only for assigning IP addresses.", "isCorrect": false },
+        { "text": "A protocol that encrypts data at the application layer.", "isCorrect": false },
+        { "text": "A protocol used exclusively for WAN routing.", "isCorrect": false }
+      ],
+      "explanation": "Switching protocols operate at Layer 2 and define how frames are forwarded while preventing loops in switched networks."
+    },
+    {
+      "id": "net-ch9-q5",
+      "question": "What is a routing protocol?",
+      "type": "single",
+      "options": [
+        { "text": "A protocol that allows routers to dynamically learn and exchange network reachability information.", "isCorrect": true },
+        { "text": "A protocol that tags Ethernet frames with VLAN IDs.", "isCorrect": false },
+        { "text": "A protocol that prevents Layer 2 loops.", "isCorrect": false },
+        { "text": "A protocol used only for physical media selection.", "isCorrect": false }
+      ],
+      "explanation": "Routing protocols enable routers to discover networks and share reachability information dynamically."
+    },
+    {
+      "id": "net-ch9-q6",
+      "question": "What is Spanning Tree Protocol (STP)?",
+      "type": "single",
+      "options": [
+        { "text": "A Layer 3 protocol used to calculate shortest paths.", "isCorrect": false },
+        { "text": "A Layer 2 protocol documented in IEEE 802.1D that prevents loops by creating a loop-free tree topology.", "isCorrect": true },
+        { "text": "A VLAN management protocol.", "isCorrect": false },
+        { "text": "A routing protocol for large internetworks.", "isCorrect": false }
+      ],
+      "explanation": "STP operates at Layer 2 and prevents switching loops by logically pruning redundant paths into a loop-free tree."
+    },
+    {
+      "id": "net-ch9-q7",
+      "question": "Why are loops dangerous in Layer 2 networks?",
+      "type": "single",
+      "options": [
+        { "text": "They reduce available bandwidth slightly.", "isCorrect": false },
+        { "text": "They cause broadcast storms, duplicate frames, and MAC table instability.", "isCorrect": true },
+        { "text": "They slow down routing convergence only.", "isCorrect": false },
+        { "text": "They only affect wireless networks.", "isCorrect": false }
+      ],
+      "explanation": "Layer 2 loops can create broadcast storms and unstable MAC tables, severely impacting network operation."
+    },
+    {
+      "id": "net-ch9-q8",
+      "question": "What is a root bridge in STP?",
+      "type": "single",
+      "options": [
+        { "text": "The switch with the highest bandwidth interfaces.", "isCorrect": false },
+        { "text": "The central reference switch from which the spanning tree is built.", "isCorrect": true },
+        { "text": "Any switch connected to end devices.", "isCorrect": false },
+        { "text": "The switch with the most VLANs configured.", "isCorrect": false }
+      ],
+      "explanation": "The root bridge is the logical center of the spanning tree and serves as the reference point for path calculations."
+    },
+    {
+      "id": "net-ch9-q9",
+      "question": "How is the root bridge elected in STP?",
+      "type": "single",
+      "options": [
+        { "text": "By selecting the switch with the lowest Bridge ID.", "isCorrect": true },
+        { "text": "By selecting the switch with the highest MAC address.", "isCorrect": false },
+        { "text": "By administrator manual selection only.", "isCorrect": false },
+        { "text": "By selecting the switch with the most ports.", "isCorrect": false }
+      ],
+      "explanation": "STP elects the root bridge based on the lowest Bridge ID, which is composed of priority and MAC address."
+    },
+    {
+      "id": "net-ch9-q10",
+      "question": "What is a VLAN?",
+      "type": "single",
+      "options": [
+        { "text": "A physical separation of switches using dedicated cabling.", "isCorrect": false },
+        { "text": "A logical emulation of a LAN that groups devices into an administrative domain.", "isCorrect": true },
+        { "text": "A routing protocol used inside an autonomous system.", "isCorrect": false },
+        { "text": "A WAN technology for long-distance communication.", "isCorrect": false }
+      ],
+      "explanation": "A VLAN logically groups devices regardless of physical location, improving management, security, and broadcast control."
+    },
+    {
+      "id": "net-ch9-q11",
+      "question": "What is a trunk link?",
+      "type": "single",
+      "options": [
+        { "text": "A link between switches that carries traffic for multiple VLANs.", "isCorrect": true },
+        { "text": "A link used only for management traffic.", "isCorrect": false },
+        { "text": "A point-to-point WAN connection.", "isCorrect": false },
+        { "text": "A backup link used only during failures.", "isCorrect": false }
+      ],
+      "explanation": "Trunk links allow multiple VLANs to traverse a single physical link between switches using VLAN tagging."
+    },
+    {
+      "id": "net-ch9-q12",
+      "question": "What standard defines VLAN tagging?",
+      "type": "single",
+      "options": [
+        { "text": "IEEE 802.3", "isCorrect": false },
+        { "text": "IEEE 802.11", "isCorrect": false },
+        { "text": "IEEE 802.1Q", "isCorrect": true },
+        { "text": "RFC 2328", "isCorrect": false }
+      ],
+      "explanation": "IEEE 802.1Q defines how VLAN information is added to Ethernet frames on trunk links."
+    },
+    {
+      "id": "net-ch9-q13",
+      "question": "What is the main goal of a routing protocol?",
+      "type": "single",
+      "options": [
+        { "text": "To share network reachability information among routers.", "isCorrect": true },
+        { "text": "To prevent Layer 2 loops.", "isCorrect": false },
+        { "text": "To tag frames with VLAN IDs.", "isCorrect": false },
+        { "text": "To assign MAC addresses to devices.", "isCorrect": false }
+      ],
+      "explanation": "Routing protocols allow routers to learn about networks and determine how to reach them efficiently."
+    },
+    {
+      "id": "net-ch9-q14",
+      "question": "What is convergence in routing?",
+      "type": "single",
+      "options": [
+        { "text": "The time it takes to install new cabling.", "isCorrect": false },
+        { "text": "The process by which all routers agree on optimal routes after a change.", "isCorrect": true },
+        { "text": "The calculation of VLAN IDs.", "isCorrect": false },
+        { "text": "The selection of a root bridge.", "isCorrect": false }
+      ],
+      "explanation": "Convergence describes how quickly routers reach a consistent view of the network after topology changes."
+    },
+    {
+      "id": "net-ch9-q15",
+      "question": "What is a distance-vector routing protocol?",
+      "type": "single",
+      "options": [
+        { "text": "A protocol where routers share routing tables with neighbors periodically.", "isCorrect": true },
+        { "text": "A protocol that sends updates only when changes occur.", "isCorrect": false },
+        { "text": "A protocol based on a full topology database.", "isCorrect": false },
+        { "text": "A protocol used only between autonomous systems.", "isCorrect": false }
+      ],
+      "explanation": "Distance-vector protocols exchange routing information periodically and base decisions on distance metrics."
+    },
+    {
+      "id": "net-ch9-q16",
+      "question": "What algorithm do link-state routing protocols use?",
+      "type": "single",
+      "options": [
+        { "text": "Bellman-Ford algorithm.", "isCorrect": false },
+        { "text": "Flooding algorithm.", "isCorrect": false },
+        { "text": "Dijkstra’s Shortest Path First (SPF) algorithm.", "isCorrect": true },
+        { "text": "Round-robin scheduling.", "isCorrect": false }
+      ],
+      "explanation": "Link-state protocols use Dijkstra’s SPF algorithm to compute the shortest paths through the network graph."
+    },
+    {
+      "id": "net-ch9-q17",
+      "question": "What is RIP?",
+      "type": "single",
+      "options": [
+        { "text": "A link-state routing protocol using cost as a metric.", "isCorrect": false },
+        { "text": "A simple distance-vector routing protocol using hop count.", "isCorrect": true },
+        { "text": "A proprietary Cisco enhanced routing protocol.", "isCorrect": false },
+        { "text": "An exterior routing protocol used on the Internet.", "isCorrect": false }
+      ],
+      "explanation": "RIP is a basic distance-vector protocol that uses hop count as its sole routing metric."
+    },
+    {
+      "id": "net-ch9-q18",
+      "question": "What is the maximum hop count in RIP?",
+      "type": "single",
+      "options": [
+        { "text": "10 hops.", "isCorrect": false },
+        { "text": "15 hops.", "isCorrect": true },
+        { "text": "30 hops.", "isCorrect": false },
+        { "text": "255 hops.", "isCorrect": false }
+      ],
+      "explanation": "RIP limits paths to a maximum of 15 hops, which restricts its scalability."
+    },
+    {
+      "id": "net-ch9-q19",
+      "question": "What is OSPF?",
+      "type": "single",
+      "options": [
+        { "text": "An open-standard link-state routing protocol defined in RFC 2328.", "isCorrect": true },
+        { "text": "A distance-vector protocol using hop count.", "isCorrect": false },
+        { "text": "A proprietary VLAN tagging protocol.", "isCorrect": false },
+        { "text": "An exterior routing protocol used only by ISPs.", "isCorrect": false }
+      ],
+      "explanation": "OSPF is an open-standard link-state protocol designed for scalable and fast-converging networks."
+    },
+    {
+      "id": "net-ch9-q20",
+      "question": "What is the key takeaway for switching and routing design?",
+      "type": "single",
+      "options": [
+        { "text": "Always choose the simplest protocol regardless of requirements.", "isCorrect": false },
+        { "text": "Choose protocols that balance scalability, performance, convergence, and administrative control.", "isCorrect": true },
+        { "text": "Avoid open standards whenever possible.", "isCorrect": false },
+        { "text": "Design networks without considering business goals.", "isCorrect": false }
+      ],
+      "explanation": "Effective switching and routing design requires balancing technical performance with scalability and administrative needs."
+    }
+  ]
+}

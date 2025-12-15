@@ -1,0 +1,500 @@
+{
+  "id": "net-ch6",
+  "type": "module",
+  "title": "Chapter 6 - Transmission Media (Unguided Media)",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "net-ch6-q1",
+      "question": "What are unguided transmission media?",
+      "type": "single",
+      "options": [
+        { "text": "Unguided media transport electromagnetic waves without a physical conductor; they are commonly called wireless communication.", "isCorrect": false },
+        { "text": "Unguided media transport electromagnetic waves without using a physical conductor; they are commonly referred to as wireless communication.", "isCorrect": true },
+        { "text": "Unguided media transport signals only through copper conductors and require shielding to reduce interference.", "isCorrect": false },
+        { "text": "Unguided media are guided channels where signals stay inside a cable like twisted pair or fiber.", "isCorrect": false }
+      ],
+      "explanation": "Unguided media carry electromagnetic waves through air (or space) without a physical conductor, which is why they are often called wireless communication."
+    },
+    {
+      "id": "net-ch6-q2",
+      "question": "How are signals transmitted in unguided media?",
+      "type": "single",
+      "options": [
+        { "text": "Signals are sent as light pulses confined in a glass core by total internal reflection.", "isCorrect": false },
+        { "text": "Signals are broadcast through air and can be received by any device capable of receiving them.", "isCorrect": true },
+        { "text": "Signals are carried only inside a cable and protected from being received outside the conduit.", "isCorrect": false },
+        { "text": "Signals must be forwarded hop-by-hop by switches using MAC addresses on a wired segment.", "isCorrect": false }
+      ],
+      "explanation": "In unguided transmission, signals are typically broadcast through air, so they can be received by devices that can detect the same frequency/band."
+    },
+    {
+      "id": "net-ch6-q3",
+      "question": "What are the main ways unguided signals travel from source to destination?",
+      "type": "single",
+      "options": [
+        { "text": "Ground propagation, sky propagation, and line-of-sight propagation.", "isCorrect": true },
+        { "text": "Baseband, broadband, and multiplexed propagation.", "isCorrect": false },
+        { "text": "Step-index, graded-index, and single-mode propagation.", "isCorrect": false },
+        { "text": "Simplex, half-duplex, and full-duplex propagation.", "isCorrect": false }
+      ],
+      "explanation": "The lesson explains three unguided propagation methods: ground propagation, sky propagation, and line-of-sight propagation."
+    },
+    {
+      "id": "net-ch6-q4",
+      "question": "What is ground propagation?",
+      "type": "single",
+      "options": [
+        { "text": "Radio waves travel through the lowest portion of the atmosphere, hugging the earth and following its curvature.", "isCorrect": false },
+        { "text": "Very high-frequency signals travel in straight lines directly from antenna to antenna.", "isCorrect": false },
+        { "text": "Higher-frequency radio waves radiate into the ionosphere and are reflected back to earth.", "isCorrect": false },
+        { "text": "Radio waves travel through the lowest portion of the atmosphere, hugging the earth and following its curvature.", "isCorrect": true }
+      ],
+      "explanation": "Ground propagation sends radio waves close to the earth’s surface; the waves spread outward and follow the curvature of the planet."
+    },
+    {
+      "id": "net-ch6-q5",
+      "question": "What frequency range is used in ground propagation?",
+      "type": "single",
+      "options": [
+        { "text": "Carrier frequencies up to 2 MHz.", "isCorrect": false },
+        { "text": "Carrier frequencies between 30 MHz and 85 MHz.", "isCorrect": false },
+        { "text": "Carrier frequencies up to 2 MHz.", "isCorrect": true },
+        { "text": "Carrier frequencies between 1 GHz and 300 GHz.", "isCorrect": false }
+      ],
+      "explanation": "Ground waves are low-frequency signals; the course specifies carrier frequencies up to 2 MHz for ground propagation."
+    },
+    {
+      "id": "net-ch6-q6",
+      "question": "What is an example of ground propagation?",
+      "type": "single",
+      "options": [
+        { "text": "AM radio.", "isCorrect": false },
+        { "text": "Microwave links between towers.", "isCorrect": false },
+        { "text": "Infrared remote-control communication.", "isCorrect": false },
+        { "text": "AM radio.", "isCorrect": true }
+      ],
+      "explanation": "The lesson uses AM radio as the example of ground wave propagation."
+    },
+    {
+      "id": "net-ch6-q7",
+      "question": "What type of coverage does ground propagation provide?",
+      "type": "single",
+      "options": [
+        { "text": "Relatively local radio communication coverage, suitable for a particular locality.", "isCorrect": true },
+        { "text": "Global coverage independent of earth curvature, with no range limitation.", "isCorrect": false },
+        { "text": "Only indoor short-range coverage because signals cannot travel outdoors.", "isCorrect": false },
+        { "text": "Only line-of-sight coverage limited to about 100 km for ground stations.", "isCorrect": false }
+      ],
+      "explanation": "Ground propagation provides relatively local radio coverage, often used by broadcast stations targeting a specific area."
+    },
+    {
+      "id": "net-ch6-q8",
+      "question": "What is sky propagation?",
+      "type": "single",
+      "options": [
+        { "text": "Very high-frequency signals are transmitted in straight lines directly from antenna to antenna.", "isCorrect": false },
+        { "text": "Higher-frequency radio waves radiate upward into the ionosphere and are reflected back to earth.", "isCorrect": true },
+        { "text": "Radio waves travel along the ground, hugging the earth and following its curvature.", "isCorrect": false },
+        { "text": "Signals are transmitted only inside coaxial cables to reduce interference.", "isCorrect": false }
+      ],
+      "explanation": "Sky propagation sends radio waves up to the ionosphere, where they are reflected back down, enabling long-distance transmission."
+    },
+    {
+      "id": "net-ch6-q9",
+      "question": "What is the frequency range of sky propagation?",
+      "type": "single",
+      "options": [
+        { "text": "Up to 2 MHz.", "isCorrect": false },
+        { "text": "30 MHz to 85 MHz.", "isCorrect": false },
+        { "text": "1 GHz to 300 GHz.", "isCorrect": false },
+        { "text": "30 MHz to 85 MHz.", "isCorrect": true }
+      ],
+      "explanation": "The lesson states sky propagation operates in the 30–85 MHz range."
+    },
+    {
+      "id": "net-ch6-q10",
+      "question": "What factors affect sky propagation?",
+      "type": "single",
+      "options": [
+        { "text": "Weather conditions, time of day, and the state of the ionosphere.", "isCorrect": true },
+        { "text": "Only the cable type and connector quality.", "isCorrect": false },
+        { "text": "Only the MAC address of the receiver.", "isCorrect": false },
+        { "text": "Only the distance between two aligned towers in direct view.", "isCorrect": false }
+      ],
+      "explanation": "Because sky propagation depends on the ionosphere, it varies with conditions such as weather and time of day."
+    },
+    {
+      "id": "net-ch6-q11",
+      "question": "What is the advantage of sky propagation?",
+      "type": "single",
+      "options": [
+        { "text": "Allows long-distance transmission with lower power output.", "isCorrect": false },
+        { "text": "Eliminates the need for antennas because signals stay inside a conductor.", "isCorrect": false },
+        { "text": "Allows long-distance transmission with lower power output.", "isCorrect": true },
+        { "text": "Guarantees that signals are confined to a private medium so they cannot be intercepted.", "isCorrect": false }
+      ],
+      "explanation": "Sky propagation enables longer distances even with lower power, because the ionosphere reflects signals back toward the earth."
+    },
+    {
+      "id": "net-ch6-q12",
+      "question": "What is line-of-sight propagation?",
+      "type": "single",
+      "options": [
+        { "text": "Very high-frequency signals travel in straight lines directly from antenna to antenna.", "isCorrect": true },
+        { "text": "Low-frequency signals spread along the ground and follow the planet’s curvature.", "isCorrect": false },
+        { "text": "Higher-frequency waves bounce off the ionosphere and return to earth.", "isCorrect": false },
+        { "text": "Signals are guided through a copper conductor with foil and braid shielding.", "isCorrect": false }
+      ],
+      "explanation": "Line-of-sight propagation uses very high frequencies that travel in straight paths, requiring a direct path between antennas."
+    },
+    {
+      "id": "net-ch6-q13",
+      "question": "What is required for line-of-sight propagation?",
+      "type": "single",
+      "options": [
+        { "text": "Transmitting and receiving antennas must be aligned and within visible range of each other.", "isCorrect": false },
+        { "text": "The transmitter must use only omnidirectional antennas to reach many receivers at once.", "isCorrect": false },
+        { "text": "The receiver must be connected through a physical conductor such as coaxial cable.", "isCorrect": false },
+        { "text": "Transmitting and receiving antennas must be aligned and within visible range of each other.", "isCorrect": true }
+      ],
+      "explanation": "For line-of-sight, antennas must face each other and be placed so the receiver is in view of the transmitter."
+    },
+    {
+      "id": "net-ch6-q14",
+      "question": "What limits line-of-sight propagation for ground stations?",
+      "type": "single",
+      "options": [
+        { "text": "The curvature of the Earth, limiting distance to about 100 km (horizon to horizon).", "isCorrect": false },
+        { "text": "The curvature of the Earth, limiting distance to about 100 km (horizon to horizon).", "isCorrect": true },
+        { "text": "The ionosphere, which reflects all line-of-sight signals back down immediately.", "isCorrect": false },
+        { "text": "The need for a coaxial terminator to prevent signal reflection at the cable end.", "isCorrect": false }
+      ],
+      "explanation": "For ground stations, earth curvature blocks straight-line paths, so line-of-sight distance is limited (about 100 km horizon-to-horizon in the course)."
+    },
+    {
+      "id": "net-ch6-q15",
+      "question": "What are examples of line-of-sight propagation?",
+      "type": "single",
+      "options": [
+        { "text": "Microwave communication and satellite communication.", "isCorrect": false },
+        { "text": "AM radio and FM radio broadcasting.", "isCorrect": false },
+        { "text": "Microwave communication and satellite communication.", "isCorrect": true },
+        { "text": "Wired Ethernet over twisted pair and optical fiber links.", "isCorrect": false }
+      ],
+      "explanation": "The lesson lists microwave and satellite as examples of line-of-sight propagation, where antennas must be aligned with a clear path."
+    },
+    {
+      "id": "net-ch6-q16",
+      "question": "What is a directional antenna?",
+      "type": "single",
+      "options": [
+        { "text": "An antenna that transmits waves in all directions using lower frequencies.", "isCorrect": false },
+        { "text": "An antenna that transmits signals in a focused beam toward a specific direction.", "isCorrect": true },
+        { "text": "An antenna that reflects signals off the ionosphere to extend range.", "isCorrect": false },
+        { "text": "A connector that ensures a cable can be inserted in only one direction.", "isCorrect": false }
+      ],
+      "explanation": "Directional antennas concentrate energy into a focused beam and are typically used for point-to-point links at higher frequencies."
+    },
+    {
+      "id": "net-ch6-q17",
+      "question": "What are directional antennas typically used for?",
+      "type": "single",
+      "options": [
+        { "text": "Multicasting where one sender reaches many receivers simultaneously.", "isCorrect": false },
+        { "text": "Point-to-point communication using high frequencies.", "isCorrect": true },
+        { "text": "Ground-wave broadcasting where signals spread in all directions along the earth.", "isCorrect": false },
+        { "text": "Short-range infrared communication inside a closed room via reflection only.", "isCorrect": false }
+      ],
+      "explanation": "The course describes directional antennas as focused beams used for point-to-point communication, especially at high frequencies."
+    },
+    {
+      "id": "net-ch6-q18",
+      "question": "What is an omnidirectional antenna?",
+      "type": "single",
+      "options": [
+        { "text": "An antenna that transmits waves in all directions using lower frequencies.", "isCorrect": true },
+        { "text": "An antenna that uses a parabolic reflector to focus energy at a single point.", "isCorrect": false },
+        { "text": "An antenna that must be aligned exactly with another antenna to work.", "isCorrect": false },
+        { "text": "A device that retransmits microwave signals as a repeater over long distances.", "isCorrect": false }
+      ],
+      "explanation": "Omnidirectional antennas radiate in all directions, which is useful when many receivers may need to receive the same signal."
+    },
+    {
+      "id": "net-ch6-q19",
+      "question": "What advantage do omnidirectional antennas provide?",
+      "type": "single",
+      "options": [
+        { "text": "Signals can be received by many antennas simultaneously.", "isCorrect": false },
+        { "text": "Signals can be received by many antennas simultaneously.", "isCorrect": true },
+        { "text": "They prevent interference by forcing narrow, aligned beams.", "isCorrect": false },
+        { "text": "They allow high-frequency microwaves to penetrate walls effectively.", "isCorrect": false }
+      ],
+      "explanation": "Because they radiate in all directions, omnidirectional antennas support communication where multiple receivers can pick up the signal."
+    },
+    {
+      "id": "net-ch6-q20",
+      "question": "How is the electromagnetic spectrum organized?",
+      "type": "single",
+      "options": [
+        { "text": "It is divided into frequency bands (VLF to EHF) regulated by government authorities.", "isCorrect": true },
+        { "text": "It is divided into only two ranges: guided and unguided media.", "isCorrect": false },
+        { "text": "It is divided into OSI layers from Physical to Application.", "isCorrect": false },
+        { "text": "It is divided into four TCP/IP layers: Application, Transport, Internet, Network Access.", "isCorrect": false }
+      ],
+      "explanation": "The lesson explains the electromagnetic spectrum is divided into regulated frequency bands ranging from very low frequency (VLF) to extremely high frequency (EHF)."
+    },
+    {
+      "id": "net-ch6-q21",
+      "question": "What frequency range defines radio waves?",
+      "type": "single",
+      "options": [
+        { "text": "Radio waves are between 3 KHz and 1 GHz.", "isCorrect": true },
+        { "text": "Radio waves are between 1 GHz and 300 GHz.", "isCorrect": false },
+        { "text": "Radio waves are limited to 30–85 MHz only.", "isCorrect": false },
+        { "text": "Radio waves are carrier frequencies up to 2 MHz only.", "isCorrect": false }
+      ],
+      "explanation": "In the course, radio waves are defined as electromagnetic waves with frequencies from about 3 KHz up to 1 GHz."
+    },
+    {
+      "id": "net-ch6-q22",
+      "question": "What frequency range defines microwaves?",
+      "type": "single",
+      "options": [
+        { "text": "Microwaves are between 1 and 300 GHz.", "isCorrect": false },
+        { "text": "Microwaves are between 1 and 300 GHz.", "isCorrect": true },
+        { "text": "Microwaves are between 3 KHz and 1 GHz.", "isCorrect": false },
+        { "text": "Microwaves are carrier frequencies up to 2 MHz.", "isCorrect": false }
+      ],
+      "explanation": "The lesson defines microwaves as electromagnetic waves with frequencies between 1 GHz and 300 GHz."
+    },
+    {
+      "id": "net-ch6-q23",
+      "question": "What type of antenna do radio waves use?",
+      "type": "single",
+      "options": [
+        { "text": "Directional antennas using focused beams and strict alignment.", "isCorrect": false },
+        { "text": "Omnidirectional antennas.", "isCorrect": false },
+        { "text": "Parabolic dish antennas only, to concentrate waves at the focus.", "isCorrect": false },
+        { "text": "Omnidirectional antennas.", "isCorrect": true }
+      ],
+      "explanation": "Radio waves are typically transmitted with omnidirectional antennas, spreading energy in all directions."
+    },
+    {
+      "id": "net-ch6-q24",
+      "question": "What is a disadvantage of radio waves?",
+      "type": "single",
+      "options": [
+        { "text": "They are susceptible to interference from other antennas using the same frequency band.", "isCorrect": true },
+        { "text": "They require a clear line-of-sight path and cannot diffract or spread.", "isCorrect": false },
+        { "text": "They cannot be received by more than one receiver at a time.", "isCorrect": false },
+        { "text": "They can only be transmitted through a physical conductor like coaxial cable.", "isCorrect": false }
+      ],
+      "explanation": "Because many transmitters can operate in the same band, radio waves are susceptible to interference from other antennas using the same frequencies."
+    },
+    {
+      "id": "net-ch6-q25",
+      "question": "Why are radio waves useful for multicasting?",
+      "type": "single",
+      "options": [
+        { "text": "Because their omnidirectional nature allows one sender to reach many receivers.", "isCorrect": false },
+        { "text": "Because they are confined to a cable so only intended receivers can access them.", "isCorrect": false },
+        { "text": "Because their omnidirectional nature allows one sender to reach many receivers.", "isCorrect": true },
+        { "text": "Because they always use narrow beams and require perfect alignment.", "isCorrect": false }
+      ],
+      "explanation": "Radio waves are useful for multicasting because omnidirectional transmission can reach many receivers from a single sender."
+    },
+    {
+      "id": "net-ch6-q26",
+      "question": "What are examples of radio wave applications?",
+      "type": "single",
+      "options": [
+        { "text": "AM and FM radio, television broadcasting, cordless phones, and paging systems.", "isCorrect": false },
+        { "text": "Microwave tower links and satellite backhaul only.", "isCorrect": false },
+        { "text": "AM and FM radio, television broadcasting, cordless phones, and paging systems.", "isCorrect": true },
+        { "text": "Infrared short-range links inside a closed room only.", "isCorrect": false }
+      ],
+      "explanation": "The course lists common radio-wave applications such as AM/FM radio, TV broadcasting, cordless phones, and paging systems."
+    },
+    {
+      "id": "net-ch6-q27",
+      "question": "What are microwaves?",
+      "type": "single",
+      "options": [
+        { "text": "Directional electromagnetic waves with frequencies between 1 and 300 GHz.", "isCorrect": true },
+        { "text": "Low-frequency ground waves with carrier frequencies up to 2 MHz.", "isCorrect": false },
+        { "text": "Radio waves between 3 KHz and 1 GHz that are typically omnidirectional.", "isCorrect": false },
+        { "text": "Noncoherent infrared light used for short-range communication.", "isCorrect": false }
+      ],
+      "explanation": "Microwaves are defined in the lesson as directional electromagnetic waves in the 1–300 GHz range."
+    },
+    {
+      "id": "net-ch6-q28",
+      "question": "How do microwaves propagate?",
+      "type": "single",
+      "options": [
+        { "text": "By line-of-sight propagation using narrowly focused beams.", "isCorrect": false },
+        { "text": "By hugging the earth and following its curvature as ground waves.", "isCorrect": false },
+        { "text": "By line-of-sight propagation using narrowly focused beams.", "isCorrect": true },
+        { "text": "By reflecting off the ionosphere in sky mode to reach distant receivers.", "isCorrect": false }
+      ],
+      "explanation": "Microwaves propagate in line-of-sight mode: focused beams travel in straight lines from antenna to antenna."
+    },
+    {
+      "id": "net-ch6-q29",
+      "question": "Why must microwave antennas be aligned?",
+      "type": "single",
+      "options": [
+        { "text": "Because the transmit and receive stations must be in visible contact.", "isCorrect": true },
+        { "text": "Because microwaves spread in all directions and need alignment to avoid multicasting.", "isCorrect": false },
+        { "text": "Because alignment is needed for sky reflection off the ionosphere.", "isCorrect": false },
+        { "text": "Because microwaves are transmitted through cables and alignment ensures proper connector insertion.", "isCorrect": false }
+      ],
+      "explanation": "Microwave links require alignment because communication depends on a direct visible path between transmitting and receiving antennas."
+    },
+    {
+      "id": "net-ch6-q30",
+      "question": "What limits microwave communication distance?",
+      "type": "single",
+      "options": [
+        { "text": "Only the MAC address length used by the devices.", "isCorrect": false },
+        { "text": "Earth’s curvature and obstacles, often requiring repeaters for long distances.", "isCorrect": true },
+        { "text": "The ionosphere, which blocks microwaves from traveling in straight lines.", "isCorrect": false },
+        { "text": "A requirement that microwaves always be omnidirectional and therefore fade quickly.", "isCorrect": false }
+      ],
+      "explanation": "The lesson notes that earth curvature and obstacles prevent short towers from communicating over long distances, so repeaters are often needed."
+    },
+    {
+      "id": "net-ch6-q31",
+      "question": "Can high-frequency microwaves penetrate walls?",
+      "type": "single",
+      "options": [
+        { "text": "No, very high-frequency microwaves cannot penetrate walls.", "isCorrect": false },
+        { "text": "Yes, microwaves penetrate walls better than infrared.", "isCorrect": false },
+        { "text": "No, very high-frequency microwaves cannot penetrate walls.", "isCorrect": true },
+        { "text": "Yes, microwaves always pass through walls because they are radio waves.", "isCorrect": false }
+      ],
+      "explanation": "The course explicitly states that very high-frequency microwaves cannot penetrate walls."
+    },
+    {
+      "id": "net-ch6-q32",
+      "question": "What is the advantage of the microwave frequency band?",
+      "type": "single",
+      "options": [
+        { "text": "It offers a very wide bandwidth (almost 299 GHz).", "isCorrect": true },
+        { "text": "It always avoids interference because no other antennas can share the band.", "isCorrect": false },
+        { "text": "It is limited to carrier frequencies up to 2 MHz, which reduces attenuation.", "isCorrect": false },
+        { "text": "It guarantees local-only coverage suitable for one locality.", "isCorrect": false }
+      ],
+      "explanation": "The microwave band is very wide (nearly 299 GHz in the course), which supports high-capacity transmission."
+    },
+    {
+      "id": "net-ch6-q33",
+      "question": "What is a parabolic dish antenna?",
+      "type": "single",
+      "options": [
+        { "text": "An antenna that focuses waves to a single point (the focus) using a parabolic shape, acting like a funnel.", "isCorrect": false },
+        { "text": "An omnidirectional antenna that radiates equally in all directions.", "isCorrect": false },
+        { "text": "A device that reflects radio waves off the ionosphere to extend range.", "isCorrect": false },
+        { "text": "An antenna that focuses waves to a single point (the focus) using a parabolic shape, acting like a funnel.", "isCorrect": true }
+      ],
+      "explanation": "A parabolic dish uses the geometry of a parabola to reflect incoming parallel waves toward a common focus, concentrating the signal."
+    },
+    {
+      "id": "net-ch6-q34",
+      "question": "How does a parabolic dish antenna work?",
+      "type": "single",
+      "options": [
+        { "text": "It broadcasts waves in all directions so many receivers can pick them up.", "isCorrect": false },
+        { "text": "Incoming parallel waves are reflected toward the focus, concentrating the signal.", "isCorrect": true },
+        { "text": "It transmits low-frequency ground waves that follow the earth’s curvature.", "isCorrect": false },
+        { "text": "It modulates noncoherent infrared light for short-range closed-area links.", "isCorrect": false }
+      ],
+      "explanation": "Parallel waves arriving at the dish reflect off the curved surface and converge at the focus, which concentrates energy for reception (and similarly focuses outgoing transmission)."
+    },
+    {
+      "id": "net-ch6-q35",
+      "question": "What is a horn antenna?",
+      "type": "single",
+      "options": [
+        { "text": "An antenna shaped like a scoop that directs outgoing waves into narrow beams and collects incoming signals.", "isCorrect": false },
+        { "text": "A keyed connector used to prevent incorrect insertion of twisted-pair cables.", "isCorrect": false },
+        { "text": "An antenna shaped like a scoop that directs outgoing waves into narrow beams and collects incoming signals.", "isCorrect": true },
+        { "text": "An antenna that transmits in all directions using lower frequencies.", "isCorrect": false }
+      ],
+      "explanation": "The course describes a horn antenna as scoop-shaped: it efficiently directs outgoing waves into narrow beams and collects incoming waves for reception."
+    },
+    {
+      "id": "net-ch6-q36",
+      "question": "What type of communication do microwaves support?",
+      "type": "single",
+      "options": [
+        { "text": "Unicast communication, such as cellular telephones and satellite networks.", "isCorrect": true },
+        { "text": "Only multicast communication like AM/FM broadcasting.", "isCorrect": false },
+        { "text": "Only local ground-wave broadcasting for a particular locality.", "isCorrect": false },
+        { "text": "Only short-range closed-area links using noncoherent infrared light.", "isCorrect": false }
+      ],
+      "explanation": "Microwave links are described as directional and line-of-sight, making them well-suited for unicast point-to-point communication such as cellular and satellite networks."
+    },
+    {
+      "id": "net-ch6-q37",
+      "question": "What is infrared transmission?",
+      "type": "single",
+      "options": [
+        { "text": "Transmission using noncoherent infrared light for short-range communication.", "isCorrect": false },
+        { "text": "Transmission using noncoherent infrared light for short-range communication.", "isCorrect": true },
+        { "text": "Transmission using focused microwave beams in the 1–300 GHz range.", "isCorrect": false },
+        { "text": "Transmission using low-frequency ground waves up to 2 MHz.", "isCorrect": false }
+      ],
+      "explanation": "Infrared communication uses noncoherent infrared light and is typically intended for short-range links."
+    },
+    {
+      "id": "net-ch6-q38",
+      "question": "What condition is required for infrared communication?",
+      "type": "single",
+      "options": [
+        { "text": "Transceivers must be within line of sight, directly or via reflection.", "isCorrect": true },
+        { "text": "Transceivers must be connected to a physical conductor to contain the signal.", "isCorrect": false },
+        { "text": "Signals must reflect off the ionosphere to reach the receiver.", "isCorrect": false },
+        { "text": "Antennas must be omnidirectional and use lower frequencies for multicasting.", "isCorrect": false }
+      ],
+      "explanation": "Infrared transceivers must be in line of sight (directly or by reflection), which constrains how and where infrared links can be used."
+    },
+    {
+      "id": "net-ch6-q39",
+      "question": "Can infrared signals penetrate walls?",
+      "type": "single",
+      "options": [
+        { "text": "Yes, infrared penetrates walls better than microwaves.", "isCorrect": false },
+        { "text": "No, infrared signals cannot penetrate walls.", "isCorrect": false },
+        { "text": "No, infrared signals cannot penetrate walls.", "isCorrect": true },
+        { "text": "Yes, because infrared is a type of radio wave that diffracts through obstacles.", "isCorrect": false }
+      ],
+      "explanation": "The lesson states infrared does not penetrate walls, which is why it is commonly used for short-range links in closed areas."
+    },
+    {
+      "id": "net-ch6-q40",
+      "question": "Where is infrared transmission typically used?",
+      "type": "single",
+      "options": [
+        { "text": "Short-range communication in closed areas.", "isCorrect": false },
+        { "text": "Long-distance cross-country links that require repeaters every 100 km.", "isCorrect": false },
+        { "text": "Local broadcasting that follows the curvature of the earth for wide-area AM coverage.", "isCorrect": false },
+        { "text": "Short-range communication in closed areas.", "isCorrect": true }
+      ],
+      "explanation": "Infrared is typically used for short-range communication within a closed area, relying on line-of-sight (direct or reflected) paths."
+    },
+    {
+      "id": "net-ch6-q41",
+      "question": "What is the key summary of unguided media?",
+      "type": "single",
+      "options": [
+        { "text": "Unguided media use air to transmit electromagnetic waves via ground, sky, and line-of-sight propagation; microwaves commonly use parabolic dish and horn antennas.", "isCorrect": true },
+        { "text": "Unguided media require copper conductors and shielding, and they mainly use RJ-45 connectors for transmission.", "isCorrect": false },
+        { "text": "Unguided media are limited to frequencies up to 2 MHz and therefore cannot support microwave or infrared communication.", "isCorrect": false },
+        { "text": "Unguided media only support sky propagation, which is always stable and unaffected by weather or time of day.", "isCorrect": false }
+      ],
+      "explanation": "The course summarizes unguided media as wireless transmission through air using ground, sky, and line-of-sight propagation, with microwaves using antennas such as parabolic dishes and horns."
+    }
+  ]
+}

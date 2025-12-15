@@ -1,0 +1,920 @@
+{
+  "id": "net-ch5",
+  "type": "module",
+  "title": "Chapter 5 - Transmission Media (Guided Media)",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "net-ch5-q1",
+      "question": "What is transmission media in computer networks?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Transmission media are the protocols that define how two devices agree to communicate.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transmission media are the logical (IP) addresses used to route packets between networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transmission media are the physical paths that carry electromagnetic signals from one device to another, under the control of the physical layer.",
+          "isCorrect": true
+        },
+        {
+          "text": "Transmission media are the headers and trailers added during encapsulation.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Transmission media are the physical pathways that carry signals between devices. The physical layer controls how those signals are sent over the medium."
+    },
+    {
+      "id": "net-ch5-q2",
+      "question": "Where are transmission media located in the OSI model?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Transmission media are located at the data link layer, where MAC addressing is handled.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transmission media are located below the physical layer and are directly controlled by it.",
+          "isCorrect": true
+        },
+        {
+          "text": "Transmission media are located at the network layer, where routing decisions are made.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transmission media are located at the transport layer, where segmentation occurs.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson explains that transmission media sit below the physical layer and are controlled by it. They are not part of higher layers like data link or network."
+    },
+    {
+      "id": "net-ch5-q3",
+      "question": "In what form are signals transmitted through transmission media?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Signals are transmitted as logical addresses (IP numbers).",
+          "isCorrect": false
+        },
+        {
+          "text": "Signals are transmitted as application-layer messages only.",
+          "isCorrect": false
+        },
+        {
+          "text": "Signals are transmitted as electromagnetic energy.",
+          "isCorrect": true
+        },
+        {
+          "text": "Signals are transmitted as encrypted text by default.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Signals on a medium are carried as electromagnetic energy (electrical, optical, or radio). This is the fundamental form used to move bits from sender to receiver."
+    },
+    {
+      "id": "net-ch5-q4",
+      "question": "How are transmission media classified?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Transmission media are classified into analog media and digital media only.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transmission media are classified into guided media and unguided (wireless) media.",
+          "isCorrect": true
+        },
+        {
+          "text": "Transmission media are classified into baseband and broadband only.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transmission media are classified into TCP and UDP media.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The course groups media into guided (signals contained in a physical path) and unguided/wireless (signals propagated through air). This is the primary classification used in the lesson."
+    },
+    {
+      "id": "net-ch5-q5",
+      "question": "What is guided transmission media?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Unguided media broadcasts signals through the air without a conductor.",
+          "isCorrect": false
+        },
+        {
+          "text": "Guided media provides a physical conduit from one device to another where signals are directed and contained.",
+          "isCorrect": true
+        },
+        {
+          "text": "Guided media is any medium that uses only light waves.",
+          "isCorrect": false
+        },
+        {
+          "text": "Guided media is defined as the OSI physical layer itself.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Guided media provides a physical conduit (like copper or fiber) that contains and directs the signal. This contrasts with wireless transmission where signals spread through open space."
+    },
+    {
+      "id": "net-ch5-q6",
+      "question": "What is unguided transmission media?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Unguided media provides a protected physical conduit where signals are contained.",
+          "isCorrect": false
+        },
+        {
+          "text": "Unguided (wireless) media transports electromagnetic waves without a physical conductor, broadcasting signals through the air.",
+          "isCorrect": true
+        },
+        {
+          "text": "Unguided media is limited to coaxial cable used for cable TV networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Unguided media requires BNC connectors and terminators.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Unguided media transmits electromagnetic waves without a physical conductor. Because signals are broadcast through the air, they can be received by any device tuned to them."
+    },
+    {
+      "id": "net-ch5-q7",
+      "question": "On what factors does transmission capacity depend?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Transmission capacity depends on the distance between devices and whether the medium is point-to-point or multipoint.",
+          "isCorrect": true
+        },
+        {
+          "text": "Transmission capacity depends only on the connector type (RJ-45 vs BNC).",
+          "isCorrect": false
+        },
+        {
+          "text": "Transmission capacity depends only on the OSI layer used by the application.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transmission capacity depends only on whether the signal is encrypted.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Transmission capacity depends mainly on the distance and whether communication is point-to-point or multipoint. These factors influence attenuation, interference, and sharing of the medium."
+    },
+    {
+      "id": "net-ch5-q8",
+      "question": "What is twisted pair cable?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Twisted pair is a glass or plastic core surrounded by cladding that guides light by reflection.",
+          "isCorrect": false
+        },
+        {
+          "text": "A twisted pair cable consists of two insulated copper wires twisted together to reduce electromagnetic interference.",
+          "isCorrect": true
+        },
+        {
+          "text": "A twisted pair cable is a central copper conductor surrounded by shielding and an outer plastic cover.",
+          "isCorrect": false
+        },
+        {
+          "text": "A twisted pair cable is a wireless medium that broadcasts through the air.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Twisted pair is made of two insulated copper wires twisted together. Twisting helps reduce interference while supporting voice and data transmission over its frequency range."
+    },
+    {
+      "id": "net-ch5-q9",
+      "question": "Why are twisted pair wires twisted together?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Twisted pair wires are twisted to minimize electromagnetic interference between adjacent pairs.",
+          "isCorrect": true
+        },
+        {
+          "text": "Twisted pair wires are twisted to increase the number of available MAC addresses.",
+          "isCorrect": false
+        },
+        {
+          "text": "Twisted pair wires are twisted to enable total internal reflection of light.",
+          "isCorrect": false
+        },
+        {
+          "text": "Twisted pair wires are twisted to prevent signal reflection at the end of the cable.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Twisting the pair reduces electromagnetic interference between adjacent pairs. This improves signal quality by limiting crosstalk and external noise effects."
+    },
+    {
+      "id": "net-ch5-q10",
+      "question": "What types of twisted pair cables exist?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Baseband and broadband.",
+          "isCorrect": false
+        },
+        {
+          "text": "Single-mode and multimode.",
+          "isCorrect": false
+        },
+        {
+          "text": "Unshielded Twisted Pair (UTP) and Shielded Twisted Pair (STP).",
+          "isCorrect": true
+        },
+        {
+          "text": "RG-58 and RG-11.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson identifies two twisted-pair types: UTP and STP. The key difference is whether shielding is added to reduce interference."
+    },
+    {
+      "id": "net-ch5-q11",
+      "question": "What are the characteristics of UTP cable?",
+      "type": "single",
+      "options": [
+        {
+          "text": "UTP has a metal braid/shielding that reduces interference but makes it thicker and harder to handle.",
+          "isCorrect": false
+        },
+        {
+          "text": "UTP is ordinary telephone wire; it is the cheapest and easiest to install, but it suffers from external electromagnetic interference.",
+          "isCorrect": true
+        },
+        {
+          "text": "UTP is immune to electromagnetic interference and is typically used for the longest distances.",
+          "isCorrect": false
+        },
+        {
+          "text": "UTP is designed to carry multiple analog signals at different frequencies simultaneously.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "UTP is inexpensive and easy to install, but it is more exposed to external electromagnetic interference. It is commonly described as ordinary telephone wire in the lesson."
+    },
+    {
+      "id": "net-ch5-q12",
+      "question": "What are the characteristics of STP cable?",
+      "type": "single",
+      "options": [
+        {
+          "text": "STP is ordinary telephone wire; it is the cheapest and easiest to install.",
+          "isCorrect": false
+        },
+        {
+          "text": "STP is a fiber medium that guides light straight through the center of a very small core.",
+          "isCorrect": false
+        },
+        {
+          "text": "STP contains metal braid or shielding to reduce interference; it is more expensive and thicker/harder to handle.",
+          "isCorrect": true
+        },
+        {
+          "text": "STP is a coaxial cable dedicated to only one channel (baseband).",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "STP adds metal shielding to reduce interference, but this makes it thicker, heavier, and more expensive than UTP. The tradeoff is better noise protection."
+    },
+    {
+      "id": "net-ch5-q13",
+      "question": "What connector is commonly used with UTP cables?",
+      "type": "single",
+      "options": [
+        {
+          "text": "RJ-45 connector.",
+          "isCorrect": true
+        },
+        {
+          "text": "BNC T-connector.",
+          "isCorrect": false
+        },
+        {
+          "text": "SC connector.",
+          "isCorrect": false
+        },
+        {
+          "text": "ST bayonet connector.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "UTP cabling commonly uses the RJ-45 connector. This is the standard connector interface for many twisted-pair Ethernet links."
+    },
+    {
+      "id": "net-ch5-q14",
+      "question": "What is special about the RJ-45 connector?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It is used at the end of a coaxial cable to prevent signal reflection.",
+          "isCorrect": false
+        },
+        {
+          "text": "It is designed primarily for single-mode optical fiber systems.",
+          "isCorrect": false
+        },
+        {
+          "text": "It is a bayonet-style connector developed by AT&T.",
+          "isCorrect": false
+        },
+        {
+          "text": "It is a keyed connector that can be inserted in only one direction.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "RJ-45 is described as a keyed connector, meaning it fits in only one orientation. This prevents incorrect insertion and pin misalignment."
+    },
+    {
+      "id": "net-ch5-q15",
+      "question": "What is coaxial cable?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Coaxial cable consists of two insulated copper wires twisted together in a spiral pattern.",
+          "isCorrect": false
+        },
+        {
+          "text": "Coaxial cable is an unguided medium that broadcasts electromagnetic waves through the air.",
+          "isCorrect": false
+        },
+        {
+          "text": "Coaxial cable has a central copper conductor surrounded by insulation, shielding (foil/braid), and an outer plastic cover.",
+          "isCorrect": true
+        },
+        {
+          "text": "Coaxial cable is a glass or plastic core surrounded by cladding for guiding light.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Coaxial cable uses a central copper conductor with insulating layers and shielding (foil/braid), then an outer cover. The shielding acts as protection and as a conductor completing the circuit."
+    },
+    {
+      "id": "net-ch5-q16",
+      "question": "Why does coaxial cable resist noise better than twisted pair?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Because it is always installed as point-to-point, never multipoint.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it uses a keyed RJ-45 connector that prevents insertion errors.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it uses total internal reflection in a glass core.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because of its shielded construction (metal foil/braid) that protects against noise.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Coax resists noise better because its shielded construction blocks external interference. This makes it more noise-resistant than twisted pair in the course."
+    },
+    {
+      "id": "net-ch5-q17",
+      "question": "How are coaxial cables functionally grouped?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Coaxial cables are grouped as UTP and STP.",
+          "isCorrect": false
+        },
+        {
+          "text": "Coaxial cables are grouped as baseband (single channel) and broadband (multiple analog signals at different frequencies).",
+          "isCorrect": true
+        },
+        {
+          "text": "Coaxial cables are grouped as single-mode and multimode.",
+          "isCorrect": false
+        },
+        {
+          "text": "Coaxial cables are grouped as simplex and full-duplex.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Coax is grouped into baseband (single channel) and broadband (multiple analog signals at different frequencies). This functional grouping is highlighted in the lesson."
+    },
+    {
+      "id": "net-ch5-q18",
+      "question": "What frequency characteristics do coaxial cables have?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Coaxial cables operate at lower frequencies than twisted pair to reduce attenuation.",
+          "isCorrect": false
+        },
+        {
+          "text": "Coaxial cables can only carry light waves and therefore have optical frequencies only.",
+          "isCorrect": false
+        },
+        {
+          "text": "Coaxial cables operate at higher frequency ranges than twisted-pair cables.",
+          "isCorrect": true
+        },
+        {
+          "text": "Coaxial cables operate only at the same frequency range as ordinary telephone wire.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The course notes coax operates at higher frequency ranges than twisted pair. This supports carrying more information than standard telephone cables."
+    },
+    {
+      "id": "net-ch5-q19",
+      "question": "What networking standards use coaxial cable?",
+      "type": "single",
+      "options": [
+        {
+          "text": "1000Base-T and 10GBase-T.",
+          "isCorrect": false
+        },
+        {
+          "text": "10Base-2 (Thin Ethernet) and 10Base-5 (Thick Ethernet).",
+          "isCorrect": true
+        },
+        {
+          "text": "802.11a and 802.11ac.",
+          "isCorrect": false
+        },
+        {
+          "text": "FTAM and X.400.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson cites coax usage in Thin Ethernet (10Base-2) and Thick Ethernet (10Base-5). These are classic Ethernet standards associated with coaxial cabling."
+    },
+    {
+      "id": "net-ch5-q20",
+      "question": "What is the maximum range of 10Base-2 Ethernet?",
+      "type": "single",
+      "options": [
+        {
+          "text": "10 meters.",
+          "isCorrect": false
+        },
+        {
+          "text": "185 meters.",
+          "isCorrect": true
+        },
+        {
+          "text": "100 meters.",
+          "isCorrect": false
+        },
+        {
+          "text": "500 meters.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "10Base-2 (Thin Ethernet) is given as having a 185 m range. This value is explicitly stated in the lesson."
+    },
+    {
+      "id": "net-ch5-q21",
+      "question": "What is the maximum range of 10Base-5 Ethernet?",
+      "type": "single",
+      "options": [
+        {
+          "text": "185 meters.",
+          "isCorrect": false
+        },
+        {
+          "text": "50 meters.",
+          "isCorrect": false
+        },
+        {
+          "text": "1500 meters.",
+          "isCorrect": false
+        },
+        {
+          "text": "500 meters.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "10Base-5 (Thick Ethernet) is given as having a 500 m range. This is the maximum segment length described for Thick Ethernet."
+    },
+    {
+      "id": "net-ch5-q22",
+      "question": "What connectors are used with coaxial cables?",
+      "type": "single",
+      "options": [
+        {
+          "text": "BNC T-connectors and BNC terminators.",
+          "isCorrect": true
+        },
+        {
+          "text": "RJ-45 connectors and patch panels.",
+          "isCorrect": false
+        },
+        {
+          "text": "SC and LC connectors.",
+          "isCorrect": false
+        },
+        {
+          "text": "Fiber snap-in connectors only.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Coax networks use BNC T-connectors and BNC terminators. These are the listed connector types for coaxial Ethernet setups."
+    },
+    {
+      "id": "net-ch5-q23",
+      "question": "What is the role of a BNC terminator?",
+      "type": "single",
+      "options": [
+        {
+          "text": "To branch out a coaxial cable for connection to a device (like a computer).",
+          "isCorrect": false
+        },
+        {
+          "text": "To prevent signal reflection at the end of the coaxial cable.",
+          "isCorrect": true
+        },
+        {
+          "text": "To convert electrical signals into light pulses inside a fiber core.",
+          "isCorrect": false
+        },
+        {
+          "text": "To assign IP addresses and protocol numbers on a network.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A BNC terminator is placed at the end of a coax cable to prevent signal reflection. Without proper termination, reflections can disrupt communication on the bus."
+    },
+    {
+      "id": "net-ch5-q24",
+      "question": "What is optical fiber?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Optical fiber is a transmission medium that uses light reflection to guide signals through a core surrounded by cladding.",
+          "isCorrect": true
+        },
+        {
+          "text": "Optical fiber is a copper conductor with foil and braid shielding designed for higher frequencies.",
+          "isCorrect": false
+        },
+        {
+          "text": "Optical fiber is two insulated copper wires twisted together to reduce interference.",
+          "isCorrect": false
+        },
+        {
+          "text": "Optical fiber is a wireless medium that broadcasts through open air.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Optical fiber guides light along a core surrounded by cladding using reflection. The lesson emphasizes this structure and the guiding mechanism."
+    },
+    {
+      "id": "net-ch5-q25",
+      "question": "What principle allows light to travel through optical fiber?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Carrier Sense Multiple Access with Collision Detection (CSMA/CD).",
+          "isCorrect": false
+        },
+        {
+          "text": "Packet fragmentation to fit the MTU.",
+          "isCorrect": false
+        },
+        {
+          "text": "Total internal reflection due to differences in density between the core and the cladding.",
+          "isCorrect": true
+        },
+        {
+          "text": "Broadband multiplexing of analog signals at different frequencies.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Light travels through fiber due to total internal reflection caused by the density (index) difference between core and cladding. This keeps light within the core instead of refracting outward."
+    },
+    {
+      "id": "net-ch5-q26",
+      "question": "What materials are used for fiber optic cores?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Copper or aluminum.",
+          "isCorrect": false
+        },
+        {
+          "text": "Glass or plastic.",
+          "isCorrect": true
+        },
+        {
+          "text": "Metal foil and braided shielding.",
+          "isCorrect": false
+        },
+        {
+          "text": "Rubber or PVC only.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Fiber cores can be made of glass or plastic. The lesson states both materials are used depending on the fiber type and application."
+    },
+    {
+      "id": "net-ch5-q27",
+      "question": "What are the main advantages of optical fiber?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Cheapest option and easiest to install, but suffers from external interference.",
+          "isCorrect": false
+        },
+        {
+          "text": "Very high data rates, immunity to electromagnetic interference, and lightweight cables.",
+          "isCorrect": true
+        },
+        {
+          "text": "Best for bus topologies using T-connectors and terminators.",
+          "isCorrect": false
+        },
+        {
+          "text": "Designed mainly to carry several analog signals at different frequencies simultaneously.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Fiber offers high data rates, immunity to electromagnetic interference, and low weight. These advantages make it attractive compared to copper media."
+    },
+    {
+      "id": "net-ch5-q28",
+      "question": "What are the main propagation modes of optical fiber?",
+      "type": "single",
+      "options": [
+        {
+          "text": "UTP, STP, and coax.",
+          "isCorrect": false
+        },
+        {
+          "text": "Multimode step index, multimode graded index, and single mode.",
+          "isCorrect": true
+        },
+        {
+          "text": "Baseband, broadband, and wireless.",
+          "isCorrect": false
+        },
+        {
+          "text": "Simplex, half-duplex, and full-duplex.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson lists three propagation modes: multimode step index, multimode graded index, and single mode. These define how light propagates through the core."
+    },
+    {
+      "id": "net-ch5-q29",
+      "question": "What characterizes multimode step-index fiber?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Gradually decreasing core density from center to edge, reducing distortion.",
+          "isCorrect": false
+        },
+        {
+          "text": "Constant core density, multiple light paths, and higher signal distortion.",
+          "isCorrect": true
+        },
+        {
+          "text": "Small core diameter guiding light straight through the center for the fastest transmission.",
+          "isCorrect": false
+        },
+        {
+          "text": "Central copper conductor with shielding and a plastic cover.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Multimode step-index has constant core density and multiple light paths, which increases distortion. It is also described as an older fiber technology."
+    },
+    {
+      "id": "net-ch5-q30",
+      "question": "What characterizes multimode graded-index fiber?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Signals are broadcast through the air and can be received by anyone with a receiver.",
+          "isCorrect": false
+        },
+        {
+          "text": "Core density is constant, causing more distortion due to multiple reflective paths.",
+          "isCorrect": false
+        },
+        {
+          "text": "Light is guided straight through a very small core with substantially lower density (index of refraction).",
+          "isCorrect": false
+        },
+        {
+          "text": "Core density decreases gradually from center to edge, which reduces signal distortion.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Multimode graded-index reduces distortion by having density highest at the center and decreasing toward the edge, refracting light back toward the center."
+    },
+    {
+      "id": "net-ch5-q31",
+      "question": "What characterizes single-mode fiber?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It has a much smaller core diameter and guides light straight through the center; it is the fastest transmission technique.",
+          "isCorrect": true
+        },
+        {
+          "text": "It uses multiple light paths bouncing off reflective walls and has higher distortion.",
+          "isCorrect": false
+        },
+        {
+          "text": "It uses a central copper conductor and shielding to resist noise.",
+          "isCorrect": false
+        },
+        {
+          "text": "It is ordinary telephone wire designed for easy installation.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Single-mode fiber has a much smaller core and guides light straight through the center, enabling the fastest technique. It also uses a substantially lower density (index of refraction)."
+    },
+    {
+      "id": "net-ch5-q32",
+      "question": "What is an SC connector?",
+      "type": "single",
+      "options": [
+        {
+          "text": "SC is a coaxial T-connector used to branch the cable to devices.",
+          "isCorrect": false
+        },
+        {
+          "text": "SC (Subscriber Connector) is a push/pull style snap-in connector commonly used in single-mode systems.",
+          "isCorrect": true
+        },
+        {
+          "text": "SC is a terminator used at the end of coax to prevent reflection.",
+          "isCorrect": false
+        },
+        {
+          "text": "SC is a bayonet-style connector developed by AT&T in the late 1980s.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "SC is a push/pull snap-in Subscriber Connector widely used in single-mode systems. The lesson links its use to performance in newer network applications."
+    },
+    {
+      "id": "net-ch5-q33",
+      "question": "What are the advantages of SC connectors?",
+      "type": "single",
+      "options": [
+        {
+          "text": "SC connectors are described as low cost, durable, high performance, and easy to use.",
+          "isCorrect": true
+        },
+        {
+          "text": "Highest shielding against electromagnetic noise because of foil and braid layers.",
+          "isCorrect": false
+        },
+        {
+          "text": "Designed mainly for old coaxial thick Ethernet networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Used primarily to support token passing in ring topologies.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "SC connectors are described as low cost, durable, high performance, and easy to use. These characteristics explain why they are common in modern deployments."
+    },
+    {
+      "id": "net-ch5-q34",
+      "question": "What is an ST connector?",
+      "type": "single",
+      "options": [
+        {
+          "text": "ST is a coaxial terminator that prevents reflections at cable ends.",
+          "isCorrect": false
+        },
+        {
+          "text": "ST is a protocol document in the RFC series.",
+          "isCorrect": false
+        },
+        {
+          "text": "ST (Straight Tip) is a quick-release bayonet-style fiber connector developed by AT&T.",
+          "isCorrect": true
+        },
+        {
+          "text": "ST is a keyed RJ connector used with twisted pair cables.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "ST is a Straight Tip connector with a quick-release bayonet mechanism developed by AT&T. It is used in both short-distance and long-line systems per the lesson."
+    },
+    {
+      "id": "net-ch5-q35",
+      "question": "When were ST connectors most commonly used?",
+      "type": "single",
+      "options": [
+        {
+          "text": "ST connectors were introduced as the newest connector for modern single-mode systems.",
+          "isCorrect": false
+        },
+        {
+          "text": "ST connectors were predominant in the late 1980s and early 1990s.",
+          "isCorrect": true
+        },
+        {
+          "text": "ST connectors were used primarily for 10Base-2 coaxial networks in the 2000s.",
+          "isCorrect": false
+        },
+        {
+          "text": "ST connectors were most common before Ethernet existed.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson notes ST connectors were predominant in the late 1980s and early 1990s. This places their peak usage period historically."
+    },
+    {
+      "id": "net-ch5-q36",
+      "question": "What other fiber optic connectors exist?",
+      "type": "single",
+      "options": [
+        {
+          "text": "RG-58 and RG-11.",
+          "isCorrect": false
+        },
+        {
+          "text": "LC (Lucent Connector) and FC (Fixed Connection).",
+          "isCorrect": true
+        },
+        {
+          "text": "BNC and RJ-45.",
+          "isCorrect": false
+        },
+        {
+          "text": "Baseband and broadband.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson lists LC (Lucent Connector) and FC (Fixed Connection) as other connector types. These are presented alongside SC and ST in the connector overview."
+    },
+    {
+      "id": "net-ch5-q37",
+      "question": "What is the main difference between guided and unguided media?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Guided media always uses light; unguided media always uses copper.",
+          "isCorrect": false
+        },
+        {
+          "text": "Guided media uses physical boundaries; unguided media transmits through open space (air) without a conductor.",
+          "isCorrect": true
+        },
+        {
+          "text": "Guided media is defined by TCP; unguided media is defined by UDP.",
+          "isCorrect": false
+        },
+        {
+          "text": "Guided media is for LANs only; unguided media is for WANs only.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Guided media is bounded by a physical medium, while unguided media transmits through open space without a conductor. This is the core distinction made in the summary."
+    },
+    {
+      "id": "net-ch5-q38",
+      "question": "What is the key advantage of optical fiber over twisted pair and coaxial cable?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Much higher bandwidth, immunity to interference, and longer transmission distances.",
+          "isCorrect": true
+        },
+        {
+          "text": "Lower cost and easier installation than twisted pair.",
+          "isCorrect": false
+        },
+        {
+          "text": "Requires BNC T-connectors and terminators for every connection.",
+          "isCorrect": false
+        },
+        {
+          "text": "Designed mainly for carrying several analog signals at different frequencies simultaneously.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Compared to twisted pair and coax, fiber provides much higher bandwidth, immunity to interference, and longer distances. These advantages are explicitly contrasted in the review content."
+    }
+  ]
+}

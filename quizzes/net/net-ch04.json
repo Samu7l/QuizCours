@@ -1,0 +1,1232 @@
+{
+  "id": "net-ch4",
+  "type": "module",
+  "title": "Chapter 4 - LAN Topologies and Standards",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "net-ch4-q1",
+      "question": "What is a physical topology in networking?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A physical topology is the actual physical layout of devices, cables, and connections in a network. It shows how nodes are physically interconnected.",
+          "isCorrect": true
+        },
+        {
+          "text": "A map of an internetwork indicating network segments, interconnection points, and user devices.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where every node is directly connected to every other node using dedicated point-to-point links.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where all nodes share a single communication backbone using a shared medium.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A physical topology is the actual physical layout of devices, cables, and connections in a network. It shows how nodes are physically interconnected."
+    },
+    {
+      "id": "net-ch4-q2",
+      "question": "What is the simplest form of physical connectivity?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A topology where each node connects to exactly two neighbors forming a closed loop.",
+          "isCorrect": false
+        },
+        {
+          "text": "Point-to-point connectivity, where two nodes are directly connected to communicate.",
+          "isCorrect": true
+        },
+        {
+          "text": "A topology where all nodes connect to a central hub.",
+          "isCorrect": false
+        },
+        {
+          "text": "An extension of the bus topology where branches connect to a central trunk.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Point-to-point connectivity, where two nodes are directly connected to communicate."
+    },
+    {
+      "id": "net-ch4-q3",
+      "question": "What is a network topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A map of an internetwork indicating network segments, interconnection points, and user devices.",
+          "isCorrect": true
+        },
+        {
+          "text": "A physical topology is the actual physical layout of devices, cables, and connections in a network. It shows how nodes are physically interconnected.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where every node is directly connected to every other node using dedicated point-to-point links.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where all nodes share a single communication backbone using a shared medium.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A map of an internetwork indicating network segments, interconnection points, and user devices."
+    },
+    {
+      "id": "net-ch4-q4",
+      "question": "What is a mesh topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A topology where all nodes connect to a central hub.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where each node connects to exactly two neighbors forming a closed loop.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where every node is directly connected to every other node using dedicated point-to-point links.",
+          "isCorrect": true
+        },
+        {
+          "text": "A topology where all nodes share a single communication backbone using a shared medium.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A topology where every node is directly connected to every other node using dedicated point-to-point links."
+    },
+    {
+      "id": "net-ch4-q5",
+      "question": "What is the formula for the number of links in a mesh topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "n(n-1)/2 links are required to connect n nodes.",
+          "isCorrect": true
+        },
+        {
+          "text": "Each node requires n-1 I/O ports.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where every node is directly connected to every other node using dedicated point-to-point links.",
+          "isCorrect": false
+        },
+        {
+          "text": "Very high cabling cost Complex installation Each node requires n-1 I/O ports.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "n(n-1)/2 links are required to connect n nodes."
+    },
+    {
+      "id": "net-ch4-q6",
+      "question": "What are the advantages of a mesh topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Full use of link capacity High robustness and fault tolerance Strong security due to dedicated links.",
+          "isCorrect": true
+        },
+        {
+          "text": "Reduced cabling compared to mesh Simple and inexpensive for small networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Easy installation and reconfiguration Easy fault detection.",
+          "isCorrect": false
+        },
+        {
+          "text": "Centralized fault detection Easy to manage and expand.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Full use of link capacity High robustness and fault tolerance Strong security due to dedicated links."
+    },
+    {
+      "id": "net-ch4-q7",
+      "question": "What are the disadvantages of a mesh topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Very high cabling cost Complex installation Each node requires n-1 I/O ports.",
+          "isCorrect": true
+        },
+        {
+          "text": "Difficult fault isolation Backbone failure brings down the network Hard to add new nodes.",
+          "isCorrect": false
+        },
+        {
+          "text": "Unidirectional traffic Failure of one node breaks the entire network.",
+          "isCorrect": false
+        },
+        {
+          "text": "The entire network depends on the central hub.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Very high cabling cost Complex installation Each node requires n-1 I/O ports."
+    },
+    {
+      "id": "net-ch4-q8",
+      "question": "What is a bus topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A topology where all nodes share a single communication backbone using a shared medium.",
+          "isCorrect": true
+        },
+        {
+          "text": "A topology where every node is directly connected to every other node using dedicated point-to-point links.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where each node connects to exactly two neighbors forming a closed loop.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where all nodes connect to a central hub.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A topology where all nodes share a single communication backbone using a shared medium."
+    },
+    {
+      "id": "net-ch4-q9",
+      "question": "How are nodes connected in a bus topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Each node connects via a drop line and a tap to the backbone.",
+          "isCorrect": true
+        },
+        {
+          "text": "Each node requires n-1 I/O ports to connect to the network.",
+          "isCorrect": false
+        },
+        {
+          "text": "Every node is directly connected to every other node using dedicated links.",
+          "isCorrect": false
+        },
+        {
+          "text": "Every node is connected to a hub, which acts as a central facilitator of transmissions.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Each node connects via a drop line and a tap to the backbone."
+    },
+    {
+      "id": "net-ch4-q10",
+      "question": "What are the advantages of a bus topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Reduced cabling compared to mesh Simple and inexpensive for small networks.",
+          "isCorrect": true
+        },
+        {
+          "text": "Full use of link capacity High robustness and fault tolerance Strong security due to dedicated links.",
+          "isCorrect": false
+        },
+        {
+          "text": "Privacy within branches Failure of one branch does not affect others.",
+          "isCorrect": false
+        },
+        {
+          "text": "Centralized fault detection Easy to manage and expand.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Reduced cabling compared to mesh Simple and inexpensive for small networks."
+    },
+    {
+      "id": "net-ch4-q11",
+      "question": "What are the disadvantages of a bus topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Difficult fault isolation Backbone failure brings down the network Hard to add new nodes.",
+          "isCorrect": true
+        },
+        {
+          "text": "Very high cabling cost Complex installation Each node requires n-1 I/O ports.",
+          "isCorrect": false
+        },
+        {
+          "text": "Fault isolation is complex Failure of the trunk impacts the entire network.",
+          "isCorrect": false
+        },
+        {
+          "text": "The entire network depends on the central hub.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Difficult fault isolation Backbone failure brings down the network Hard to add new nodes."
+    },
+    {
+      "id": "net-ch4-q12",
+      "question": "What is a tree topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "An extension of the bus topology where branches connect to a central trunk.",
+          "isCorrect": true
+        },
+        {
+          "text": "A topology where all nodes share a single communication backbone using a shared medium.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where all nodes connect to a central hub.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where each node connects to exactly two neighbors forming a closed loop.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "An extension of the bus topology where branches connect to a central trunk."
+    },
+    {
+      "id": "net-ch4-q13",
+      "question": "What are the advantages of a tree topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Privacy within branches Failure of one branch does not affect others.",
+          "isCorrect": true
+        },
+        {
+          "text": "Reduced cabling compared to mesh Simple and inexpensive for small networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Easy installation and reconfiguration Easy fault detection.",
+          "isCorrect": false
+        },
+        {
+          "text": "Centralized fault detection Easy to manage and expand.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Privacy within branches Failure of one branch does not affect others."
+    },
+    {
+      "id": "net-ch4-q14",
+      "question": "What are the disadvantages of a tree topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Fault isolation is complex Failure of the trunk impacts the entire network.",
+          "isCorrect": true
+        },
+        {
+          "text": "Difficult fault isolation Backbone failure brings down the network Hard to add new nodes.",
+          "isCorrect": false
+        },
+        {
+          "text": "Unidirectional traffic Failure of one node breaks the entire network.",
+          "isCorrect": false
+        },
+        {
+          "text": "The entire network depends on the central hub.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Fault isolation is complex Failure of the trunk impacts the entire network."
+    },
+    {
+      "id": "net-ch4-q15",
+      "question": "What is a ring topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A topology where each node connects to exactly two neighbors forming a closed loop.",
+          "isCorrect": true
+        },
+        {
+          "text": "A topology where all nodes connect to a central hub.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where all nodes share a single communication backbone using a shared medium.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where every node is directly connected to every other node using dedicated point-to-point links.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A topology where each node connects to exactly two neighbors forming a closed loop."
+    },
+    {
+      "id": "net-ch4-q16",
+      "question": "How does data transmission work in a ring topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Uses token passing Only the node with the token can transmit No collisions occur.",
+          "isCorrect": true
+        },
+        {
+          "text": "Regenerates signals and broadcasts incoming data to all ports.",
+          "isCorrect": false
+        },
+        {
+          "text": "Devices check if the line is idle before transmitting.",
+          "isCorrect": false
+        },
+        {
+          "text": "Frames are forwarded only to one port based on MAC address tables.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Uses token passing Only the node with the token can transmit No collisions occur."
+    },
+    {
+      "id": "net-ch4-q17",
+      "question": "What are the advantages of a ring topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Easy installation and reconfiguration Easy fault detection.",
+          "isCorrect": true
+        },
+        {
+          "text": "Full use of link capacity High robustness and fault tolerance Strong security due to dedicated links.",
+          "isCorrect": false
+        },
+        {
+          "text": "Centralized fault detection Easy to manage and expand.",
+          "isCorrect": false
+        },
+        {
+          "text": "Reduced cabling compared to mesh Simple and inexpensive for small networks.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Easy installation and reconfiguration Easy fault detection."
+    },
+    {
+      "id": "net-ch4-q18",
+      "question": "What are the disadvantages of a ring topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Unidirectional traffic Failure of one node breaks the entire network.",
+          "isCorrect": true
+        },
+        {
+          "text": "Fault isolation is complex Failure of the trunk impacts the entire network.",
+          "isCorrect": false
+        },
+        {
+          "text": "The entire network depends on the central hub.",
+          "isCorrect": false
+        },
+        {
+          "text": "Very high cabling cost Complex installation Each node requires n-1 I/O ports.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Unidirectional traffic Failure of one node breaks the entire network."
+    },
+    {
+      "id": "net-ch4-q19",
+      "question": "What is a star topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A topology where all nodes connect to a central hub.",
+          "isCorrect": true
+        },
+        {
+          "text": "A topology where all nodes share a single communication backbone using a shared medium.",
+          "isCorrect": false
+        },
+        {
+          "text": "A topology where each node connects to exactly two neighbors forming a closed loop.",
+          "isCorrect": false
+        },
+        {
+          "text": "An extension of the bus topology where branches connect to a central trunk.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A topology where all nodes connect to a central hub."
+    },
+    {
+      "id": "net-ch4-q20",
+      "question": "How is a star topology logically similar to a bus topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "With a hub, traffic is broadcast to all nodes, similar to a shared bus.",
+          "isCorrect": true
+        },
+        {
+          "text": "Because every node has dedicated point-to-point links to every other node.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it uses token passing and therefore has no collisions.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it uses trunk links and VLAN tags for segmentation.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "With a hub, traffic is broadcast to all nodes, similar to a shared bus."
+    },
+    {
+      "id": "net-ch4-q21",
+      "question": "What are the advantages of a star topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Centralized fault detection Easy to manage and expand.",
+          "isCorrect": true
+        },
+        {
+          "text": "Easy installation and reconfiguration Easy fault detection.",
+          "isCorrect": false
+        },
+        {
+          "text": "Reduced cabling compared to mesh Simple and inexpensive for small networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Privacy within branches Failure of one branch does not affect others.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Centralized fault detection Easy to manage and expand."
+    },
+    {
+      "id": "net-ch4-q22",
+      "question": "What is the main disadvantage of a star topology?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The entire network depends on the central hub.",
+          "isCorrect": true
+        },
+        {
+          "text": "Unidirectional traffic Failure of one node breaks the entire network.",
+          "isCorrect": false
+        },
+        {
+          "text": "Difficult fault isolation Backbone failure brings down the network Hard to add new nodes.",
+          "isCorrect": false
+        },
+        {
+          "text": "Very high cabling cost Complex installation Each node requires n-1 I/O ports.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The entire network depends on the central hub."
+    },
+    {
+      "id": "net-ch4-q23",
+      "question": "What is the role of a repeater?",
+      "type": "single",
+      "options": [
+        {
+          "text": "To regenerate and retransmit signals to extend the physical length of a network.",
+          "isCorrect": true
+        },
+        {
+          "text": "Forwards frames based on MAC addresses Filters traffic to reduce collisions.",
+          "isCorrect": false
+        },
+        {
+          "text": "Forwards packets based on network-layer addresses Connects different LANs.",
+          "isCorrect": false
+        },
+        {
+          "text": "Regenerates signals and broadcasts incoming data to all ports.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "To regenerate and retransmit signals to extend the physical length of a network."
+    },
+    {
+      "id": "net-ch4-q24",
+      "question": "What does a hub do?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Regenerates signals and broadcasts incoming data to all ports.",
+          "isCorrect": true
+        },
+        {
+          "text": "Forwards frames based on MAC addresses Filters traffic to reduce collisions.",
+          "isCorrect": false
+        },
+        {
+          "text": "To regenerate and retransmit signals to extend the physical length of a network.",
+          "isCorrect": false
+        },
+        {
+          "text": "Forwards packets based on network-layer addresses Connects different LANs.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Regenerates signals and broadcasts incoming data to all ports."
+    },
+    {
+      "id": "net-ch4-q25",
+      "question": "What are hub limitations by speed?",
+      "type": "single",
+      "options": [
+        {
+          "text": "10 Mb/s → 4 hubs max 100 Mb/s → 2 hubs max 1 Gb/s → 1 hub max.",
+          "isCorrect": true
+        },
+        {
+          "text": "Each switch port is a separate collision domain All ports together form one broadcast domain.",
+          "isCorrect": false
+        },
+        {
+          "text": "Layer 2 uses MAC addresses Layer 3 uses network-layer addresses.",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP/IP has 4 layers: Application, Transport, Internet, Network Access.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "10 Mb/s → 4 hubs max 100 Mb/s → 2 hubs max 1 Gb/s → 1 hub max."
+    },
+    {
+      "id": "net-ch4-q26",
+      "question": "What is the role of a bridge or switch?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Forwards frames based on MAC addresses Filters traffic to reduce collisions.",
+          "isCorrect": true
+        },
+        {
+          "text": "To regenerate and retransmit signals to extend the physical length of a network.",
+          "isCorrect": false
+        },
+        {
+          "text": "Forwards packets based on network-layer addresses Connects different LANs.",
+          "isCorrect": false
+        },
+        {
+          "text": "Regenerates signals and broadcasts incoming data to all ports.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Forwards frames based on MAC addresses Filters traffic to reduce collisions."
+    },
+    {
+      "id": "net-ch4-q27",
+      "question": "What is the role of a router?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Forwards packets based on network-layer addresses Connects different LANs.",
+          "isCorrect": true
+        },
+        {
+          "text": "Forwards frames based on MAC addresses Filters traffic to reduce collisions.",
+          "isCorrect": false
+        },
+        {
+          "text": "Regenerates signals and broadcasts incoming data to all ports.",
+          "isCorrect": false
+        },
+        {
+          "text": "To regenerate and retransmit signals to extend the physical length of a network.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Forwards packets based on network-layer addresses Connects different LANs."
+    },
+    {
+      "id": "net-ch4-q28",
+      "question": "What is a collision domain?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A network segment where only one device can transmit at a time without collision.",
+          "isCorrect": true
+        },
+        {
+          "text": "A map of an internetwork indicating network segments, interconnection points, and user devices.",
+          "isCorrect": false
+        },
+        {
+          "text": "A Virtual LAN that logically groups devices independent of physical location.",
+          "isCorrect": false
+        },
+        {
+          "text": "A special header added to frames identifying the VLAN ID.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A network segment where only one device can transmit at a time without collision."
+    },
+    {
+      "id": "net-ch4-q29",
+      "question": "What is a traditional LAN design?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A single shared LAN where all devices share one collision domain.",
+          "isCorrect": true
+        },
+        {
+          "text": "Hardware-based frame forwarding using MAC addresses.",
+          "isCorrect": false
+        },
+        {
+          "text": "Packet forwarding based on network-layer addresses.",
+          "isCorrect": false
+        },
+        {
+          "text": "A logical group of devices based on function, not restricted to a physical LAN segment.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A single shared LAN where all devices share one collision domain."
+    },
+    {
+      "id": "net-ch4-q30",
+      "question": "What protocol controls access in Ethernet LANs?",
+      "type": "single",
+      "options": [
+        {
+          "text": "CSMA/CD — Carrier Sense Multiple Access with Collision Detection.",
+          "isCorrect": true
+        },
+        {
+          "text": "Token passing — only the device with the token can transmit.",
+          "isCorrect": false
+        },
+        {
+          "text": "VLAN tagging — frames are marked with VLAN IDs on trunk links.",
+          "isCorrect": false
+        },
+        {
+          "text": "Routing protocols — choose optimal paths and summarize reachability.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "CSMA/CD — Carrier Sense Multiple Access with Collision Detection."
+    },
+    {
+      "id": "net-ch4-q31",
+      "question": "What does Carrier Sense mean in CSMA/CD?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Devices check if the line is idle before transmitting.",
+          "isCorrect": true
+        },
+        {
+          "text": "Devices detect collisions and stop transmitting, then retry later.",
+          "isCorrect": false
+        },
+        {
+          "text": "Everyone on the segment uses the same wires to send and receive.",
+          "isCorrect": false
+        },
+        {
+          "text": "Frames are forwarded only to one port when the destination is known.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Devices check if the line is idle before transmitting."
+    },
+    {
+      "id": "net-ch4-q32",
+      "question": "What does Collision Detection mean?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Devices detect collisions and stop transmitting, then retry later.",
+          "isCorrect": true
+        },
+        {
+          "text": "Devices check if the line is idle before transmitting.",
+          "isCorrect": false
+        },
+        {
+          "text": "Only the node with the token can transmit data, preventing collisions.",
+          "isCorrect": false
+        },
+        {
+          "text": "Frames are switched based on network-layer information.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Devices detect collisions and stop transmitting, then retry later."
+    },
+    {
+      "id": "net-ch4-q33",
+      "question": "Why were bridges and switches introduced?",
+      "type": "single",
+      "options": [
+        {
+          "text": "To reduce congestion and collision domains in Ethernet networks.",
+          "isCorrect": true
+        },
+        {
+          "text": "To regenerate and retransmit signals to extend the physical length of a network.",
+          "isCorrect": false
+        },
+        {
+          "text": "To create dedicated point-to-point links between every pair of nodes.",
+          "isCorrect": false
+        },
+        {
+          "text": "To assign IP addresses, DNS root zones, and protocol numbers.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "To reduce congestion and collision domains in Ethernet networks."
+    },
+    {
+      "id": "net-ch4-q34",
+      "question": "How do switches reduce collisions?",
+      "type": "single",
+      "options": [
+        {
+          "text": "By forwarding frames only to the destination port using MAC tables.",
+          "isCorrect": true
+        },
+        {
+          "text": "By broadcasting incoming data to all ports, ensuring all hosts see every frame.",
+          "isCorrect": false
+        },
+        {
+          "text": "By using token passing so only one host can transmit at a time.",
+          "isCorrect": false
+        },
+        {
+          "text": "By increasing the number of hubs allowed in series at higher speeds.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "By forwarding frames only to the destination port using MAC tables."
+    },
+    {
+      "id": "net-ch4-q35",
+      "question": "How does a switch learn MAC addresses?",
+      "type": "single",
+      "options": [
+        {
+          "text": "By reading the source MAC address of incoming frames.",
+          "isCorrect": true
+        },
+        {
+          "text": "By reading the destination MAC address and adding it immediately to the table.",
+          "isCorrect": false
+        },
+        {
+          "text": "By querying IANA for a list of MAC addresses in the subnet.",
+          "isCorrect": false
+        },
+        {
+          "text": "By using DHCP to assign MAC addresses dynamically to hosts.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "By reading the source MAC address of incoming frames."
+    },
+    {
+      "id": "net-ch4-q36",
+      "question": "What happens if a destination MAC is unknown?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The frame is flooded to all ports except the incoming port.",
+          "isCorrect": true
+        },
+        {
+          "text": "The frame is discarded immediately because unknown unicasts are not allowed.",
+          "isCorrect": false
+        },
+        {
+          "text": "The switch sends the frame only to the port with the highest link speed.",
+          "isCorrect": false
+        },
+        {
+          "text": "The router rewrites the MAC address to the correct one and forwards it.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The frame is flooded to all ports except the incoming port."
+    },
+    {
+      "id": "net-ch4-q37",
+      "question": "How are collision and broadcast domains affected by switches?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Each switch port is a separate collision domain All ports together form one broadcast domain.",
+          "isCorrect": true
+        },
+        {
+          "text": "All switch ports are in one collision domain and one broadcast domain, like a hub.",
+          "isCorrect": false
+        },
+        {
+          "text": "Each switch port is a separate broadcast domain by default, like a router interface.",
+          "isCorrect": false
+        },
+        {
+          "text": "Switches eliminate broadcasts completely by filtering all multicast and broadcast frames.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Each switch port is a separate collision domain All ports together form one broadcast domain."
+    },
+    {
+      "id": "net-ch4-q38",
+      "question": "What is the difference between a bridge and a switch?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A switch works like a bridge but is faster and uses ASIC hardware.",
+          "isCorrect": true
+        },
+        {
+          "text": "A bridge forwards packets based on IP addresses, while a switch forwards frames based on MAC addresses.",
+          "isCorrect": false
+        },
+        {
+          "text": "A bridge broadcasts all frames to all ports, while a switch can only forward broadcasts.",
+          "isCorrect": false
+        },
+        {
+          "text": "A switch regenerates the signal and copies incoming bits to all outputs, while a bridge cannot.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A switch works like a bridge but is faster and uses ASIC hardware."
+    },
+    {
+      "id": "net-ch4-q39",
+      "question": "What is Layer 2 switching?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Hardware-based frame forwarding using MAC addresses.",
+          "isCorrect": true
+        },
+        {
+          "text": "Packet forwarding based on network-layer addresses.",
+          "isCorrect": false
+        },
+        {
+          "text": "A mechanism that regenerates signals and broadcasts frames to all ports.",
+          "isCorrect": false
+        },
+        {
+          "text": "A session management process that establishes and terminates communication sessions.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Hardware-based frame forwarding using MAC addresses."
+    },
+    {
+      "id": "net-ch4-q40",
+      "question": "Why are Layer 2 switches preferred over hubs?",
+      "type": "single",
+      "options": [
+        {
+          "text": "They offer much higher performance and fewer collisions.",
+          "isCorrect": true
+        },
+        {
+          "text": "They broadcast every incoming bit-stream to all devices to simplify traffic handling.",
+          "isCorrect": false
+        },
+        {
+          "text": "They assign IP addresses and DNS zones more efficiently.",
+          "isCorrect": false
+        },
+        {
+          "text": "They require only one collision domain for the entire campus network, improving throughput.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "They offer much higher performance and fewer collisions."
+    },
+    {
+      "id": "net-ch4-q41",
+      "question": "What is the limitation of large Layer 2 networks?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Broadcast traffic still affects performance and scalability.",
+          "isCorrect": true
+        },
+        {
+          "text": "They cannot forward frames based on MAC addresses and must use IP routing instead.",
+          "isCorrect": false
+        },
+        {
+          "text": "They cannot carry multiple VLANs between switches using trunk links.",
+          "isCorrect": false
+        },
+        {
+          "text": "They require token passing, which limits throughput to one transmitter at a time.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Broadcast traffic still affects performance and scalability."
+    },
+    {
+      "id": "net-ch4-q42",
+      "question": "What is Layer 3 routing?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Packet forwarding based on network-layer addresses.",
+          "isCorrect": true
+        },
+        {
+          "text": "Hardware-based frame forwarding using MAC addresses.",
+          "isCorrect": false
+        },
+        {
+          "text": "Regenerating and retransmitting signals to extend network length.",
+          "isCorrect": false
+        },
+        {
+          "text": "Adding VLAN tags so frames reach the correct VLAN across a trunk link.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Packet forwarding based on network-layer addresses."
+    },
+    {
+      "id": "net-ch4-q43",
+      "question": "What advantages do routers provide?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Scalability Broadcast separation Optimal path selection Fast convergence.",
+          "isCorrect": true
+        },
+        {
+          "text": "Centralized fault detection Easy to manage and expand.",
+          "isCorrect": false
+        },
+        {
+          "text": "Full use of link capacity High robustness and fault tolerance Strong security due to dedicated links.",
+          "isCorrect": false
+        },
+        {
+          "text": "Reduced cabling compared to mesh Simple and inexpensive for small networks.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Scalability Broadcast separation Optimal path selection Fast convergence."
+    },
+    {
+      "id": "net-ch4-q44",
+      "question": "What is the difference between Layer 2 and Layer 3 switching?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Layer 2 uses MAC addresses Layer 3 uses network-layer addresses.",
+          "isCorrect": true
+        },
+        {
+          "text": "Layer 2 uses network-layer addresses Layer 3 uses MAC addresses.",
+          "isCorrect": false
+        },
+        {
+          "text": "Layer 2 removes the need for broadcast traffic while Layer 3 floods unknown unicasts.",
+          "isCorrect": false
+        },
+        {
+          "text": "Layer 2 operates only in a ring topology while Layer 3 requires token passing.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Layer 2 uses MAC addresses Layer 3 uses network-layer addresses."
+    },
+    {
+      "id": "net-ch4-q45",
+      "question": "What is a VLAN?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A Virtual LAN that logically groups devices independent of physical location.",
+          "isCorrect": true
+        },
+        {
+          "text": "A topology where all nodes share a single communication backbone using a shared medium.",
+          "isCorrect": false
+        },
+        {
+          "text": "A network segment where only one device can transmit at a time without collision.",
+          "isCorrect": false
+        },
+        {
+          "text": "A device that regenerates signals and broadcasts data to all ports.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A Virtual LAN that logically groups devices independent of physical location."
+    },
+    {
+      "id": "net-ch4-q46",
+      "question": "What problem do VLANs solve?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Network segmentation without physical restructuring.",
+          "isCorrect": true
+        },
+        {
+          "text": "They prevent collisions by using token passing on Ethernet segments.",
+          "isCorrect": false
+        },
+        {
+          "text": "They extend the physical length of a network by regenerating signals.",
+          "isCorrect": false
+        },
+        {
+          "text": "They replace the need for MAC addresses by switching only on IP addresses.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Network segmentation without physical restructuring."
+    },
+    {
+      "id": "net-ch4-q47",
+      "question": "How do VLANs improve networks?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Improved scalability Better security Easier management.",
+          "isCorrect": true
+        },
+        {
+          "text": "Reduced cabling compared to mesh Simple and inexpensive for small networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Easy installation and reconfiguration Easy fault detection.",
+          "isCorrect": false
+        },
+        {
+          "text": "Scalability Broadcast separation Optimal path selection Fast convergence.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Improved scalability Better security Easier management."
+    },
+    {
+      "id": "net-ch4-q48",
+      "question": "How are VLANs equivalent to subnets?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Each VLAN represents a separate broadcast domain.",
+          "isCorrect": true
+        },
+        {
+          "text": "Each VLAN is a separate collision domain shared by all ports on a hub.",
+          "isCorrect": false
+        },
+        {
+          "text": "Each VLAN is defined by a ring token so no collisions occur.",
+          "isCorrect": false
+        },
+        {
+          "text": "Each VLAN guarantees end-to-end reliability by retransmitting lost packets.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Each VLAN represents a separate broadcast domain."
+    },
+    {
+      "id": "net-ch4-q49",
+      "question": "How do switches carry multiple VLANs between them?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Using a trunk link.",
+          "isCorrect": true
+        },
+        {
+          "text": "Using CSMA/CD with collision detection enabled on every port.",
+          "isCorrect": false
+        },
+        {
+          "text": "Using token passing so VLAN frames transmit without collision.",
+          "isCorrect": false
+        },
+        {
+          "text": "Using repeaters to regenerate signals across longer physical links.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Using a trunk link."
+    },
+    {
+      "id": "net-ch4-q50",
+      "question": "What is a VLAN tag?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A special header added to frames identifying the VLAN ID.",
+          "isCorrect": true
+        },
+        {
+          "text": "A checksum used to detect errors at the end of an Ethernet frame.",
+          "isCorrect": false
+        },
+        {
+          "text": "A MAC address table entry learned from the destination address of frames.",
+          "isCorrect": false
+        },
+        {
+          "text": "A routing table entry summarizing reachability information by network number.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A special header added to frames identifying the VLAN ID."
+    },
+    {
+      "id": "net-ch4-q51",
+      "question": "Why are VLAN tags important?",
+      "type": "single",
+      "options": [
+        {
+          "text": "They ensure frames reach the correct VLAN across trunk links.",
+          "isCorrect": true
+        },
+        {
+          "text": "They allow hubs to forward frames only to the destination port to reduce collisions.",
+          "isCorrect": false
+        },
+        {
+          "text": "They prevent collisions by forcing only one device to transmit at a time on the segment.",
+          "isCorrect": false
+        },
+        {
+          "text": "They regenerate weakened signals to extend the physical length of the network.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "They ensure frames reach the correct VLAN across trunk links."
+    }
+  ]
+}

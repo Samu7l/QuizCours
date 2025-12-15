@@ -1,0 +1,656 @@
+{
+  "id": "net-ch7",
+  "type": "module",
+  "title": "Chapter 7 - Structured Cabling and Standards",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "net-ch7-q1",
+      "question": "What is structured cabling?",
+      "type": "single",
+      "options": [
+        {
+          "text": "An ad-hoc cabling approach with no standard, often creating complex maintenance issues.",
+          "isCorrect": false
+        },
+        {
+          "text": "A standardized approach to designing, installing, and managing network cabling infrastructure in a consistent and organized manner.",
+          "isCorrect": true
+        },
+        {
+          "text": "A protocol suite that defines data, voice, and video encapsulation.",
+          "isCorrect": false
+        },
+        {
+          "text": "A set of wireless standards that define how signals are broadcast through air.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A standardized approach to designing, installing, and managing network cabling infrastructure in a consistent and organized manner."
+    },
+    {
+      "id": "net-ch7-q2",
+      "question": "Why is structured cabling important?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Because 70% of network problems are traced to cabling faults, and proper structure reduces failures and maintenance costs.",
+          "isCorrect": true
+        },
+        {
+          "text": "Because it replaces the need for documentation and labeling in network rooms.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it is required for all wireless networks to function correctly.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it guarantees zero electromagnetic interference on all copper cables.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Because 70% of network problems are traced to cabling faults, and proper structure reduces failures and maintenance costs."
+    },
+    {
+      "id": "net-ch7-q3",
+      "question": "What is unstructured cabling?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A method that divides the network infrastructure into manageable blocks.",
+          "isCorrect": false
+        },
+        {
+          "text": "A cabling plan defined by the EIA-568 standard for commercial buildings.",
+          "isCorrect": false
+        },
+        {
+          "text": "A cabling approach where no single standard is followed for interconnections, leading to complexity and maintenance issues.",
+          "isCorrect": true
+        },
+        {
+          "text": "A standardized approach to designing and managing cabling in a consistent way.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A cabling approach where no single standard is followed for interconnections, leading to complexity and maintenance issues."
+    },
+    {
+      "id": "net-ch7-q4",
+      "question": "What are the main disadvantages of unstructured cabling?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Low initial cost but higher long-term expenses; difficult maintenance and scalability; poor support for future technologies.",
+          "isCorrect": false
+        },
+        {
+          "text": "Prevents additions and moves unless the whole network is rewired.",
+          "isCorrect": false
+        },
+        {
+          "text": "Limited to fiber-optic links and cannot support copper cabling.",
+          "isCorrect": false
+        },
+        {
+          "text": "Low initial cost but higher long-term expenses; difficult maintenance and scalability; poor support for future technologies.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Low initial cost but higher long-term expenses; difficult maintenance and scalability; poor support for future technologies."
+    },
+    {
+      "id": "net-ch7-q5",
+      "question": "What are the benefits of structured cabling over unstructured cabling?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Better organization; easier maintenance; scalability; support for future technologies; lower long-term cost.",
+          "isCorrect": true
+        },
+        {
+          "text": "Improved signal propagation by reflecting radio waves off the ionosphere.",
+          "isCorrect": false
+        },
+        {
+          "text": "Lower initial cost and fewer standards to follow, making it faster to deploy.",
+          "isCorrect": false
+        },
+        {
+          "text": "Better for temporary setups because it avoids patch panels and labeling systems.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Better organization; easier maintenance; scalability; support for future technologies; lower long-term cost."
+    },
+    {
+      "id": "net-ch7-q6",
+      "question": "How does structured cabling organize infrastructure?",
+      "type": "single",
+      "options": [
+        {
+          "text": "By converting DTE data into signals using physical-layer equipment.",
+          "isCorrect": false
+        },
+        {
+          "text": "By using only one long backbone cable shared by every device (bus layout).",
+          "isCorrect": false
+        },
+        {
+          "text": "By dividing the entire network infrastructure into manageable blocks.",
+          "isCorrect": true
+        },
+        {
+          "text": "By following no single standard so cables can be routed however is convenient.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "By dividing the entire network infrastructure into manageable blocks."
+    },
+    {
+      "id": "net-ch7-q7",
+      "question": "What administrative advantages does structured cabling provide?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Labeling and color-coding for quick identification; clear documentation and management.",
+          "isCorrect": true
+        },
+        {
+          "text": "Using routers to separate broadcasts and select optimal paths.",
+          "isCorrect": false
+        },
+        {
+          "text": "Using parabolic dish antennas and horn antennas to focus transmissions.",
+          "isCorrect": false
+        },
+        {
+          "text": "Choosing network architecture and topology without any need for documentation.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Labeling and color-coding for quick identification; clear documentation and management."
+    },
+    {
+      "id": "net-ch7-q8",
+      "question": "How does structured cabling support changes in a network?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It prevents any cabling changes by locking the layout to the initial design.",
+          "isCorrect": false
+        },
+        {
+          "text": "It allows additions, moves, and changes with minimal inconvenience.",
+          "isCorrect": true
+        },
+        {
+          "text": "It supports changes by increasing the number of hubs allowed in a LAN.",
+          "isCorrect": false
+        },
+        {
+          "text": "It allows changes only if the entire trunk cable is replaced.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "It allows additions, moves, and changes with minimal inconvenience."
+    },
+    {
+      "id": "net-ch7-q9",
+      "question": "What must be considered when choosing network cabling?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Only the cable connector type (RJ45 vs BNC) and the patch lead length.",
+          "isCorrect": false
+        },
+        {
+          "text": "Only whether the network uses DTE or DCE devices at the endpoints.",
+          "isCorrect": false
+        },
+        {
+          "text": "Network architecture (Ethernet, Token Ring); topology (star, bus, ring); building codes and regulations.",
+          "isCorrect": true
+        },
+        {
+          "text": "Only the IP addressing plan and routing protocol used in the network core.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Network architecture (Ethernet, Token Ring); topology (star, bus, ring); building codes and regulations."
+    },
+    {
+      "id": "net-ch7-q10",
+      "question": "What tools are required for proper cabling installation?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Parabolic dishes, horn antennas, and microwave repeaters.",
+          "isCorrect": false
+        },
+        {
+          "text": "Routers, switches, and firewalls for broadcast separation.",
+          "isCorrect": false
+        },
+        {
+          "text": "Oscilloscopes, spectrum analyzers, and RF power meters.",
+          "isCorrect": false
+        },
+        {
+          "text": "Crimpers; fish tapes; continuity testers; labeling tools.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Crimpers; fish tapes; continuity testers; labeling tools."
+    },
+    {
+      "id": "net-ch7-q11",
+      "question": "Why is documentation important in structured cabling?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It enables easy maintenance, troubleshooting, and future upgrades.",
+          "isCorrect": false
+        },
+        {
+          "text": "It ensures network devices can communicate directly without any DCE.",
+          "isCorrect": false
+        },
+        {
+          "text": "It enables easy maintenance, troubleshooting, and future upgrades.",
+          "isCorrect": true
+        },
+        {
+          "text": "It eliminates the need for patch panels and labeling in equipment rooms.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "It enables easy maintenance, troubleshooting, and future upgrades."
+    },
+    {
+      "id": "net-ch7-q12",
+      "question": "What does the TIA/EIA 568A standard specify?",
+      "type": "single",
+      "options": [
+        {
+          "text": "How routers select optimal paths and converge quickly after failures.",
+          "isCorrect": false
+        },
+        {
+          "text": "Maximum distances for horizontal wiring; cable parameters such as crosstalk and attenuation; cabling structure (e.g. star); connectors (RJ45); equipment rooms and closets.",
+          "isCorrect": true
+        },
+        {
+          "text": "How DTE devices translate digital and analog signals using modems.",
+          "isCorrect": false
+        },
+        {
+          "text": "Maximum microwave transmission distance between ground stations.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Maximum distances for horizontal wiring; cable parameters such as crosstalk and attenuation; cabling structure (e.g. star); connectors (RJ45); equipment rooms and closets."
+    },
+    {
+      "id": "net-ch7-q13",
+      "question": "Who published the EIA-568 standard and when?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The Electronics Industries Association published EIA-568 in 1991.",
+          "isCorrect": true
+        },
+        {
+          "text": "The IEEE published it in 1985 as part of the Ethernet standards.",
+          "isCorrect": false
+        },
+        {
+          "text": "The IETF published it as an RFC to standardize wireless cabling.",
+          "isCorrect": false
+        },
+        {
+          "text": "The International Telecommunication Union published it in 2001.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Electronics Industries Association published EIA-568 in 1991."
+    },
+    {
+      "id": "net-ch7-q14",
+      "question": "What is the purpose of the EIA-568 standard?",
+      "type": "single",
+      "options": [
+        {
+          "text": "To specify radio and microwave frequency bands regulated by governments.",
+          "isCorrect": false
+        },
+        {
+          "text": "To describe how token passing prevents collisions in ring networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "To define cabling requirements for commercial building telecommunications.",
+          "isCorrect": true
+        },
+        {
+          "text": "To define packet routing requirements between different LANs.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "To define cabling requirements for commercial building telecommunications."
+    },
+    {
+      "id": "net-ch7-q15",
+      "question": "What type of cabling does EIA-568 specify?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Only coaxial cable types used in 10Base-2 and 10Base-5 Ethernet.",
+          "isCorrect": false
+        },
+        {
+          "text": "Voice-grade unshielded twisted pair (UTP); shielded twisted pair (STP) for in-building applications.",
+          "isCorrect": true
+        },
+        {
+          "text": "Only fiber-optic cabling connectors such as SC and ST.",
+          "isCorrect": false
+        },
+        {
+          "text": "Any unguided media used for microwave and infrared transmission.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Voice-grade unshielded twisted pair (UTP); shielded twisted pair (STP) for in-building applications."
+    },
+    {
+      "id": "net-ch7-q16",
+      "question": "What is Data Terminal Equipment (DTE)?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Any device that acts as a source or destination of binary digital data and does not communicate directly with other DTEs.",
+          "isCorrect": false
+        },
+        {
+          "text": "Equipment that converts DTE data into physical signals at the physical layer.",
+          "isCorrect": false
+        },
+        {
+          "text": "Any device that acts as a source or destination of binary digital data and does not communicate directly with other DTEs.",
+          "isCorrect": true
+        },
+        {
+          "text": "A cabling method that follows no standard, increasing maintenance issues.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Any device that acts as a source or destination of binary digital data and does not communicate directly with other DTEs."
+    },
+    {
+      "id": "net-ch7-q17",
+      "question": "How is DTE explained using an analogy?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Like a modem translating digital and analog signals for transmission.",
+          "isCorrect": false
+        },
+        {
+          "text": "Like a brain that generates ideas but cannot transmit them directly without a translator.",
+          "isCorrect": true
+        },
+        {
+          "text": "Like a router selecting the optimal path for packets between networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Like a patch panel that organizes and labels cables in a cabinet.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Like a brain that generates ideas but cannot transmit them directly without a translator."
+    },
+    {
+      "id": "net-ch7-q18",
+      "question": "What is Data Circuit-Terminating Equipment (DCE)?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Any device that acts as a source or destination of binary digital data.",
+          "isCorrect": false
+        },
+        {
+          "text": "Equipment that receives or transmits data signals (analog or digital) and works at the physical layer of the OSI model.",
+          "isCorrect": false
+        },
+        {
+          "text": "A labeling system used to color-code cables for quick identification.",
+          "isCorrect": false
+        },
+        {
+          "text": "Equipment that receives or transmits data signals (analog or digital) and works at the physical layer of the OSI model.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Equipment that receives or transmits data signals (analog or digital) and works at the physical layer of the OSI model."
+    },
+    {
+      "id": "net-ch7-q19",
+      "question": "What is the role of DCE in networking?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It converts data from DTE into signals that can be transmitted over a communication link.",
+          "isCorrect": false
+        },
+        {
+          "text": "It selects optimal routes and separates broadcasts between VLANs.",
+          "isCorrect": false
+        },
+        {
+          "text": "It defines maximum distances for horizontal wiring in a building.",
+          "isCorrect": false
+        },
+        {
+          "text": "It converts data from DTE into signals that can be transmitted over a communication link.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "It converts data from DTE into signals that can be transmitted over a communication link."
+    },
+    {
+      "id": "net-ch7-q20",
+      "question": "What is a common example of DCE?",
+      "type": "single",
+      "options": [
+        {
+          "text": "An RJ45 patch panel used to connect outlets to switches.",
+          "isCorrect": false
+        },
+        {
+          "text": "A modem that translates between digital and analog signals.",
+          "isCorrect": true
+        },
+        {
+          "text": "A trunking system used to route and protect cables.",
+          "isCorrect": false
+        },
+        {
+          "text": "A continuity tester used to verify cable integrity.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A modem that translates between digital and analog signals."
+    },
+    {
+      "id": "net-ch7-q21",
+      "question": "At which OSI layer does DCE operate?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The Application Layer.",
+          "isCorrect": false
+        },
+        {
+          "text": "The Data Link Layer.",
+          "isCorrect": false
+        },
+        {
+          "text": "The Physical Layer.",
+          "isCorrect": true
+        },
+        {
+          "text": "The Network Layer.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Physical Layer."
+    },
+    {
+      "id": "net-ch7-q22",
+      "question": "What are the main advantages of structured cabling?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Broadcast separation and optimal path selection by routing protocols.",
+          "isCorrect": false
+        },
+        {
+          "text": "Guaranteed lowest initial cost and no need for standards or planning.",
+          "isCorrect": false
+        },
+        {
+          "text": "Consistency for data, voice, and video; multi-vendor support; simplified troubleshooting; support for future applications; fault isolation; reduced maintenance costs.",
+          "isCorrect": true
+        },
+        {
+          "text": "High bandwidth wireless transmission using parabolic dish antennas.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Consistency for data, voice, and video; multi-vendor support; simplified troubleshooting; support for future applications; fault isolation; reduced maintenance costs."
+    },
+    {
+      "id": "net-ch7-q23",
+      "question": "How does structured cabling simplify troubleshooting?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Problems are broadcast to all nodes so every device can help diagnose them.",
+          "isCorrect": false
+        },
+        {
+          "text": "Troubleshooting requires rewiring the entire trunk to isolate faults.",
+          "isCorrect": false
+        },
+        {
+          "text": "Problems are easier to isolate and fix without affecting the entire network.",
+          "isCorrect": true
+        },
+        {
+          "text": "Troubleshooting relies on ionosphere conditions and time of day.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Problems are easier to isolate and fix without affecting the entire network."
+    },
+    {
+      "id": "net-ch7-q24",
+      "question": "How does structured cabling support future applications?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It supports multimedia, video conferencing, and new technologies with minimal upgrades.",
+          "isCorrect": false
+        },
+        {
+          "text": "It supports only voice services and cannot support multimedia or video.",
+          "isCorrect": false
+        },
+        {
+          "text": "It supports future tech by removing the need for labeling and documentation.",
+          "isCorrect": false
+        },
+        {
+          "text": "It supports multimedia, video conferencing, and new technologies with minimal upgrades.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "It supports multimedia, video conferencing, and new technologies with minimal upgrades."
+    },
+    {
+      "id": "net-ch7-q25",
+      "question": "What equipment is typically included in a structured cabling setup?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Network cabinet; RJ45 patch panels; Cat 5e cables; outlets and backboxes; patch leads and fly leads; trunking and labeling systems.",
+          "isCorrect": false
+        },
+        {
+          "text": "Parabolic dishes, horn antennas, and aligned towers for microwave links.",
+          "isCorrect": false
+        },
+        {
+          "text": "Network cabinet; RJ45 patch panels; Cat 5e cables; outlets and backboxes; patch leads and fly leads; trunking and labeling systems.",
+          "isCorrect": true
+        },
+        {
+          "text": "Modems, routers, and switches used to connect different LANs together.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Network cabinet; RJ45 patch panels; Cat 5e cables; outlets and backboxes; patch leads and fly leads; trunking and labeling systems."
+    },
+    {
+      "id": "net-ch7-q26",
+      "question": "What is the main summary of structured cabling?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It is a wireless-only approach based on line-of-sight propagation.",
+          "isCorrect": false
+        },
+        {
+          "text": "It provides standardized installation and management of network cabling, guided by TIA/EIA standards, offering cost savings and performance benefits.",
+          "isCorrect": true
+        },
+        {
+          "text": "It is a routing design that focuses on optimal path selection and convergence.",
+          "isCorrect": false
+        },
+        {
+          "text": "It is an unstructured approach that avoids standards to reduce initial cost.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "It provides standardized installation and management of network cabling, guided by TIA/EIA standards, offering cost savings and performance benefits."
+    },
+    {
+      "id": "net-ch7-q27",
+      "question": "Why do some organizations avoid structured cabling standards?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Because documentation is not allowed under TIA/EIA cabling guidelines.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because structured cabling cannot support future technologies like video.",
+          "isCorrect": false
+        },
+        {
+          "text": "Due to higher initial costs, lack of awareness, or short-term cost-saving decisions.",
+          "isCorrect": true
+        },
+        {
+          "text": "Because standards make troubleshooting impossible and increase downtime.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Due to higher initial costs, lack of awareness, or short-term cost-saving decisions."
+    }
+  ]
+}

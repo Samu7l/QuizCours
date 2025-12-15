@@ -18,28 +18,41 @@
     "net": {
       "title": "Networks 2: Communication Protocols and Applications",
       "chapters": [
-        { "id": "net-ch1", "title": "Chapitre 1: OSI", "file": "net/ch1.json" }
+        { "id": "net-ch01", "title": "Chapter 1 - Introduction to Data Communication Model", "file": "net/net-ch01.json" },
+        { "id": "net-ch02", "title": "Chapter 2 - Protocols in Data Communication (I)", "file": "net/net-ch02.json" },
+        { "id": "net-ch03", "title": "Chapter 3 - Protocols in Data Communication (II)", "file": "net/net-ch03.json" },
+        { "id": "net-ch04", "title": "Chapter 4 - LAN Topologies and Standards", "file": "net/net-ch04.json" },
+        { "id": "net-ch05", "title": "Chapter 5 - Transmission Media (Guided Media)", "file": "net/net-ch05.json" },
+        { "id": "net-ch06", "title": "Chapter 6 - Transmission Media (Unguided Media)", "file": "net/net-ch06.json" },
+        { "id": "net-ch07", "title": "Chapter 7 - Structured Cabling and Standards", "file": "net/net-ch07.json" },
+        { "id": "net-ch08", "title": "Chapter 8 - IP Addressing", "file": "net/net-ch08.json" },
+        { "id": "net-ch09", "title": "Chapter 9 - Switching and Routing", "file": "net/net-ch09.json" },
+        { "id": "net-ch10", "title": "Chapter 10 - Transport and Application", "file": "net/net-ch10.json" },
+        { "id": "net-ch11", "title": "Chapter 11 - IPv6 Addressing", "file": "net/net-ch11.json" },
+        { "id": "net-ch12", "title": "Chapitre 12 - Routing ", "file": "net/net-ch12.json" }
       ],
-      "finals": []
+      "finals": [
+        { "id": "net-final-01", "title": "Ef'réussite quiz", "file": "net/net-final-v1.json" }
+      ]
     },
     "ml": {
       "title": "Introduction to Machine Learning",
       "chapters": [
-        { "id": "arch-ch1", "title": "Chapitre 1: Logique", "file": "arch/ch1.json" }
+        { "id": "ml-ch1", "title": "", "file": "ml/ch1.json" }
       ],
       "finals": []
     },
     "java": {
       "title": "Java 2: Generic, functional and concurrent programming",
       "chapters": [
-        { "id": "arch-ch1", "title": "Chapitre 1: Logique", "file": "arch/ch1.json" }
+        { "id": "java-ch1", "title": "", "file": "java/ch1.json" }
       ],
       "finals": []
     },
     "uml": {
       "title": "Object-Oriented Analysis & Design with UML",
       "chapters": [
-        { "id": "arch-ch1", "title": "Chapitre 1: Logique", "file": "arch/ch1.json" }
+        { "id": "uml-ch1", "title": "", "file": "uml/ch1.json" }
       ],
       "finals": []
     }

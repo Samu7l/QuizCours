@@ -1,0 +1,1328 @@
+{
+  "id": "net-ch8",
+  "type": "module",
+  "title": "Chapter 8 - IP Addressing",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "net-ch8-q1",
+      "question": "What is the purpose of IP addressing?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Routing determines how packets reach them.",
+          "isCorrect": false
+        },
+        {
+          "text": "A logical address used to identify a device and its location on a network.",
+          "isCorrect": false
+        },
+        {
+          "text": "IP addressing assigns unique identifiers to devices so they can communicate across a network.",
+          "isCorrect": true
+        },
+        {
+          "text": "A 32-bit value that separates the network/subnet portion from the host portion of an IP address.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "IP addressing provides unique logical identifiers so devices can be located and communicate across networks. This identification supports routing and end-to-end communication."
+    },
+    {
+      "id": "net-ch8-q2",
+      "question": "What are the two main topics of the IP addressing lesson?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Routing Protocols and Switching.",
+          "isCorrect": false
+        },
+        {
+          "text": "IP Addressing Subnet Addressing.",
+          "isCorrect": true
+        },
+        {
+          "text": "Physical Layer and Data Link Layer.",
+          "isCorrect": false
+        },
+        {
+          "text": "Classful Routing and Classless Routing.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson is organized around IP Addressing fundamentals and Subnet Addressing, which introduces subnetting, masks, and prefix concepts."
+    },
+    {
+      "id": "net-ch8-q3",
+      "question": "What is an IP address?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A 48-bit flat address assigned by manufacturers, such as a MAC address.",
+          "isCorrect": false
+        },
+        {
+          "text": "A logical address used to identify a device and its location on a network.",
+          "isCorrect": false
+        },
+        {
+          "text": "A logical address used to identify a device and its location on a network.",
+          "isCorrect": true
+        },
+        {
+          "text": "The process of dividing a network into smaller subnetworks using a subnet mask.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Layer 3 addressing (IP) is hierarchical and assigned by administrators to reflect network structure. Routers forward packets based on the destination IP network information."
+    },
+    {
+      "id": "net-ch8-q4",
+      "question": "What is dotted decimal notation?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A human-readable representation of a 32-bit IP address using four decimal octets separated by dots.",
+          "isCorrect": true
+        },
+        {
+          "text": "A routing method that transmits prefix length with the address.",
+          "isCorrect": false
+        },
+        {
+          "text": "A binary representation of an IP address written without separators.",
+          "isCorrect": false
+        },
+        {
+          "text": "A 48-bit flat address assigned by manufacturers (MAC address).",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "IPv4 addresses are 32 bits; dotted decimal notation makes them readable by writing four 8-bit octets as decimal numbers separated by dots."
+    },
+    {
+      "id": "net-ch8-q5",
+      "question": "What are the two main parts of an IPv4 address?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Network mask and broadcast ID.",
+          "isCorrect": false
+        },
+        {
+          "text": "Network ID (Net ID) Host ID.",
+          "isCorrect": true
+        },
+        {
+          "text": "Prefix length and route.",
+          "isCorrect": false
+        },
+        {
+          "text": "Manufacturer code and unique identifier.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "An IPv4 address is logically divided into a network part (Network ID) and a host part (Host ID). Subnetting adds an additional hierarchy level inside the network portion."
+    },
+    {
+      "id": "net-ch8-q6",
+      "question": "What does the Network ID identify?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A specific device within a network.",
+          "isCorrect": false
+        },
+        {
+          "text": "The network’s location within the Internet.",
+          "isCorrect": false
+        },
+        {
+          "text": "The route a packet takes to reach a destination.",
+          "isCorrect": false
+        },
+        {
+          "text": "The network’s location within the Internet.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "The Network ID represents the network portion of an IPv4 address, indicating where the network is located on the Internet. Hosts within that network share the same Network ID."
+    },
+    {
+      "id": "net-ch8-q7",
+      "question": "What does the Host ID identify?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The network’s location within the Internet.",
+          "isCorrect": false
+        },
+        {
+          "text": "The prefix length of the subnet mask.",
+          "isCorrect": false
+        },
+        {
+          "text": "A specific device within a network.",
+          "isCorrect": true
+        },
+        {
+          "text": "The manufacturer code portion of a Layer 2 address.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Host ID is the part of the IPv4 address that identifies a specific device inside a given network. It must be unique within that network/subnet."
+    },
+    {
+      "id": "net-ch8-q8",
+      "question": "Why is IP addressing considered hierarchical?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A logical subdivision of a network created to add an additional level of hierarchy.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it identifies networks first and hosts second, enabling scalable routing.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it identifies networks first and hosts second, enabling scalable routing.",
+          "isCorrect": true
+        },
+        {
+          "text": "Because it separates Layer 2 switching tables from Layer 3 routing tables.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "IP addressing is hierarchical because the address structure identifies the network portion first and then the host within that network. This supports scalable routing."
+    },
+    {
+      "id": "net-ch8-q9",
+      "question": "What problem arises with only Net ID and Host ID?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A list of valid subnet masks and corresponding address ranges.",
+          "isCorrect": false
+        },
+        {
+          "text": "Very large networks reduce privacy, security, and efficient management.",
+          "isCorrect": true
+        },
+        {
+          "text": "It forces the use of non-contiguous subnet masks.",
+          "isCorrect": false
+        },
+        {
+          "text": "It prevents routers from using longest prefix match.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "With only two hierarchy levels (network and host), networks can become extremely large. This reduces privacy/security and makes management and efficiency harder, which subnetting helps address."
+    },
+    {
+      "id": "net-ch8-q10",
+      "question": "What is a subnet?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A logical, hierarchical address assigned by a network administrator.",
+          "isCorrect": false
+        },
+        {
+          "text": "A logical subdivision of a network created to add an additional level of hierarchy.",
+          "isCorrect": true
+        },
+        {
+          "text": "A 32-bit value that separates the network/subnet portion from the host portion of an IP address.",
+          "isCorrect": false
+        },
+        {
+          "text": "A human-readable representation of a 32-bit IP address using four decimal octets separated by dots.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A subnet is a smaller logical part of a larger network. Subnetting introduces another level of hierarchy to improve organization, efficiency, and control."
+    },
+    {
+      "id": "net-ch8-q11",
+      "question": "What is subnetting?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The process of dividing a network into smaller subnetworks using a subnet mask.",
+          "isCorrect": false
+        },
+        {
+          "text": "The process of dividing a network into smaller subnetworks using a subnet mask.",
+          "isCorrect": true
+        },
+        {
+          "text": "A 32-bit value that separates the network/subnet portion from the host portion of an IP address.",
+          "isCorrect": false
+        },
+        {
+          "text": "A logical address used to identify a device and its location on a network.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Subnetting divides a larger network into smaller logical networks. It is implemented by applying a subnet mask (or prefix length) to split network/subnet vs host parts."
+    },
+    {
+      "id": "net-ch8-q12",
+      "question": "What is a subnet mask?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A 32-bit value that separates the network/subnet portion from the host portion of an IP address.",
+          "isCorrect": false
+        },
+        {
+          "text": "A logical subdivision of a network created to add an additional level of hierarchy.",
+          "isCorrect": false
+        },
+        {
+          "text": "A 32-bit value that separates the network/subnet portion from the host portion of an IP address.",
+          "isCorrect": true
+        },
+        {
+          "text": "A routing method that does not transmit prefix length and infers it from address classes.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A subnet mask is a 32-bit value that marks network/subnet bits with 1s and host bits with 0s. Devices and routers use it to determine which part of the address is network/subnet vs host."
+    },
+    {
+      "id": "net-ch8-q13",
+      "question": "How is a subnet mask structured in binary?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Network/subnet bits are 0 and host bits are 1.",
+          "isCorrect": false
+        },
+        {
+          "text": "Network/subnet bits are 1 Host bits are 0.",
+          "isCorrect": true
+        },
+        {
+          "text": "All bits alternate 1 and 0 to avoid routing ambiguity.",
+          "isCorrect": false
+        },
+        {
+          "text": "All bits are 1 for unicast and all bits are 0 for multicast.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In a subnet mask, the network/subnet portion is represented by contiguous 1s, and the host portion by 0s. This clean split allows consistent interpretation across devices."
+    },
+    {
+      "id": "net-ch8-q14",
+      "question": "What is the purpose of subnetting?",
+      "type": "single",
+      "options": [
+        {
+          "text": "To segment networks, reduce broadcast traffic, and improve efficiency and security.",
+          "isCorrect": true
+        },
+        {
+          "text": "To make IP addresses flat and globally unique like MAC addresses.",
+          "isCorrect": false
+        },
+        {
+          "text": "To remove the need for routing by broadcasting packets to all networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "To infer prefix lengths automatically from Class A, B, or C.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Subnetting segments a network into smaller parts to reduce broadcast traffic and improve efficiency. It also supports better organization and security boundaries."
+    },
+    {
+      "id": "net-ch8-q15",
+      "question": "What is Variable Length Subnet Masking (VLSM)?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The ability to use different subnet masks for the same network to optimize address usage.",
+          "isCorrect": false
+        },
+        {
+          "text": "A routing method that infers prefix length from the address class.",
+          "isCorrect": false
+        },
+        {
+          "text": "The ability to use different subnet masks for the same network to optimize address usage.",
+          "isCorrect": true
+        },
+        {
+          "text": "A human-readable representation of a 32-bit IP address using four decimal octets.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "VLSM lets you use different prefix lengths for subnets within the same major network. This reduces wasted addresses and supports route summarization."
+    },
+    {
+      "id": "net-ch8-q16",
+      "question": "What is another name for classless addressing?",
+      "type": "single",
+      "options": [
+        {
+          "text": "VLSM (Variable Length Subnet Masking).",
+          "isCorrect": false
+        },
+        {
+          "text": "CIDR (Classless Inter-Domain Routing).",
+          "isCorrect": false
+        },
+        {
+          "text": "ARP (Address Resolution Protocol).",
+          "isCorrect": false
+        },
+        {
+          "text": "CIDR (Classless Inter-Domain Routing).",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "CIDR (classless addressing) carries the prefix length explicitly (for example /24). This allows flexible subnet sizes and route aggregation beyond the old A/B/C class boundaries."
+    },
+    {
+      "id": "net-ch8-q17",
+      "question": "What is prefix length notation?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A slash followed by the number of network bits, e.g. /24.",
+          "isCorrect": true
+        },
+        {
+          "text": "A dotted-decimal form of a subnet mask, such as 255.255.255.0.",
+          "isCorrect": false
+        },
+        {
+          "text": "A method that infers the prefix from the address class (A/B/C).",
+          "isCorrect": false
+        },
+        {
+          "text": "A flat address format used for MAC addresses.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Prefix length notation writes the number of network/subnet bits as “/n”. For example, /24 means 24 bits are used for the network/subnet portion."
+    },
+    {
+      "id": "net-ch8-q18",
+      "question": "What does /24 represent in CIDR notation?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The last 24 bits are host bits.",
+          "isCorrect": false
+        },
+        {
+          "text": "The prefix is inferred from the address class without being sent.",
+          "isCorrect": false
+        },
+        {
+          "text": "The first 24 bits are network/subnet bits.",
+          "isCorrect": false
+        },
+        {
+          "text": "The first 24 bits are network/subnet bits.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "In CIDR, /24 means the first 24 bits are part of the network/subnet (prefix). The remaining bits are available for host addressing within that subnet."
+    },
+    {
+      "id": "net-ch8-q19",
+      "question": "What is the relationship between addressing and routing?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Addressing identifies devices Routing determines how packets reach them.",
+          "isCorrect": false
+        },
+        {
+          "text": "Addressing chooses the best path; routing assigns device identifiers.",
+          "isCorrect": false
+        },
+        {
+          "text": "Addressing encrypts packets; routing decrypts them.",
+          "isCorrect": false
+        },
+        {
+          "text": "Addressing identifies devices Routing determines how packets reach them.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Addressing gives devices identifiers (where they are), while routing is about how packets are forwarded to reach those identifiers."
+    },
+    {
+      "id": "net-ch8-q20",
+      "question": "What is the difference between a name, address, and route?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Name: what you want Address: where it is Route: how to get there.",
+          "isCorrect": true
+        },
+        {
+          "text": "Name: how to get there; Address: what you want; Route: where it is.",
+          "isCorrect": false
+        },
+        {
+          "text": "Name: a MAC address; Address: a port number; Route: a subnet mask.",
+          "isCorrect": false
+        },
+        {
+          "text": "Name: the network ID; Address: the broadcast ID; Route: the host ID.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A name is a human-friendly identifier (what you want). An address tells where it is, and a route is the path or method used to get there."
+    },
+    {
+      "id": "net-ch8-q21",
+      "question": "What is a Layer 2 address?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A flat, globally unique address assigned by manufacturers, such as a MAC address.",
+          "isCorrect": false
+        },
+        {
+          "text": "A logical, hierarchical address assigned by a network administrator.",
+          "isCorrect": false
+        },
+        {
+          "text": "A 32-bit address written in dotted decimal notation.",
+          "isCorrect": false
+        },
+        {
+          "text": "A flat, globally unique address assigned by manufacturers, such as a MAC address.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Layer 2 addressing is flat and typically refers to MAC addresses, which are globally unique and assigned by manufacturers. Switches forward frames using destination MAC information."
+    },
+    {
+      "id": "net-ch8-q22",
+      "question": "What are the two parts of a Layer 2 address?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Manufacturer code Unique identifier.",
+          "isCorrect": false
+        },
+        {
+          "text": "Subnet bits and host bits.",
+          "isCorrect": false
+        },
+        {
+          "text": "Prefix length and next hop.",
+          "isCorrect": false
+        },
+        {
+          "text": "Manufacturer code Unique identifier.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "A Layer 2 address (MAC) includes a manufacturer code and a unique identifier. The manufacturer code indicates the vendor, while the unique identifier distinguishes each interface."
+    },
+    {
+      "id": "net-ch8-q23",
+      "question": "Who assigns manufacturer codes for Layer 2 addresses?",
+      "type": "single",
+      "options": [
+        {
+          "text": "IANA.",
+          "isCorrect": false
+        },
+        {
+          "text": "The local network administrator.",
+          "isCorrect": false
+        },
+        {
+          "text": "The IEEE.",
+          "isCorrect": true
+        },
+        {
+          "text": "The IETF through RFCs.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Manufacturer codes for Layer 2 addresses are assigned by the IEEE. Vendors then assign the remaining identifier portion to each interface they produce."
+    },
+    {
+      "id": "net-ch8-q24",
+      "question": "What is a Layer 3 address?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A flat, globally unique address burned into a network interface.",
+          "isCorrect": false
+        },
+        {
+          "text": "A logical, hierarchical address assigned by a network administrator.",
+          "isCorrect": true
+        },
+        {
+          "text": "A physical cable standard for commercial buildings.",
+          "isCorrect": false
+        },
+        {
+          "text": "A broadcast address used to reach all local hosts.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Layer 3 addressing (IP) is hierarchical and assigned by administrators to reflect network structure. Routers forward packets based on the destination IP network information."
+    },
+    {
+      "id": "net-ch8-q25",
+      "question": "What happens to Layer 3 addresses when users move networks?",
+      "type": "single",
+      "options": [
+        {
+          "text": "They remain the same because they are burned into the NIC.",
+          "isCorrect": false
+        },
+        {
+          "text": "They become multicast addresses automatically.",
+          "isCorrect": false
+        },
+        {
+          "text": "They change, while Layer 2 addresses remain the same.",
+          "isCorrect": false
+        },
+        {
+          "text": "They change, while Layer 2 addresses remain the same.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Layer 3 (IP) addresses are assigned based on the network you are connected to, so they change when you move networks. Layer 2 (MAC) addresses generally remain the same."
+    },
+    {
+      "id": "net-ch8-q26",
+      "question": "What is Layer 2 switching based on?",
+      "type": "single",
+      "options": [
+        {
+          "text": "MAC address information.",
+          "isCorrect": true
+        },
+        {
+          "text": "Network-layer (IP) addresses.",
+          "isCorrect": false
+        },
+        {
+          "text": "Application-layer port numbers.",
+          "isCorrect": false
+        },
+        {
+          "text": "Subnet masks and prefix lengths.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Layer 2 switching forwards frames using destination MAC address information. The switch decides the outgoing interface based on its MAC table."
+    },
+    {
+      "id": "net-ch8-q27",
+      "question": "How does a Layer 2 switch learn addresses?",
+      "type": "single",
+      "options": [
+        {
+          "text": "By broadcasting unknown frames and building a switching table.",
+          "isCorrect": false
+        },
+        {
+          "text": "By sending packets to a router which returns a switching table.",
+          "isCorrect": false
+        },
+        {
+          "text": "By broadcasting unknown frames and building a switching table.",
+          "isCorrect": true
+        },
+        {
+          "text": "By querying DNS for the destination name and caching it.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A Layer 2 switch learns by observing incoming frames and associating source MAC addresses to ports. If it doesn’t know a destination, it floods (broadcasts) and learns from replies."
+    },
+    {
+      "id": "net-ch8-q28",
+      "question": "What is Layer 3 switching based on?",
+      "type": "single",
+      "options": [
+        {
+          "text": "MAC address information.",
+          "isCorrect": false
+        },
+        {
+          "text": "Manufacturer code information.",
+          "isCorrect": false
+        },
+        {
+          "text": "The physical port number only.",
+          "isCorrect": false
+        },
+        {
+          "text": "Network-layer (IP) addresses.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Layer 3 switching (routing) forwards packets using network-layer destination addresses. This relies on hierarchical addressing and routing tables."
+    },
+    {
+      "id": "net-ch8-q29",
+      "question": "Why is hierarchical routing important?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It forces every router to know every network segment in the Internet.",
+          "isCorrect": false
+        },
+        {
+          "text": "It localizes routing knowledge and improves scalability.",
+          "isCorrect": true
+        },
+        {
+          "text": "It removes the need for subnet masks and prefix lengths.",
+          "isCorrect": false
+        },
+        {
+          "text": "It makes Layer 2 addresses change when users move networks.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Hierarchical routing reduces how much topology information any single router must hold. This improves scalability as networks grow."
+    },
+    {
+      "id": "net-ch8-q30",
+      "question": "What is classful routing?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Routing that does not transmit prefix length and infers it from address classes.",
+          "isCorrect": true
+        },
+        {
+          "text": "Routing that transmits the prefix length explicitly with the IP address.",
+          "isCorrect": false
+        },
+        {
+          "text": "Routing that works only with /24 networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Routing that uses MAC addresses instead of IP addresses.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In classful routing, routers do not carry the prefix length in updates and instead infer it from the address class. This limits flexibility compared to classless routing."
+    },
+    {
+      "id": "net-ch8-q31",
+      "question": "What is classless routing?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Routing that infers prefix length from address classes without sending it.",
+          "isCorrect": false
+        },
+        {
+          "text": "Routing that transmits the prefix length explicitly with the IP address.",
+          "isCorrect": false
+        },
+        {
+          "text": "Routing that transmits the prefix length explicitly with the IP address.",
+          "isCorrect": true
+        },
+        {
+          "text": "Routing that forbids aggregation and requires fixed /8, /16, /24 masks.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Classless routing includes the prefix length with the route, enabling arbitrary prefix sizes. This improves address utilization and allows aggregation."
+    },
+    {
+      "id": "net-ch8-q32",
+      "question": "Why is classless routing more flexible?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It prevents route aggregation and increases table size.",
+          "isCorrect": false
+        },
+        {
+          "text": "It allows arbitrary prefix lengths, aggregation, and efficient address usage.",
+          "isCorrect": true
+        },
+        {
+          "text": "It is less flexible because it restricts prefixes to 8, 16, or 24 bits.",
+          "isCorrect": false
+        },
+        {
+          "text": "It eliminates subnetting by forcing one network per enterprise.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Classless routing allows routes with different prefix lengths and supports aggregation (summarization). This makes it more efficient and scalable than classful routing."
+    },
+    {
+      "id": "net-ch8-q33",
+      "question": "What are IP address classes used for historically?",
+      "type": "single",
+      "options": [
+        {
+          "text": "To define fixed network and host boundaries.",
+          "isCorrect": false
+        },
+        {
+          "text": "To define physical cable categories and connector types.",
+          "isCorrect": false
+        },
+        {
+          "text": "To define fixed network and host boundaries.",
+          "isCorrect": true
+        },
+        {
+          "text": "To assign manufacturer codes for MAC addresses.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Historically, IP classes (A/B/C) were used to define fixed boundaries between the network ID and host ID. CIDR later replaced this fixed approach."
+    },
+    {
+      "id": "net-ch8-q34",
+      "question": "Why are IP address classes considered obsolete?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Because CIDR replaced them, but they remain in use for legacy understanding.",
+          "isCorrect": true
+        },
+        {
+          "text": "Because subnet masks are no longer needed in IPv4.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because Layer 2 switching replaced Layer 3 routing.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because Class D replaced all unicast addressing.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In classful IPv4, the class historically defined the network/host boundary (A=/8, B=/16, C=/24). CIDR later replaced this by allowing arbitrary prefix lengths."
+    },
+    {
+      "id": "net-ch8-q35",
+      "question": "What is Class A IP addressing?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Network bits: 8 Host bits: 24 Used for very large networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Network bits: 16, Host bits: 16, used for large networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Network bits: 8 Host bits: 24 Used for very large networks.",
+          "isCorrect": true
+        },
+        {
+          "text": "Network bits: 24, Host bits: 8, used for small networks.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In classful IPv4, the class historically defined the network/host boundary (A=/8, B=/16, C=/24). CIDR later replaced this by allowing arbitrary prefix lengths."
+    },
+    {
+      "id": "net-ch8-q36",
+      "question": "What is Class B IP addressing?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Network bits: 16 Host bits: 16 Used for large networks.",
+          "isCorrect": true
+        },
+        {
+          "text": "Network bits: 8, Host bits: 24, used for very large networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Network bits: 24, Host bits: 8, used for small networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Network bits: 16, Host bits: 16, used for small networks.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In classful IPv4, the class historically defined the network/host boundary (A=/8, B=/16, C=/24). CIDR later replaced this by allowing arbitrary prefix lengths."
+    },
+    {
+      "id": "net-ch8-q37",
+      "question": "What is Class C IP addressing?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Network bits: 16, Host bits: 16, used for large networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Network bits: 24 Host bits: 8 Used for small networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "Network bits: 24 Host bits: 8 Used for small networks.",
+          "isCorrect": true
+        },
+        {
+          "text": "Network bits: 24, Host bits: 8, used for very large networks.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In classful IPv4, the class historically defined the network/host boundary (A=/8, B=/16, C=/24). CIDR later replaced this by allowing arbitrary prefix lengths."
+    },
+    {
+      "id": "net-ch8-q38",
+      "question": "What is Class D used for?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Experimental purposes.",
+          "isCorrect": false
+        },
+        {
+          "text": "Multicast addressing.",
+          "isCorrect": true
+        },
+        {
+          "text": "Very large networks (8-bit network ID).",
+          "isCorrect": false
+        },
+        {
+          "text": "Loopback traffic local to a host.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In classful IPv4, the class historically defined the network/host boundary (A=/8, B=/16, C=/24). CIDR later replaced this by allowing arbitrary prefix lengths."
+    },
+    {
+      "id": "net-ch8-q39",
+      "question": "What is Class E used for?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Multicast addressing.",
+          "isCorrect": false
+        },
+        {
+          "text": "Small networks (24-bit network ID).",
+          "isCorrect": false
+        },
+        {
+          "text": "Experimental purposes.",
+          "isCorrect": true
+        },
+        {
+          "text": "Broadcast addressing for all local hosts.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In classful IPv4, the class historically defined the network/host boundary (A=/8, B=/16, C=/24). CIDR later replaced this by allowing arbitrary prefix lengths."
+    },
+    {
+      "id": "net-ch8-q40",
+      "question": "Why are addresses starting with 127 reserved?",
+      "type": "single",
+      "options": [
+        {
+          "text": "They mark private network ranges assigned by IANA.",
+          "isCorrect": false
+        },
+        {
+          "text": "They are reserved for loopback (local host) traffic.",
+          "isCorrect": true
+        },
+        {
+          "text": "They are reserved for multicast groups (Class D).",
+          "isCorrect": false
+        },
+        {
+          "text": "They indicate experimental Class E addresses.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Addresses starting with 127 are reserved for loopback, meaning traffic that stays local to the host. They are not used for normal network communication."
+    },
+    {
+      "id": "net-ch8-q41",
+      "question": "What are the three IP address types?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Class A, Class B, and Class C.",
+          "isCorrect": false
+        },
+        {
+          "text": "Unicast Multicast Broadcast.",
+          "isCorrect": false
+        },
+        {
+          "text": "Unicast, Anycast, and Geocast.",
+          "isCorrect": false
+        },
+        {
+          "text": "Unicast Multicast Broadcast.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "IPv4 addressing supports unicast (one-to-one), multicast (one-to-many group), and broadcast (one-to-all on the local network)."
+    },
+    {
+      "id": "net-ch8-q42",
+      "question": "Why are two host addresses subtracted in subnet calculations?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Because the first address is always the gateway and the last is always reserved for DHCP.",
+          "isCorrect": false
+        },
+        {
+          "text": "All zeros = network address All ones = broadcast address.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because subnet masks require removing two bits from the host portion.",
+          "isCorrect": false
+        },
+        {
+          "text": "All zeros = network address All ones = broadcast address.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "In each subnet, the all-zeros host value represents the network address and the all-ones host value represents the broadcast address. These two cannot be assigned to hosts."
+    },
+    {
+      "id": "net-ch8-q43",
+      "question": "What does longest prefix match mean?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The router selects any matching entry because masks are non-contiguous.",
+          "isCorrect": false
+        },
+        {
+          "text": "The router selects the route with the most matching 1s in the subnet mask.",
+          "isCorrect": true
+        },
+        {
+          "text": "The router selects the route with the fewest matching 1s in the mask.",
+          "isCorrect": false
+        },
+        {
+          "text": "The router selects the route with the largest host portion.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Routers compare the destination address against routing entries and choose the match with the most network bits in common. This is the longest prefix match rule."
+    },
+    {
+      "id": "net-ch8-q44",
+      "question": "Why are non-contiguous subnet masks problematic?",
+      "type": "single",
+      "options": [
+        {
+          "text": "They improve routing by making prefix matching faster.",
+          "isCorrect": false
+        },
+        {
+          "text": "They can cause routing loops due to ambiguity.",
+          "isCorrect": false
+        },
+        {
+          "text": "They prevent ambiguity by ensuring only one match exists.",
+          "isCorrect": false
+        },
+        {
+          "text": "They can cause routing loops due to ambiguity.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Non-contiguous masks can create ambiguous matches, where different routers may choose different masks for the same destination. This inconsistency can lead to routing loops."
+    },
+    {
+      "id": "net-ch8-q45",
+      "question": "What is the formula for the number of subnets?",
+      "type": "single",
+      "options": [
+        {
+          "text": "2^(number of host bits) - 2",
+          "isCorrect": false
+        },
+        {
+          "text": "2^(number of subnet bits)",
+          "isCorrect": true
+        },
+        {
+          "text": "2^(number of network bits) - 2",
+          "isCorrect": false
+        },
+        {
+          "text": "2^(prefix length)",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Subnet calculations use powers of two based on how many bits are allocated to subnets or hosts. Reserved values are excluded when calculating usable host addresses."
+    },
+    {
+      "id": "net-ch8-q46",
+      "question": "What is the formula for the number of hosts per subnet?",
+      "type": "single",
+      "options": [
+        {
+          "text": "2^(number of host bits) - 2",
+          "isCorrect": true
+        },
+        {
+          "text": "2^(number of subnet bits)",
+          "isCorrect": false
+        },
+        {
+          "text": "2^(number of host bits)",
+          "isCorrect": false
+        },
+        {
+          "text": "2^(number of host bits) - 1",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Subnet calculations use powers of two based on how many bits are allocated to subnets or hosts. Reserved values are excluded when calculating usable host addresses."
+    },
+    {
+      "id": "net-ch8-q47",
+      "question": "How many hosts are available in a /8 network?",
+      "type": "single",
+      "options": [
+        {
+          "text": "2^16 - 2 = 65,534 hosts.",
+          "isCorrect": false
+        },
+        {
+          "text": "2^24 - 2 = 16,777,214 hosts.",
+          "isCorrect": false
+        },
+        {
+          "text": "2^24 = 16,777,216 hosts.",
+          "isCorrect": false
+        },
+        {
+          "text": "2^24 - 2 = 16,777,214 hosts.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "A /8 prefix leaves 24 bits for hosts. Usable hosts are 2^24 minus 2 reserved addresses (network and broadcast), giving 16,777,214."
+    },
+    {
+      "id": "net-ch8-q48",
+      "question": "What is the network address in 10.0.0.0/8?",
+      "type": "single",
+      "options": [
+        {
+          "text": "10.0.0.0",
+          "isCorrect": true
+        },
+        {
+          "text": "10.0.0.1",
+          "isCorrect": false
+        },
+        {
+          "text": "10.255.255.255",
+          "isCorrect": false
+        },
+        {
+          "text": "10.255.255.254",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "With a /8 prefix, the first octet is the network part and the remaining 24 bits are host bits. That determines the network, usable host range, and broadcast address."
+    },
+    {
+      "id": "net-ch8-q49",
+      "question": "What is the first usable host in 10.0.0.0/8?",
+      "type": "single",
+      "options": [
+        {
+          "text": "10.0.0.0",
+          "isCorrect": false
+        },
+        {
+          "text": "10.255.255.254",
+          "isCorrect": false
+        },
+        {
+          "text": "10.0.0.1",
+          "isCorrect": true
+        },
+        {
+          "text": "10.255.255.255",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "With a /8 network, the all-zeros host value is the network address (10.0.0.0). The first usable host is therefore the next address: 10.0.0.1."
+    },
+    {
+      "id": "net-ch8-q50",
+      "question": "What is the last usable host in 10.0.0.0/8?",
+      "type": "single",
+      "options": [
+        {
+          "text": "10.255.255.255",
+          "isCorrect": false
+        },
+        {
+          "text": "10.0.0.1",
+          "isCorrect": false
+        },
+        {
+          "text": "10.255.255.254",
+          "isCorrect": false
+        },
+        {
+          "text": "10.255.255.254",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "In a /8 network, the broadcast address is the last address in the range (all host bits = 1). The last usable host is one less than broadcast: 10.255.255.254."
+    },
+    {
+      "id": "net-ch8-q51",
+      "question": "What is the broadcast address in 10.0.0.0/8?",
+      "type": "single",
+      "options": [
+        {
+          "text": "10.0.0.0",
+          "isCorrect": false
+        },
+        {
+          "text": "10.255.255.255",
+          "isCorrect": true
+        },
+        {
+          "text": "10.0.0.1",
+          "isCorrect": false
+        },
+        {
+          "text": "10.255.255.254",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "With a /8 prefix, the broadcast address has all host bits set to 1. That yields 10.255.255.255 for the 10.0.0.0/8 network."
+    },
+    {
+      "id": "net-ch8-q52",
+      "question": "What does an address of all zeros represent?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A multicast group address.",
+          "isCorrect": false
+        },
+        {
+          "text": "The network address.",
+          "isCorrect": true
+        },
+        {
+          "text": "The broadcast address.",
+          "isCorrect": false
+        },
+        {
+          "text": "A loopback address.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In IPv4, the address with all host bits set to 0 represents the network (or subnet) address. It identifies the subnet itself and is not assignable to a host."
+    },
+    {
+      "id": "net-ch8-q53",
+      "question": "What does an address of all ones represent?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A manufacturer code.",
+          "isCorrect": false
+        },
+        {
+          "text": "A host identifier only.",
+          "isCorrect": false
+        },
+        {
+          "text": "The broadcast address.",
+          "isCorrect": true
+        },
+        {
+          "text": "The network address.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In IPv4, the address with all host bits set to 1 is the broadcast address for that network/subnet. It targets all hosts on the local subnet."
+    },
+    {
+      "id": "net-ch8-q54",
+      "question": "What does RFC 1878 provide?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A routing protocol specification for classful networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "A list of valid subnet masks and corresponding address ranges.",
+          "isCorrect": false
+        },
+        {
+          "text": "A list of MAC address vendor codes and assignments.",
+          "isCorrect": false
+        },
+        {
+          "text": "A list of valid subnet masks and corresponding address ranges.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "RFC 1878 is referenced as a resource listing valid subnet masks and the address ranges they produce, helping ensure subnet designs use valid masks."
+    },
+    {
+      "id": "net-ch8-q55",
+      "question": "What is the main summary of IP addressing?",
+      "type": "single",
+      "options": [
+        {
+          "text": "IP addressing eliminates the need for routing by broadcasting to all hosts.",
+          "isCorrect": false
+        },
+        {
+          "text": "IP addressing uses hierarchical structure, subnetting, and masks to enable scalable and efficient networking.",
+          "isCorrect": true
+        },
+        {
+          "text": "IP addressing relies on flat Layer 2 identifiers only, without hierarchy.",
+          "isCorrect": false
+        },
+        {
+          "text": "IP addressing is defined primarily by cable types and connector standards.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "IP addressing uses hierarchical structure (network then host), and subnetting adds more hierarchy using subnet masks/prefixes. This enables scalable routing and efficient network management."
+    }
+  ]
+}

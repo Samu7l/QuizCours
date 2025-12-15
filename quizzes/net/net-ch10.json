@@ -1,0 +1,1616 @@
+{
+  "id": "net-ch10",
+  "type": "module",
+  "title": "Chapter 10 - Transport and Application",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "net-ch10-q1",
+      "question": "What is the role of the Transport Layer?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It establishes a temporary communication session between two applications and delivers data between them.",
+          "isCorrect": true
+        },
+        {
+          "text": "It defines the format of URLs and how web pages are requested.",
+          "isCorrect": false
+        },
+        {
+          "text": "It resolves server names to IP addresses before communication starts.",
+          "isCorrect": false
+        },
+        {
+          "text": "It tags Ethernet frames to carry multiple VLANs on a trunk link.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Transport layer establishes a temporary end-to-end communication session between applications and delivers their data. It provides services like segmentation and conversation tracking so applications can exchange data reliably when needed."
+    },
+    {
+      "id": "net-ch10-q2",
+      "question": "Which main services are provided by the Transport Layer?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Name resolution; Authentication; Encryption; Web page formatting.",
+          "isCorrect": false
+        },
+        {
+          "text": "Connection-oriented data stream support; Reliability; Flow control; Multiplexing.",
+          "isCorrect": false
+        },
+        {
+          "text": "Session establishment; Reliable delivery; In-order delivery; Flow control.",
+          "isCorrect": true
+        },
+        {
+          "text": "Routing; Path selection; Packet forwarding; Address translation.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Transport layer provides connection-oriented data stream support, reliability, flow control, and multiplexing. These services help multiple application conversations share the network while matching delivery behavior to application needs."
+    },
+    {
+      "id": "net-ch10-q3",
+      "question": "What does conversation multiplexing mean in the Transport Layer?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It allows multiple applications to send and receive data simultaneously by labeling data chunks per conversation.",
+          "isCorrect": false
+        },
+        {
+          "text": "It assigns well-known port numbers to servers automatically.",
+          "isCorrect": false
+        },
+        {
+          "text": "It converts digital data into analog signals for transmission.",
+          "isCorrect": false
+        },
+        {
+          "text": "It allows multiple applications to send and receive data simultaneously by labeling data chunks per conversation.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Conversation multiplexing lets the Transport layer keep multiple application conversations separate at the same time. It labels chunks of data for each conversation so the receiver can deliver the right data to the right application."
+    },
+    {
+      "id": "net-ch10-q4",
+      "question": "How does the Transport Layer segment data?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It breaks data into small chunks called segments and reassembles them at the destination.",
+          "isCorrect": false
+        },
+        {
+          "text": "It breaks data into small chunks called segments and reassembles them at the destination.",
+          "isCorrect": true
+        },
+        {
+          "text": "It converts a URL into an IP address using DNS.",
+          "isCorrect": false
+        },
+        {
+          "text": "It encapsulates data into frames and adds MAC addresses.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "To transmit efficiently, the Transport layer breaks application data into smaller pieces (segments) and later reassembles them at the destination. This supports reliable delivery mechanisms and makes large data transfers manageable."
+    },
+    {
+      "id": "net-ch10-q5",
+      "question": "Which two Transport Layer protocols are provided?",
+      "type": "single",
+      "options": [
+        {
+          "text": "HTTP and HTTPS",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP and UDP.",
+          "isCorrect": true
+        },
+        {
+          "text": "SMTP and IMAP",
+          "isCorrect": false
+        },
+        {
+          "text": "FTP and DNS",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Transport layer provides two main protocols: TCP and UDP. They offer different trade-offs between reliability/ordering and speed/overhead."
+    },
+    {
+      "id": "net-ch10-q6",
+      "question": "What is the main difference between TCP and UDP?",
+      "type": "single",
+      "options": [
+        {
+          "text": "TCP provides reliability; UDP does not provide reliability.",
+          "isCorrect": false
+        },
+        {
+          "text": "UDP provides sequencing and retransmission while TCP does not.",
+          "isCorrect": false
+        },
+        {
+          "text": "UDP is connection-oriented while TCP is not.",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP provides reliability; UDP does not provide reliability.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "TCP is designed for reliable, ordered delivery using acknowledgments and retransmissions, while UDP is connectionless and does not provide built-in reliability. Applications choose based on whether they need accuracy or low delay."
+    },
+    {
+      "id": "net-ch10-q7",
+      "question": "How does TCP provide reliable data transport?",
+      "type": "single",
+      "options": [
+        {
+          "text": "By using window size only, without acknowledgments or retransmissions.",
+          "isCorrect": false
+        },
+        {
+          "text": "By numbering segments, acknowledging received data, and retransmitting unacknowledged data.",
+          "isCorrect": false
+        },
+        {
+          "text": "By encrypting every segment end-to-end with HTTPS.",
+          "isCorrect": false
+        },
+        {
+          "text": "By numbering segments, acknowledging received data, and retransmitting unacknowledged data.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "TCP reliability comes from numbering segments, acknowledging received data, and retransmitting data that is not acknowledged. These mechanisms ensure data arrives correctly and in order."
+    },
+    {
+      "id": "net-ch10-q8",
+      "question": "What happens when TCP does not receive an acknowledgment?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It switches to UDP for the remainder of the transfer.",
+          "isCorrect": false
+        },
+        {
+          "text": "It assumes delivery succeeded and continues without action.",
+          "isCorrect": false
+        },
+        {
+          "text": "The data is retransmitted after a certain period of time.",
+          "isCorrect": true
+        },
+        {
+          "text": "It immediately closes the session with a FIN flag.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "If TCP does not receive an acknowledgment within the expected time, it assumes the segment may have been lost. It retransmits the unacknowledged data to maintain reliable delivery."
+    },
+    {
+      "id": "net-ch10-q9",
+      "question": "What is UDP mainly designed for?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Fast data delivery with very little overhead and minimal data checking.",
+          "isCorrect": false
+        },
+        {
+          "text": "Flow control with a 16-bit window size field.",
+          "isCorrect": false
+        },
+        {
+          "text": "Fast data delivery with very little overhead and minimal data checking.",
+          "isCorrect": true
+        },
+        {
+          "text": "Guaranteed delivery with retransmissions and sequencing.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "UDP is designed for fast delivery with minimal overhead and limited checking. Because it avoids session management and retransmission, it reduces delay and processing cost."
+    },
+    {
+      "id": "net-ch10-q10",
+      "question": "Why is UDP suitable for real-time applications?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Because it tolerates data loss but provides low latency.",
+          "isCorrect": true
+        },
+        {
+          "text": "Because it buffers out-of-order segments until all data is received.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it uses a three-way handshake before sending any data.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it guarantees perfect delivery with no packet loss.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Real-time applications often prefer low latency over perfect reliability. UDP can tolerate some loss without waiting for retransmissions, which helps keep audio/video and VoIP responsive."
+    },
+    {
+      "id": "net-ch10-q11",
+      "question": "Which applications typically use TCP?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Databases; Web browsers; Email clients.",
+          "isCorrect": false
+        },
+        {
+          "text": "Live audio streaming; Video streaming; VoIP",
+          "isCorrect": false
+        },
+        {
+          "text": "TFTP; Live streaming video; VoIP",
+          "isCorrect": false
+        },
+        {
+          "text": "Databases; Web browsers; Email clients.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "TCP is commonly used by applications like databases, web browsing, and email because it provides reliable, ordered delivery and handles transport tasks for the application."
+    },
+    {
+      "id": "net-ch10-q12",
+      "question": "Which applications typically use UDP?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Live audio streaming; Video streaming; VoIP.",
+          "isCorrect": false
+        },
+        {
+          "text": "Live audio streaming; Video streaming; VoIP.",
+          "isCorrect": true
+        },
+        {
+          "text": "FTP; SMTP; HTTP",
+          "isCorrect": false
+        },
+        {
+          "text": "Databases; Web browsers; Email clients",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "UDP is commonly used for live audio/video streaming and VoIP because it minimizes delay. These applications can tolerate some loss but benefit from low latency."
+    },
+    {
+      "id": "net-ch10-q13",
+      "question": "What are the key features of TCP?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Session establishment; Reliable delivery; In-order delivery; Flow control.",
+          "isCorrect": true
+        },
+        {
+          "text": "Simple and fast; Stateless operation; No built-in reliability.",
+          "isCorrect": false
+        },
+        {
+          "text": "Name resolution; URL formatting; File transfer commands.",
+          "isCorrect": false
+        },
+        {
+          "text": "Very little overhead; No sequencing; No flow control.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TCP establishes sessions and provides reliable, in-order delivery with flow control. These features support applications that cannot tolerate missing or misordered data."
+    },
+    {
+      "id": "net-ch10-q14",
+      "question": "Why is TCP considered a stateful protocol?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Because it reassembles datagrams without verification.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it maintains session information and connection state.",
+          "isCorrect": true
+        },
+        {
+          "text": "Because it only uses a single connection for commands and data.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it does not keep any session information.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TCP is stateful because it maintains connection state and session information to support reliability, ordering, and flow control across the session."
+    },
+    {
+      "id": "net-ch10-q15",
+      "question": "How much overhead does a TCP header add?",
+      "type": "single",
+      "options": [
+        {
+          "text": "20 bytes.",
+          "isCorrect": false
+        },
+        {
+          "text": "8 bytes",
+          "isCorrect": false
+        },
+        {
+          "text": "20 bytes.",
+          "isCorrect": true
+        },
+        {
+          "text": "40 bytes",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TCP adds 20 bytes of header overhead to each segment. This extra header supports reliability features such as sequence numbers, acknowledgments, and flow control."
+    },
+    {
+      "id": "net-ch10-q16",
+      "question": "What are the key features of UDP?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Session establishment; Reliable delivery; In-order delivery; Flow control.",
+          "isCorrect": false
+        },
+        {
+          "text": "Simple and fast; Stateless operation; No built-in reliability.",
+          "isCorrect": true
+        },
+        {
+          "text": "Authentication; Encryption; Name resolution.",
+          "isCorrect": false
+        },
+        {
+          "text": "Connection-oriented data stream support; Retransmission; Sequencing.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "UDP is designed to be simple and fast with stateless operation and no built-in reliability. If reliability is needed, the application layer must provide it."
+    },
+    {
+      "id": "net-ch10-q17",
+      "question": "What are UDP data units called?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Datagrams.",
+          "isCorrect": true
+        },
+        {
+          "text": "Frames",
+          "isCorrect": false
+        },
+        {
+          "text": "Packets",
+          "isCorrect": false
+        },
+        {
+          "text": "Segments",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In UDP, the pieces of communication are called datagrams. UDP keeps the transport header minimal and does not add TCP-style sequencing or acknowledgments."
+    },
+    {
+      "id": "net-ch10-q18",
+      "question": "How much overhead does a UDP header add?",
+      "type": "single",
+      "options": [
+        {
+          "text": "28 bytes",
+          "isCorrect": false
+        },
+        {
+          "text": "8 bytes.",
+          "isCorrect": false
+        },
+        {
+          "text": "20 bytes",
+          "isCorrect": false
+        },
+        {
+          "text": "8 bytes.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "UDP adds only 8 bytes of header overhead, which is much smaller than TCP. That small header is one reason UDP is considered low overhead."
+    },
+    {
+      "id": "net-ch10-q19",
+      "question": "What are the three steps of TCP connection establishment?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Client requests session; Server acknowledges and responds; Client acknowledges.",
+          "isCorrect": false
+        },
+        {
+          "text": "Client requests session; Server acknowledges and responds; Client acknowledges.",
+          "isCorrect": true
+        },
+        {
+          "text": "Client sends GET; Server sends index.html; Client renders HTML.",
+          "isCorrect": false
+        },
+        {
+          "text": "Client sends FIN; Server ACKs; Server sends FIN; Client ACKs.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TCP establishes a connection in three steps: the client requests a session, the server acknowledges and responds, and the client acknowledges back. This confirms both endpoints are ready to communicate."
+    },
+    {
+      "id": "net-ch10-q20",
+      "question": "What is the TCP three-way handshake used for?",
+      "type": "single",
+      "options": [
+        {
+          "text": "To verify destination availability, service readiness, and session intent.",
+          "isCorrect": true
+        },
+        {
+          "text": "To translate the server name into an IP address.",
+          "isCorrect": false
+        },
+        {
+          "text": "To download email messages from a server and remove them.",
+          "isCorrect": false
+        },
+        {
+          "text": "To tag frames with VLAN information across a trunk link.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The TCP three-way handshake confirms the destination is reachable, that a service is listening on the destination port, and that the client intends to establish a session. This setup is part of why TCP is connection-oriented."
+    },
+    {
+      "id": "net-ch10-q21",
+      "question": "Which TCP flag is used to terminate a connection?",
+      "type": "single",
+      "options": [
+        {
+          "text": "SYN",
+          "isCorrect": false
+        },
+        {
+          "text": "PSH",
+          "isCorrect": false
+        },
+        {
+          "text": "FIN.",
+          "isCorrect": true
+        },
+        {
+          "text": "RST",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TCP uses the FIN flag to terminate a connection when one side has no more data to send. FIN/ACK exchanges allow an orderly shutdown of the session in both directions."
+    },
+    {
+      "id": "net-ch10-q22",
+      "question": "What happens during TCP session termination?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The client downloads all messages and removes them from the server.",
+          "isCorrect": false
+        },
+        {
+          "text": "FIN and ACK flags are exchanged until both sides agree to close the session.",
+          "isCorrect": false
+        },
+        {
+          "text": "The server resolves the URL and encrypts the data with HTTPS.",
+          "isCorrect": false
+        },
+        {
+          "text": "FIN and ACK flags are exchanged until both sides agree to close the session.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "TCP uses the FIN flag to terminate a connection when one side has no more data to send. FIN/ACK exchanges allow an orderly shutdown of the session in both directions."
+    },
+    {
+      "id": "net-ch10-q23",
+      "question": "How does TCP ensure ordered delivery?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Using port numbers to identify applications.",
+          "isCorrect": false
+        },
+        {
+          "text": "Using sequence numbers to track and reorder segments.",
+          "isCorrect": true
+        },
+        {
+          "text": "Using a three-way handshake to establish the session.",
+          "isCorrect": false
+        },
+        {
+          "text": "Using DNS to resolve names before data transfer.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TCP uses sequence numbers to keep track of segment order and to reassemble data correctly. Out-of-order segments can be buffered until missing pieces arrive."
+    },
+    {
+      "id": "net-ch10-q24",
+      "question": "What is an Initial Sequence Number (ISN)?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A value that indicates the number of bytes the receiver can accept.",
+          "isCorrect": false
+        },
+        {
+          "text": "A randomly chosen starting number used during TCP session setup.",
+          "isCorrect": true
+        },
+        {
+          "text": "A checksum value used to encrypt the segment header.",
+          "isCorrect": false
+        },
+        {
+          "text": "A fixed number equal to the destination port.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "An Initial Sequence Number (ISN) is chosen randomly during TCP session setup and becomes the starting point for sequencing. TCP then increments it as bytes are transmitted to support reliable, ordered delivery."
+    },
+    {
+      "id": "net-ch10-q25",
+      "question": "How does TCP handle out-of-order segments?",
+      "type": "single",
+      "options": [
+        {
+          "text": "They are resent by the receiver using a FIN request.",
+          "isCorrect": false
+        },
+        {
+          "text": "Segments are buffered until all data is received and reassembled.",
+          "isCorrect": false
+        },
+        {
+          "text": "They are discarded immediately and never delivered.",
+          "isCorrect": false
+        },
+        {
+          "text": "Segments are buffered until all data is received and reassembled.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "TCP buffers received segments until missing data arrives, then reorders and reassembles the stream. Data is delivered to the application only after it is completely received and reassembled."
+    },
+    {
+      "id": "net-ch10-q26",
+      "question": "What is TCP flow control?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A method to resolve domain names to IP addresses.",
+          "isCorrect": false
+        },
+        {
+          "text": "A mechanism that adjusts data flow to match receiver processing capacity.",
+          "isCorrect": true
+        },
+        {
+          "text": "A mechanism that removes email messages from the server after download.",
+          "isCorrect": false
+        },
+        {
+          "text": "A mechanism that encrypts data so messages cannot be intercepted.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TCP flow control adjusts the sender’s data rate to match what the receiver can accept and process reliably. This helps prevent overwhelming the destination during a session."
+    },
+    {
+      "id": "net-ch10-q27",
+      "question": "Which TCP field supports flow control?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Destination Port field",
+          "isCorrect": false
+        },
+        {
+          "text": "SYN flag",
+          "isCorrect": false
+        },
+        {
+          "text": "Sequence Number field",
+          "isCorrect": false
+        },
+        {
+          "text": "The Window Size field.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "TCP flow control relies on the Window Size field in the TCP header. It advertises how many bytes the receiver can accept at a time."
+    },
+    {
+      "id": "net-ch10-q28",
+      "question": "What does the TCP window size represent?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The server port used for control traffic.",
+          "isCorrect": false
+        },
+        {
+          "text": "The time before retransmission occurs.",
+          "isCorrect": false
+        },
+        {
+          "text": "The number of bytes the destination can accept at one time.",
+          "isCorrect": true
+        },
+        {
+          "text": "The randomly chosen starting sequence number.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TCP flow control uses the Window Size field to indicate how many bytes the receiver can accept and process at one time. The window can be adjusted during a session to match receiver capacity."
+    },
+    {
+      "id": "net-ch10-q29",
+      "question": "Can TCP window size change during a session?",
+      "type": "single",
+      "options": [
+        {
+          "text": "No, it is fixed at 20 bytes for the entire session.",
+          "isCorrect": false
+        },
+        {
+          "text": "Yes, it can be adjusted dynamically.",
+          "isCorrect": true
+        },
+        {
+          "text": "No, it can only change after a new three-way handshake.",
+          "isCorrect": false
+        },
+        {
+          "text": "Yes, but only when using UDP as a fallback.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TCP endpoints can adjust the window size during a session. This lets the connection adapt to changing receiver capacity and network conditions."
+    },
+    {
+      "id": "net-ch10-q30",
+      "question": "Why is UDP considered low overhead?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Because it does not perform sequencing, retransmission, or flow control.",
+          "isCorrect": true
+        },
+        {
+          "text": "Because it buffers out-of-order segments until reassembly completes.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it retransmits unacknowledged data after a timeout.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it uses three-way handshakes for every datagram.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "UDP avoids sequencing, acknowledgments, retransmission, and flow control. By not performing these functions, it keeps the protocol simple and minimizes overhead."
+    },
+    {
+      "id": "net-ch10-q31",
+      "question": "How does UDP reassemble data?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It reassembles data in the order received without verification.",
+          "isCorrect": false
+        },
+        {
+          "text": "It reassembles segments using sequence numbers and acknowledgments.",
+          "isCorrect": false
+        },
+        {
+          "text": "It reassembles data in the order received without verification.",
+          "isCorrect": true
+        },
+        {
+          "text": "It reassembles data only after a three-way handshake completes.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "UDP simply reassembles data in the order it was received and does not verify correctness or completeness. If ordering matters, the application must handle it."
+    },
+    {
+      "id": "net-ch10-q32",
+      "question": "Who is responsible for reliability in UDP communication?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The application layer, if needed.",
+          "isCorrect": true
+        },
+        {
+          "text": "The network layer provides retransmissions for UDP.",
+          "isCorrect": false
+        },
+        {
+          "text": "The transport layer always handles reliability automatically.",
+          "isCorrect": false
+        },
+        {
+          "text": "The data link layer ensures UDP sequencing and acknowledgments.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "UDP itself does not provide reliability mechanisms like retransmission or ordering. If reliability is needed, it must be implemented by the application layer."
+    },
+    {
+      "id": "net-ch10-q33",
+      "question": "How do UDP servers identify applications?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Using port numbers.",
+          "isCorrect": true
+        },
+        {
+          "text": "Using VLAN IDs",
+          "isCorrect": false
+        },
+        {
+          "text": "Using IP addresses only",
+          "isCorrect": false
+        },
+        {
+          "text": "Using MAC addresses",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "UDP uses port numbers to identify which server application should receive a request. The destination port maps the datagram to the correct process on the host."
+    },
+    {
+      "id": "net-ch10-q34",
+      "question": "How does a UDP client choose a port number?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It always uses the well-known destination port as the source port.",
+          "isCorrect": false
+        },
+        {
+          "text": "It dynamically selects a source port.",
+          "isCorrect": false
+        },
+        {
+          "text": "It dynamically selects a source port.",
+          "isCorrect": true
+        },
+        {
+          "text": "It uses a fixed port number assigned by the IEEE.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A UDP client dynamically selects a source port for the conversation. The destination port is usually the well-known or registered port of the server application."
+    },
+    {
+      "id": "net-ch10-q35",
+      "question": "What happens to source and destination ports in UDP replies?",
+      "type": "single",
+      "options": [
+        {
+          "text": "They stay identical; only the IP addresses change.",
+          "isCorrect": false
+        },
+        {
+          "text": "They are flipped in the response datagram.",
+          "isCorrect": false
+        },
+        {
+          "text": "The ports are replaced by MAC addresses in the reply.",
+          "isCorrect": false
+        },
+        {
+          "text": "They are flipped in the response datagram.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "When the server replies, UDP swaps the source and destination port numbers. This ensures the response is delivered to the client’s correct application process."
+    },
+    {
+      "id": "net-ch10-q36",
+      "question": "Which applications benefit from using UDP?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Live multimedia; Simple request-reply services; Applications handling their own reliability.",
+          "isCorrect": false
+        },
+        {
+          "text": "Live multimedia; Simple request-reply services; Applications handling their own reliability.",
+          "isCorrect": true
+        },
+        {
+          "text": "Web browsing where data must be delivered in order.",
+          "isCorrect": false
+        },
+        {
+          "text": "Applications needing guaranteed delivery like email transfer.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "UDP is well-suited to live multimedia and simple request-reply services where low overhead and low delay are important. If needed, reliability can be implemented by the application itself."
+    },
+    {
+      "id": "net-ch10-q37",
+      "question": "What is the Application Layer closest to?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The data link layer where switching occurs.",
+          "isCorrect": false
+        },
+        {
+          "text": "The end user.",
+          "isCorrect": true
+        },
+        {
+          "text": "The physical media and cabling infrastructure.",
+          "isCorrect": false
+        },
+        {
+          "text": "The network layer where routing decisions are made.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Application layer is closest to the end user because it supports the network services used directly by programs. Its protocols define how applications exchange data across the network."
+    },
+    {
+      "id": "net-ch10-q38",
+      "question": "What does the TCP/IP Application Layer correspond to in OSI?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Only the Network layer.",
+          "isCorrect": false
+        },
+        {
+          "text": "The top three OSI layers.",
+          "isCorrect": false
+        },
+        {
+          "text": "Only the Transport layer.",
+          "isCorrect": false
+        },
+        {
+          "text": "The top three OSI layers.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "In the TCP/IP model, the Application layer covers the functions of the top three OSI layers. It includes responsibilities that map to OSI Application, Presentation, and Session layers."
+    },
+    {
+      "id": "net-ch10-q39",
+      "question": "What is the role of Application Layer protocols?",
+      "type": "single",
+      "options": [
+        {
+          "text": "They define how programs exchange data across the network.",
+          "isCorrect": false
+        },
+        {
+          "text": "They prevent Layer 2 loops by disabling redundant links.",
+          "isCorrect": false
+        },
+        {
+          "text": "They define how programs exchange data across the network.",
+          "isCorrect": true
+        },
+        {
+          "text": "They provide flow control using a window size field.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Application layer protocols define rules for how applications format requests and responses and exchange data. They enable common services such as web browsing, file transfer, and email."
+    },
+    {
+      "id": "net-ch10-q40",
+      "question": "Name common Application Layer protocols.",
+      "type": "single",
+      "options": [
+        {
+          "text": "HTTP; FTP; TFTP; DNS.",
+          "isCorrect": true
+        },
+        {
+          "text": "TCP, UDP, ICMP, ARP",
+          "isCorrect": false
+        },
+        {
+          "text": "RIP, OSPF, BGP, EIGRP",
+          "isCorrect": false
+        },
+        {
+          "text": "STP, 802.1Q, PPP, HDLC",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Common Application layer protocols include HTTP for web access, FTP/TFTP for file transfer, and DNS for name resolution. These protocols specify how end-user applications communicate over the network."
+    },
+    {
+      "id": "net-ch10-q41",
+      "question": "What must be true for Application Layer communication to work?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Only the client must implement the protocol; servers are optional.",
+          "isCorrect": false
+        },
+        {
+          "text": "Protocols must be implemented and compatible on both source and destination hosts.",
+          "isCorrect": true
+        },
+        {
+          "text": "Both hosts must use the same MAC address vendor code.",
+          "isCorrect": false
+        },
+        {
+          "text": "The subnet mask must be /24 for both hosts.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "For applications to communicate, both endpoints must implement the same application protocol and be compatible. Otherwise, requests and responses will not be understood."
+    },
+    {
+      "id": "net-ch10-q42",
+      "question": "What is the client-server model?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Clients request data; Servers provide data.",
+          "isCorrect": false
+        },
+        {
+          "text": "Clients request data; Servers provide data.",
+          "isCorrect": true
+        },
+        {
+          "text": "Clients provide data while servers request it.",
+          "isCorrect": false
+        },
+        {
+          "text": "Every device always acts as both client and server at the same time.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In the client-server model, clients send requests and servers respond by providing services or data. This is a common interaction pattern for web, email, and many network services."
+    },
+    {
+      "id": "net-ch10-q43",
+      "question": "What type of model does email use?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Token-passing model",
+          "isCorrect": false
+        },
+        {
+          "text": "Client-Server.",
+          "isCorrect": false
+        },
+        {
+          "text": "Peer-to-peer (P2P)",
+          "isCorrect": false
+        },
+        {
+          "text": "Client-Server.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "Email uses the client-server model: clients connect to mail servers to send and retrieve messages. Mail servers also communicate with other mail servers to relay mail between domains."
+    },
+    {
+      "id": "net-ch10-q44",
+      "question": "What is a peer-to-peer (P2P) network?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A network where devices act as both clients and servers.",
+          "isCorrect": true
+        },
+        {
+          "text": "A model where servers request and clients provide data.",
+          "isCorrect": false
+        },
+        {
+          "text": "A network where a dedicated server provides all resources.",
+          "isCorrect": false
+        },
+        {
+          "text": "A network where only clients can initiate communication.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In a peer-to-peer network, devices can act as both clients and servers, and roles can change per request. This differs from a dedicated client-server setup."
+    },
+    {
+      "id": "net-ch10-q45",
+      "question": "How are roles defined in P2P networks?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Roles are assigned only by a central mail server.",
+          "isCorrect": false
+        },
+        {
+          "text": "Roles are determined by the IP address class (A/B/C).",
+          "isCorrect": false
+        },
+        {
+          "text": "Roles change per request.",
+          "isCorrect": true
+        },
+        {
+          "text": "Roles are fixed and never change after login.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In peer-to-peer networks, the roles of client and server are set on a per-request basis. A device may request a resource in one exchange and provide a resource in another."
+    },
+    {
+      "id": "net-ch10-q46",
+      "question": "What is an email system based on?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Store-and-forward message delivery.",
+          "isCorrect": true
+        },
+        {
+          "text": "Two separate TCP connections for control and data.",
+          "isCorrect": false
+        },
+        {
+          "text": "Real-time streaming with minimal delay and tolerates loss.",
+          "isCorrect": false
+        },
+        {
+          "text": "Direct peer-to-peer transfer with no servers involved.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Email uses a store-and-forward model: messages are stored on mail servers and forwarded between servers as needed until they reach the recipient’s mailbox."
+    },
+    {
+      "id": "net-ch10-q47",
+      "question": "Where are email messages stored?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Inside DNS servers for name resolution.",
+          "isCorrect": false
+        },
+        {
+          "text": "On mail servers.",
+          "isCorrect": true
+        },
+        {
+          "text": "On the client device only, never on a server.",
+          "isCorrect": false
+        },
+        {
+          "text": "In switches’ MAC address tables.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Email messages are stored on mail servers. Email clients connect to these servers to send messages and to retrieve or view stored messages."
+    },
+    {
+      "id": "net-ch10-q48",
+      "question": "Which protocols are required for email operation?",
+      "type": "single",
+      "options": [
+        {
+          "text": "HTTP, HTTPS, DNS",
+          "isCorrect": false
+        },
+        {
+          "text": "SMTP; POP; IMAP.",
+          "isCorrect": true
+        },
+        {
+          "text": "TCP, UDP, IP",
+          "isCorrect": false
+        },
+        {
+          "text": "FTP, TFTP, SNMP",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Email relies on SMTP for sending/relaying messages and POP or IMAP for retrieving messages. These protocols enable end-to-end email operation between clients and servers."
+    },
+    {
+      "id": "net-ch10-q49",
+      "question": "What is the role of SMTP?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Sending and relaying email messages.",
+          "isCorrect": false
+        },
+        {
+          "text": "Downloading emails from the server to the client.",
+          "isCorrect": false
+        },
+        {
+          "text": "Sending and relaying email messages.",
+          "isCorrect": true
+        },
+        {
+          "text": "Viewing emails directly on the server without downloading.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "SMTP is responsible for sending email from clients to mail servers and relaying messages between mail servers. It transports mail between domains when needed."
+    },
+    {
+      "id": "net-ch10-q50",
+      "question": "Which port does SMTP use?",
+      "type": "single",
+      "options": [
+        {
+          "text": "TCP port 25.",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP port 21",
+          "isCorrect": false
+        },
+        {
+          "text": "UDP port 53",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP port 25.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "SMTP is used for sending and relaying email messages. SMTP clients connect to an SMTP server using TCP port 25 to submit or relay mail."
+    },
+    {
+      "id": "net-ch10-q51",
+      "question": "What information does an SMTP message contain?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A header and a message body.",
+          "isCorrect": true
+        },
+        {
+          "text": "A URL, server name, and requested resource.",
+          "isCorrect": false
+        },
+        {
+          "text": "A VLAN tag and frame check sequence.",
+          "isCorrect": false
+        },
+        {
+          "text": "Sequence numbers and window size fields.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "SMTP message formats require a header and a body. The header includes properly formatted sender and recipient addressing information."
+    },
+    {
+      "id": "net-ch10-q52",
+      "question": "What is POP used for?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Downloading emails from the server to the client.",
+          "isCorrect": false
+        },
+        {
+          "text": "Encrypting web traffic with authentication.",
+          "isCorrect": false
+        },
+        {
+          "text": "Downloading emails from the server to the client.",
+          "isCorrect": true
+        },
+        {
+          "text": "Sending and relaying email messages.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "POP is used to retrieve email by downloading messages from the mail server to the client. POP commonly results in messages being stored on the client device."
+    },
+    {
+      "id": "net-ch10-q53",
+      "question": "Which port does POP use?",
+      "type": "single",
+      "options": [
+        {
+          "text": "TCP port 110.",
+          "isCorrect": true
+        },
+        {
+          "text": "TCP port 25",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP port 20",
+          "isCorrect": false
+        },
+        {
+          "text": "UDP port 69",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "POP is used to retrieve email by downloading messages from the server to the client. POP requests are sent to mail servers using TCP port 110."
+    },
+    {
+      "id": "net-ch10-q54",
+      "question": "What happens to emails after POP download?",
+      "type": "single",
+      "options": [
+        {
+          "text": "They are converted into HTML and rendered by a browser.",
+          "isCorrect": false
+        },
+        {
+          "text": "They are usually removed from the server.",
+          "isCorrect": false
+        },
+        {
+          "text": "They remain on the server and synchronize across devices.",
+          "isCorrect": false
+        },
+        {
+          "text": "They are usually removed from the server.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "With POP, messages are downloaded to the client and are typically removed from the server afterward. This means the downloaded copy resides on the device that retrieved it."
+    },
+    {
+      "id": "net-ch10-q55",
+      "question": "What is IMAP used for?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Transferring files with separate control and data channels.",
+          "isCorrect": false
+        },
+        {
+          "text": "Viewing emails directly on the server.",
+          "isCorrect": true
+        },
+        {
+          "text": "Downloading emails and removing them from the server by default.",
+          "isCorrect": false
+        },
+        {
+          "text": "Sending and relaying email messages to other servers.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "IMAP is used to retrieve email by allowing users to view messages directly on the mail server. It supports synchronization across devices and keeps the original messages on the server until deleted."
+    },
+    {
+      "id": "net-ch10-q56",
+      "question": "What advantage does IMAP provide over POP?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It uses UDP for faster email delivery.",
+          "isCorrect": false
+        },
+        {
+          "text": "Messages remain on the server and synchronize across devices.",
+          "isCorrect": true
+        },
+        {
+          "text": "Messages are always removed from the server after download.",
+          "isCorrect": false
+        },
+        {
+          "text": "It does not require a mail server to store messages.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "IMAP keeps messages on the server and synchronizes the user’s view across devices. This makes it easier to access the same mailbox consistently from multiple clients."
+    },
+    {
+      "id": "net-ch10-q57",
+      "question": "What protocol supports folder hierarchy for emails?",
+      "type": "single",
+      "options": [
+        {
+          "text": "SMTP",
+          "isCorrect": false
+        },
+        {
+          "text": "IMAP.",
+          "isCorrect": false
+        },
+        {
+          "text": "POP",
+          "isCorrect": false
+        },
+        {
+          "text": "IMAP.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "IMAP supports folder hierarchy so users can organize and store mail on the server. Deletions and changes are synchronized between client and server."
+    },
+    {
+      "id": "net-ch10-q58",
+      "question": "What is HTTP used for?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Sending and relaying email messages.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transferring files across a network using two connections.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transferring web pages between clients and servers.",
+          "isCorrect": true
+        },
+        {
+          "text": "Resolving domain names to IP addresses.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "HTTP transfers web content between clients (browsers) and web servers. A browser requests a resource and the server responds with the requested file or page."
+    },
+    {
+      "id": "net-ch10-q59",
+      "question": "What does a URL contain?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Protocol; Server name; Requested resource.",
+          "isCorrect": false
+        },
+        {
+          "text": "Sequence number; Window size; FIN flag.",
+          "isCorrect": false
+        },
+        {
+          "text": "Protocol; Server name; Requested resource.",
+          "isCorrect": true
+        },
+        {
+          "text": "Subnet mask; Broadcast address; Default gateway.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "A URL includes the protocol, the server name, and the requested resource. Before contacting the server, DNS resolves the server name into an IP address."
+    },
+    {
+      "id": "net-ch10-q60",
+      "question": "What is the role of DNS in HTTP communication?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It resolves server names to IP addresses.",
+          "isCorrect": true
+        },
+        {
+          "text": "It encrypts web messages so they cannot be intercepted.",
+          "isCorrect": false
+        },
+        {
+          "text": "It transfers files between FTP client and server.",
+          "isCorrect": false
+        },
+        {
+          "text": "It provides reliability by retransmitting lost segments.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "When a browser uses a URL, DNS translates the server name into the corresponding IP address. This allows the client to contact the correct web server."
+    },
+    {
+      "id": "net-ch10-q61",
+      "question": "Why is HTTP considered insecure?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Because it requires two separate TCP connections.",
+          "isCorrect": false
+        },
+        {
+          "text": "Data can be intercepted.",
+          "isCorrect": true
+        },
+        {
+          "text": "Because it uses a 20-byte transport header.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it forces messages to be stored on mail servers.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "HTTP is not secure because data can be intercepted during transmission. It does not provide built-in encryption or authentication."
+    },
+    {
+      "id": "net-ch10-q62",
+      "question": "What does HTTPS add to HTTP?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Authentication and encryption.",
+          "isCorrect": false
+        },
+        {
+          "text": "Automatic removal of messages from the mail server.",
+          "isCorrect": false
+        },
+        {
+          "text": "Authentication and encryption.",
+          "isCorrect": true
+        },
+        {
+          "text": "Broadcast storm prevention and loop-free topology.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "HTTP is not secure because data can be intercepted in transit. HTTPS improves security by adding authentication and encryption."
+    },
+    {
+      "id": "net-ch10-q63",
+      "question": "What is FTP used for?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Transferring web pages between clients and servers.",
+          "isCorrect": false
+        },
+        {
+          "text": "Sending and relaying email messages.",
+          "isCorrect": false
+        },
+        {
+          "text": "Viewing emails directly on the server.",
+          "isCorrect": false
+        },
+        {
+          "text": "Transferring files across a network.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "FTP was developed to transfer files over a network. It allows clients to upload (push) and download (pull) files to and from an FTP server."
+    },
+    {
+      "id": "net-ch10-q64",
+      "question": "How many connections does FTP require?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Two connections.",
+          "isCorrect": true
+        },
+        {
+          "text": "One connection for both commands and data.",
+          "isCorrect": false
+        },
+        {
+          "text": "No connections because it is connectionless.",
+          "isCorrect": false
+        },
+        {
+          "text": "Three connections: control, data, and acknowledgment.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "FTP uses two separate TCP connections: one for control commands and replies, and another for the actual file transfer. This separation supports managing transfers and data movement independently."
+    },
+    {
+      "id": "net-ch10-q65",
+      "question": "Which port is used for FTP control?",
+      "type": "single",
+      "options": [
+        {
+          "text": "TCP port 80",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP port 21.",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP port 110",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP port 21.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "FTP control traffic uses TCP port 21. This control connection carries commands and replies between the FTP client and server."
+    },
+    {
+      "id": "net-ch10-q66",
+      "question": "Which port is used for FTP data transfer?",
+      "type": "single",
+      "options": [
+        {
+          "text": "TCP port 110",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP port 20.",
+          "isCorrect": false
+        },
+        {
+          "text": "UDP port 69",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP port 20.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "FTP data transfer uses TCP port 20 for the data connection. The data connection is separate from the control connection on TCP port 21."
+    },
+    {
+      "id": "net-ch10-q67",
+      "question": "What operations can an FTP client perform?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Resolve names to IP addresses; Cache DNS entries.",
+          "isCorrect": false
+        },
+        {
+          "text": "Upload (push) files; Download (pull) files.",
+          "isCorrect": true
+        },
+        {
+          "text": "Send and relay messages; Store messages on mail servers.",
+          "isCorrect": false
+        },
+        {
+          "text": "Request index.html; Render HTML in a browser window.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "An FTP client can transfer files in both directions: downloading (pull) files from the server or uploading (push) files to the server. These operations use FTP’s data connection."
+    }
+  ]
+}

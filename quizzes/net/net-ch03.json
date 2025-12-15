@@ -1,0 +1,1016 @@
+{
+  "id": "net-ch3",
+  "type": "module",
+  "title": "Chapter 3 - Protocols in Data Communication (II)",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "net-ch3-q1",
+      "question": "What does the TCP/IP model describe?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It describes how local area networks are wired and how signals are encoded on a medium and relies on best-effort delivery across gateways.",
+          "isCorrect": false
+        },
+        {
+          "text": "It defines the seven-layer OSI reference model for all networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "It is a directory service standard for organizing network resources.",
+          "isCorrect": false
+        },
+        {
+          "text": "It describes how the Internet works and the protocol stack used for communication.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "The TCP/IP model is presented as the model that describes how the Internet works; it defines the layered protocol stack used for Internet communication."
+    },
+    {
+      "id": "net-ch3-q2",
+      "question": "Why is TCP/IP more widely used than OSI?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Because it was developed before OSI, is simpler, and became the dominant transport/network solution for networks of all sizes.",
+          "isCorrect": true
+        },
+        {
+          "text": "Because it replaces Ethernet and removes the need for MAC addressing and relies on best-effort delivery across gateways.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it is an ISO standard with seven layers, while OSI is not standardized.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because it guarantees zero packet loss by design, unlike OSI.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In the lesson, TCP/IP is described as predating the OSI model, being simpler, and becoming the most common solution across many network sizes and configurations."
+    },
+    {
+      "id": "net-ch3-q3",
+      "question": "What does the TCP/IP suite consist of?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Only two protocols: IP for routing and MAC for local delivery.",
+          "isCorrect": false
+        },
+        {
+          "text": "Independent protocols, each serving specialized networking functions.",
+          "isCorrect": true
+        },
+        {
+          "text": "A single monolithic protocol that combines Ethernet, IP, and application services into one.",
+          "isCorrect": false
+        },
+        {
+          "text": "A set of physical-layer standards for cables, connectors, and signal encoding.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The TCP/IP suite is described as a collection of independent protocols, with each protocol handling a specific function in networking."
+    },
+    {
+      "id": "net-ch3-q4",
+      "question": "What are the four layers of the TCP/IP model?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Application, Transport, Internet, Network Access.",
+          "isCorrect": true
+        },
+        {
+          "text": "Network Access, Internet, Transport, Physical.",
+          "isCorrect": false
+        },
+        {
+          "text": "Application, Session, Presentation, Transport.",
+          "isCorrect": false
+        },
+        {
+          "text": "Physical, Data Link, Network, Transport.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson lists four TCP/IP layers: Application, Transport, Internet, and Network Access."
+    },
+    {
+      "id": "net-ch3-q5",
+      "question": "What is the role of the IETF?",
+      "type": "single",
+      "options": [
+        {
+          "text": "To manufacture Ethernet switches and routers.",
+          "isCorrect": false
+        },
+        {
+          "text": "To develop and maintain Internet standards.",
+          "isCorrect": true
+        },
+        {
+          "text": "To define electrical connector types for fiber optics.",
+          "isCorrect": false
+        },
+        {
+          "text": "To assign MAC addresses to network cards worldwide.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The IETF (Internet Engineering Task Force) is identified in the course as the body that develops and maintains Internet standards."
+    },
+    {
+      "id": "net-ch3-q6",
+      "question": "What is the role of IEEE?",
+      "type": "single",
+      "options": [
+        {
+          "text": "To publish RFCs as the official Internet standards document series while using encapsulation and headers at each layer.",
+          "isCorrect": false
+        },
+        {
+          "text": "To standardize networking and electrical technologies such as Ethernet.",
+          "isCorrect": true
+        },
+        {
+          "text": "To provide end-user application services such as email and file transfer.",
+          "isCorrect": false
+        },
+        {
+          "text": "To assign IP address blocks and DNS root zones.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "IEEE is presented as a standardization organization for electrical and networking technologies, including Ethernet-related standards."
+    },
+    {
+      "id": "net-ch3-q7",
+      "question": "What is the role of IANA?",
+      "type": "single",
+      "options": [
+        {
+          "text": "To assign IP addresses, DNS root zones, and protocol numbers.",
+          "isCorrect": true
+        },
+        {
+          "text": "To control the physical signaling used on Ethernet links.",
+          "isCorrect": false
+        },
+        {
+          "text": "To provide congestion avoidance algorithms for TCP.",
+          "isCorrect": false
+        },
+        {
+          "text": "To define the OSI model and its seven layers.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson states that IANA (Internet Assigned Numbers Authority) assigns key Internet numbering resources such as IP addresses, DNS root zones, and protocol numbers."
+    },
+    {
+      "id": "net-ch3-q8",
+      "question": "What is an RFC?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A “Remote File Channel,” a legacy file-transfer protocol in the OSI application layer.",
+          "isCorrect": false
+        },
+        {
+          "text": "A “Reliable Frame Check,” an Ethernet error-detection field.",
+          "isCorrect": false
+        },
+        {
+          "text": "A “Routing Forwarding Control,” the mechanism routers use to pick next hops.",
+          "isCorrect": false
+        },
+        {
+          "text": "A “Request for Comments,” the official document series that defines Internet standards.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "In the course, RFC stands for Request for Comments and is used as the document format for defining Internet standards."
+    },
+    {
+      "id": "net-ch3-q9",
+      "question": "What design principle is packet switching based on?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Data is transmitted as one continuous unbroken stream without headers to reduce overhead.",
+          "isCorrect": false
+        },
+        {
+          "text": "Data is divided into fixed-size packets, each sent with a header containing addressing and control (“housekeeping”) information.",
+          "isCorrect": true
+        },
+        {
+          "text": "Data is divided into variable-size messages that are never encapsulated by layers.",
+          "isCorrect": false
+        },
+        {
+          "text": "Data is sent only after a full circuit is reserved end-to-end, guaranteeing in-order delivery.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Packet switching is described as splitting data into fixed-size chunks (packets) and sending each with a header that carries addressing and control information."
+    },
+    {
+      "id": "net-ch3-q10",
+      "question": "What is the role of gateways in internetworking?",
+      "type": "single",
+      "options": [
+        {
+          "text": "They connect different networks by encapsulating packets from one protocol inside another.",
+          "isCorrect": true
+        },
+        {
+          "text": "They prevent fragmentation by increasing the MTU on all connected links.",
+          "isCorrect": false
+        },
+        {
+          "text": "They replace routers by switching frames based only on MAC addresses and relies on best-effort delivery across gateways.",
+          "isCorrect": false
+        },
+        {
+          "text": "They encrypt all traffic at the presentation layer before forwarding it.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Gateways are described as devices with interfaces to multiple networks that connect them by encapsulating packets from one protocol inside another."
+    },
+    {
+      "id": "net-ch3-q11",
+      "question": "Why is layering important in protocol design?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Layering forces every device to use the same hardware manufacturer to interoperate.",
+          "isCorrect": false
+        },
+        {
+          "text": "Layering eliminates the need for standards because each vendor can implement anything.",
+          "isCorrect": false
+        },
+        {
+          "text": "Layering guarantees packets never arrive out of order by fixing routes.",
+          "isCorrect": false
+        },
+        {
+          "text": "Each layer provides services to the layer above and relies on the layer below, enabling modularity and interoperability.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "The lesson explains layering as a design approach where protocols are organized in layers; each layer builds on the services of lower layers, which supports modular design and interoperability."
+    },
+    {
+      "id": "net-ch3-q12",
+      "question": "What is the end-to-end principle?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Switches reassemble the full message at each hop before forwarding it.",
+          "isCorrect": false
+        },
+        {
+          "text": "Intermediate nodes only examine destination addresses; only endpoints interpret or process the data.",
+          "isCorrect": true
+        },
+        {
+          "text": "Routers decrypt and re-encrypt payloads at each hop to keep data secure.",
+          "isCorrect": false
+        },
+        {
+          "text": "Gateways change the application data format so endpoints do not need translation.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "End-to-end protocols are described so the network only needs to look at destination addresses while the actual data is not processed between source and destination; endpoints handle interpretation."
+    },
+    {
+      "id": "net-ch3-q13",
+      "question": "What does “least mechanism” mean?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The network guarantees delivery by storing every packet in gateways until acknowledged, while using encapsulation and headers at each layer.",
+          "isCorrect": false
+        },
+        {
+          "text": "The network removes the need for transport protocols by ensuring error-free delivery.",
+          "isCorrect": false
+        },
+        {
+          "text": "To send a packet, a source needs only know a \"neighbour\" that is connected to the network; intermediate nodes forward to the next hop, and endpoints handle retransmission if needed.",
+          "isCorrect": true
+        },
+        {
+          "text": "The network reserves a dedicated circuit before sending any data.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Least mechanism means intermediate gateways/routers focus on forwarding packets to the next hop on a best-effort basis, and endpoints handle recovery when packets are lost."
+    },
+    {
+      "id": "net-ch3-q14",
+      "question": "Why may packets arrive out of order in TCP/IP networks?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Because routing is best-effort and each packet may take different paths through the network.",
+          "isCorrect": true
+        },
+        {
+          "text": "Because TCP sequence numbers randomize packet order for security.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because Ethernet preambles force frames to be reordered for synchronization.",
+          "isCorrect": false
+        },
+        {
+          "text": "Because IP fragmentation requires fragments to be delivered in reverse order.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The course notes best-effort routing: packets can follow different routes, so arrival order is not guaranteed."
+    },
+    {
+      "id": "net-ch3-q15",
+      "question": "What is encapsulation?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Only the application layer adds headers; lower layers carry raw data only.",
+          "isCorrect": false
+        },
+        {
+          "text": "Each protocol layer adds its own header as data moves down the stack and removes it as it moves up.",
+          "isCorrect": true
+        },
+        {
+          "text": "Each layer replaces the previous layer’s header so only one header exists at any time.",
+          "isCorrect": false
+        },
+        {
+          "text": "Encapsulation means encrypting payloads so only routers can read them.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Encapsulation is described as control information being treated as data by the next lower layer; headers/trailers are added going down the stack and removed going up."
+    },
+    {
+      "id": "net-ch3-q16",
+      "question": "What are the two parts of a packet?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Sequence number and acknowledgment number.",
+          "isCorrect": false
+        },
+        {
+          "text": "Preamble and checksum.",
+          "isCorrect": false
+        },
+        {
+          "text": "Source port and destination port.",
+          "isCorrect": false
+        },
+        {
+          "text": "Header (control information) and payload (data).",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "A packet is presented as a structured message with a header that carries control information (where it came from/where it is going) and a payload carrying the data."
+    },
+    {
+      "id": "net-ch3-q17",
+      "question": "What is the Ethernet MTU?",
+      "type": "single",
+      "options": [
+        {
+          "text": "1500 octets (12,000 bits) of data for Ethernet (values can vary by network type).",
+          "isCorrect": true
+        },
+        {
+          "text": "576 octets, fixed for all Ethernet networks.",
+          "isCorrect": false
+        },
+        {
+          "text": "65,535 octets, because IP datagrams must always fit without fragmentation.",
+          "isCorrect": false
+        },
+        {
+          "text": "64 octets, because Ethernet frames cannot exceed 64 bytes.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson states Ethernet’s MTU allows 1500 octets (12,000 bits) of data, while noting MTU depends on the network."
+    },
+    {
+      "id": "net-ch3-q18",
+      "question": "How does IP handle packets larger than the MTU?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It increases the Ethernet MTU automatically to match the datagram size.",
+          "isCorrect": false
+        },
+        {
+          "text": "It fragments datagrams into smaller pieces that fit into the network MTU.",
+          "isCorrect": true
+        },
+        {
+          "text": "It converts the packet into a TCP segment with a smaller window size.",
+          "isCorrect": false
+        },
+        {
+          "text": "It drops the datagram immediately because fragmentation is not allowed in IP.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The course explains that IP datagrams can be broken into fragments so they fit within the MTU; each fragment keeps the header information plus as much data as allowed."
+    },
+    {
+      "id": "net-ch3-q19",
+      "question": "What is the Ethernet frame preamble used for?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Synchronization: alternating 1s and 0s help receivers lock onto the signal.",
+          "isCorrect": true
+        },
+        {
+          "text": "Fragmentation: it indicates which fragment number is being carried.",
+          "isCorrect": false
+        },
+        {
+          "text": "Routing: it contains the next-hop IP address for gateways.",
+          "isCorrect": false
+        },
+        {
+          "text": "Encryption: it scrambles the frame so only the destination can read it.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In the Ethernet frame format, the preamble is described as alternating 1s and 0s used for synchronization by receiving nodes."
+    },
+    {
+      "id": "net-ch3-q20",
+      "question": "What is an Ethernet MAC address?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A checksum value used by CRC for error detection on Ethernet.",
+          "isCorrect": false
+        },
+        {
+          "text": "A temporary logical address assigned by DHCP at the transport layer and relies on best-effort delivery across gateways.",
+          "isCorrect": false
+        },
+        {
+          "text": "A globally unique hardware address assigned to every network interface (typically by the manufacturer).",
+          "isCorrect": true
+        },
+        {
+          "text": "A port number that identifies an application service such as HTTP.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson describes the MAC address as a unique identifier assigned by the hardware manufacturer for a network interface."
+    },
+    {
+      "id": "net-ch3-q21",
+      "question": "What does the Ethernet “Type” field specify?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It specifies the IP version (4 or 6) of the datagram header.",
+          "isCorrect": false
+        },
+        {
+          "text": "It specifies which protocol is carried inside the Ethernet frame (for example, IPv4 or ARP).",
+          "isCorrect": true
+        },
+        {
+          "text": "It specifies the TCP window size for flow control.",
+          "isCorrect": false
+        },
+        {
+          "text": "It specifies the Ethernet MTU used on the link.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The Ethernet Type (or packet type) field identifies what protocol is encapsulated inside the Ethernet frame, enabling multiple protocols/versions."
+    },
+    {
+      "id": "net-ch3-q22",
+      "question": "What is the purpose of CRC in Ethernet?",
+      "type": "single",
+      "options": [
+        {
+          "text": "Routing by selecting the best path through intermediate gateways.",
+          "isCorrect": false
+        },
+        {
+          "text": "Flow control by limiting how much data can be sent without ACK.",
+          "isCorrect": false
+        },
+        {
+          "text": "Encryption by protecting payload confidentiality over the link.",
+          "isCorrect": false
+        },
+        {
+          "text": "Error detection using a Cyclic Redundancy Check (CRC).",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "The Ethernet frame includes a CRC field used for error detection via a cyclic redundancy check."
+    },
+    {
+      "id": "net-ch3-q23",
+      "question": "What is the role of TTL in an IP datagram?",
+      "type": "single",
+      "options": [
+        {
+          "text": "TTL is a transport-layer field that sets the TCP retransmission timeout.",
+          "isCorrect": false
+        },
+        {
+          "text": "Gateways decrement TTL; if it reaches zero, the datagram is discarded to prevent infinite loops.",
+          "isCorrect": true
+        },
+        {
+          "text": "Switches increment TTL to prefer longer routes for load balancing.",
+          "isCorrect": false
+        },
+        {
+          "text": "Endpoints use TTL to encrypt the payload for each hop.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The course states that gateways decrement the TTL field; if TTL reaches zero, the datagram is discarded to avoid endless circulation."
+    },
+    {
+      "id": "net-ch3-q24",
+      "question": "What does the IP “Protocol” field represent?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It identifies the Ethernet frame type (for example ARP or IPv4).",
+          "isCorrect": false
+        },
+        {
+          "text": "It identifies the encapsulated transport protocol (for example TCP=6 or UDP=17).",
+          "isCorrect": true
+        },
+        {
+          "text": "It identifies the application protocol (for example HTTP or DNS).",
+          "isCorrect": false
+        },
+        {
+          "text": "It identifies the physical medium (copper, fiber, or Wi-Fi).",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "In the IP datagram, the Protocol field is analogous to Ethernet Type and indicates which transport-layer protocol is carried (e.g., TCP or UDP)."
+    },
+    {
+      "id": "net-ch3-q25",
+      "question": "What is the purpose of the TCP sequence number?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It identifies the destination MAC address used for Layer 2 switching.",
+          "isCorrect": false
+        },
+        {
+          "text": "It identifies which fragment number the datagram belongs to (e.g., 2 of 4).",
+          "isCorrect": false
+        },
+        {
+          "text": "It identifies the receiver’s maximum window size in bytes.",
+          "isCorrect": false
+        },
+        {
+          "text": "It identifies the position of a segment’s first byte in the sender’s byte stream.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "The TCP sequence number is described as the position (in the sender’s byte stream) of the first byte carried in the segment."
+    },
+    {
+      "id": "net-ch3-q26",
+      "question": "What does the TCP acknowledgment number represent?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It indicates the checksum value calculated by CRC at the data link layer.",
+          "isCorrect": false
+        },
+        {
+          "text": "It indicates the next byte the receiver expects from the sender.",
+          "isCorrect": true
+        },
+        {
+          "text": "It indicates the last byte the sender transmitted on the local Ethernet segment.",
+          "isCorrect": false
+        },
+        {
+          "text": "It indicates the port number of the application that opened the connection.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The acknowledgment number in TCP represents what the receiver expects next in the sender’s byte stream, supporting reliable delivery."
+    },
+    {
+      "id": "net-ch3-q27",
+      "question": "What are the three roles of TCP segments?",
+      "type": "single",
+      "options": [
+        {
+          "text": "They can carry data, carry acknowledgments (ACKs), or carry control flags such as SYN and FIN.",
+          "isCorrect": true
+        },
+        {
+          "text": "They carry only MAC addresses and CRC values for Layer 2 switching.",
+          "isCorrect": false
+        },
+        {
+          "text": "They always carry data; ACKs and control are only sent in separate UDP datagrams.",
+          "isCorrect": false
+        },
+        {
+          "text": "They carry only IP fragmentation information and TTL values.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The course explains that TCP segments may carry data, may carry ACK-only information, or may carry control information to establish/close connections (e.g., SYN/FIN)."
+    },
+    {
+      "id": "net-ch3-q28",
+      "question": "What does the TCP window size specify?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It specifies the service name-to-port mapping in /etc/services.",
+          "isCorrect": false
+        },
+        {
+          "text": "It specifies how many routers a packet may cross before being dropped.",
+          "isCorrect": false
+        },
+        {
+          "text": "It specifies how many bytes the receiver can accept before requiring acknowledgment.",
+          "isCorrect": true
+        },
+        {
+          "text": "It specifies the MTU of the physical network interface.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TCP’s window size indicates the receiver’s available buffer capacity, limiting how much data can be in flight before acknowledgment."
+    },
+    {
+      "id": "net-ch3-q29",
+      "question": "What is Layer 2 switching based on?",
+      "type": "single",
+      "options": [
+        {
+          "text": "MAC addresses.",
+          "isCorrect": true
+        },
+        {
+          "text": "IP addresses.",
+          "isCorrect": false
+        },
+        {
+          "text": "TTL values.",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP port numbers.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson contrasts Layer 2 and Layer 3 switching: Layer 2 switching forwards frames based on MAC addresses."
+    },
+    {
+      "id": "net-ch3-q30",
+      "question": "What is Layer 3 switching based on?",
+      "type": "single",
+      "options": [
+        {
+          "text": "MAC addresses.",
+          "isCorrect": false
+        },
+        {
+          "text": "IP addresses.",
+          "isCorrect": true
+        },
+        {
+          "text": "CRC checksums.",
+          "isCorrect": false
+        },
+        {
+          "text": "Sequence numbers.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "Layer 3 switching (routing) forwards packets based on IP addresses, as described in the slide comparing Layer 2 vs Layer 3 switching."
+    },
+    {
+      "id": "net-ch3-q31",
+      "question": "What is the role of the LLC sublayer?",
+      "type": "single",
+      "options": [
+        {
+          "text": "To determine/identify which Network Layer protocol is being carried inside the frame.",
+          "isCorrect": true
+        },
+        {
+          "text": "To decrement TTL to prevent routing loops.",
+          "isCorrect": false
+        },
+        {
+          "text": "To assign burned-in hardware addresses to each network interface.",
+          "isCorrect": false
+        },
+        {
+          "text": "To provide encryption and compression for data representation.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The LLC (Logical Link Control) sublayer is described as determining the type of network-layer data traveling inside the data-link frame."
+    },
+    {
+      "id": "net-ch3-q32",
+      "question": "What is the TCP 3-way handshake?",
+      "type": "single",
+      "options": [
+        {
+          "text": "ACK → FIN → ACK.",
+          "isCorrect": false
+        },
+        {
+          "text": "SYN → ACK → FIN.",
+          "isCorrect": false
+        },
+        {
+          "text": "SYN → SYN-ACK → ACK.",
+          "isCorrect": true
+        },
+        {
+          "text": "FIN → FIN-ACK → ACK.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The course describes TCP’s initial connection setup as a three-way handshake: SYN, then SYN-ACK, then ACK to establish connection parameters and sequence numbers."
+    },
+    {
+      "id": "net-ch3-q33",
+      "question": "How does TCP handle lost packets?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The sender keeps a copy, starts a timer, and retransmits if no ACK arrives before timeout.",
+          "isCorrect": true
+        },
+        {
+          "text": "Gateways store the packet and resend it periodically until it arrives.",
+          "isCorrect": false
+        },
+        {
+          "text": "The packet is converted to UDP because UDP retransmits automatically.",
+          "isCorrect": false
+        },
+        {
+          "text": "The receiver immediately increases the window size to request retransmission.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TCP reliability is described by storing sent segments, waiting for ACKs, and using timers; if the timer expires, the segment is retransmitted."
+    },
+    {
+      "id": "net-ch3-q34",
+      "question": "What happens to a duplicate TCP segment?",
+      "type": "single",
+      "options": [
+        {
+          "text": "It forces the sender to restart the 3-way handshake.",
+          "isCorrect": false
+        },
+        {
+          "text": "It is discarded because it was already acknowledged.",
+          "isCorrect": true
+        },
+        {
+          "text": "It is re-encapsulated into a new Ethernet frame with a different MAC address.",
+          "isCorrect": false
+        },
+        {
+          "text": "It is delivered twice to the application to ensure no data is missed.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The slides note that duplicate packets (already acknowledged) are discarded, using sequence numbers to detect duplication."
+    },
+    {
+      "id": "net-ch3-q35",
+      "question": "What mechanism does TCP use for flow control?",
+      "type": "single",
+      "options": [
+        {
+          "text": "CRC and header checksum.",
+          "isCorrect": false
+        },
+        {
+          "text": "Destination-based next-hop routing.",
+          "isCorrect": false
+        },
+        {
+          "text": "The sliding window protocol.",
+          "isCorrect": true
+        },
+        {
+          "text": "Packet fragmentation and reassembly.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TCP flow control is presented as allowing multiple packets in flight with acknowledgments, using a sliding window determined by receiver buffer availability."
+    },
+    {
+      "id": "net-ch3-q36",
+      "question": "What happens when the TCP window is reduced to zero?",
+      "type": "single",
+      "options": [
+        {
+          "text": "The sender switches to UDP to continue sending.",
+          "isCorrect": false
+        },
+        {
+          "text": "Data flow stops until the window size is increased again.",
+          "isCorrect": true
+        },
+        {
+          "text": "Gateways begin prioritizing the traffic using QoS.",
+          "isCorrect": false
+        },
+        {
+          "text": "The connection automatically closes with a FIN exchange.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson states that reducing the TCP window slows data flow, and setting it to zero halts data exchange until the receiver advertises a larger window."
+    },
+    {
+      "id": "net-ch3-q37",
+      "question": "What is TCP congestion avoidance?",
+      "type": "single",
+      "options": [
+        {
+          "text": "When a timeout occurs, TCP halves the window size and increases retransmission delays to reduce congestion.",
+          "isCorrect": true
+        },
+        {
+          "text": "TCP relies on routers to resend lost packets so endpoints do not change behavior.",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP disables checksums during congestion to reduce processing overhead.",
+          "isCorrect": false
+        },
+        {
+          "text": "TCP increases the window size aggressively after a timeout to recover faster.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The course describes congestion avoidance as cutting window size in half on timeout and lengthening ACK timing for retransmitted segments, helping gateways clear queued datagrams."
+    },
+    {
+      "id": "net-ch3-q38",
+      "question": "What type of service does UDP provide?",
+      "type": "single",
+      "options": [
+        {
+          "text": "A network-layer protocol that provides fragmentation and TTL.",
+          "isCorrect": false
+        },
+        {
+          "text": "Connection-oriented, reliable service with sequencing and retransmission.",
+          "isCorrect": false
+        },
+        {
+          "text": "A data-link protocol that provides MAC addressing and CRC.",
+          "isCorrect": false
+        },
+        {
+          "text": "Connectionless, unreliable service with minimal overhead.",
+          "isCorrect": true
+        }
+      ],
+      "explanation": "UDP is described as providing a connectionless service for application-level procedures, with unreliable delivery/duplication control not guaranteed and reduced overhead."
+    },
+    {
+      "id": "net-ch3-q39",
+      "question": "When is UDP preferred over TCP?",
+      "type": "single",
+      "options": [
+        {
+          "text": "When low latency is needed or the whole message fits in a single datagram (e.g., DNS, VoIP, streaming).",
+          "isCorrect": true
+        },
+        {
+          "text": "When strict in-order delivery is required for large file transfers.",
+          "isCorrect": false
+        },
+        {
+          "text": "When the network must guarantee delivery by reserving a circuit.",
+          "isCorrect": false
+        },
+        {
+          "text": "When a 3-way handshake is necessary before sending any data.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The course notes UDP is used when one IP packet is sufficient or for real-time/request-response cases where low overhead and low latency matter (examples include DNS and streaming/VoIP)."
+    },
+    {
+      "id": "net-ch3-q40",
+      "question": "What document lists standard port numbers?",
+      "type": "single",
+      "options": [
+        {
+          "text": "/etc/hosts",
+          "isCorrect": false
+        },
+        {
+          "text": "/etc/services",
+          "isCorrect": true
+        },
+        {
+          "text": "/etc/resolv.conf",
+          "isCorrect": false
+        },
+        {
+          "text": "/var/log/syslog",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The slides show that the standard port numbers for well-known services are listed in the system file /etc/services."
+    },
+    {
+      "id": "net-ch3-q41",
+      "question": "Give examples of well-known ports.",
+      "type": "single",
+      "options": [
+        {
+          "text": "1 (ICMP), 6 (TCP), 17 (UDP), 58 (ICMPv6).",
+          "isCorrect": false
+        },
+        {
+          "text": "20 (FTP-data), 21 (FTP-control), 23 (Telnet), 25 (SMTP), 53 (DNS), 67/68 (DHCP), 69 (TFTP), 80 (HTTP).",
+          "isCorrect": true
+        },
+        {
+          "text": "53 (HTTP), 80 (DNS), 25 (Telnet), 23 (SMTP) and relies on best-effort delivery across gateways.",
+          "isCorrect": false
+        },
+        {
+          "text": "22 (SSH), 110 (POP3), 143 (IMAP), 443 (HTTPS) only.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "The lesson provides a list of well-known ports including FTP (20/21), Telnet (23), SMTP (25), DNS (53), DHCP (67/68), TFTP (69), and HTTP (80)."
+    },
+    {
+      "id": "net-ch3-q42",
+      "question": "How are TCP and UDP ports used?",
+      "type": "single",
+      "options": [
+        {
+          "text": "They synchronize the receiver using alternating 1s and 0s on the physical layer.",
+          "isCorrect": false
+        },
+        {
+          "text": "They identify specific services or applications at the transport layer.",
+          "isCorrect": true
+        },
+        {
+          "text": "They determine the next-hop router at the network layer.",
+          "isCorrect": false
+        },
+        {
+          "text": "They identify the hardware manufacturer and act as physical addresses on the data link layer.",
+          "isCorrect": false
+        }
+      ],
+      "explanation": "TCP and UDP port numbers are transport-layer addresses used to distinguish application services (like DNS or HTTP) on a host."
+    }
+  ]
+}

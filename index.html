@@ -140,36 +140,50 @@
             </section>
 
             <section id="view-quiz" class="view">
-                <div class="quiz-header">
-                    <h3 id="quiz-title-display">Quiz Title</h3>
-                    <div id="quiz-timer" class="timer-display hidden">
-                        <span>Time Left: </span>
-                        <span id="timer-val">00:00:00</span>
-                    </div>
-                    <div class="progress-wrapper">
-                        <span id="progress-text">Question 1 of 10</span>
-                        <div class="progress-bar"><div id="progress-fill"></div></div>
-                    </div>
-                </div>
-                
-                <div class="nav-map" id="question-nav-map"></div>
+                <div class="quiz-layout">
 
-                <div class="question-card">
-                    <h2 id="q-number">Question 1</h2>
-                    <div id="q-anim-wrapper">
+                    <!-- GAUCHE : la question + réponses + boutons -->
+                    <div class="quiz-main">
+                    <div class="question-card">
+                        <h2 id="q-number">Question 1</h2>
+
+                        <div id="q-anim-wrapper">
                         <p id="q-text" class="q-text">Question text...</p>
                         <img id="q-image" class="q-img hidden" src="" alt="Question Image">
-                        <small id="q-instruction" style="color: #666; display:block; margin-bottom:10px;"></small>
+                        <small id="q-instruction" style="color:#666; display:block; margin-bottom:10px;"></small>
                         <div id="q-options" class="options-list"></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="quiz-controls">
-                    <button id="btn-prev" class="btn-secondary">Previous</button>
-                    <button id="btn-next" class="btn-primary">Next</button>
-                    <button id="btn-finish" class="btn-danger hidden">Submit Quiz</button>
+                    <div class="quiz-controls">
+                        <button id="btn-prev" class="btn-secondary">Previous</button>
+                        <button id="btn-next" class="btn-primary">Next</button>
+                        <button id="btn-finish" class="btn-danger hidden">Submit Quiz</button>
+                    </div>
+                    </div>
+
+                    <!-- DROITE : header + timer + progression + map -->
+                    <aside class="quiz-side">
+                    <div class="quiz-header">
+                        <h3 id="quiz-title-display">Quiz Title</h3>
+
+                        <div id="quiz-timer" class="timer-display hidden">
+                        <span>Time Left: </span>
+                        <span id="timer-val">00:00:00</span>
+                        </div>
+
+                        <div class="progress-wrapper">
+                        <span id="progress-text">Question 1 of 10</span>
+                        <div class="progress-bar"><div id="progress-fill"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="nav-map" id="question-nav-map"></div>
+                    </aside>
+
                 </div>
             </section>
+
 
             <section id="view-result" class="view">
                 <div class="result-card">
