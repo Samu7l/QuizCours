@@ -1,0 +1,260 @@
+{
+  "id": "CAO-ch3",
+  "type": "module",
+  "title": "Chapter 3 - System Architecture",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "CAO-ch3-q1",
+      "question": "What is the definition of a 'Bus' in computer architecture?",
+      "type": "single",
+      "options": [
+        { "text": "A dedicated point-to-point circuit used exclusively between the CPU and RAM.", "isCorrect": false },
+        { "text": "A shared communication link consisting of a group of electrical conductors transferring signals.", "isCorrect": true },
+        { "text": "A software protocol that manages data flow within the operating system.", "isCorrect": false },
+        { "text": "The physical plastic casing that holds the motherboard components together.", "isCorrect": false }
+      ],
+      "explanation": "A bus is a shared communication link, a group of electrical conductors that transfer signals between components, avoiding the need for separate circuits between every pair of devices."
+    },
+    {
+      "id": "CAO-ch3-q2",
+      "question": "What constitutes a single 'Bus Line'?",
+      "type": "single",
+      "options": [
+        { "text": "A single conductor carrying a single electrical signal.", "isCorrect": true },
+        { "text": "A bundle of 8 wires carrying a byte of data.", "isCorrect": false },
+        { "text": "The connector slot used for the graphics card.", "isCorrect": false },
+        { "text": "A software interrupt signal sent to the CPU.", "isCorrect": false }
+      ],
+      "explanation": "A bus line is defined as a single conductor (wire or PCB track) that is assigned a name and carries a single electrical signal."
+    },
+    {
+      "id": "CAO-ch3-q3",
+      "question": "Which of the following represents the four main categories of bus lines?",
+      "type": "single",
+      "options": [
+        { "text": "Input, Output, Storage, and Processing lines.", "isCorrect": false },
+        { "text": "Data, Address, Control, and Power lines.", "isCorrect": true },
+        { "text": "USB, HDMI, Ethernet, and Audio lines.", "isCorrect": false },
+        { "text": "Serial, Parallel, Simplex, and Duplex lines.", "isCorrect": false }
+      ],
+      "explanation": "The four main categories of bus lines are Data lines (carry data), Address lines (specify recipient), Control lines (synchronization), and Power lines (provide power)."
+    },
+    {
+      "id": "CAO-ch3-q4",
+      "question": "What is the primary function and characteristic of the Data Bus?",
+      "type": "single",
+      "options": [
+        { "text": "It carries control signals and is unidirectional.", "isCorrect": false },
+        { "text": "It supplies power to the components and is non-directional.", "isCorrect": false },
+        { "text": "It carries data between the CPU, memory, and I/O, and is bi-directional.", "isCorrect": true },
+        { "text": "It carries memory addresses from the CPU and is unidirectional.", "isCorrect": false }
+      ],
+      "explanation": "The Data Bus carries data between the CPU and memory or I/O devices. It is bi-directional ('out of' CPU for write, 'into' CPU for read) ."
+    },
+    {
+      "id": "CAO-ch3-q5",
+      "question": "What is the specific role of the Address Bus?",
+      "type": "single",
+      "options": [
+        { "text": "It carries the data being processed and is bi-directional.", "isCorrect": false },
+        { "text": "It carries the address from the CPU to memory or I/O and is unidirectional.", "isCorrect": true },
+        { "text": "It carries synchronization signals like the system clock.", "isCorrect": false },
+        { "text": "It provides the voltage required for the memory chips to operate.", "isCorrect": false }
+      ],
+      "explanation": "The Address Bus carries an address from the CPU to Memory or I/O devices. It is unidirectional because the address is always supplied by the CPU ."
+    },
+    {
+      "id": "CAO-ch3-q6",
+      "question": "Which specific signals are typically found in the Control Bus?",
+      "type": "single",
+      "options": [
+        { "text": "D0, D1, D2, D3.", "isCorrect": false },
+        { "text": "A0, A1, A2, A3.", "isCorrect": false },
+        { "text": "VCC, GND, +5V, +12V.", "isCorrect": false },
+        { "text": "/RD (read), /WR (write), CLK (clock), /IRQ (interrupt).", "isCorrect": true }
+      ],
+      "explanation": "The Control Bus is a collection of signals for coordinating CPU activities, typically including /RD, /WR, CLK, and /IRQ ."
+    },
+    {
+      "id": "CAO-ch3-q7",
+      "question": "How do you calculate the total addressable memory if the address bus has 'k' bits and the data bus has 'n' bits?",
+      "type": "single",
+      "options": [
+        { "text": "Total Memory = 2^k * n bits.", "isCorrect": true },
+        { "text": "Total Memory = 2^n * k bits.", "isCorrect": false },
+        { "text": "Total Memory = k * n bits.", "isCorrect": false },
+        { "text": "Total Memory = 2^(k+n) bits.", "isCorrect": false }
+      ],
+      "explanation": "With a k-bit address bus, there are 2^k addressable locations. If the word length (data bus) is n bits, the total memory is 2^k locations multiplied by n bits per location ."
+    },
+    {
+      "id": "CAO-ch3-q8",
+      "question": "Calculate the total memory size for a system with an 18-bit Address Bus and a 16-bit Data Bus.",
+      "type": "single",
+      "options": [
+        { "text": "256 KB.", "isCorrect": false },
+        { "text": "512 KB.", "isCorrect": true },
+        { "text": "1 MB.", "isCorrect": false },
+        { "text": "4 MB.", "isCorrect": false }
+      ],
+      "explanation": "2^18 = 262,144 locations. Each location is 16 bits (2 bytes). Total = 262,144 * 2 bytes = 524,288 bytes = 512 KB."
+    },
+    {
+      "id": "CAO-ch3-q9",
+      "question": "What are the two main types of Bus Topologies mentioned in the course?",
+      "type": "single",
+      "options": [
+        { "text": "Star and Mesh.", "isCorrect": false },
+        { "text": "Ring and Bus.", "isCorrect": false },
+        { "text": "Point-to-Point and Multipoint (Multidrop).", "isCorrect": true },
+        { "text": "Serial and Parallel.", "isCorrect": false }
+      ],
+      "explanation": "The two main topologies are Point-to-Point (specific source to specific destination) and Multipoint/Multidrop (signals to several destinations) ."
+    },
+    {
+      "id": "CAO-ch3-q10",
+      "question": "What is the function of a Backplane or System Bus?",
+      "type": "single",
+      "options": [
+        { "text": "It connects the CPU with memory and I/O module cards in the same physical package.", "isCorrect": true },
+        { "text": "It connects the computer to the internet via a modem.", "isCorrect": false },
+        { "text": "It connects external peripherals like printers and scanners only.", "isCorrect": false },
+        { "text": "It provides a dedicated link between the keyboard and the monitor.", "isCorrect": false }
+      ],
+      "explanation": "A Backplane or System Bus connects the CPU with memory and/or I/O module cards within the same physical package/chassis."
+    },
+    {
+      "id": "CAO-ch3-q11",
+      "question": "What is the purpose of a Bus Interface Unit or Bridge?",
+      "type": "single",
+      "options": [
+        { "text": "It provides a physical structure to hold the motherboard in the case.", "isCorrect": false },
+        { "text": "It interfaces between different buses (e.g., varying bandwidths) to allow communication.", "isCorrect": true },
+        { "text": "It generates the system clock signal for the CPU.", "isCorrect": false },
+        { "text": "It acts as the main power supply regulator for the bus.", "isCorrect": false }
+      ],
+      "explanation": "Bridges or Bus Interface Units are interfaces between different buses that allow them to communicate, often connecting buses with different capacities ."
+    },
+    {
+      "id": "CAO-ch3-q12",
+      "question": "Which of the following is a list of common Backplane Buses mentioned?",
+      "type": "single",
+      "options": [
+        { "text": "USB, HDMI, and VGA.", "isCorrect": false },
+        { "text": "Ethernet, Wi-Fi, and Bluetooth.", "isCorrect": false },
+        { "text": "PCI, AGP, and ISA.", "isCorrect": true },
+        { "text": "SATA, IDE, and SCSI.", "isCorrect": false }
+      ],
+      "explanation": "The course lists PCI (Peripheral Component Interconnect), AGP (Accelerated Graphics Port), and ISA (Industry Standard Architecture) as examples of backplane buses."
+    },
+    {
+      "id": "CAO-ch3-q13",
+      "question": "What is a 'Bus Protocol'?",
+      "type": "single",
+      "options": [
+        { "text": "A hardware cable used to connect the bus.", "isCorrect": false },
+        { "text": "The speed at which data travels on the bus.", "isCorrect": false },
+        { "text": "A specification agreement defining the meaning of each bus line and signal.", "isCorrect": true },
+        { "text": "The software driver installed for the chipset.", "isCorrect": false }
+      ],
+      "explanation": "A bus protocol is a specification that delineates the meaning of each bus line and signal, acting as an agreement between components on how to communicate."
+    },
+    {
+      "id": "CAO-ch3-q14",
+      "question": "Which motherboard technology was developed by Intel in 1995 and became the standard for most desktop PCs?",
+      "type": "single",
+      "options": [
+        { "text": "AT (Advanced Technology).", "isCorrect": false },
+        { "text": "Mini-ITX.", "isCorrect": false },
+        { "text": "ATX (Advanced Technology Extended).", "isCorrect": true },
+        { "text": "BTX (Balanced Technology eXtended).", "isCorrect": false }
+      ],
+      "explanation": "ATX was developed by Intel in 1995 and offers better power management and integrated I/O ports compared to the older AT standard."
+    },
+    {
+      "id": "CAO-ch3-q15",
+      "question": "Which components are typically found connected directly to the motherboard?",
+      "type": "single",
+      "options": [
+        { "text": "Monitor screen and Keyboard keys.", "isCorrect": false },
+        { "text": "CPU Socket, RAM Slots, and PCIe Slots.", "isCorrect": true },
+        { "text": "Printer ink cartridges and Paper tray.", "isCorrect": false },
+        { "text": "External Hard Drive USB cable.", "isCorrect": false }
+      ],
+      "explanation": "Common motherboard components include the CPU Socket, RAM Slots, PCIe Slots, Power Connectors, and Storage Connections ."
+    },
+    {
+      "id": "CAO-ch3-q16",
+      "question": "What defines a 'Multiprocessor System'?",
+      "type": "single",
+      "options": [
+        { "text": "A system with a single processor running multiple operating systems.", "isCorrect": false },
+        { "text": "A system with two or more processors working together.", "isCorrect": true },
+        { "text": "A system that uses multiple hard drives for storage.", "isCorrect": false },
+        { "text": "A system connected to multiple monitors.", "isCorrect": false }
+      ],
+      "explanation": "A multiprocessor system is defined as a system with two or more processors working together to improve performance and scalability ."
+    },
+    {
+      "id": "CAO-ch3-q17",
+      "question": "What is a key characteristic of Symmetric Multiprocessing (SMP)?",
+      "type": "single",
+      "options": [
+        { "text": "Processors have a master-slave relationship.", "isCorrect": false },
+        { "text": "Each processor has its own private memory and cannot access others.", "isCorrect": false },
+        { "text": "Multiple processors share a single memory and I/O bus with equal access.", "isCorrect": true },
+        { "text": "It is primarily used in low-power embedded systems.", "isCorrect": false }
+      ],
+      "explanation": "In SMP, multiple processors share a single memory and I/O bus, providing equal access to memory and balanced load distribution."
+    },
+    {
+      "id": "CAO-ch3-q18",
+      "question": "What characterizes Asymmetric Multiprocessing (AMP)?",
+      "type": "single",
+      "options": [
+        { "text": "Processors are assigned specific tasks in a Master-Slave relationship.", "isCorrect": true },
+        { "text": "All processors share the same workload equally.", "isCorrect": false },
+        { "text": "It offers the highest possible scalability compared to SMP.", "isCorrect": false },
+        { "text": "It requires all processors to be identical in speed and architecture.", "isCorrect": false }
+      ],
+      "explanation": "AMP involves processors assigned specific tasks with a master-slave relationship, where the master controls the system and slaves perform tasks."
+    },
+    {
+      "id": "CAO-ch3-q19",
+      "question": "What are the two main types of Parallelism described?",
+      "type": "single",
+      "options": [
+        { "text": "Input Parallelism and Output Parallelism.", "isCorrect": false },
+        { "text": "Memory Parallelism and Storage Parallelism.", "isCorrect": false },
+        { "text": "Data Parallelism and Task Parallelism.", "isCorrect": true },
+        { "text": "Hardware Parallelism and Software Parallelism.", "isCorrect": false }
+      ],
+      "explanation": "The course identifies Data Parallelism (processing data across multiple processors) and Task Parallelism (parallel execution of different tasks) ."
+    },
+    {
+      "id": "CAO-ch3-q20",
+      "question": "Which of the following is a primary challenge associated with Parallel Architectures?",
+      "type": "single",
+      "options": [
+        { "text": "Complexity in synchronization and data management.", "isCorrect": true },
+        { "text": "Decreased throughput and performance.", "isCorrect": false },
+        { "text": "Inability to use modern operating systems.", "isCorrect": false },
+        { "text": "Limited availability of power supply units.", "isCorrect": false }
+      ],
+      "explanation": "While parallel architectures offer improved performance, a key challenge is the complexity involved in synchronization and data management."
+    },
+    {
+      "id": "CAO-ch3-q21",
+      "question": "Which of the following are examples of modern multiprocessor systems mentioned?",
+      "type": "single",
+      "options": [
+        { "text": "Intel 8086 and Zilog Z80.", "isCorrect": false },
+        { "text": "Intel Xeon and AMD Epyc.", "isCorrect": true },
+        { "text": "Apple M1 and Snapdragon 888.", "isCorrect": false },
+        { "text": "Arduino Uno and Raspberry Pi.", "isCorrect": false }
+      ],
+      "explanation": "The course lists Intel Xeon and AMD Epyc as examples of modern multiprocessor systems used in data centers and HPC."
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "id": "CAO-ch8",
+  "type": "module",
+  "title": "Chapter 8 - File and File System Management",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "CAO-ch8-q1",
+      "question": "What is the primary objective of file and file system management in Linux?",
+      "type": "single",
+      "options": [
+        { "text": "To compile source code into executable programs.", "isCorrect": false },
+        { "text": "To organize, store, access, and protect data on storage devices efficiently.", "isCorrect": true },
+        { "text": "To manage the scheduling of processes on the CPU.", "isCorrect": false },
+        { "text": "To convert analog signals into digital data for the monitor.", "isCorrect": false }
+      ],
+      "explanation": "The main purpose is to organize, store, access, and protect data on storage devices in a structured and efficient way ."
+    },
+    {
+      "id": "CAO-ch8-q2",
+      "question": "How is the Linux file system structured?",
+      "type": "single",
+      "options": [
+        { "text": "As a hierarchical tree-like structure starting from the root directory (/)", "isCorrect": true },
+        { "text": "As a flat list where all files must have unique names.", "isCorrect": false },
+        { "text": "As a circular mesh of interconnected nodes.", "isCorrect": false },
+        { "text": "As a relational database with tables and rows.", "isCorrect": false }
+      ],
+      "explanation": "Linux uses a hierarchical file system, a tree-like structure where directories contain files and subdirectories, starting from the root directory /."
+    },
+    {
+      "id": "CAO-ch8-q3",
+      "question": "What is the function of the root directory (/) in Linux?",
+      "type": "single",
+      "options": [
+        { "text": "It contains only the personal files of the system administrator.", "isCorrect": false },
+        { "text": "It serves as a temporary folder for internet downloads.", "isCorrect": false },
+        { "text": "It is the top-level directory containing all other files and directories.", "isCorrect": true },
+        { "text": "It is a special file used for virtual memory swapping.", "isCorrect": false }
+      ],
+      "explanation": "The root directory (/) is the top-level directory that contains all other files and directories in the system ."
+    },
+    {
+      "id": "CAO-ch8-q4",
+      "question": "Which list represents the main file operations supported by Linux?",
+      "type": "single",
+      "options": [
+        { "text": "Creation, opening, closing, reading, writing, and deletion.", "isCorrect": true },
+        { "text": "Compiling, linking, debugging, and executing.", "isCorrect": false },
+        { "text": "Formatting, partitioning, mounting, and ejecting.", "isCorrect": false },
+        { "text": "Uploading, downloading, streaming, and buffering.", "isCorrect": false }
+      ],
+      "explanation": "The main file operations include file creation, opening, closing, reading, writing, and deletion ."
+    },
+    {
+      "id": "CAO-ch8-q5",
+      "question": "Which command is used to create an empty file in Linux?",
+      "type": "single",
+      "options": [
+        { "text": "mkdir", "isCorrect": false },
+        { "text": "touch", "isCorrect": true },
+        { "text": "cat", "isCorrect": false },
+        { "text": "rm", "isCorrect": false }
+      ],
+      "explanation": "The 'touch' command is used to create an empty file or update the timestamp of an existing file."
+    },
+    {
+      "id": "CAO-ch8-q6",
+      "question": "What is the difference between an absolute path and a relative path?",
+      "type": "single",
+      "options": [
+        { "text": "An absolute path allows spaces in names; a relative path does not.", "isCorrect": false },
+        { "text": "An absolute path is used for files; a relative path is used for directories.", "isCorrect": false },
+        { "text": "An absolute path starts from the root (/); a relative path starts from the current directory.", "isCorrect": true },
+        { "text": "An absolute path is encrypted; a relative path is visible to all users.", "isCorrect": false }
+      ],
+      "explanation": "An absolute path starts from the root directory (e.g., /home/user/file.txt), while a relative path is defined relative to the current working directory."
+    },
+    {
+      "id": "CAO-ch8-q7",
+      "question": "What defines a 'directory' in the Linux file system?",
+      "type": "single",
+      "options": [
+        { "text": "A hardware component that stores data magnetically.", "isCorrect": false },
+        { "text": "A special type of file that contains references to other files and directories.", "isCorrect": true },
+        { "text": "A command used to list active processes.", "isCorrect": false },
+        { "text": "A security permission level for the root user.", "isCorrect": false }
+      ],
+      "explanation": "In Linux, a directory is essentially a special type of file that contains references (pointers) to other files and subdirectories."
+    },
+    {
+      "id": "CAO-ch8-q8",
+      "question": "Which set of commands is used for directory management in Linux?",
+      "type": "single",
+      "options": [
+        { "text": "ping, ifconfig, netstat, ssh", "isCorrect": false },
+        { "text": "mkdir, rmdir, rm -r, ls", "isCorrect": true },
+        { "text": "gcc, make, gedit, vim", "isCorrect": false },
+        { "text": "grep, sed, awk, cat", "isCorrect": false }
+      ],
+      "explanation": "Directory management commands include 'mkdir' (create), 'rmdir' (remove empty), 'rm -r' (remove recursively), and 'ls' (list contents) ."
+    },
+    {
+      "id": "CAO-ch8-q9",
+      "question": "What is the purpose of file permission management in Linux?",
+      "type": "single",
+      "options": [
+        { "text": "To increase the read/write speed of the hard disk.", "isCorrect": false },
+        { "text": "To control who can read, write, or execute a specific file.", "isCorrect": true },
+        { "text": "To compress files automatically to save space.", "isCorrect": false },
+        { "text": "To organize files alphabetically for easier searching.", "isCorrect": false }
+      ],
+      "explanation": "File permission management is a security mechanism that controls access, determining who can read, write, or execute a file."
+    },
+    {
+      "id": "CAO-ch8-q10",
+      "question": "What are the three standard types of file permissions in Linux?",
+      "type": "single",
+      "options": [
+        { "text": "Read (r), Write (w), Execute (x).", "isCorrect": true },
+        { "text": "Open (o), Close (c), Save (s).", "isCorrect": false },
+        { "text": "Input (i), Output (o), Process (p).", "isCorrect": false },
+        { "text": "Admin (a), User (u), Guest (g).", "isCorrect": false }
+      ],
+      "explanation": "The three permission types are Read (r), Write (w), and Execute (x)."
+    },
+    {
+      "id": "CAO-ch8-q11",
+      "question": "To which categories of users do file permissions apply?",
+      "type": "single",
+      "options": [
+        { "text": "User (owner), Group, and Others.", "isCorrect": true },
+        { "text": "Administrators, Moderators, and Guests.", "isCorrect": false },
+        { "text": "Local users, Remote users, and Bots.", "isCorrect": false },
+        { "text": "Windows users, Mac users, and Linux users.", "isCorrect": false }
+      ],
+      "explanation": "Permissions are assigned to three categories: User (the owner of the file), Group (users in the file's group), and Others (everyone else)."
+    },
+    {
+      "id": "CAO-ch8-q12",
+      "question": "Which command is used to change file permissions?",
+      "type": "single",
+      "options": [
+        { "text": "chown", "isCorrect": false },
+        { "text": "pwd", "isCorrect": false },
+        { "text": "chmod", "isCorrect": true },
+        { "text": "grep", "isCorrect": false }
+      ],
+      "explanation": "The 'chmod' (change mode) command is used to modify the access permissions of file system objects ."
+    },
+    {
+      "id": "CAO-ch8-q13",
+      "question": "Which command is used to change the owner of a file?",
+      "type": "single",
+      "options": [
+        { "text": "chgrp", "isCorrect": false },
+        { "text": "chmod", "isCorrect": false },
+        { "text": "touch", "isCorrect": false },
+        { "text": "chown", "isCorrect": true }
+      ],
+      "explanation": "The 'chown' (change owner) command allows you to change the user ownership of a file."
+    },
+    {
+      "id": "CAO-ch8-q14",
+      "question": "What is a 'Distributed File System'?",
+      "type": "single",
+      "options": [
+        { "text": "A file system that scatters parts of a single file across the hard disk sectors.", "isCorrect": false },
+        { "text": "A file system that allows files to be stored and accessed across multiple machines as if they were local.", "isCorrect": true },
+        { "text": "A system where files are emailed to users automatically.", "isCorrect": false },
+        { "text": "A backup system that copies files to an external USB drive.", "isCorrect": false }
+      ],
+      "explanation": "A distributed file system allows access to files stored on multiple remote machines as though they were located on the local machine."
+    },
+    {
+      "id": "CAO-ch8-q15",
+      "question": "Why are distributed file systems useful?",
+      "type": "single",
+      "options": [
+        { "text": "They enable resource sharing, scalability, and fault tolerance.", "isCorrect": true },
+        { "text": "They make the computer boot up faster.", "isCorrect": false },
+        { "text": "They eliminate the need for an operating system kernel.", "isCorrect": false },
+        { "text": "They automatically translate text files into different languages.", "isCorrect": false }
+      ],
+      "explanation": "Distributed file systems provide benefits such as resource sharing among users, scalability of storage, and fault tolerance against hardware failures."
+    },
+    {
+      "id": "CAO-ch8-q16",
+      "question": "What is the role of the Linux kernel regarding the file system?",
+      "type": "single",
+      "options": [
+        { "text": "It provides the graphical user interface for dragging and dropping files.", "isCorrect": false },
+        { "text": "It handles file access, disk I/O, permissions enforcement, and hardware communication.", "isCorrect": true },
+        { "text": "It compiles C programs into executable binaries.", "isCorrect": false },
+        { "text": "It acts as a text editor for modifying system configurations.", "isCorrect": false }
+      ],
+      "explanation": "The kernel is the core component that manages hardware and provides file system services like access control and I/O management ."
+    },
+    {
+      "id": "CAO-ch8-q17",
+      "question": "How does Linux represent system components like devices and processes?",
+      "type": "single",
+      "options": [
+        { "text": "Everything is represented as a File.", "isCorrect": true },
+        { "text": "Everything is represented as a Database entry.", "isCorrect": false },
+        { "text": "Everything is represented as a Network packet.", "isCorrect": false },
+        { "text": "Everything is represented as a Graphical icon.", "isCorrect": false }
+      ],
+      "explanation": "A key philosophy in Linux/Unix is that 'Everything is a file', including hardware devices, directories, and processes, allowing a unified interface."
+    },
+    {
+      "id": "CAO-ch8-q18",
+      "question": "What is the primary purpose of the 'find' command?",
+      "type": "single",
+      "options": [
+        { "text": "To search for text patterns inside a file content.", "isCorrect": false },
+        { "text": "To locate files and directories based on criteria like name or size.", "isCorrect": true },
+        { "text": "To recover deleted files from the trash.", "isCorrect": false },
+        { "text": "To display the current working directory path.", "isCorrect": false }
+      ],
+      "explanation": "The 'find' command is used for searching for files and directories within a directory hierarchy based on various criteria ."
+    },
+    {
+      "id": "CAO-ch8-q19",
+      "question": "What does the command 'find / -size +10M' do?",
+      "type": "single",
+      "options": [
+        { "text": "It finds all files in the current directory created 10 minutes ago.", "isCorrect": false },
+        { "text": "It deletes all files larger than 10 Megabytes.", "isCorrect": false },
+        { "text": "It finds all files larger than 10 MB starting from the root directory.", "isCorrect": true },
+        { "text": "It moves files smaller than 10 MB to the root directory.", "isCorrect": false }
+      ],
+      "explanation": "This specific command searches from the root (/) for files where the size is greater than (+10M) 10 Megabytes."
+    },
+    {
+      "id": "CAO-ch8-q20",
+      "question": "What is an advantage of using a hierarchical file system?",
+      "type": "single",
+      "options": [
+        { "text": "It improves organization, scalability, and ease of navigation.", "isCorrect": true },
+        { "text": "It ensures that all files are stored in a single folder for quick access.", "isCorrect": false },
+        { "text": "It prevents users from creating subdirectories.", "isCorrect": false },
+        { "text": "It removes the need for file permissions.", "isCorrect": false }
+      ],
+      "explanation": "A hierarchical structure allows for logical organization of files into directories, making the system scalable and easier to navigate and secure."
+    }
+  ]
+}

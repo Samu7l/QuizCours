@@ -1,0 +1,344 @@
+{
+  "id": "CAO-ch5",
+  "type": "module",
+  "title": "Chapter 5 - Introduction to Operating Systems",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "CAO-ch5-q1",
+      "question": "What is the primary definition of an Operating System (OS)?",
+      "type": "single",
+      "options": [
+        { "text": "A hardware component that executes instructions.", "isCorrect": false },
+        { "text": "A user application used for word processing.", "isCorrect": false },
+        { "text": "A network protocol for data transmission.", "isCorrect": false },
+        { "text": "Software acting as an interface between the user and hardware, managing resources.", "isCorrect": true }
+      ],
+      "explanation": "An operating system is defined as software that acts as an interface between the user and the computer hardware and is responsible for managing system resources ."
+    },
+    {
+      "id": "CAO-ch5-q2",
+      "question": "Which of the following are the main responsibilities of an operating system?",
+      "type": "single",
+      "options": [
+        { "text": "Management of activities, sharing resources, and shielding hardware complexity.", "isCorrect": true },
+        { "text": "Compiling high-level programming code into machine language.", "isCorrect": false },
+        { "text": "Designing physical circuit boards and processors.", "isCorrect": false },
+        { "text": "Providing internet connectivity hardware components.", "isCorrect": false }
+      ],
+      "explanation": "The main responsibilities include the management and coordination of activities, the sharing of computer resources, and shielding programmers from hardware complexity."
+    },
+    {
+      "id": "CAO-ch5-q3",
+      "question": "How does an operating system function as an interface?",
+      "type": "single",
+      "options": [
+        { "text": "It physically connects input devices to the monitor.", "isCorrect": false },
+        { "text": "It converts electrical AC power to DC for the hardware.", "isCorrect": false },
+        { "text": "It sits between user applications and hardware, translating actions into operations.", "isCorrect": true },
+        { "text": "It replaces the need for a Central Processing Unit (CPU).", "isCorrect": false }
+      ],
+      "explanation": "The OS acts as an interface by sitting between user applications and the hardware, translating user actions into specific hardware operations ."
+    },
+    {
+      "id": "CAO-ch5-q4",
+      "question": "What tasks are included in Process Management within an OS?",
+      "type": "single",
+      "options": [
+        { "text": "Managing the physical rotation speed of the hard disk.", "isCorrect": false },
+        { "text": "Creation, scheduling, termination, and synchronization of processes.", "isCorrect": true },
+        { "text": "Organizing files into hierarchical folders.", "isCorrect": false },
+        { "text": "Controlling the resolution and brightness of the monitor.", "isCorrect": false }
+      ],
+      "explanation": "Process management involves the creation, scheduling, termination, and synchronization of processes, as well as deadlock management and inter-process communication."
+    },
+    {
+      "id": "CAO-ch5-q5",
+      "question": "What is the primary goal of Memory Management in an operating system?",
+      "type": "single",
+      "options": [
+        { "text": "Deleting unused files to permanently save disk space.", "isCorrect": false },
+        { "text": "Managing the power consumption of the RAM modules.", "isCorrect": false },
+        { "text": "Manufacturing physical memory chips.", "isCorrect": false },
+        { "text": "Tracking usage, managing RAM, and handling swapping between RAM and disk.", "isCorrect": true }
+      ],
+      "explanation": "Memory management involves tracking memory usage, managing the system's RAM, and handling the swapping of data between RAM and disk when necessary."
+    },
+    {
+      "id": "CAO-ch5-q6",
+      "question": "What functionality does File System Management provide?",
+      "type": "single",
+      "options": [
+        { "text": "Mechanisms to create, read, update, and delete files.", "isCorrect": true },
+        { "text": "Managing the speed of the system bus.", "isCorrect": false },
+        { "text": "Coordinating communication between the CPU and the ALU.", "isCorrect": false },
+        { "text": "Translating mouse clicks into binary code.", "isCorrect": false }
+      ],
+      "explanation": "File system management provides the necessary mechanisms for applications to create, read, update, and delete files."
+    },
+    {
+      "id": "CAO-ch5-q7",
+      "question": "What does Device Management entail in an OS context?",
+      "type": "single",
+      "options": [
+        { "text": "Physically repairing broken peripheral devices.", "isCorrect": false },
+        { "text": "Designing hardware drivers for new equipment.", "isCorrect": false },
+        { "text": "Managing communication via drivers and handling data transfer.", "isCorrect": true },
+        { "text": "Increasing the clock speed of the processor.", "isCorrect": false }
+      ],
+      "explanation": "Device management involves managing device communication through drivers, translating user input into device commands, and handling data transfer."
+    },
+    {
+      "id": "CAO-ch5-q8",
+      "question": "What is the purpose of Security and Access Control in an OS?",
+      "type": "single",
+      "options": [
+        { "text": "To speed up the computer's boot process.", "isCorrect": false },
+        { "text": "Preventing unauthorized access and controlling user permissions.", "isCorrect": true },
+        { "text": "To ensure the desktop background looks visually appealing.", "isCorrect": false },
+        { "text": "To automatically update all application software.", "isCorrect": false }
+      ],
+      "explanation": "Security and access control are responsible for preventing unauthorized access to system resources and controlling user permissions and actions."
+    },
+    {
+      "id": "CAO-ch5-q9",
+      "question": "What role does the User Interface play in an operating system?",
+      "type": "single",
+      "options": [
+        { "text": "Allowing user interaction through command-line or graphical interfaces.", "isCorrect": true },
+        { "text": "Connecting the computer to the main power grid.", "isCorrect": false },
+        { "text": "Compiling source code into executable programs.", "isCorrect": false },
+        { "text": "Managing the cooling fans of the system.", "isCorrect": false }
+      ],
+      "explanation": "The user interface's role is to allow user interaction with the system, typically provided through command-line interfaces or graphical user interfaces (GUIs)."
+    },
+    {
+      "id": "CAO-ch5-q10",
+      "question": "What characterized first-generation computers (1940s–1950s)?",
+      "type": "single",
+      "options": [
+        { "text": "Use of Integrated Circuits and multitasking capabilities.", "isCorrect": false },
+        { "text": "Transistors and batch processing systems.", "isCorrect": false },
+        { "text": "Microprocessors and personal computers.", "isCorrect": false },
+        { "text": "Vacuum tubes, plugboards, and no operating system.", "isCorrect": true }
+      ],
+      "explanation": "First-generation computers were characterized by the use of vacuum tubes and plugboards, had no operating system, and allowed only single user access ."
+    },
+    {
+      "id": "CAO-ch5-q11",
+      "question": "What defined second-generation operating systems (Late 1950s - 1960s)?",
+      "type": "single",
+      "options": [
+        { "text": "Vacuum tubes and manual plugboards.", "isCorrect": false },
+        { "text": "Personal computers and graphical user interfaces.", "isCorrect": false },
+        { "text": "Use of transistors, introduction of OS, and batch processing.", "isCorrect": true },
+        { "text": "Cloud computing and mobile operating systems.", "isCorrect": false }
+      ],
+      "explanation": "The second generation was defined by the use of transistors, the introduction of operating systems, and the prevalence of batch processing systems ."
+    },
+    {
+      "id": "CAO-ch5-q12",
+      "question": "What significant development occurred in the fourth generation of operating systems?",
+      "type": "single",
+      "options": [
+        { "text": "The invention of the vacuum tube.", "isCorrect": false },
+        { "text": "Rise of microprocessors, PCs, UNIX, and MS-DOS.", "isCorrect": true },
+        { "text": "The creation of the first batch monitor.", "isCorrect": false },
+        { "text": "The shift to cloud-based kernels.", "isCorrect": false }
+      ],
+      "explanation": "The fourth generation saw the rise of microprocessors and personal computers, along with the development of operating systems like UNIX and MS-DOS ."
+    },
+    {
+      "id": "CAO-ch5-q13",
+      "question": "What characterizes modern operating systems (1990s–present)?",
+      "type": "single",
+      "options": [
+        { "text": "Support for networking, multitasking, and advanced UIs (e.g., Windows, Linux).", "isCorrect": true },
+        { "text": "Use of plugboards for programming tasks.", "isCorrect": false },
+        { "text": "Strictly single-user batch processing workflows.", "isCorrect": false },
+        { "text": "Lack of any graphical user interfaces.", "isCorrect": false }
+      ],
+      "explanation": "Modern operating systems are characterized by their support for networking, multitasking, and advanced user interfaces, with examples including Windows, Linux, and macOS."
+    },
+    {
+      "id": "CAO-ch5-q14",
+      "question": "What is a multitasking operating system?",
+      "type": "single",
+      "options": [
+        { "text": "An OS that allows only one program to run at a time.", "isCorrect": false },
+        { "text": "An OS designed exclusively for multiple CPUs.", "isCorrect": false },
+        { "text": "An OS that runs programs strictly sequentially in batches.", "isCorrect": false },
+        { "text": "An OS allowing multiple programs to run simultaneously on a single processor.", "isCorrect": true }
+      ],
+      "explanation": "A multitasking operating system allows multiple programs to run simultaneously on a single processor by managing priorities and execution order."
+    },
+    {
+      "id": "CAO-ch5-q15",
+      "question": "What defines a time-sharing operating system?",
+      "type": "single",
+      "options": [
+        { "text": "It dedicates the CPU to one user until they finish.", "isCorrect": false },
+        { "text": "It allows multiple users to use the system simultaneously via time slices.", "isCorrect": true },
+        { "text": "It is used exclusively for batch jobs without user interaction.", "isCorrect": false },
+        { "text": "It runs on embedded devices with no user interaction.", "isCorrect": false }
+      ],
+      "explanation": "A time-sharing operating system allows multiple users to use the system simultaneously by executing programs in small time slices ."
+    },
+    {
+      "id": "CAO-ch5-q16",
+      "question": "What is the defining feature of a Real-Time Operating System (RTOS)?",
+      "type": "single",
+      "options": [
+        { "text": "It focuses on maximizing user interface aesthetics.", "isCorrect": false },
+        { "text": "It is designed for general-purpose desktop computing.", "isCorrect": false },
+        { "text": "It is designed to respond within strict time constraints.", "isCorrect": true },
+        { "text": "It allows unlimited time for task completion.", "isCorrect": false }
+      ],
+      "explanation": "A Real-Time Operating System (RTOS) is designed to respond within strict time constraints and is used in systems where timing is critical ."
+    },
+    {
+      "id": "CAO-ch5-q17",
+      "question": "What is a multiprogramming operating system?",
+      "type": "single",
+      "options": [
+        { "text": "An OS that stores multiple programs in main memory to maximize CPU utilization.", "isCorrect": true },
+        { "text": "An OS that requires multiple CPUs to function.", "isCorrect": false },
+        { "text": "An OS that runs one program at a time from a tape.", "isCorrect": false },
+        { "text": "An OS designed for single-user gaming only.", "isCorrect": false }
+      ],
+      "explanation": "A multiprogramming operating system stores multiple programs in main memory simultaneously to maximize CPU utilization."
+    },
+    {
+      "id": "CAO-ch5-q18",
+      "question": "What is a multiprocessing operating system?",
+      "type": "single",
+      "options": [
+        { "text": "An OS that runs multiple programs on a single CPU.", "isCorrect": false },
+        { "text": "An OS that uses more than one independent processing unit.", "isCorrect": true },
+        { "text": "An OS that simulates multiple processors using software.", "isCorrect": false },
+        { "text": "An OS that processes data in batches on one core.", "isCorrect": false }
+      ],
+      "explanation": "A multiprocessing operating system is defined as one that uses more than one independent processing unit to execute tasks."
+    },
+    {
+      "id": "CAO-ch5-q19",
+      "question": "How does a batch operating system function?",
+      "type": "single",
+      "options": [
+        { "text": "It allows real-time user interaction.", "isCorrect": false },
+        { "text": "It handles one user at a time with full interactive control.", "isCorrect": false },
+        { "text": "It executes programs based on priority interrupts.", "isCorrect": false },
+        { "text": "It executes jobs in batches with no user interaction during execution.", "isCorrect": true }
+      ],
+      "explanation": "A batch operating system executes jobs in batches with no user interaction during execution and is used for repetitive large-scale processing ."
+    },
+    {
+      "id": "CAO-ch5-q20",
+      "question": "What is a single-user operating system?",
+      "type": "single",
+      "options": [
+        { "text": "It allows only one user at a time to use the computer.", "isCorrect": true },
+        { "text": "It supports thousands of concurrent users.", "isCorrect": false },
+        { "text": "It is designed for mainframe computers.", "isCorrect": false },
+        { "text": "It requires a network connection to function.", "isCorrect": false }
+      ],
+      "explanation": "A single-user operating system allows only one user at a time to use the computer."
+    },
+    {
+      "id": "CAO-ch5-q21",
+      "question": "What is a multi-user operating system?",
+      "type": "single",
+      "options": [
+        { "text": "An OS restricted to a single administrator.", "isCorrect": false },
+        { "text": "An OS for standalone embedded devices.", "isCorrect": false },
+        { "text": "An OS that allows multiple users to access the system simultaneously.", "isCorrect": true },
+        { "text": "An OS that runs only one application at a time.", "isCorrect": false }
+      ],
+      "explanation": "A multi-user operating system allows multiple users to access the computer system simultaneously."
+    },
+    {
+      "id": "CAO-ch5-q22",
+      "question": "Which of the following lists services provided by an OS to users and programs?",
+      "type": "single",
+      "options": [
+        { "text": "Hardware assembly, circuit design, and soldering.", "isCorrect": false },
+        { "text": "Program execution, Input-output operations, and File system manipulation.", "isCorrect": true },
+        { "text": "Website development, graphic design, and video editing.", "isCorrect": false },
+        { "text": "Manufacturing, shipping, and logistics.", "isCorrect": false }
+      ],
+      "explanation": "Services provided by an OS include program execution, input-output operations, and file system manipulation."
+    },
+    {
+      "id": "CAO-ch5-q23",
+      "question": "What communication services does an OS provide?",
+      "type": "single",
+      "options": [
+        { "text": "Providing internet access via an ISP.", "isCorrect": false },
+        { "text": "Managing email servers.", "isCorrect": false },
+        { "text": "Connecting physical cables between computers.", "isCorrect": false },
+        { "text": "Managing shared memory and message passing between processes.", "isCorrect": true }
+      ],
+      "explanation": "The OS provides communication services by managing shared memory and message passing for the exchange of information between processes."
+    },
+    {
+      "id": "CAO-ch5-q24",
+      "question": "What is the purpose of error detection in an operating system?",
+      "type": "single",
+      "options": [
+        { "text": "Detecting and correcting errors to maintain system consistency.", "isCorrect": true },
+        { "text": "Creating logs for hardware manufacturers only.", "isCorrect": false },
+        { "text": "Preventing users from making spelling mistakes.", "isCorrect": false },
+        { "text": "Increasing the clock speed when errors occur.", "isCorrect": false }
+      ],
+      "explanation": "Error detection involves taking measures to detect and correct errors to ensure a consistent system state."
+    },
+    {
+      "id": "CAO-ch5-q25",
+      "question": "What are typical use cases for a Real-Time Operating System (RTOS)?",
+      "type": "single",
+      "options": [
+        { "text": "Word processing and spreadsheets.", "isCorrect": false },
+        { "text": "Web browsing and email.", "isCorrect": false },
+        { "text": "Industrial automation, medical systems, and air traffic control.", "isCorrect": true },
+        { "text": "Managing personal photo libraries.", "isCorrect": false }
+      ],
+      "explanation": "RTOS use cases include embedded and time-critical applications such as industrial automation, medical imaging, and air traffic control ."
+    },
+    {
+      "id": "CAO-ch5-q26",
+      "question": "What characterizes an embedded operating system?",
+      "type": "single",
+      "options": [
+        { "text": "Large, general-purpose, and resource-heavy.", "isCorrect": false },
+        { "text": "Compact, efficient, and designed for specific hardware.", "isCorrect": true },
+        { "text": "Designed for supercomputers and mainframes.", "isCorrect": false },
+        { "text": "Used primarily for desktop gaming.", "isCorrect": false }
+      ],
+      "explanation": "An embedded operating system is characterized by being compact, efficient, and designed for specific hardware, often used in consumer electronics."
+    },
+    {
+      "id": "CAO-ch5-q27",
+      "question": "What are the primary drivers of operating system evolution?",
+      "type": "single",
+      "options": [
+        { "text": "The need for larger monitors and keyboards.", "isCorrect": false },
+        { "text": "A reduction in the number of internet users.", "isCorrect": false },
+        { "text": "The preference for command-line interfaces over GUIs.", "isCorrect": false },
+        { "text": "Hardware advancements, security needs, Cloud, IoT, and AI.", "isCorrect": true }
+      ],
+      "explanation": "Operating system evolution is driven by hardware advancements, security needs, and new technologies like Cloud computing, IoT, and AI integration."
+    },
+    {
+      "id": "CAO-ch5-q28",
+      "question": "Why is understanding operating systems important?",
+      "type": "single",
+      "options": [
+        { "text": "It is essential for software development, system administration, and innovation.", "isCorrect": true },
+        { "text": "It is only required for hardware manufacturers.", "isCorrect": false },
+        { "text": "It helps in fixing physical broken screens.", "isCorrect": false },
+        { "text": "It is necessary for using a calculator.", "isCorrect": false }
+      ],
+      "explanation": "Understanding operating systems is crucial for software development, system administration, and driving modern computing innovation."
+    }
+  ]
+}

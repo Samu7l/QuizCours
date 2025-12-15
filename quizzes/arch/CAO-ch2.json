@@ -1,0 +1,380 @@
+{
+  "id": "CAO-ch2",
+  "type": "module",
+  "title": "Chapter 2 - Processor Architecture",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "CAO-ch2-q1",
+      "question": "What is the definition of an 'Instruction' in the context of computer architecture?",
+      "type": "single",
+      "options": [
+        { "text": "A physical wire connecting the ALU to memory.", "isCorrect": false },
+        { "text": "A collection of registers used for high-speed storage.", "isCorrect": false },
+        { "text": "A small program stored in ROM that replaces CPU functions.", "isCorrect": false },
+        { "text": "A direction or command given to a computer that causes electrical signals to be sent through specific circuits.", "isCorrect": true }
+      ],
+      "explanation": "An instruction is defined as a direction or command given to a computer. It causes electrical signals to be sent through specific circuits for processing."
+    },
+    {
+      "id": "CAO-ch2-q2",
+      "question": "What does the 'Instruction Set' of a processor define?",
+      "type": "single",
+      "options": [
+        { "text": "The physical layout of the motherboard.", "isCorrect": false },
+        { "text": "A collection of functions performed by the processor, differentiating architecture by elements like data types and formats.", "isCorrect": true },
+        { "text": "The speed at which the clock signal propagates.", "isCorrect": false },
+        { "text": "The operating system's kernel commands.", "isCorrect": false }
+      ],
+      "explanation": "The instruction set design defines a collection of functions performed by the processor. It differentiates computer architectures by the number of instructions, complexity, data types, format, register usage, and addressing."
+    },
+    {
+      "id": "CAO-ch2-q3",
+      "question": "Which of the following lists contains the core elements of an instruction?",
+      "type": "single",
+      "options": [
+        { "text": "OP-CODE, Source OPERAND, Result OPERAND, and the location of data.", "isCorrect": true },
+        { "text": "Fetch, Decode, Execute, and Write-back.", "isCorrect": false },
+        { "text": "ALU, Control Unit, Registers, and Cache.", "isCorrect": false },
+        { "text": "Header, Body, Footer, and Checksum.", "isCorrect": false }
+      ],
+      "explanation": "The elements of an instruction include the OP-CODE (task), Source OPERAND(s), Result OPERAND, and the location of data (register or memory) ."
+    },
+    {
+      "id": "CAO-ch2-q4",
+      "question": "What is an 'Instruction Format'?",
+      "type": "single",
+      "options": [
+        { "text": "A software protocol for internet communication.", "isCorrect": false },
+        { "text": "A standard for connecting peripheral devices.", "isCorrect": false },
+        { "text": "A machine-specific template specifying the length of the op-code and operands.", "isCorrect": true },
+        { "text": "The physical shape of the processor socket.", "isCorrect": false }
+      ],
+      "explanation": "Instruction Format is a machine-specific template that specifies the length of the op-code, the number of operands, and the length of the operands."
+    },
+    {
+      "id": "CAO-ch2-q5",
+      "question": "Which statement best describes 'Privileged Instructions'?",
+      "type": "single",
+      "options": [
+        { "text": "Instructions that are accessible to any user program.", "isCorrect": false },
+        { "text": "Control functions internal to the CPU, accessible only to the Operating System.", "isCorrect": true },
+        { "text": "Instructions used specifically for floating-point arithmetic.", "isCorrect": false },
+        { "text": "Basic arithmetic operations available in the ALU.", "isCorrect": false }
+      ],
+      "explanation": "Privileged instructions are control functions internal to the CPU and are accessible only to the Operating System. An example is the Halt instruction."
+    },
+    {
+      "id": "CAO-ch2-q6",
+      "question": "Which of the following is an example of a 'User Accessible Instruction'?",
+      "type": "single",
+      "options": [
+        { "text": "Halt System.", "isCorrect": false },
+        { "text": "Microcode Reset.", "isCorrect": false },
+        { "text": "Flush Pipeline.", "isCorrect": false },
+        { "text": "Data Transfer (load, store).", "isCorrect": true }
+      ],
+      "explanation": "User accessible instructions are functions made accessible to user programs executing within the computer. These include Data Transfer, Arithmetic, Logical, and Program Control instructions."
+    },
+    {
+      "id": "CAO-ch2-q7",
+      "question": "What is the core philosophy of CISC (Complex Instruction Set Computing)?",
+      "type": "single",
+      "options": [
+        { "text": "To improve performance by reducing the number of instructions per program and shifting complexity to hardware.", "isCorrect": true },
+        { "text": "To improve performance by reducing the number of cycles per instruction.", "isCorrect": false },
+        { "text": "To shift the burden of complexity from the hardware to the compiler.", "isCorrect": false },
+        { "text": "To use fixed-length instructions for all operations.", "isCorrect": false }
+      ],
+      "explanation": "CISC aims to improve performance by reducing the number of instructions per program. It shifts the burden of complexity from the software to the hardware level."
+    },
+    {
+      "id": "CAO-ch2-q8",
+      "question": "What is the core philosophy of RISC (Reduced Instruction Set Computing)?",
+      "type": "single",
+      "options": [
+        { "text": "To support complex addressing modes in hardware.", "isCorrect": false },
+        { "text": "To implement microcode control for flexibility.", "isCorrect": false },
+        { "text": "To improve performance by reducing the number of cycles per instruction and shifting complexity to the compiler.", "isCorrect": true },
+        { "text": "To use variable-length instructions to save memory.", "isCorrect": false }
+      ],
+      "explanation": "RISC aims to improve performance by reducing the number of cycles per instruction. It makes the common case faster and shifts the burden of complexity from hardware to the compiler."
+    },
+    {
+      "id": "CAO-ch2-q9",
+      "question": "Which set of properties characterizes a RISC processor?",
+      "type": "single",
+      "options": [
+        { "text": "Variable instruction length and microcode control.", "isCorrect": false },
+        { "text": "Simple primitive instructions, one clock cycle execution, and hardwired control.", "isCorrect": true },
+        { "text": "Complex instructions and few registers.", "isCorrect": false },
+        { "text": "Segmented memory model and multiple memory access mechanisms.", "isCorrect": false }
+      ],
+      "explanation": "RISC processors typically have simple primitive instructions, execute in one clock cycle, use fixed instruction formats, rely on hardwired control, and have a large number of registers."
+    },
+    {
+      "id": "CAO-ch2-q10",
+      "question": "Which set of properties characterizes a CISC processor?",
+      "type": "single",
+      "options": [
+        { "text": "Fixed instruction format and large register files.", "isCorrect": false },
+        { "text": "Hardwired control and single-cycle execution.", "isCorrect": false },
+        { "text": "Only load/store instructions access memory.", "isCorrect": false },
+        { "text": "Variable instruction size, microcode control, and complex addressing modes.", "isCorrect": true }
+      ],
+      "explanation": "CISC processors generally have a richer instruction set, variable instruction sizes, microcode control, complex addressing modes, and often require more than one clock cycle per instruction."
+    },
+    {
+      "id": "CAO-ch2-q11",
+      "question": "How does the role of the compiler differ between RISC and CISC?",
+      "type": "single",
+      "options": [
+        { "text": "RISC architectures rely heavily on optimizing compilers to handle complexity.", "isCorrect": true },
+        { "text": "CISC architectures require complex compilers to manage simple hardware.", "isCorrect": false },
+        { "text": "Both architectures use simple compilers with no optimization.", "isCorrect": false },
+        { "text": "The compiler role is identical regardless of the architecture.", "isCorrect": false }
+      ],
+      "explanation": "In RISC, complexity is pushed to the compiler, so it depends on optimizing compilers. CISC works well with simpler compilers as the hardware handles the complexity."
+    },
+    {
+      "id": "CAO-ch2-q12",
+      "question": "What is the definition of 'Pipelining'?",
+      "type": "single",
+      "options": [
+        { "text": "A method of cooling the processor using liquid pipes.", "isCorrect": false },
+        { "text": "A technique where instructions are executed strictly sequentially without overlap.", "isCorrect": false },
+        { "text": "A technique of improving performance by overlapping the execution of instructions.", "isCorrect": true },
+        { "text": "A bus architecture that connects the CPU to memory.", "isCorrect": false }
+      ],
+      "explanation": "Pipelining is a technique of improving the performance of a machine by overlapping the execution of instructions to reduce the overall execution time ."
+    },
+    {
+      "id": "CAO-ch2-q13",
+      "question": "What are two common problems that arise in instruction pipelining?",
+      "type": "single",
+      "options": [
+        { "text": "Overheating and Voltage Drop.", "isCorrect": false },
+        { "text": "Data Dependency and Branching of Instructions.", "isCorrect": true },
+        { "text": "Memory Leakage and Stack Overflow.", "isCorrect": false },
+        { "text": "Hard Drive Latency and Network Congestion.", "isCorrect": false }
+      ],
+      "explanation": "Two main pipeline problems are Data Dependency (adjacent instructions accessing same memory) and Branching of Instructions (pre-fetched instructions discarded after a branch)."
+    },
+    {
+      "id": "CAO-ch2-q14",
+      "question": "Which of the following are solutions for Data Dependency in pipelines?",
+      "type": "single",
+      "options": [
+        { "text": "Probabilistic Approach and Instruction Reordering.", "isCorrect": false },
+        { "text": "Microcode Control and Variable Instruction Length.", "isCorrect": false },
+        { "text": "Separate Pipelines and Branch Prediction.", "isCorrect": false },
+        { "text": "Hardware Interlocks, Operand Forwarding, and Delayed Load.", "isCorrect": true }
+      ],
+      "explanation": "Solutions for Data Dependency include Hardware Interlocks and Operand Forwarding (Hardware-based), and Delayed Load (Software-based)."
+    },
+    {
+      "id": "CAO-ch2-q15",
+      "question": "Which of the following are solutions for Branching problems in pipelines?",
+      "type": "single",
+      "options": [
+        { "text": "Separate pipelines, Probabilistic approach, and Instruction Reordering.", "isCorrect": true },
+        { "text": "Hardware Interlocks and Operand Forwarding.", "isCorrect": false },
+        { "text": "Increasing the number of registers.", "isCorrect": false },
+        { "text": "Using Microprogrammed implementation.", "isCorrect": false }
+      ],
+      "explanation": "Branching problems can be solved using separate pipelines for possibilities, a probabilistic approach, requiring instructions not to depend on the branch, or instruction reordering."
+    },
+    {
+      "id": "CAO-ch2-q16",
+      "question": "What is a 'Hardwired' implementation of a processor's control unit?",
+      "type": "single",
+      "options": [
+        { "text": "Control operations are implemented using software drivers.", "isCorrect": false },
+        { "text": "Control operations uses tiny programs stored in ROM.", "isCorrect": false },
+        { "text": "Operations are implemented directly by logic gates for speed.", "isCorrect": true },
+        { "text": "It is a flexible approach used primarily for complex CISC instructions.", "isCorrect": false }
+      ],
+      "explanation": "In a hardwired implementation, operations are implemented directly by logic gates. Its main advantage is speed, and it is typical of RISC designs."
+    },
+    {
+      "id": "CAO-ch2-q17",
+      "question": "What characterizes a 'Microprogrammed' implementation?",
+      "type": "single",
+      "options": [
+        { "text": "It uses physical wires exclusively to control the CPU.", "isCorrect": false },
+        { "text": "It uses tiny programs stored in ROM to replace CPU instructions, offering flexibility.", "isCorrect": true },
+        { "text": "It is the fastest possible implementation method.", "isCorrect": false },
+        { "text": "It is primarily used in RISC architectures.", "isCorrect": false }
+      ],
+      "explanation": "Microprogrammed implementation involves microcodes (tiny programs) stored in ROM that replace CPU instructions. It is more flexible and easier to implement complex instructions but requires more clock cycles."
+    },
+    {
+      "id": "CAO-ch2-q18",
+      "question": "What is the definition of a 'Register' in a processor?",
+      "type": "single",
+      "options": [
+        { "text": "A large external storage device for backups.", "isCorrect": false },
+        { "text": "A mechanism to cool the CPU.", "isCorrect": false },
+        { "text": "The main circuit board of the computer.", "isCorrect": false },
+        { "text": "A small, fast storage location within the CPU to manipulate data.", "isCorrect": true }
+      ],
+      "explanation": "Registers are small, fast storage locations within the CPU. They act like high-speed storage for processing, holding data, instructions, and addresses."
+    },
+    {
+      "id": "CAO-ch2-q19",
+      "question": "How are processor registers generally classified?",
+      "type": "single",
+      "options": [
+        { "text": "General-Purpose and Special-Purpose Registers.", "isCorrect": true },
+        { "text": "Volatile and Non-Volatile Registers.", "isCorrect": false },
+        { "text": "Input Registers and Output Registers.", "isCorrect": false },
+        { "text": "Analogue and Digital Registers.", "isCorrect": false }
+      ],
+      "explanation": "Registers are classified into General-Purpose Registers (used for a variety of functions) and Special-Purpose Registers (specific functions like PC, IR, MAR, MDR)."
+    },
+    {
+      "id": "CAO-ch2-q20",
+      "question": "In the x86 architecture, which register serves as the 32-bit accumulator?",
+      "type": "single",
+      "options": [
+        { "text": "bx", "isCorrect": false },
+        { "text": "cx", "isCorrect": false },
+        { "text": "eax", "isCorrect": true },
+        { "text": "dx", "isCorrect": false }
+      ],
+      "explanation": "In x86 architecture, 'eax' is the 32-bit accumulator register. 'ax' is the lower 16 bits, 'ah' is the upper 8 bits of ax, and 'al' is the lower 8 bits of ax."
+    },
+    {
+      "id": "CAO-ch2-q21",
+      "question": "Which sequence correctly describes the READ operation using MAR and MDR?",
+      "type": "single",
+      "options": [
+        { "text": "MDR gets data -> Write signal sent -> MAR gets address.", "isCorrect": false },
+        { "text": "Address written to MAR -> Read signal sent -> Data stored in MDR.", "isCorrect": true },
+        { "text": "Data written to MAR -> Read signal sent -> Address stored in MDR.", "isCorrect": false },
+        { "text": "Read signal sent -> MDR gets address -> MAR gets data.", "isCorrect": false }
+      ],
+      "explanation": "During a READ operation, the address is written into the MAR, a read signal is sent to memory via the control bus, and the contents are then put into the MDR."
+    },
+    {
+      "id": "CAO-ch2-q22",
+      "question": "Which sequence correctly describes the WRITE operation using MAR and MDR?",
+      "type": "single",
+      "options": [
+        { "text": "Address written to MDR -> Data written to MAR -> Write signal sent.", "isCorrect": false },
+        { "text": "Write signal sent -> Data written to MAR -> Address written to MDR.", "isCorrect": false },
+        { "text": "Data read from Memory -> Stored in MDR -> Copied to MAR.", "isCorrect": false },
+        { "text": "Data written to MDR -> Address written to MAR -> Write signal sent.", "isCorrect": true }
+      ],
+      "explanation": "During a WRITE operation, the data to be stored is written into the MDR, the address is written into the MAR, and a write signal is sent to the computer memory."
+    },
+    {
+      "id": "CAO-ch2-q23",
+      "question": "When is the Carry Flag (CY) set to 1?",
+      "type": "single",
+      "options": [
+        { "text": "If there is a carry from the Most Significant Bit (MSB) position.", "isCorrect": true },
+        { "text": "If the result is zero.", "isCorrect": false },
+        { "text": "If the result is negative.", "isCorrect": false },
+        { "text": "If the parity of the result is even.", "isCorrect": false }
+      ],
+      "explanation": "The Carry Flag (CY) is set (1) if there is a carry from the Most Significant Bit (MSB) position. Otherwise, it is reset (0)."
+    },
+    {
+      "id": "CAO-ch2-q24",
+      "question": "When is the Parity Flag (P) set to 1 (assuming Even Parity)?",
+      "type": "single",
+      "options": [
+        { "text": "If the number of 1s in the result is odd.", "isCorrect": false },
+        { "text": "If the result is zero.", "isCorrect": false },
+        { "text": "If the number of 1s in the result inclusive of parity is even.", "isCorrect": true },
+        { "text": "If there is an overflow.", "isCorrect": false }
+      ],
+      "explanation": "For Even Parity, the Parity Flag is set (1) if the number of 1s in the result inclusive of parity is even. Otherwise, it is reset (0)."
+    },
+    {
+      "id": "CAO-ch2-q25",
+      "question": "When is the Auxiliary-Carry (AC) or Half-Carry (HC) Flag set to 1?",
+      "type": "single",
+      "options": [
+        { "text": "If the result is negative.", "isCorrect": false },
+        { "text": "If there is a carry from the Lower Nibble to the Higher Nibble.", "isCorrect": true },
+        { "text": "If there is a carry from the MSB.", "isCorrect": false },
+        { "text": "If the result is zero.", "isCorrect": false }
+      ],
+      "explanation": "The Aux-Carry Flag is set (1) if there is a carry from the Half Significant Bit position (carry from lower nibble to higher nibble). Otherwise, it is reset (0)."
+    },
+    {
+      "id": "CAO-ch2-q26",
+      "question": "When is the Zero Flag (Z) set to 1?",
+      "type": "single",
+      "options": [
+        { "text": "If the result of the arithmetic operation is positive.", "isCorrect": false },
+        { "text": "If the result of the arithmetic operation is negative.", "isCorrect": false },
+        { "text": "If the result of the arithmetic operation contains a carry.", "isCorrect": false },
+        { "text": "If the result of the arithmetic operation is zero.", "isCorrect": true }
+      ],
+      "explanation": "The Zero Flag is set (1) if the result of the arithmetic operation is zero. Otherwise, it is reset (0)."
+    },
+    {
+      "id": "CAO-ch2-q27",
+      "question": "When is the Sign Flag (S) set to 1?",
+      "type": "single",
+      "options": [
+        { "text": "If the result of the arithmetic operation is negative (MSB is 1).", "isCorrect": true },
+        { "text": "If the result of the arithmetic operation is positive (MSB is 0).", "isCorrect": false },
+        { "text": "If the result is zero.", "isCorrect": false },
+        { "text": "If an overflow occurred.", "isCorrect": false }
+      ],
+      "explanation": "The Sign Flag is set (1) if the result of the arithmetic operation is negative (indicated by the MSB being 1). Otherwise, it is reset (0)."
+    },
+    {
+      "id": "CAO-ch2-q28",
+      "question": "When is the Overflow Flag (V) set to 1?",
+      "type": "single",
+      "options": [
+        { "text": "If the result is zero.", "isCorrect": false },
+        { "text": "If the result is negative.", "isCorrect": false },
+        { "text": "If there is a carry from the MSB or MSB-1 bit positions but not both.", "isCorrect": true },
+        { "text": "If there is a carry from the lower nibble.", "isCorrect": false }
+      ],
+      "explanation": "The Overflow Flag is set (1) if there is a carry from the MSB or MSB-1 bit positions, but not both. It indicates an error in signed arithmetic."
+    },
+    {
+      "id": "CAO-ch2-q29",
+      "question": "What is 'Parallelism' in computer architecture?",
+      "type": "single",
+      "options": [
+        { "text": "Executing instructions strictly one after another.", "isCorrect": false },
+        { "text": "The execution of two or more operations in a computer at the same time.", "isCorrect": true },
+        { "text": "Using a single processor for all tasks.", "isCorrect": false },
+        { "text": "Storing data in parallel memory banks.", "isCorrect": false }
+      ],
+      "explanation": "Parallelism is defined as an execution of two or more operations in a computer at the same time ."
+    },
+    {
+      "id": "CAO-ch2-q30",
+      "question": "What is a major benefit of Parallelism?",
+      "type": "single",
+      "options": [
+        { "text": "It significantly reduces the cost of hardware.", "isCorrect": false },
+        { "text": "It simplifies the software compiler design.", "isCorrect": false },
+        { "text": "It eliminates the need for cache memory.", "isCorrect": false },
+        { "text": "It increases throughput and speeds up computer processing.", "isCorrect": true }
+      ],
+      "explanation": "Benefits of parallelism include speeding up computer processing, increasing computational speed, increasing throughput, and improving overall computer performance."
+    },
+    {
+      "id": "CAO-ch2-q31",
+      "question": "How is 'Concurrency' defined?",
+      "type": "single",
+      "options": [
+        { "text": "The ability to run several programs or parts of a program in parallel.", "isCorrect": true },
+        { "text": "The ability to store data redundantly.", "isCorrect": false },
+        { "text": "The ability to execute microcode instructions.", "isCorrect": false },
+        { "text": "The sequential execution of non-overlapping tasks.", "isCorrect": false }
+      ],
+      "explanation": "Concurrency is the ability to run several programs or several parts of a program in parallel, or the ability to execute two operations at the same time ."
+    }
+  ]
+}

@@ -1,0 +1,488 @@
+{
+  "id": "CAO-ch9",
+  "type": "module",
+  "title": "Chapter 9 - File and File System Management",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "CAO-ch9-q1",
+      "question": "What is the primary purpose of file and file system management in Linux?",
+      "type": "single",
+      "options": [
+        { "text": "To compile C programs into binary executables.", "isCorrect": false },
+        { "text": "To organize, store, access, and protect data on storage devices efficiently.", "isCorrect": true },
+        { "text": "To manage the graphical user interface themes.", "isCorrect": false },
+        { "text": "To control the network packet routing protocols.", "isCorrect": false }
+      ],
+      "explanation": "The main purpose of file system management is to organize, store, access, and protect data in a structured and efficient way."
+    },
+    {
+      "id": "CAO-ch9-q2",
+      "question": "What is the Linux Filesystem Hierarchy Standard (FHS)?",
+      "type": "single",
+      "options": [
+        { "text": "A standard that defines the directory structure and contents in Linux systems.", "isCorrect": true },
+        { "text": "A protocol for transferring files over the network.", "isCorrect": false },
+        { "text": "A hardware specification for hard drive manufacturing.", "isCorrect": false },
+        { "text": "A coding standard for the Linux Kernel.", "isCorrect": false }
+      ],
+      "explanation": "The FHS defines the directory structure and directory contents in Linux systems ."
+    },
+    {
+      "id": "CAO-ch9-q3",
+      "question": "What is the function of the root directory (/) in Linux?",
+      "type": "single",
+      "options": [
+        { "text": "It stores only the boot loader files.", "isCorrect": false },
+        { "text": "It acts as a temporary folder for user downloads.", "isCorrect": false },
+        { "text": "It contains only the administrator's personal files.", "isCorrect": false },
+        { "text": "It is the top-level directory containing all other directories and files.", "isCorrect": true }
+      ],
+      "explanation": "The root directory (/) is the top-level directory containing all other directories. Everything in Linux exists under this single tree structure."
+    },
+    {
+      "id": "CAO-ch9-q4",
+      "question": "What type of data is typically stored in the /etc directory?",
+      "type": "single",
+      "options": [
+        { "text": "User home directories and documents.", "isCorrect": false },
+        { "text": "System-wide configuration files (e.g., network settings, user accounts).", "isCorrect": true },
+        { "text": "Temporary files that are cleared on reboot.", "isCorrect": false },
+        { "text": "Binary executable files for user commands.", "isCorrect": false }
+      ],
+      "explanation": "/etc stores system-wide configuration files like network settings and user accounts, usually as editable text files."
+    },
+    {
+      "id": "CAO-ch9-q5",
+      "question": "What is the role of the /var directory?",
+      "type": "single",
+      "options": [
+        { "text": "To store static system binaries.", "isCorrect": false },
+        { "text": "To hold variable data like logs, mail spools, and temporary files persisting across reboots.", "isCorrect": true },
+        { "text": "To mount external removable media.", "isCorrect": false },
+        { "text": "To store the Linux kernel image.", "isCorrect": false }
+      ],
+      "explanation": "/var contains variable data including logs (/var/log), mail spools, and temporary files that persist across reboots."
+    },
+    {
+      "id": "CAO-ch9-q6",
+      "question": "What characterizes the /tmp directory?",
+      "type": "single",
+      "options": [
+        { "text": "It stores permanent backups of the system.", "isCorrect": false },
+        { "text": "It stores user password files securely.", "isCorrect": false },
+        { "text": "It stores temporary files that are usually cleared on reboot.", "isCorrect": true },
+        { "text": "It contains essential system libraries.", "isCorrect": false }
+      ],
+      "explanation": "/tmp is used for temporary files which are typically cleared upon system reboot."
+    },
+    {
+      "id": "CAO-ch9-q7",
+      "question": "What are /mnt and /media typically used for?",
+      "type": "single",
+      "options": [
+        { "text": "Compiling source code.", "isCorrect": false },
+        { "text": "Mount points for additional filesystems and removable media (e.g., USB drives).", "isCorrect": true },
+        { "text": "Storing web server HTML files.", "isCorrect": false },
+        { "text": "Network configuration scripts.", "isCorrect": false }
+      ],
+      "explanation": "/mnt and /media serve as mount points for additional filesystems, with /media often used for removable media like USB drives."
+    },
+    {
+      "id": "CAO-ch9-q8",
+      "question": "What distinguishes an Absolute Path from a Relative Path?",
+      "type": "single",
+      "options": [
+        { "text": "An absolute path starts from the root (/), while a relative path starts from the current directory.", "isCorrect": true },
+        { "text": "An absolute path is shorter than a relative path.", "isCorrect": false },
+        { "text": "An absolute path uses backslashes, while a relative path uses forward slashes.", "isCorrect": false },
+        { "text": "An absolute path is only for files, while a relative path is only for directories.", "isCorrect": false }
+      ],
+      "explanation": "An absolute path specifies the complete location starting from the root (/), whereas a relative path is defined relative to the current working directory ."
+    },
+    {
+      "id": "CAO-ch9-q9",
+      "question": "Which path type works regardless of the current working directory?",
+      "type": "single",
+      "options": [
+        { "text": "A relative path.", "isCorrect": false },
+        { "text": "A variable path.", "isCorrect": false },
+        { "text": "An absolute path.", "isCorrect": true },
+        { "text": "A symbolic link.", "isCorrect": false }
+      ],
+      "explanation": "Absolute paths work regardless of your current directory because they specify the full path from the root."
+    },
+    {
+      "id": "CAO-ch9-q10",
+      "question": "In Linux paths, what do the symbols '.' and '..' represent?",
+      "type": "single",
+      "options": [
+        { "text": "'.' is the home directory, '..' is the root directory.", "isCorrect": false },
+        { "text": "'.' is the parent directory, '..' is the current directory.", "isCorrect": false },
+        { "text": "'.' is the current directory, '..' is the parent directory.", "isCorrect": true },
+        { "text": "'.' is a hidden file, '..' is a system file.", "isCorrect": false }
+      ],
+      "explanation": "The single dot (.) represents the current directory, and the double dot (..) represents the parent directory."
+    },
+    {
+      "id": "CAO-ch9-q11",
+      "question": "What does the tilde symbol (~) represent in Linux?",
+      "type": "single",
+      "options": [
+        { "text": "The root directory.", "isCorrect": false },
+        { "text": "The /tmp directory.", "isCorrect": false },
+        { "text": "The previous directory.", "isCorrect": false },
+        { "text": "The current user's home directory.", "isCorrect": true }
+      ],
+      "explanation": "The tilde (~) is a shortcut that references the current user's home directory."
+    },
+    {
+      "id": "CAO-ch9-q12",
+      "question": "Which of the following represents the correct structure of a Linux command?",
+      "type": "single",
+      "options": [
+        { "text": "Command Name -> Arguments -> Options", "isCorrect": false },
+        { "text": "Options -> Command Name -> Arguments", "isCorrect": false },
+        { "text": "Arguments -> Command Name -> Flags", "isCorrect": false },
+        { "text": "Command Name -> Options/Flags -> Arguments", "isCorrect": true }
+      ],
+      "explanation": "The standard command-line syntax is: Command Name, followed by Options/Flags (modifying behavior), followed by Arguments (targets) ."
+    },
+    {
+      "id": "CAO-ch9-q13",
+      "question": "How can you access the full manual page for a command like 'ls'?",
+      "type": "single",
+      "options": [
+        { "text": "help ls", "isCorrect": false },
+        { "text": "ls /?", "isCorrect": false },
+        { "text": "man ls", "isCorrect": true },
+        { "text": "doc ls", "isCorrect": false }
+      ],
+      "explanation": "The 'man' command (manual) is used to access the full documentation for a command."
+    },
+    {
+      "id": "CAO-ch9-q14",
+      "question": "What is the purpose of the 'pwd' command?",
+      "type": "single",
+      "options": [
+        { "text": "To change the password.", "isCorrect": false },
+        { "text": "To print the working directory (current location).", "isCorrect": true },
+        { "text": "To print wireless details.", "isCorrect": false },
+        { "text": "To prevent writing data.", "isCorrect": false }
+      ],
+      "explanation": "pwd stands for Print Working Directory and it displays the current directory you are in."
+    },
+    {
+      "id": "CAO-ch9-q15",
+      "question": "Which command lists directory contents?",
+      "type": "single",
+      "options": [
+        { "text": "cd", "isCorrect": false },
+        { "text": "ls", "isCorrect": true },
+        { "text": "cp", "isCorrect": false },
+        { "text": "mv", "isCorrect": false }
+      ],
+      "explanation": "The 'ls' command is used to list the contents of a directory."
+    },
+    {
+      "id": "CAO-ch9-q16",
+      "question": "What is the function of the 'cd' command?",
+      "type": "single",
+      "options": [
+        { "text": "Create Directory.", "isCorrect": false },
+        { "text": "Clear Data.", "isCorrect": false },
+        { "text": "Copy Directory.", "isCorrect": false },
+        { "text": "Change Directory.", "isCorrect": true }
+      ],
+      "explanation": "cd stands for Change Directory and is used to navigate between directories."
+    },
+    {
+      "id": "CAO-ch9-q17",
+      "question": "Which command is used to create an empty file or update its timestamp?",
+      "type": "single",
+      "options": [
+        { "text": "touch", "isCorrect": true },
+        { "text": "make", "isCorrect": false },
+        { "text": "new", "isCorrect": false },
+        { "text": "create", "isCorrect": false }
+      ],
+      "explanation": "The 'touch' command creates an empty file if it doesn't exist, or updates the timestamp if it does."
+    },
+    {
+      "id": "CAO-ch9-q18",
+      "question": "Which command is used to create a new directory?",
+      "type": "single",
+      "options": [
+        { "text": "dir", "isCorrect": false },
+        { "text": "mkfile", "isCorrect": false },
+        { "text": "mkdir", "isCorrect": true },
+        { "text": "newdir", "isCorrect": false }
+      ],
+      "explanation": "mkdir stands for Make Directory and is used to create new directories."
+    },
+    {
+      "id": "CAO-ch9-q19",
+      "question": "What does the 'cp' command do?",
+      "type": "single",
+      "options": [
+        { "text": "Changes permission.", "isCorrect": false },
+        { "text": "Checks path.", "isCorrect": false },
+        { "text": "Copies files or directories.", "isCorrect": true },
+        { "text": "Creates programs.", "isCorrect": false }
+      ],
+      "explanation": "cp is the command used to Copy files or directories (with the -r flag)."
+    },
+    {
+      "id": "CAO-ch9-q20",
+      "question": "What is the function of the 'mv' command?",
+      "type": "single",
+      "options": [
+        { "text": "Make variable.", "isCorrect": false },
+        { "text": "Mount volume.", "isCorrect": false },
+        { "text": "Moves or renames files and directories.", "isCorrect": true },
+        { "text": "Modifies view.", "isCorrect": false }
+      ],
+      "explanation": "mv is used to Move files or Rename them if the destination is in the same directory."
+    },
+    {
+      "id": "CAO-ch9-q21",
+      "question": "Which command is used to delete files or directories?",
+      "type": "single",
+      "options": [
+        { "text": "dl", "isCorrect": false },
+        { "text": "rm", "isCorrect": true },
+        { "text": "del", "isCorrect": false },
+        { "text": "erase", "isCorrect": false }
+      ],
+      "explanation": "rm (remove) is the command used to delete files. Adding -r allows deleting directories."
+    },
+    {
+      "id": "CAO-ch9-q22",
+      "question": "Why should the command 'rm -rf /' be avoided?",
+      "type": "single",
+      "options": [
+        { "text": "It deletes files permanently from the root without confirmation, causing system destruction.", "isCorrect": true },
+        { "text": "It only deletes the trash folder.", "isCorrect": false },
+        { "text": "It takes too long to execute.", "isCorrect": false },
+        { "text": "It creates too many backup files.", "isCorrect": false }
+      ],
+      "explanation": "rm -rf / recursively forces deletion starting from the root directory, which can destroy the entire system."
+    },
+    {
+      "id": "CAO-ch9-q23",
+      "question": "What is the purpose of the 'cat' command?",
+      "type": "single",
+      "options": [
+        { "text": "To catch errors in a log.", "isCorrect": false },
+        { "text": "To categorize files by type.", "isCorrect": false },
+        { "text": "To create a catalog of files.", "isCorrect": false },
+        { "text": "To display (concatenate) the full contents of a file.", "isCorrect": true }
+      ],
+      "explanation": "cat (concatenate) displays the entire contents of a file to the standard output."
+    },
+    {
+      "id": "CAO-ch9-q24",
+      "question": "Which command allows paginated viewing of large files, letting you scroll?",
+      "type": "single",
+      "options": [
+        { "text": "less", "isCorrect": true },
+        { "text": "tiny", "isCorrect": false },
+        { "text": "small", "isCorrect": false },
+        { "text": "page", "isCorrect": false }
+      ],
+      "explanation": "The 'less' command allows navigating large files without loading the entire file into memory."
+    },
+    {
+      "id": "CAO-ch9-q25",
+      "question": "What do the 'head' and 'tail' commands do respectively?",
+      "type": "single",
+      "options": [
+        { "text": "Show the beginning and end lines of a file.", "isCorrect": true },
+        { "text": "Show the largest and smallest files.", "isCorrect": false },
+        { "text": "Show the header and footer metadata.", "isCorrect": false },
+        { "text": "Show the most and least accessed files.", "isCorrect": false }
+      ],
+      "explanation": "head shows the first lines (default 10) and tail shows the last lines (default 10) of a file."
+    },
+    {
+      "id": "CAO-ch9-q26",
+      "question": "What is the 'find' command used for?",
+      "type": "single",
+      "options": [
+        { "text": "Searching files in real-time based on criteria like name, size, or type.", "isCorrect": true },
+        { "text": "Searching for text patterns inside files.", "isCorrect": false },
+        { "text": "Finding the IP address of a server.", "isCorrect": false },
+        { "text": "Finding available Wi-Fi networks.", "isCorrect": false }
+      ],
+      "explanation": "find searches the filesystem in real-time based on criteria like name, size, type, or modification time."
+    },
+    {
+      "id": "CAO-ch9-q27",
+      "question": "Why might the 'locate' command return stale or missing results compared to 'find'?",
+      "type": "single",
+      "options": [
+        { "text": "It is case-sensitive only.", "isCorrect": false },
+        { "text": "It queries a pre-built database that may not be up to date.", "isCorrect": true },
+        { "text": "It cannot search outside the home directory.", "isCorrect": false },
+        { "text": "It only works on text files.", "isCorrect": false }
+      ],
+      "explanation": "locate queries a pre-built database (mlocate.db) which is faster but may be outdated if new files were created recently."
+    },
+    {
+      "id": "CAO-ch9-q28",
+      "question": "Which command is used to refresh the database used by 'locate'?",
+      "type": "single",
+      "options": [
+        { "text": "refreshdb", "isCorrect": false },
+        { "text": "updatedb", "isCorrect": true },
+        { "text": "newdb", "isCorrect": false },
+        { "text": "loaddb", "isCorrect": false }
+      ],
+      "explanation": "The 'sudo updatedb' command updates the database used by locate."
+    },
+    {
+      "id": "CAO-ch9-q29",
+      "question": "What is the 'grep' command used for?",
+      "type": "single",
+      "options": [
+        { "text": "Searching for files by name.", "isCorrect": false },
+        { "text": "Grouping files into folders.", "isCorrect": false },
+        { "text": "Searching for specific text patterns inside files.", "isCorrect": true },
+        { "text": "Compressing text files.", "isCorrect": false }
+      ],
+      "explanation": "grep matches text patterns (including regular expressions) within files."
+    },
+    {
+      "id": "CAO-ch9-q30",
+      "question": "What does the 'wc' command count?",
+      "type": "single",
+      "options": [
+        { "text": "Web Cookies.", "isCorrect": false },
+        { "text": "Windows Configuration.", "isCorrect": false },
+        { "text": "Lines, words, and characters (bytes) in a file.", "isCorrect": true },
+        { "text": "Warnings and Crashes.", "isCorrect": false }
+      ],
+      "explanation": "wc stands for Word Count, counting lines (-l), words (-w), and characters (-c)."
+    },
+    {
+      "id": "CAO-ch9-q31",
+      "question": "What symbol is used for Output Redirection (overwriting)?",
+      "type": "single",
+      "options": [
+        { "text": "<", "isCorrect": false },
+        { "text": "|", "isCorrect": false },
+        { "text": ">", "isCorrect": true },
+        { "text": "&", "isCorrect": false }
+      ],
+      "explanation": "The > symbol redirects output to a file, overwriting it. >> appends to it."
+    },
+    {
+      "id": "CAO-ch9-q32",
+      "question": "What is a 'Pipeline' in Linux command line?",
+      "type": "single",
+      "options": [
+        { "text": "A way to run commands in the background.", "isCorrect": false },
+        { "text": "A physical cable connecting the CPU to RAM.", "isCorrect": false },
+        { "text": "Connecting commands so the output of one becomes the input of another (|).", "isCorrect": true },
+        { "text": "A series of network routers.", "isCorrect": false }
+      ],
+      "explanation": "Pipelines (using |) connect commands, sending the output (stdout) of the first command as input (stdin) to the next ."
+    },
+    {
+      "id": "CAO-ch9-q33",
+      "question": "What are the three permission classes in the Unix permissions model?",
+      "type": "single",
+      "options": [
+        { "text": "Read, Write, Execute.", "isCorrect": false },
+        { "text": "Admin, Guest, System.", "isCorrect": false },
+        { "text": "User, Group, Others.", "isCorrect": true },
+        { "text": "Local, Remote, Network.", "isCorrect": false }
+      ],
+      "explanation": "Permissions are defined for the User (owner), the Group, and Others (everyone else)."
+    },
+    {
+      "id": "CAO-ch9-q34",
+      "question": "Which command is used to change file permissions?",
+      "type": "single",
+      "options": [
+        { "text": "chown", "isCorrect": false },
+        { "text": "chmod", "isCorrect": true },
+        { "text": "chgrp", "isCorrect": false },
+        { "text": "check", "isCorrect": false }
+      ],
+      "explanation": "chmod (Change Mode) is used to modify the read, write, and execute permissions."
+    },
+    {
+      "id": "CAO-ch9-q35",
+      "question": "What command changes the ownership of a file?",
+      "type": "single",
+      "options": [
+        { "text": "chmod", "isCorrect": false },
+        { "text": "owner", "isCorrect": false },
+        { "text": "chown", "isCorrect": true },
+        { "text": "take", "isCorrect": false }
+      ],
+      "explanation": "chown (Change Owner) changes the user and/or group ownership of a file."
+    },
+    {
+      "id": "CAO-ch9-q36",
+      "question": "What is the difference between a Hard Link and a Symbolic Link?",
+      "type": "single",
+      "options": [
+        { "text": "Hard links point to the file path; Symbolic links share the inode.", "isCorrect": false },
+        { "text": "Hard links share the same inode; Symbolic links point to the file path.", "isCorrect": true },
+        { "text": "Hard links work across filesystems; Symbolic links do not.", "isCorrect": false },
+        { "text": "There is no difference.", "isCorrect": false }
+      ],
+      "explanation": "Hard links point to the same physical data (inode). Symbolic links are special files that contain a path to the target."
+    },
+    {
+      "id": "CAO-ch9-q37",
+      "question": "What does the 'PATH' environment variable define?",
+      "type": "single",
+      "options": [
+        { "text": "The location of the user's home directory.", "isCorrect": false },
+        { "text": "The path to the current script file.", "isCorrect": false },
+        { "text": "The directories where the shell searches for executable commands.", "isCorrect": true },
+        { "text": "The network route to the internet.", "isCorrect": false }
+      ],
+      "explanation": "PATH defines the list of directories the shell searches when you type a command name."
+    },
+    {
+      "id": "CAO-ch9-q38",
+      "question": "Which command is used to display currently running processes?",
+      "type": "single",
+      "options": [
+        { "text": "proc", "isCorrect": false },
+        { "text": "list", "isCorrect": false },
+        { "text": "ps", "isCorrect": true },
+        { "text": "run", "isCorrect": false }
+      ],
+      "explanation": "ps (process status) displays information about active processes. 'top' is also used for real-time viewing."
+    },
+    {
+      "id": "CAO-ch9-q39",
+      "question": "What command sends a signal to terminate a process?",
+      "type": "single",
+      "options": [
+        { "text": "kill", "isCorrect": true },
+        { "text": "stop", "isCorrect": false },
+        { "text": "end", "isCorrect": false },
+        { "text": "halt", "isCorrect": false }
+      ],
+      "explanation": "The 'kill' command sends a signal (typically TERM or KILL) to a process to terminate it."
+    },
+    {
+      "id": "CAO-ch9-q40",
+      "question": "What indicates the start of a shell script (Shebang)?",
+      "type": "single",
+      "options": [
+        { "text": "// bin/bash", "isCorrect": false },
+        { "text": "#!/bin/bash", "isCorrect": true },
+        { "text": "<script bash>", "isCorrect": false },
+        { "text": "start bash", "isCorrect": false }
+      ],
+      "explanation": "The shebang (#! /bin/bash) on the first line tells the system which interpreter to use to execute the script."
+    }
+  ]
+}

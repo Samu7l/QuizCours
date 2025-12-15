@@ -1,0 +1,434 @@
+{
+  "id": "net-fin-v1",
+  "type": "final",
+  "title": "Final Exam: Networks and Protocols",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "net-q1",
+      "question": "We have a real-time application that sends messages at a very high frequency where we can tolerate up to 2% loss. Which transport layer protocol (layer 4) should be used for this application?",
+      "type": "single",
+      "options": [
+        { "text": "UDP", "isCorrect": true },
+        { "text": "TCP", "isCorrect": false },
+        { "text": "IP", "isCorrect": false },
+        { "text": "ARP", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q2",
+      "question": "If a message is rejected by a router because it does not have enough capacity, how does IP handle this loss?",
+      "type": "single",
+      "options": [
+        { "text": "IP retransmet le message", "isCorrect": false },
+        { "text": "IP will not even be aware of this loss, it is not part of its functionality", "isCorrect": true },
+        { "text": "It asks the physical layer to retransmit", "isCorrect": false },
+        { "text": "IP informs the destination to retransmit", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q3",
+      "question": "How does a machine get the MAC address of another machine on the same network?",
+      "type": "single",
+      "options": [
+        { "text": "By sending an ARP request in broadcast", "isCorrect": true },
+        { "text": "MAC addresses are published on a server that the machine will request", "isCorrect": false },
+        { "text": "The MAC address of the machines on the same network are given in the configuration", "isCorrect": false },
+        { "text": "By sending an ARP request in unicast to the target machine", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q4",
+      "question": "How does a router know if a packet has been sent to it to be routed or if it is a packet that has been sent to it as an end destination (for it and not to be routed)?",
+      "type": "single",
+      "options": [
+        { "text": "A router never receives packets for itself, it receives always packets to route", "isCorrect": false },
+        { "text": "By checking the source IP address to see if it is the same network", "isCorrect": false },
+        { "text": "By checking the destination IP address", "isCorrect": true },
+        { "text": "By checking the destination MAC address", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q5",
+      "question": "A message received by a switch is processed and then sent to the correct destination based on the destination MAC address. Which statement is correct?",
+      "type": "single",
+      "options": [
+        { "text": "A switch links the MAC addresses of the network machines to their IP addresses in a table", "isCorrect": false },
+        { "text": "If the switch does not know the destination MAC address, it will reject the message", "isCorrect": false },
+        { "text": "When the switch receives a message from a sender it does not know, it will link the sender's MAC address to the port number (port where the cable is connected on which it receives the message) in its switching table", "isCorrect": true },
+        { "text": "When the switch receives a message from a sender it does not know, it will broadcast the message to the entire network", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q6",
+      "question": "Which field in the IP header is used to determine whether the packet encapsulates TCP or UDP?",
+      "type": "single",
+      "options": [
+        { "text": "Protocol", "isCorrect": true },
+        { "text": "Port", "isCorrect": false },
+        { "text": "Destination IP address", "isCorrect": false },
+        { "text": "Version", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q7",
+      "question": "Which condition is necessary for proper addressing?",
+      "type": "single",
+      "options": [
+        { "text": "Two machines on two different networks must have the same value of the machine part of their IP addresses", "isCorrect": false },
+        { "text": "Two machines on the same network must have the same value for the network portion of their IP addresses", "isCorrect": true },
+        { "text": "Two machines on the same network must have the same value for the machine part of their IP addresses", "isCorrect": false },
+        { "text": "Two machines on two different networks must have the same value of the network portion of their IP addresses", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q8",
+      "question": "Which statement is correct?",
+      "type": "single",
+      "options": [
+        { "text": "TCP identifies the different connections through MAC addresses", "isCorrect": false },
+        { "text": "TCP allows to manage the loss of messages thanks to an acknowledgment technique", "isCorrect": true },
+        { "text": "UDP manages connections using datagram sequence numbers", "isCorrect": false },
+        { "text": "UDP allows a router to know which route to take", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q9",
+      "question": "Which layer is responsible for determining the next router when sending a message?",
+      "type": "single",
+      "options": [
+        { "text": "Layer 3", "isCorrect": true },
+        { "text": "Layer 7", "isCorrect": false },
+        { "text": "Layer 1", "isCorrect": false },
+        { "text": "Layer 4", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q10",
+      "question": "We have a network that we want to divide into 2 subnetworks. We use the address 10.0.0.0/10 as a starting address. Which of the following addresses could be given to one of the two networks?",
+      "type": "single",
+      "options": [
+        { "text": "10.192.0.0/12", "isCorrect": false },
+        { "text": "10.64.0.0/12", "isCorrect": false },
+        { "text": "10.0.0.32/16", "isCorrect": true },
+        { "text": "10.128.0.0/11", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q11",
+      "question": "How does a machine check if it has the MAC address of the machine to contact ?",
+      "type": "single",
+      "options": [
+        { "text": "By looking in its ARP table", "isCorrect": true },
+        { "text": "By looking at its interface configuration", "isCorrect": false },
+        { "text": "By looking in its routing table", "isCorrect": false },
+        { "text": "By asking the UDP protocol", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q12",
+      "question": "A machine wants to send a packet to a remote machine (in another network) but it does not have its IP address. Which of the following statements is correct.",
+      "type": "single",
+      "options": [
+        { "text": "It sends in broadcast and the machine in question accepts the packet", "isCorrect": false },
+        { "text": "It will be able to convert its MAC address into an IP address", "isCorrect": false },
+        { "text": "It sends using the address of the router", "isCorrect": false },
+        { "text": "It will not be able to send the IP packet", "isCorrect": true }
+      ]
+    },
+    {
+      "id": "net-q13",
+      "question": "What does a machine do when it receives an ARP request containing its IP address?",
+      "type": "single",
+      "options": [
+        { "text": "it retransmits the ARP request to a server that manages the IP-MAC addresses correspondence", "isCorrect": false },
+        { "text": "it sends an ARP response to the machine that sent the request", "isCorrect": true },
+        { "text": "it sends an ARP response in broadcast on the network", "isCorrect": false },
+        { "text": "it sends an IP packet , in response to the ARP request, to the machine that sent the request", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q14",
+      "question": "Given the following configuration, which route is correct on machine A to reach machine B?",
+      "image": "net-final-1.png",
+      "type": "single",
+      "options": [
+        { "text": "Destination: 10.2.1.0/16, next router: 10.2.1.3", "isCorrect": false },
+        { "text": "Destination: 10.2.0.0/16, next router: 10.1.1.3", "isCorrect": false },
+        { "text": "Destination: 10.2.1.0/16, next router: 10.1.1.3", "isCorrect": true },
+        { "text": "Destination: 10.2.0.0/16, next router: 10.2.1.3", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q15",
+      "question": "A machine A sends a message to a machine B in the same network, the two machines are connected via a switch. In which case a collision can take place ?",
+      "type": "single",
+      "options": [
+        { "text": "When the two messages cross on the cable connecting the switch to machine B", "isCorrect": true },
+        { "text": "When the two messages cross on one of the two machines", "isCorrect": false },
+        { "text": "When the two messages cross on the switch", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q16",
+      "question": "What happens if a machine with the address 192.168.1.1/24 sends a message to an IP address 192.168.1.4/24 that is not assigned to any machine in its network?",
+      "type": "single",
+      "options": [
+        { "text": "The message will be sent and no machine will receive it", "isCorrect": false },
+        { "text": "By applying the mask, the sending machine will know that the destination IP address does not correspond to any machine in the network and reject the message", "isCorrect": false },
+        { "text": "The sending machine will not be able to obtain the MAC address of the destination machine and will never send the message", "isCorrect": true }
+      ]
+    },
+    {
+      "id": "net-q17",
+      "question": "When an application message is sent, the transmitting machine encapsulates it in a layer 4 message, which is then encapsulated in turn in a layer 3 packet. Which proposition is correct?",
+      "type": "single",
+      "options": [
+        { "text": "In this encapsulation process, each layer (3 and 4) adds addresses of different types", "isCorrect": false },
+        { "text": "In this encapsulation process, each layer (3 and 4) adds information necessary for the sending of the data to the destination application", "isCorrect": true },
+        { "text": "In this encapsulation process, layer 3 checks the message given by layer 4 before encapsulating it", "isCorrect": false },
+        { "text": "In this encapsulation process, layer 4 adds information that is used by the routers routing the data to the destination", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q18",
+      "question": "Which information is used to determine the next machine to contact to route the data to the destination?",
+      "type": "single",
+      "options": [
+        { "text": "a sequence number", "isCorrect": false },
+        { "text": "the window size", "isCorrect": false },
+        { "text": "the destination MAC address", "isCorrect": true },
+        { "text": "a port number", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q19",
+      "question": "Two machines A and B are on two different networks interconnected by routers on the Internet. To allow communication between A and B, which proposition is correct?",
+      "type": "single",
+      "options": [
+        { "text": "A and B must use the same type of physical medium", "isCorrect": false },
+        { "text": "A and B and all routers must use the same Layer 3 protocol", "isCorrect": true },
+        { "text": "A and B can use different Layer 4 protocols", "isCorrect": false },
+        { "text": "A and B must use the same protocols on all layers", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q20",
+      "question": "A machine A wants to send a message to a machine B in another network than A. Which destination IP address will A put in the IP packet?",
+      "type": "single",
+      "options": [
+        { "text": "IP adresse of the router connected to the network of A", "isCorrect": false },
+        { "text": "IP adresse of the router connected to the network of B", "isCorrect": false },
+        { "text": "IP adresse of B", "isCorrect": true }
+      ]
+    },
+    {
+      "id": "net-q21",
+      "question": "When does machine A use an ARP request?",
+      "type": "single",
+      "options": [
+        { "text": "When machine A does not have the MAC address of the destination host", "isCorrect": true },
+        { "text": "To get a MAC address from a port number", "isCorrect": false },
+        { "text": "To get an IP address from a MAC address", "isCorrect": false },
+        { "text": "When the interface of machine A does not have an assigned MAC address", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q22",
+      "question": "Which of the following properties characterizes a router?",
+      "type": "single",
+      "options": [
+        { "text": "It divides the network into multiple broadcast domains", "isCorrect": true },
+        { "text": "It retransmits data in case of loss", "isCorrect": false },
+        { "text": "It gives sequence numbers to the messages it transfers", "isCorrect": false },
+        { "text": "It directs the flow to a particular application", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q23",
+      "question": "Which of the following is not relevant to the TCP protocol?",
+      "type": "single",
+      "options": [
+        { "text": "Manage the splitting of the application flow into several messages", "isCorrect": false },
+        { "text": "Manage the addresses given to the two extremities machines", "isCorrect": true },
+        { "text": "Manage data multiplexing with port numbers", "isCorrect": false },
+        { "text": "Manage the flow with the reception windows", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q24",
+      "question": "Let a message be sent from an application AP1 on a machine A to an AP2 application on a machine B. Which layer allows the machines to know that the transmission is going from AP1 et AP2 and not other applications?",
+      "type": "single",
+      "options": [
+        { "text": "Layer 4", "isCorrect": true },
+        { "text": "Layer 1", "isCorrect": false },
+        { "text": "Layer 7", "isCorrect": false },
+        { "text": "Layer 3", "isCorrect": false },
+        { "text": "Layer 2", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q25",
+      "question": "A router connecting two networks receives a message from network 1. How does it know if it is an IP packet to route or a packet of another protocol?",
+      "type": "single",
+      "options": [
+        { "text": "A router only receives IP packets, so this is always the case", "isCorrect": false },
+        { "text": "Looking at the size of the message", "isCorrect": false },
+        { "text": "It looks at the value of the \"length/type\" field of the layer 2 Ethernet header", "isCorrect": true },
+        { "text": "By looking if the MAC address matches", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q26",
+      "question": "Why does a machine need both IP address and a MAC address to send a message to another machine?",
+      "type": "single",
+      "options": [
+        { "text": "Because an IP address is not stable", "isCorrect": false },
+        { "text": "Because a message can pass through several machines to reach the destination", "isCorrect": true },
+        { "text": "To guarantee uniqueness of the destination and to be sure that it is the right destination", "isCorrect": false },
+        { "text": "To allow the receiving machine to check that the message is sent to it", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q27",
+      "question": "A machine A sends a message to a machine B directly connected to it. Which proposition is correct ?",
+      "type": "single",
+      "options": [
+        { "text": "If a collision occurs, machine A will, in all cases, be aware of the collision", "isCorrect": true },
+        { "text": "If a collision occurs machine A might not be aware of the collision, other layers will detect the loss and ensure retransmission", "isCorrect": false },
+        { "text": "If a collision occurs, it is the physical layer that will manage the detection and retransmission of the message", "isCorrect": false },
+        { "text": "If machine A detects the collision, it will ask layer 3 to retransmit", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q28",
+      "question": "During the process of receiving a message, what is the first information used by the receiving machine to accept or reject a received message?",
+      "type": "single",
+      "options": [
+        { "text": "The destination IP address", "isCorrect": false },
+        { "text": "The preamble of the Ethernet frame", "isCorrect": false },
+        { "text": "The error check sequence", "isCorrect": false },
+        { "text": "The destination MAC address", "isCorrect": true }
+      ]
+    },
+    {
+      "id": "net-q29",
+      "question": "A machine A and a machine B are directly connected by a cable. To ensure communication between A and B. Which proposition is correct?",
+      "type": "single",
+      "options": [
+        { "text": "A and B can use different Layer 2 protocols", "isCorrect": false },
+        { "text": "A and B can use different Layer 3 protocols", "isCorrect": false },
+        { "text": "All protocols of the different layers must be the same on both machines", "isCorrect": true },
+        { "text": "A and B may use different methods of accessing the medium", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q30",
+      "question": "Which statement is correct regarding the IP protocol ?",
+      "type": "single",
+      "options": [
+        { "text": "It avoids overloading the network by limiting the flow", "isCorrect": false },
+        { "text": "It retransmits the message in case of collision", "isCorrect": false },
+        { "text": "It allows machines to perform the necessary actions that allow messages to reach a remote destination", "isCorrect": true },
+        { "text": "It puts back in order the messages at the reception", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q31",
+      "question": "We have two machines A and B connected by a switch. Which statement is correct?",
+      "type": "single",
+      "options": [
+        { "text": "To avoid a collision, machine A avoids sending, when a signal leaves the switch to go to machine A", "isCorrect": true },
+        { "text": "To avoid a collision, machine A avoids sending when a signal is going from B to the switch", "isCorrect": false },
+        { "text": "To avoid a collision, machine A avoids sending when the switch is processing data", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q32",
+      "question": "In a network 172.16.0.0/16, which of the following addresses can we give to a machine?",
+      "type": "single",
+      "options": [
+        { "text": "172.20.0.64/16", "isCorrect": false },
+        { "text": "172.16.32.0/16", "isCorrect": true },
+        { "text": "172.18.0.1/16", "isCorrect": false },
+        { "text": "172.33.0.0/16", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q33",
+      "question": "A router connects two local networks, network R1 and network R2. What type of coding is possible on the two networks so that they are compatible.",
+      "type": "single",
+      "options": [
+        { "text": "Manchester on R1 - NRZ on R2", "isCorrect": true },
+        { "text": "Manchester on R1 - Amplitude Modulation on R2", "isCorrect": false },
+        { "text": "Amplitude Modulation on R1 - Amplitude Modulation on R2", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q34",
+      "question": "On a machine A, what are the MAC addresses kept in the ARP table?",
+      "type": "single",
+      "options": [
+        { "text": "The MAC addresses of the machines that A has contacted and that are in a different network than A", "isCorrect": false },
+        { "text": "The MAC addresses of the machines that A has contacted and that are in the same network as A", "isCorrect": true },
+        { "text": "MAC addresses of all machines in the same network as A", "isCorrect": false },
+        { "text": "The MAC addresses of the machines that the router of A's network has contacted", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q35",
+      "question": "A router receives a packet with a destination IP address that matches its address and a MAC address that is different from its address. What does it do with the packet?",
+      "type": "single",
+      "options": [
+        { "text": "It routes it to the machine that has the destination MAC address", "isCorrect": false },
+        { "text": "It considers that the packet was intended for it", "isCorrect": false },
+        { "text": "It rejects the packet at layer 2", "isCorrect": true },
+        { "text": "It discards the packet at layer 3", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q36",
+      "question": "Which of the following statements is correct?",
+      "type": "single",
+      "options": [
+        { "text": "A message sent from a machine A to a machine B in another network is encapsulated in a level 2 ethernet frame to avoid collisions", "isCorrect": false },
+        { "text": "A message sent from a machine A to a machine B in another network is encapsulated in a level 2 ethernet frame to detect if a transmission error has occurred", "isCorrect": true },
+        { "text": "A message sent from machine A to machine B in another network is encapsulated in a Layer 2 ethernet frame in order to be routed to the destination", "isCorrect": false },
+        { "text": "A message sent from a machine A to a machine B in another network is encapsulated in a Layer 2 ethernet frame to ensure compatibility between A and B", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q37",
+      "question": "An IP address given to a machine is composed of what parts?",
+      "type": "single",
+      "options": [
+        { "text": "Machine-ID and application-ID", "isCorrect": false },
+        { "text": "Network-ID, Machine-ID and constructor-ID", "isCorrect": false },
+        { "text": "Network-ID and Machine-ID", "isCorrect": true },
+        { "text": "Network-ID, Machine-ID and Broadcast-ID", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q38",
+      "question": "How does a machine know if another machine is in the same network as it or in a different network?",
+      "type": "single",
+      "options": [
+        { "text": "by applying the mask to the destination IP address", "isCorrect": true },
+        { "text": "by checking its routing table", "isCorrect": false },
+        { "text": "by testing with a broadcast message", "isCorrect": false },
+        { "text": "by comparing its MAC address to that of the destination machine", "isCorrect": false }
+      ]
+    },
+    {
+      "id": "net-q39",
+      "question": "Why do we need a Layer 3 protocol if Layer 2 protocols can identify machines with a MAC address?",
+      "type": "single",
+      "options": [
+        { "text": "To manage the flow of data", "isCorrect": false },
+        { "text": "To interconnect machines belonging to different networks", "isCorrect": true },
+        { "text": "To carry data to the application", "isCorrect": false },
+        { "text": "To provide a security layer", "isCorrect": false }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "id": "CAO-ch1",
+  "type": "module",
+  "title": "Chapter 1 - Introduction to Computer Architecture",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "CAO-ch1-q1",
+      "question": "What characteristic defined the Zeroth Generation of computers (1642-1945)?",
+      "type": "single",
+      "options": [
+        { "text": "They were mechanical systems without electronic components.", "isCorrect": true },
+        { "text": "They utilized vacuum tubes for processing.", "isCorrect": false },
+        { "text": "They were based on transistor technology.", "isCorrect": false },
+        { "text": "They introduced the first Integrated Circuits.", "isCorrect": false }
+      ],
+      "explanation": "According to the historical overview, the Zeroth Generation (1642-1945) consisted of mechanical devices. Vacuum tubes appeared in the First Generation."
+    },
+    {
+      "id": "CAO-ch1-q2",
+      "question": "Which technology was the primary component of First Generation computers (1945-1955)?",
+      "type": "single",
+      "options": [
+        { "text": "Transistors", "isCorrect": false },
+        { "text": "Vacuum tubes", "isCorrect": true },
+        { "text": "Integrated Circuits", "isCorrect": false },
+        { "text": "Microprocessors", "isCorrect": false }
+      ],
+      "explanation": "The First Generation of computers (1945-1955) utilized vacuum tubes. The Cathode Ray Tube (CRT) was also mainly employed during this era."
+    },
+    {
+      "id": "CAO-ch1-q3",
+      "question": "What major advancement marked the Second Generation of computers (1955-1965)?",
+      "type": "single",
+      "options": [
+        { "text": "The invention of the mechanical analytical engine.", "isCorrect": false },
+        { "text": "The introduction of Very Large Scale Integration (VLSI).", "isCorrect": false },
+        { "text": "The replacement of vacuum tubes with transistors.", "isCorrect": true },
+        { "text": "The development of graphical user interfaces (GUIs).", "isCorrect": false }
+      ],
+      "explanation": "The Second Generation saw the replacement of vacuum tubes with transistors, making computers smaller, faster, and more reliable. "
+    },
+    {
+      "id": "CAO-ch1-q4",
+      "question": "Which technology was introduced during the Third Generation (1965-1980)?",
+      "type": "single",
+      "options": [
+        { "text": "Artificial Intelligence neural networks.", "isCorrect": false },
+        { "text": "Vacuum tubes.", "isCorrect": false },
+        { "text": "Personal Computers (PCs).", "isCorrect": false },
+        { "text": "Integrated Circuits (ICs).", "isCorrect": true }
+      ],
+      "explanation": "The Third Generation introduced Integrated Circuits (ICs), replacing transistors 68]. This era also saw the rise of minicomputers."
+    },
+    {
+      "id": "CAO-ch1-q5",
+      "question": "What key technological development characterizes the Fourth Generation of computers (1980-present)?",
+      "type": "single",
+      "options": [
+        { "text": "The use of punch cards for input.", "isCorrect": false },
+        { "text": "The advent of microprocessors and VLSI.", "isCorrect": true },
+        { "text": "The creation of the first mechanical calculator.", "isCorrect": false },
+        { "text": "The exclusive use of assembly language.", "isCorrect": false }
+      ],
+      "explanation": "The Fourth Generation is characterized by Personal Computers and VLSI (Very Large Scale Integration), seeing the advent of microprocessors that integrate thousands of ICs on a single chip."
+    },
+    {
+      "id": "CAO-ch1-q6",
+      "question": "What is the primary function of the Arithmetic & Logic Unit (ALU)?",
+      "type": "single",
+      "options": [
+        { "text": "It manages the transfer of data between the HDD and RAM.", "isCorrect": false },
+        { "text": "It stores the operating system permanently.", "isCorrect": false },
+        { "text": "It performs arithmetic (+, -) and logic (AND, OR) operations.", "isCorrect": true },
+        { "text": "It acts as the physical interface for I/O devices.", "isCorrect": false }
+      ],
+      "explanation": "The ALU allows required arithmetic operations (like addition and subtraction) or logic operations (like AND, OR) to be carried out while a program is being run. "
+    },
+    {
+      "id": "CAO-ch1-q7",
+      "question": "How is computer memory structured fundamentally?",
+      "type": "single",
+      "options": [
+        { "text": "It is a combination of memory cells, where each cell length is 8 bits.", "isCorrect": true },
+        { "text": "It is a continuous wave of analog signals.", "isCorrect": false },
+        { "text": "It is composed of decimal storage units called 'decits'.", "isCorrect": false },
+        { "text": "It consists solely of mechanical switches.", "isCorrect": false }
+      ],
+      "explanation": "Memory is a combination of memory cells. Each cell length is 8 bits. Every data stored in computer memory follows bit data such as 0's and 1's."
+    },
+    {
+      "id": "CAO-ch1-q8",
+      "question": "What are the two main categories of computer memory?",
+      "type": "single",
+      "options": [
+        { "text": "Volatile and Non-volatile Memory.", "isCorrect": false },
+        { "text": "HDD and SSD Storage.", "isCorrect": false },
+        { "text": "Digital and Analog Memory.", "isCorrect": false },
+        { "text": "Primary (Internal) and Secondary (External) Memory.", "isCorrect": true }
+      ],
+      "explanation": "Computer memory is divided into Primary Memory (Internal) and Secondary Memory (External). "
+    },
+    {
+      "id": "CAO-ch1-q9",
+      "question": "Which of the following contains only examples of Primary Memory?",
+      "type": "single",
+      "options": [
+        { "text": "HDD, SSD, and Flash Drive.", "isCorrect": false },
+        { "text": "RAM, ROM, and Hybrid (EEPROM).", "isCorrect": true },
+        { "text": "Compact Disk, Floppy Disk, and Magnetic Tape.", "isCorrect": false },
+        { "text": "Monitor, Keyboard, and Mouse.", "isCorrect": false }
+      ],
+      "explanation": "Primary memory includes RAM (SRAM, DRAM), ROM (PROM, EPROM), and Hybrid types like EEPROM and NVRAM."
+    },
+    {
+      "id": "CAO-ch1-q10",
+      "question": "What is the key difference between Internal (Primary) and External (Secondary) memory regarding accessibility?",
+      "type": "single",
+      "options": [
+        { "text": "External memory is faster than Internal memory.", "isCorrect": false },
+        { "text": "Internal memory is accessible via I/O modules, while External is direct.", "isCorrect": false },
+        { "text": "Internal memory is directly accessible by the processor, while External is accessible via I/O modules.", "isCorrect": true },
+        { "text": "External memory stores data temporarily, while Internal stores it permanently.", "isCorrect": false }
+      ],
+      "explanation": "Internal Memory (Primary) is directly accessible by the processor. External Memory (Secondary) is accessible by the processor via I/O Modules."
+    },
+    {
+      "id": "CAO-ch1-q11",
+      "question": "What is the function of a CPU Register?",
+      "type": "single",
+      "options": [
+        { "text": "A small storage location within a CPU to hold data or addresses temporarily.", "isCorrect": true },
+        { "text": "A large storage area for archiving old files.", "isCorrect": false },
+        { "text": "A device used to input human-readable data.", "isCorrect": false },
+        { "text": "A permanent storage for the operating system kernel.", "isCorrect": false }
+      ],
+      "explanation": "A register is a small permanent storage location within a CPU used to hold data, information, and addresses temporarily. The data is not stored permanently."
+    },
+    {
+      "id": "CAO-ch1-q12",
+      "question": "Which statement accurately describes Cache Memory?",
+      "type": "single",
+      "options": [
+        { "text": "It is the slowest form of memory in the hierarchy.", "isCorrect": false },
+        { "text": "It is located in the secondary storage devices.", "isCorrect": false },
+        { "text": "It stores data permanently even when the computer is off.", "isCorrect": false },
+        { "text": "It resides between the CPU and main memory to store frequently used data.", "isCorrect": true }
+      ],
+      "explanation": "Cache memory is one of the fastest memories. It resides between the CPU and main memory and stores all frequently used data to help the CPU access data quicker."
+    },
+    {
+      "id": "CAO-ch1-q13",
+      "question": "What is the definition of Main Memory?",
+      "type": "single",
+      "options": [
+        { "text": "An external storage area used for backup tapes.", "isCorrect": false },
+        { "text": "An internal storage area availed to store data and programs either permanently or temporarily.", "isCorrect": true },
+        { "text": "A specialized unit strictly for arithmetic calculations.", "isCorrect": false },
+        { "text": "A graphical interface for user interaction.", "isCorrect": false }
+      ],
+      "explanation": "Main memory is defined as an internal storage area in a computer which is availed to store data and programs either permanently or temporarily."
+    },
+    {
+      "id": "CAO-ch1-q14",
+      "question": "How is 'Computer Architecture' defined?",
+      "type": "single",
+      "options": [
+        { "text": "The process of manufacturing silicon chips.", "isCorrect": false },
+        { "text": "The design of graphical icons for operating systems.", "isCorrect": false },
+        { "text": "A specification detailing how software and hardware standards interact to form a computer system.", "isCorrect": true },
+        { "text": "The physical arrangement of cables within a server room.", "isCorrect": false }
+      ],
+      "explanation": "Computer architecture is a specification detailing how a set of software and hardware technology standards interact to form a computer system or platform. It acts as an interface between hardware and software."
+    },
+    {
+      "id": "CAO-ch1-q15",
+      "question": "What is a core feature of the Von Neumann Architecture?",
+      "type": "single",
+      "options": [
+        { "text": "It requires data to be fed manually while running.", "isCorrect": false },
+        { "text": "It holds both programs and data in the same memory.", "isCorrect": true },
+        { "text": "It prevents the CPU from accessing memory directly.", "isCorrect": false },
+        { "text": "It was designed specifically for parallel processing without a CPU.", "isCorrect": false }
+      ],
+      "explanation": "Developed in 1945, the Von Neumann Architecture concept allows the computer memory to hold programs as well as data. It also enables the CPU to access memory directly."
+    },
+    {
+      "id": "CAO-ch1-q16",
+      "question": "Which of the following lists correctly identifies components of the Von Neumann Model?",
+      "type": "single",
+      "options": [
+        { "text": "MAR, MDR, PC, CIR, ALU, and Control Unit.", "isCorrect": true },
+        { "text": "Keyboard, Mouse, Monitor, and Printer.", "isCorrect": false },
+        { "text": "HDD, SSD, Flash Drive, and Cloud Storage.", "isCorrect": false },
+        { "text": "Windows, Linux, MacOS, and Android.", "isCorrect": false }
+      ],
+      "explanation": "The Von Neumann Architecture Model includes specific components such as the Memory Address Register (MAR), Memory Data Register (MDR), Program Counter (PC), Current Instruction Register (CIR), ALU, and Control Unit. "
+    },
+    {
+      "id": "CAO-ch1-q17",
+      "question": "Which of these are examples of specific Computer Architectures mentioned in the course?",
+      "type": "single",
+      "options": [
+        { "text": "TCP/IP, HTTP, and FTP.", "isCorrect": false },
+        { "text": "Photoshop, Excel, and Word.", "isCorrect": false },
+        { "text": "CRT, LCD, and LED.", "isCorrect": false },
+        { "text": "x86, SPARC, and PowerPC.", "isCorrect": true }
+      ],
+      "explanation": "The course lists specific examples of computer architectures including the x86 (Intel and AMD), the SPARC (Sun Microsystems), and the PowerPC (Apple, IBM, Motorola)."
+    },
+    {
+      "id": "CAO-ch1-q18",
+      "question": "What does the x86 architecture specification define?",
+      "type": "single",
+      "options": [
+        { "text": "How the monitor displays colors.", "isCorrect": false },
+        { "text": "How the power supply regulates voltage.", "isCorrect": false },
+        { "text": "How a processor handles and executes instructions passed from the OS.", "isCorrect": true },
+        { "text": "How the keyboard maps keys to characters.", "isCorrect": false }
+      ],
+      "explanation": "x86 architecture defines how a processor handles and executes different instructions passed from the operating system (OS) and software program."
+    },
+    {
+      "id": "CAO-ch1-q19",
+      "question": "Into which categories can I/O (External) devices be categorized?",
+      "type": "single",
+      "options": [
+        { "text": "Processing, Storage, and Retrieval.", "isCorrect": false },
+        { "text": "Human readable, Machine readable, and Communications.", "isCorrect": true },
+        { "text": "Primary, Secondary, and Tertiary.", "isCorrect": false },
+        { "text": "Internal, External, and Hybrid.", "isCorrect": false }
+      ],
+      "explanation": "External devices are categorized into Human readable (e.g., Printers), Machine readable (e.g., Sensors), and Communications (e.g., Modems)."
+    }
+  ]
+}

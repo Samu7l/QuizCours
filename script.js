@@ -6,9 +6,40 @@ const app = {
         currentQuestionIndex: 0,
         isAnimating: false,
         cache: {},
-        // KILL SWITCH : Permet d'annuler les chargements en cours si on change de quiz
         abortController: null,
         timerInterval: null
+    },
+
+    // --- Configuration for your 5 Subjects ---
+    // Maps the JSON keys to your HTML Sidebar IDs
+    config: {
+        subjectMap: {
+            'arch': { 
+                chaptersId: 'list-arch-chapters', 
+                finalsId: 'list-arch-final', 
+                title: 'Architecture & OS' 
+            },
+            'net': { 
+                chaptersId: 'list-net-chapters', 
+                finalsId: 'list-net-final', 
+                title: 'Networks' 
+            },
+            'ml': { 
+                chaptersId: 'list-ml-chapters', 
+                finalsId: 'list-ml-final', 
+                title: 'Machine Learning' 
+            },
+            'java': { 
+                chaptersId: 'list-java-chapters', 
+                finalsId: 'list-java-final', 
+                title: 'Java Programming' 
+            },
+            'uml': { 
+                chaptersId: 'list-uml-chapters', 
+                finalsId: 'list-uml-final', 
+                title: 'UML & Design' 
+            }
+        }
     },
 
     init: async () => {
@@ -16,13 +47,14 @@ const app = {
         if(loader) loader.classList.remove('hidden');
 
         try {
+            // Ensure this points to your new structure file
             const response = await fetch('quizzes/index.json');
-            if (!response.ok) throw new Error("Impossible de charger le manifeste (index.json)");
+            if (!response.ok) throw new Error("Impossible de charger index.json");
             app.data.manifest = await response.json();
             app.renderSidebar();
         } catch (e) {
             console.error(e);
-            alert("Erreur critique : Impossible de lire 'quizzes/index.json'.");
+            alert("Erreur critique : Impossible de lire 'quizzes/index.json'. Vérifiez la console.");
         } finally {
             if(loader) loader.classList.add('hidden');
         }
@@ -31,7 +63,8 @@ const app = {
     // --- Navigation ---
     showView: (viewId) => {
         document.querySelectorAll('.view').forEach(el => el.classList.remove('active'));
-        document.getElementById(viewId).classList.add('active');
+        const target = document.getElementById(viewId);
+        if(target) target.classList.add('active');
         document.getElementById('app-content').scrollTop = 0;
     },
 
@@ -42,75 +75,57 @@ const app = {
         app.renderSavedCustom();
     },
 
-    showFinalSelector: () => {
-        const container = document.getElementById('final-exam-list-container');
-        container.innerHTML = '';
-
-        app.data.manifest.finalExams.forEach(exam => {
-            const card = document.createElement('div');
-            card.className = 'exam-card';
-            card.innerHTML = `
-                <h3>${exam.title}</h3>
-                <p>${exam.description || "Aucune description."}</p>
-                <small>Cliquez pour commencer</small>
-            `;
-            card.onclick = () => app.prepareQuiz(exam.id, 'Final Exam');
-            container.appendChild(card);
-        });
-
-        app.showView('view-final-selection');
-    },
-
     showCustomBuilder: () => {
         app.renderCustomBuilder();
         app.showView('view-custom-builder');
     },
 
-    // --- Sidebar & UI ---
+    // --- Sidebar Logic (Major Update) ---
     renderSidebar: () => {
-        const createItem = (item, type, isDeletable = false) => {
-            const div = document.createElement('div');
-            div.className = 'sidebar-item';
-            div.innerHTML = `<div><strong>${item.title}</strong><br><small>${type}</small></div>`;
-            div.onclick = () => app.prepareQuiz(item.id, type, div);
+        const subjects = app.data.manifest.subjects; // Expecting new JSON structure
+        if(!subjects) return;
 
-            if (isDeletable) {
-                const delBtn = document.createElement('button');
-                delBtn.className = 'delete-btn';
-                delBtn.innerHTML = '&times;';
-                delBtn.onclick = (e) => {
-                    e.stopPropagation();
-                    if(confirm("Supprimer ?")) app.deleteCustomQuiz(item.id);
-                };
-                div.appendChild(delBtn);
+        // Loop through our config map (arch, net, ml, etc.)
+        for (const [key, config] of Object.entries(app.config.subjectMap)) {
+            const subjectData = subjects[key];
+            if (!subjectData) continue; // Skip if not in JSON
+
+            // 1. Render Chapters
+            const chapterContainer = document.getElementById(config.chaptersId);
+            if (chapterContainer) {
+                chapterContainer.innerHTML = '';
+                if(subjectData.chapters) {
+                    subjectData.chapters.forEach(quiz => {
+                        chapterContainer.appendChild(app.createSidebarItem(quiz, 'Chapter'));
+                    });
+                }
             }
-            return div;
-        };
 
-        const fill = (id, list, type) => {
-            const c = document.getElementById(id);
-            c.innerHTML = '';
-            if(list) list.forEach(x => c.appendChild(createItem(x, type)));
-        };
-
-        fill('list-modules', app.data.manifest.modules, 'Module');
-        fill('list-checkpoints', app.data.manifest.checkpoints, 'Checkpoint');
-        
-        const finalC = document.getElementById('list-final');
-        finalC.innerHTML = '';
-        if (app.data.manifest.finalExams && app.data.manifest.finalExams.length > 0) {
-            const div = document.createElement('div');
-            div.className = 'sidebar-item';
-            div.innerHTML = `<div><strong>Accéder aux Examens</strong><br><small>Sélection</small></div>`;
-            
-            div.onclick = () => {
-                document.querySelectorAll('.sidebar-item').forEach(el => el.classList.remove('active'));
-                div.classList.add('active');
-                app.showFinalSelector();
-            };
-            finalC.appendChild(div);
+            // 2. Render Final Preps
+            const finalContainer = document.getElementById(config.finalsId);
+            if (finalContainer) {
+                finalContainer.innerHTML = '';
+                if(subjectData.finals) {
+                    subjectData.finals.forEach(quiz => {
+                        // Force Final Exam settings
+                        quiz.isFinal = true; 
+                        finalContainer.appendChild(app.createSidebarItem(quiz, 'Final Exam'));
+                    });
+                }
+            }
         }
+
         app.renderSavedCustom();
+    },
+
+    createSidebarItem: (quizItem, type) => {
+        const div = document.createElement('div');
+        div.className = 'sidebar-item';
+        div.innerHTML = `<div><strong>${quizItem.title}</strong></div>`;
+        
+        // On click, we pass the whole item object directly
+        div.onclick = () => app.prepareQuiz(quizItem, div);
+        return div;
     },
 
     renderSavedCustom: () => {
@@ -131,6 +146,8 @@ const app = {
                 div.classList.add('active');
                 app.loadInMemoryQuiz(q);
             };
+            
+            // Delete Button
             const delBtn = document.createElement('button');
             delBtn.className = 'delete-btn';
             delBtn.innerHTML = '&times;';
@@ -150,65 +167,47 @@ const app = {
         app.renderSavedCustom();
     },
 
-    // --- LE CŒUR DU SYSTÈME (Optimisé) ---
+    // --- Loading System ---
 
-    // 1. Fetch avec gestion d'annulation (Signal) et Retry
-    fetchJson: async (url, signal, retries = 2) => {
-        // Cache Check
+    fetchJson: async (url, signal, retries = 1) => {
         if (app.data.cache[url]) return JSON.parse(JSON.stringify(app.data.cache[url]));
 
         for (let i = 0; i <= retries; i++) {
             try {
+                // Adjust path: assume files are inside 'quizzes/' folder
                 const res = await fetch(`quizzes/${url}`, { signal }); 
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 const data = await res.json();
-                app.data.cache[url] = data; // Save to cache
+                app.data.cache[url] = data; 
                 return data;
             } catch (err) {
-                if (err.name === 'AbortError') throw err; // Si annulé par l'utilisateur, on arrête tout
-                if (i === retries) throw err; // Si dernière tentative échouée, on renvoie l'erreur
+                if (err.name === 'AbortError') throw err;
+                if (i === retries) throw err;
             }
         }
     },
 
-    // 2. Préparation avec Kill Switch
-    prepareQuiz: async (id, type, domElement) => {
-        // A. ANNULATION DE LA PRÉCÉDENTE REQUÊTE
-        if (app.data.abortController) {
-            app.data.abortController.abort();
-        }
-        // Création d'un nouveau contrôleur pour cette requête
+    // Updated: Accepts the Quiz Object directly from JSON
+    prepareQuiz: async (quizItem, domElement) => {
+        // Cancel previous loading
+        if (app.data.abortController) app.data.abortController.abort();
         app.data.abortController = new AbortController();
         const signal = app.data.abortController.signal;
 
-        // B. Interface UI
+        // UI
         const loader = document.getElementById('app-loader');
         if(loader) loader.classList.remove('hidden');
         document.querySelectorAll('.sidebar-item').forEach(el => el.classList.remove('active'));
         if (domElement) domElement.classList.add('active');
 
         try {
-            let quizData = null;
-            let item = null;
-
-            if (type === 'Module') {
-                item = app.data.manifest.modules.find(m => m.id === id);
-                quizData = await app.fetchJson(item.file, signal);
-            } 
-            else if (type === 'Checkpoint') {
-                item = app.data.manifest.checkpoints.find(c => c.id === id);
-                quizData = await app.fetchJson(item.file, signal);
-                if (!quizData.questions || quizData.questions.length === 0) {
-                    quizData = await app.generateQuestionsFromRange(quizData, item.moduleRange, signal);
-                }
-            } 
-            else if (type === 'Final Exam') {
-                item = app.data.manifest.finalExams.find(f => f.id === id);
-                quizData = await app.fetchJson(item.file, signal);
-                if (!quizData.questions || quizData.questions.length === 0) {
-                    quizData = await app.generateQuestionsFromRange(quizData, [1, 27], signal);
-                }
-                quizData.timeLimit = 75;
+            // Load the specific file defined in the JSON item
+            let quizData = await app.fetchJson(quizItem.file, signal);
+            
+            // Apply overrides from the manifest item (e.g. enforce time limit for finals)
+            if(quizItem.isFinal) {
+                quizData.timeLimit = quizItem.timeLimit || 60; // Default 60 mins for finals
+                quizData.title = "🏆 " + quizData.title;
             }
 
             if (quizData && !signal.aborted) {
@@ -217,48 +216,17 @@ const app = {
 
         } catch (error) {
             if (error.name === 'AbortError') {
-                console.log("Chargement annulé par l'utilisateur (changement de quiz).");
+                console.log("Load cancelled.");
             } else {
-                console.error("Erreur chargement:", error);
-                alert("Erreur: Le fichier JSON semble corrompu ou introuvable.\n" + error.message);
+                console.error("Error loading quiz:", error);
+                alert("Erreur: Impossible de charger le fichier: " + quizItem.file);
             }
         } finally {
-            // Ne cacher le loader que si ce n'est pas une annulation (car une autre requête a pris le relais)
             if (!signal.aborted && loader) loader.classList.add('hidden');
         }
     },
 
-    // 3. Génération Massive (Batching + Signal)
-    generateQuestionsFromRange: async (baseQuiz, range, signal) => {
-        const [start, end] = range;
-        let pool = [];
-        
-        const modules = app.data.manifest.modules.filter(m => m.moduleNumber >= start && m.moduleNumber <= end);
-        
-        // Batch size : 5 requêtes simultanées max
-        const batchSize = 5;
-        
-        for (let i = 0; i < modules.length; i += batchSize) {
-            if (signal.aborted) throw new Error('AbortError'); // Stop si annulé
-
-            const batch = modules.slice(i, i + batchSize);
-            const promises = batch.map(m => 
-                app.fetchJson(m.file, signal)
-                    .then(data => data.questions || [])
-                    .catch(() => []) // Ignore les erreurs individuelles de fichiers manquants
-            );
-
-            const results = await Promise.all(promises);
-            results.forEach(q => pool = pool.concat(q));
-        }
-
-        pool.sort(() => 0.5 - Math.random());
-        // Limite à 100 questions pour ne pas faire laguer le navigateur pendant le quiz
-        baseQuiz.questions = pool.slice(0, 100); 
-        return baseQuiz;
-    },
-
-    // --- Quiz Engine ---
+    // --- Quiz Engine (Unchanged but robust) ---
     loadInMemoryQuiz: (quizObj) => {
         app.data.currentQuiz = quizObj;
         app.data.currentQuestionIndex = 0;
@@ -271,10 +239,10 @@ const app = {
 
         const infoBox = document.querySelector('.info-box p:last-child');
         if (quizObj.timeLimit) {
-            infoBox.innerHTML = `<strong>⚠️ Attention :</strong> Vous avez <strong>${quizObj.timeLimit} minutes</strong> pour compléter cet examen.`;
+            infoBox.innerHTML = `<strong>⚠️ Exam Mode:</strong> You have <strong>${quizObj.timeLimit} minutes</strong>.`;
             infoBox.style.color = "#d35400";
         } else {
-            infoBox.innerHTML = "You have unlimited attempts. There is no time limit.";
+            infoBox.innerHTML = "Practice Mode: Unlimited time and attempts.";
             infoBox.style.color = "";
         }
         
@@ -288,7 +256,6 @@ const app = {
         app.renderCurrentQuestion(false);
 
         const timerDisplay = document.getElementById('quiz-timer');
-    
         if (app.data.timerInterval) clearInterval(app.data.timerInterval);
 
         if (app.data.currentQuiz.timeLimit) {
@@ -298,35 +265,27 @@ const app = {
             timerDisplay.classList.add('hidden');
         }
     },
+
     startTimer: (durationInSeconds) => {
         let timer = durationInSeconds;
         const display = document.getElementById('timer-val');
         
         const updateDisplay = () => {
-            const hours = Math.floor(timer / 3600);
-            const minutes = Math.floor((timer % 3600) / 60);
-            const seconds = timer % 60;
-
-            const h = hours > 0 ? (hours < 10 ? "0" + hours : hours) + ":" : "";
-            const m = minutes < 10 ? "0" + minutes : minutes;
-            const s = seconds < 10 ? "0" + seconds : seconds;
-
-            display.textContent = h + m + ":" + s;
-            
-            // Optionnel : Passer en rouge quand il reste moins de 5 min
+            const h = Math.floor(timer / 3600);
+            const m = Math.floor((timer % 3600) / 60);
+            const s = timer % 60;
+            display.textContent = `${h}:${m<10?'0'+m:m}:${s<10?'0'+s:s}`;
             if (timer < 300) display.style.color = "red";
             else display.style.color = "";
         };
 
-        updateDisplay(); // Affichage immédiat
-
+        updateDisplay();
         app.data.timerInterval = setInterval(() => {
             timer--;
             updateDisplay();
-
             if (timer <= 0) {
                 clearInterval(app.data.timerInterval);
-                alert("Temps écoulé ! L'examen va être soumis automatiquement.");
+                alert("Time's up! Submitting...");
                 app.finishQuiz();
             }
         }, 1000);
@@ -403,13 +362,12 @@ const app = {
 
         const pct = (answeredCount / total) * 100;
         document.getElementById('progress-fill').style.width = `${pct}%`;
-        document.getElementById('progress-text').innerText = `Question ${app.data.currentQuestionIndex + 1} of ${total}`;
+        document.getElementById('progress-text').innerText = `Q ${app.data.currentQuestionIndex + 1} / ${total}`;
     },
 
     renderCurrentQuestion: (skipNavUpdate = false) => {
         const qIndex = app.data.currentQuestionIndex;
         const qData = app.data.currentQuiz.questions[qIndex];
-        
         const optsContainer = document.getElementById('q-options');
         optsContainer.innerHTML = ''; 
 
@@ -430,9 +388,9 @@ const app = {
 
         const instructionEl = document.getElementById('q-instruction');
         
-        // --- MATCH (Click-to-Move) ---
+        // --- MATCHING ---
         if (qData.type === 'match') {
-            instructionEl.innerText = "(Tap an answer in the bank to fill a slot. Tap a slot to clear it.)";
+            instructionEl.innerText = "Tap an answer bank item, then a slot.";
             const matchContainer = document.createElement('div');
             matchContainer.className = 'match-container';
             const currentAns = app.data.userAnswers[qIndex] || {};
@@ -449,7 +407,7 @@ const app = {
                     slot.innerText = currentAns[idx];
                     slot.classList.add('filled');
                 } else {
-                    slot.innerText = "Drop here...";
+                    slot.innerText = "Drop here";
                 }
                 slot.onclick = () => app.handleMatchSlotClick(qIndex, idx);
                 row.appendChild(prompt);
@@ -474,53 +432,10 @@ const app = {
             });
             optsContainer.appendChild(bank);
         }
-        
-        // --- DROPDOWN MATCH ---
-        else if (qData.type === 'dropdown-match') {
-            instructionEl.innerText = "(Select the correct option.)";
-            const uniqueOptions = [...new Set(qData.pairs.map(p => p.right))].sort();
-            const currentAns = app.data.userAnswers[qIndex] || {};
-
-            qData.pairs.forEach((pair, idx) => {
-                const row = document.createElement('div');
-                row.className = 'dd-match-row';
-                const prompt = document.createElement('div');
-                prompt.className = 'dd-match-prompt';
-                prompt.innerText = pair.left;
-                const select = document.createElement('select');
-                select.className = 'dd-match-select';
-                
-                const defaultOpt = document.createElement('option');
-                defaultOpt.value = "";
-                defaultOpt.innerText = "Select...";
-                defaultOpt.disabled = true;
-                if (!currentAns[idx]) defaultOpt.selected = true;
-                select.appendChild(defaultOpt);
-
-                uniqueOptions.forEach(optText => {
-                    const option = document.createElement('option');
-                    option.value = optText;
-                    option.innerText = optText;
-                    if (currentAns[idx] === optText) option.selected = true;
-                    select.appendChild(option);
-                });
-
-                select.onchange = (e) => {
-                    let answers = app.data.userAnswers[qIndex] || {};
-                    answers[idx] = e.target.value;
-                    app.data.userAnswers[qIndex] = answers;
-                    app.updateNavStyles();
-                };
-                row.appendChild(prompt);
-                row.appendChild(select);
-                optsContainer.appendChild(row);
-            });
-        }
-
-        // --- STANDARD ---
+        // --- STANDARD MCQ ---
         else {
             const isMultiple = qData.type === 'multiple';
-            instructionEl.innerText = isMultiple ? "(Select all that apply)" : "(Select one)";
+            instructionEl.innerText = isMultiple ? "Select all that apply." : "Select the best answer.";
             qData.options.forEach((opt, optIdx) => {
                 const el = document.createElement('div');
                 el.className = 'option-item';
@@ -555,7 +470,7 @@ const app = {
         app.updateNavStyles();
     },
 
-    // --- Handlers ---
+    // --- Input Handlers ---
     handleOptionClick: (qIndex, optIndex, isMultiple) => {
         if (isMultiple) {
             let current = app.data.userAnswers[qIndex] || [];
@@ -573,6 +488,7 @@ const app = {
         let current = app.data.userAnswers[qIndex] || {};
         let targetSlot = -1;
         const qData = app.data.currentQuiz.questions[qIndex];
+        // Find first empty slot
         for(let i=0; i<qData.pairs.length; i++) { if(!current[i]) { targetSlot = i; break; } }
         if (targetSlot !== -1) {
             current[targetSlot] = answerText;
@@ -589,14 +505,16 @@ const app = {
         }
     },
 
-    // --- Score & Custom ---
+    // --- Scoring ---
     finishQuiz: () => {
         if (app.data.timerInterval) clearInterval(app.data.timerInterval);
         const total = app.data.currentQuiz.questions.length;
         let correctCount = 0;
+        
         app.data.currentQuiz.questions.forEach((q, idx) => {
             const userAns = app.data.userAnswers[idx];
-            if (q.type === 'match' || q.type === 'dropdown-match') {
+            
+            if (q.type === 'match') {
                 if (userAns && Object.keys(userAns).length === q.pairs.length) {
                     let allCorrect = true;
                     q.pairs.forEach((pair, pairIdx) => {
@@ -607,6 +525,7 @@ const app = {
             } else if (q.type === 'multiple') {
                 const correctIndices = q.options.map((opt, i) => opt.isCorrect ? i : -1).filter(i => i !== -1);
                 const userIndices = Array.isArray(userAns) ? userAns : [];
+                // Check if lengths match and every correct index is in user array
                 const isCorrect = correctIndices.length === userIndices.length && correctIndices.every(val => userIndices.includes(val));
                 if (isCorrect) correctCount++;
             } else {
@@ -617,7 +536,9 @@ const app = {
         const score = Math.round((correctCount / total) * 100);
         const pass = app.data.currentQuiz.passPercentage || 70;
         document.getElementById('result-score').innerText = `${score}%`;
-        document.getElementById('result-msg').innerText = score >= pass ? "Réussi !" : "Échec.";
+        const msg = document.getElementById('result-msg');
+        msg.innerText = score >= pass ? "Passed!" : "Failed";
+        msg.style.color = score >= pass ? "green" : "red";
         
         if (app.data.currentQuiz.type === 'custom') {
             document.getElementById('btn-save-custom').classList.remove('hidden');
@@ -638,10 +559,10 @@ const app = {
             item.className = 'review-item';
             let html = `<h4>${idx + 1}. ${q.question}</h4>`;
 
-            if (q.type === 'match' || q.type === 'dropdown-match') {
+            if (q.type === 'match') {
                 html += `<div style="background:#f9f9f9; padding:10px;">`;
                 q.pairs.forEach((pair, pairIdx) => {
-                    const userVal = userAns ? userAns[pairIdx] : "Vide";
+                    const userVal = userAns ? userAns[pairIdx] : "Empty";
                     const isCorrect = userVal === pair.right;
                     html += `<div style="border-bottom:1px solid #eee; padding:5px;">
                         <span>${pair.left}</span><br>
@@ -652,7 +573,6 @@ const app = {
             } else {
                 q.options.forEach((opt, optIdx) => {
                     const isMultiple = q.type === 'multiple';
-                    let marker = '';
                     let userSelected = false;
                     if (isMultiple) userSelected = Array.isArray(userAns) && userAns.includes(optIdx);
                     else userSelected = userAns === optIdx;
@@ -660,36 +580,53 @@ const app = {
                     let style = "padding:8px; border:1px solid #eee; margin:2px;";
                     if(opt.isCorrect) style += "background:#dff0d8; color:#3c763d;"; 
                     if(userSelected && !opt.isCorrect) style += "background:#f2dede; color:#a94442;";
-                    if(userSelected) marker = " <strong>(Votre choix)</strong>";
+                    let marker = userSelected ? " <strong>(Your Answer)</strong>" : "";
                     
                     html += `<div style="${style}">${opt.text} ${marker}</div>`;
                 });
             }
-            if (q.explanation) html += `<div class="explanation"><strong>Note:</strong> ${q.explanation}</div>`;
+            if (q.explanation) html += `<div class="explanation"><strong>Explanation:</strong> ${q.explanation}</div>`;
             item.innerHTML = html;
             container.appendChild(item);
         });
         app.showView('view-review');
     },
 
+    // --- Custom Builder (Updated for Multi-Subject) ---
     renderCustomBuilder: () => {
         const list = document.getElementById('builder-module-list');
         list.innerHTML = '';
-        if(!app.data.manifest) return;
-        app.data.manifest.modules.forEach(m => {
-            const label = document.createElement('label');
-            label.className = 'cb-item';
-            label.innerHTML = `<input type="checkbox" value="${m.id}" class="mod-cb"> ${m.title}`;
-            list.appendChild(label);
-        });
+        const subjects = app.data.manifest.subjects;
+        if(!subjects) return;
+
+        // Iterate through all subjects
+        for (const [key, subj] of Object.entries(subjects)) {
+            // Header for the group
+            const h4 = document.createElement('h4');
+            h4.innerText = subj.title || key.toUpperCase();
+            h4.style.marginTop = "1rem";
+            h4.style.borderBottom = "1px solid #ccc";
+            list.appendChild(h4);
+
+            if(subj.chapters) {
+                subj.chapters.forEach(m => {
+                    const label = document.createElement('label');
+                    label.className = 'cb-item';
+                    // We store the file path directly in the value
+                    label.innerHTML = `<input type="checkbox" value="${m.file}" class="mod-cb"> ${m.title}`;
+                    list.appendChild(label);
+                });
+            }
+        }
     },
 
     generateCustomQuiz: async () => {
-        const selected = Array.from(document.querySelectorAll('.mod-cb:checked')).map(cb => cb.value);
-        if (selected.length === 0) { alert("Sélectionnez au moins un module."); return; }
+        // Collect selected files
+        const selectedFiles = Array.from(document.querySelectorAll('.mod-cb:checked')).map(cb => cb.value);
+        if (selectedFiles.length === 0) { alert("Select at least one module."); return; }
         
         const count = parseInt(document.getElementById('custom-count').value) || 20;
-        const title = document.getElementById('custom-title').value || "Custom Quiz";
+        const title = document.getElementById('custom-title').value || "Custom Revision";
         
         if (app.data.abortController) app.data.abortController.abort();
         app.data.abortController = new AbortController();
@@ -700,15 +637,13 @@ const app = {
 
         try {
             let pool = [];
-            // Batch loading for custom quiz
-            const modulesToFetch = app.data.manifest.modules.filter(m => selected.includes(m.id));
             const batchSize = 5;
             
-            for (let i = 0; i < modulesToFetch.length; i += batchSize) {
+            for (let i = 0; i < selectedFiles.length; i += batchSize) {
                 if(signal.aborted) throw new Error("AbortError");
-                const batch = modulesToFetch.slice(i, i + batchSize);
-                const promises = batch.map(m => 
-                    app.fetchJson(m.file, signal)
+                const batch = selectedFiles.slice(i, i + batchSize);
+                const promises = batch.map(fileUrl => 
+                    app.fetchJson(fileUrl, signal)
                         .then(data => data.questions || [])
                         .catch(() => [])
                 );
@@ -722,15 +657,14 @@ const app = {
                 id: 'custom-' + Date.now(), 
                 type: 'custom', 
                 title: title, 
-                passPercentage: 70, 
-                questions: finalQuestions, 
-                createdFrom: selected 
+                passPercentage: 60, 
+                questions: finalQuestions
             };
             
             if(!signal.aborted) app.loadInMemoryQuiz(customQuiz);
 
         } catch(e) {
-            if(e.name !== 'AbortError') alert("Erreur lors de la génération.");
+            if(e.name !== 'AbortError') alert("Error generating custom quiz.");
         } finally {
             if(!signal.aborted) loader.classList.add('hidden');
         }
@@ -742,7 +676,7 @@ const app = {
         const saved = JSON.parse(localStorage.getItem('customQuizzes') || '[]');
         saved.push(quiz);
         localStorage.setItem('customQuizzes', JSON.stringify(saved));
-        alert("Quiz sauvegardé !");
+        alert("Quiz saved to sidebar!");
         app.renderSavedCustom();
     }
 };

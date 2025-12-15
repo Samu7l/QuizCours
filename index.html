@@ -3,42 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Course Assessment</title>
+    <title>Semester Course Assessment</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="app-loader" class="loader-overlay hidden">
-        <div class="spinner">Loading...</div>
+        <div class="spinner">Loading resources...</div>
     </div>
 
     <header class="app-header">
-        <div class="logo">CyberSec Assessment</div>
+        <div class="logo">Semester Portal</div>
         <nav>
-            <button onclick="app.showHome()">Welcome Screen</button>
-            <button onclick="app.showCustomBuilder()">Build Custom Quiz</button>
+            <button onclick="app.showHome()">Dashboard</button>
+            <button onclick="app.showCustomBuilder()">Global Custom Quiz</button>
         </nav>
     </header>
 
     <div class="layout-container">
         
         <aside class="sidebar">
-            <div class="sidebar-section">
-                <h3>Module Quizzes</h3>
-                <div id="list-modules" class="sidebar-list"></div>
+            <div class="sidebar-header">
+                <h2>Course List</h2>
+            </div>
+
+            <div class="subject-group">
+                <h3 class="subject-title">🖥️ Arch & OS</h3>
+                <div class="subject-content">
+                    <span class="sub-label">Chapters</span>
+                    <div id="list-arch-chapters" class="sidebar-list"></div>
+                    <span class="sub-label">Final Prep</span>
+                    <div id="list-arch-final" class="sidebar-list"></div>
+                </div>
+            </div>
+
+            <div class="subject-group">
+                <h3 class="subject-title">🌐 Networks</h3>
+                <div class="subject-content">
+                    <span class="sub-label">Chapters</span>
+                    <div id="list-net-chapters" class="sidebar-list"></div>
+                    <span class="sub-label">Final Prep</span>
+                    <div id="list-net-final" class="sidebar-list"></div>
+                </div>
+            </div>
+
+            <div class="subject-group">
+                <h3 class="subject-title">🤖 Machine Learning</h3>
+                <div class="subject-content">
+                    <span class="sub-label">Chapters</span>
+                    <div id="list-ml-chapters" class="sidebar-list"></div>
+                    <span class="sub-label">Final Prep</span>
+                    <div id="list-ml-final" class="sidebar-list"></div>
+                </div>
+            </div>
+
+            <div class="subject-group">
+                <h3 class="subject-title">☕ Java</h3>
+                <div class="subject-content">
+                    <span class="sub-label">Chapters</span>
+                    <div id="list-java-chapters" class="sidebar-list"></div>
+                    <span class="sub-label">Final Prep</span>
+                    <div id="list-java-final" class="sidebar-list"></div>
+                </div>
+            </div>
+
+            <div class="subject-group">
+                <h3 class="subject-title">📐 UML & Design</h3>
+                <div class="subject-content">
+                    <span class="sub-label">Chapters</span>
+                    <div id="list-uml-chapters" class="sidebar-list"></div>
+                    <span class="sub-label">Final Prep</span>
+                    <div id="list-uml-final" class="sidebar-list"></div>
+                </div>
             </div>
 
             <div class="sidebar-section">
-                <h3>Checkpoint Exams</h3>
-                <div id="list-checkpoints" class="sidebar-list"></div>
-            </div>
-
-            <div class="sidebar-section">
-                <h3>Final Exam</h3>
-                <div id="list-final" class="sidebar-list"></div>
-            </div>
-
-            <div class="sidebar-section">
-                <h3>Saved Custom Quizzes</h3>
+                <h3>💾 Saved Quizzes</h3>
                 <div id="list-saved" class="sidebar-list">
                     <p class="empty-msg">No saved quizzes.</p>
                 </div>
@@ -49,9 +88,12 @@
             
             <section id="view-home" class="view active">
                 <div class="hero">
-                    <h1>Cybersecurity Essentials</h1>
-                    <p>Select a module from the sidebar to begin, or build a custom exam.</p>
-                    <button class="btn-primary" onclick="app.showCustomBuilder()">Create Custom Quiz</button>
+                    <h1>Semester Assessment Hub</h1>
+                    <p>Select a subject from the sidebar to access chapter modules or final exam preparation.</p>
+                    <div class="quick-stats">
+                        <p>5 Courses Available • Unlimited Attempts</p>
+                    </div>
+                    <button class="btn-primary" onclick="app.showCustomBuilder()">Build Multi-Subject Quiz</button>
                 </div>
             </section>
 
@@ -60,7 +102,7 @@
                 <div class="builder-controls">
                     <div class="form-group">
                         <label>Quiz Title:</label>
-                        <input type="text" id="custom-title" value="My Custom Quiz">
+                        <input type="text" id="custom-title" value="My Revision Quiz">
                     </div>
                     <div class="form-group">
                         <label>Number of Questions:</label>
@@ -76,15 +118,12 @@
 
             <section id="view-final-selection" class="view">
                 <div class="hero">
-                    <h1>Examens Finaux</h1>
-                    <p>Veuillez choisir la version de l'examen que vous souhaitez passer.</p>
+                    <h1 id="final-selection-title">Final Exams</h1>
+                    <p>Select a version to begin.</p>
                 </div>
-                
-                <div id="final-exam-list-container" class="card-grid">
-                    </div>
-
+                <div id="final-exam-list-container" class="card-grid"></div>
                 <div style="text-align:center; margin-top:2rem;">
-                    <button class="btn-secondary" onclick="app.showHome()">Retour Accueil</button>
+                    <button class="btn-secondary" onclick="app.showHome()">Return Home</button>
                 </div>
             </section>
 
@@ -94,7 +133,7 @@
                     <div class="info-box">
                         <p><strong>Pass Percentage:</strong> <span id="start-pass">70</span>%</p>
                         <p><strong>Questions:</strong> <span id="start-qcount">0</span></p>
-                        <p>You have unlimited attempts. There is no time limit.</p>
+                        <p>Unlimited attempts. No time limit.</p>
                     </div>
                     <button id="btn-begin" class="btn-primary btn-large">Start Quiz</button>
                 </div>
@@ -104,7 +143,7 @@
                 <div class="quiz-header">
                     <h3 id="quiz-title-display">Quiz Title</h3>
                     <div id="quiz-timer" class="timer-display hidden">
-                        <span>Temps restant: </span>
+                        <span>Time Left: </span>
                         <span id="timer-val">00:00:00</span>
                     </div>
                     <div class="progress-wrapper">
@@ -134,12 +173,12 @@
 
             <section id="view-result" class="view">
                 <div class="result-card">
-                    <h1 id="result-score">80%</h1>
-                    <h3 id="result-msg">Result Message</h3>
+                    <h1 id="result-score">--</h1>
+                    <h3 id="result-msg">Completed</h3>
                     <div class="result-actions">
-                        <button class="btn-secondary" onclick="app.resetQuiz()">Reset Quiz</button>
-                        <button class="btn-primary" onclick="app.startReview()">Review Assessment</button>
-                        <button id="btn-save-custom" class="btn-secondary hidden" onclick="app.saveCustomQuiz()">Save This Quiz</button>
+                        <button class="btn-secondary" onclick="app.resetQuiz()">Retry</button>
+                        <button class="btn-primary" onclick="app.startReview()">Review Answers</button>
+                        <button id="btn-save-custom" class="btn-secondary hidden" onclick="app.saveCustomQuiz()">Save Quiz</button>
                     </div>
                 </div>
             </section>

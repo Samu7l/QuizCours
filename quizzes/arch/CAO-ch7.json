@@ -1,0 +1,500 @@
+{
+  "id": "CAO-ch7",
+  "type": "module",
+  "title": "Chapter 7 - Process Management",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "CAO-ch7-q1",
+      "question": "What is the definition of a 'process' in the context of an operating system?",
+      "type": "single",
+      "options": [
+        { "text": "A static file stored on the hard drive.", "isCorrect": false },
+        { "text": "A program in execution, including its code, data, and current execution state.", "isCorrect": true },
+        { "text": "A hardware component responsible for calculations.", "isCorrect": false },
+        { "text": "A set of instructions written in high-level code.", "isCorrect": false }
+      ],
+      "explanation": "A process is defined as a program in execution. It is more than just the program code; it includes the current activity, data, and execution state."
+    },
+    {
+      "id": "CAO-ch7-q2",
+      "question": "What does 'Process Management' entail?",
+      "type": "single",
+      "options": [
+        { "text": "Managing the physical temperature of the CPU.", "isCorrect": false },
+        { "text": "Organizing files and folders on the desktop.", "isCorrect": false },
+        { "text": "Creation, scheduling, execution, synchronization, and termination of processes.", "isCorrect": true },
+        { "text": "Installing and uninstalling user applications.", "isCorrect": false }
+      ],
+      "explanation": "Process management includes the creation, scheduling, execution, synchronization, and termination of processes, along with handling deadlocks and IPC."
+    },
+    {
+      "id": "CAO-ch7-q3",
+      "question": "What is 'CPU Scheduling'?",
+      "type": "single",
+      "options": [
+        { "text": "The process of selecting which process from the ready queue gets access to the CPU.", "isCorrect": true },
+        { "text": "The process of overclocking the processor to run faster.", "isCorrect": false },
+        { "text": "The allocation of hard disk space to new programs.", "isCorrect": false },
+        { "text": "The manual selection of programs by the user.", "isCorrect": false }
+      ],
+      "explanation": "CPU scheduling is the process of selecting which process from the ready queue gets access to the CPU to ensure efficient resource utilization ."
+    },
+    {
+      "id": "CAO-ch7-q4",
+      "question": "Why is CPU scheduling considered a fundamental function of an Operating System?",
+      "type": "single",
+      "options": [
+        { "text": "To ensure the CPU is not idle and resources are used efficiently.", "isCorrect": true },
+        { "text": "To prevent the computer from overheating.", "isCorrect": false },
+        { "text": "To ensure that the graphical user interface looks pleasing.", "isCorrect": false },
+        { "text": "To allow the user to play high-definition video games.", "isCorrect": false }
+      ],
+      "explanation": "Scheduling is done to ensure that the CPU is not idle, maximizing CPU utilization and system throughput."
+    },
+    {
+      "id": "CAO-ch7-q5",
+      "question": "What is the primary role of a CPU Scheduler?",
+      "type": "single",
+      "options": [
+        { "text": "To choose the next process to run from the ready queue using a specific algorithm.", "isCorrect": true },
+        { "text": "To load programs from the hard disk into the main memory.", "isCorrect": false },
+        { "text": "To manage the power consumption of the processor.", "isCorrect": false },
+        { "text": "To scan the system for viruses and malware.", "isCorrect": false }
+      ],
+      "explanation": "The CPU scheduler is tasked with choosing which process to run first from the ready queue using a scheduling algorithm."
+    },
+    {
+      "id": "CAO-ch7-q6",
+      "question": "Which of the following is NOT one of the main aims of CPU scheduling?",
+      "type": "single",
+      "options": [
+        { "text": "Fairness.", "isCorrect": false },
+        { "text": "Graphic Rendering.", "isCorrect": true },
+        { "text": "Efficiency.", "isCorrect": false },
+        { "text": "Throughput.", "isCorrect": false }
+      ],
+      "explanation": "The aims of CPU scheduling are Fairness, Efficiency, Response time, Turnaround time, and Throughput. Graphic Rendering is a function of the GPU/Application."
+    },
+    {
+      "id": "CAO-ch7-q7",
+      "question": "In the context of CPU scheduling, what does 'Fairness' mean?",
+      "type": "single",
+      "options": [
+        { "text": "Allocating resources based on who pays the most.", "isCorrect": false },
+        { "text": "Ensuring all processes get a fair share of CPU time and avoiding starvation.", "isCorrect": true },
+        { "text": "Giving the CPU exclusively to the largest programs.", "isCorrect": false },
+        { "text": "Randomly terminating processes to free up space.", "isCorrect": false }
+      ],
+      "explanation": "Fairness ensures all processes get a fair share of the CPU time and avoids starvation, where a process waits indefinitely."
+    },
+    {
+      "id": "CAO-ch7-q8",
+      "question": "What does 'Efficiency' refer to in CPU scheduling?",
+      "type": "single",
+      "options": [
+        { "text": "Minimizing the amount of electricity used.", "isCorrect": false },
+        { "text": "Maximizing CPU utilization to keep the CPU busy close to 100% of the time.", "isCorrect": true },
+        { "text": "Reducing the file size of applications.", "isCorrect": false },
+        { "text": "Increasing the speed of the system fan.", "isCorrect": false }
+      ],
+      "explanation": "Efficiency aims to maximize CPU utilization, ensuring the CPU is kept busy executing processes as much as possible."
+    },
+    {
+      "id": "CAO-ch7-q9",
+      "question": "How is 'Response Time' defined in CPU scheduling?",
+      "type": "single",
+      "options": [
+        { "text": "The time it takes to boot up the computer.", "isCorrect": false },
+        { "text": "The time required to save a file to the disk.", "isCorrect": false },
+        { "text": "The time between a request submission and the first response from the system.", "isCorrect": true },
+        { "text": "The total duration a process stays in the RAM.", "isCorrect": false }
+      ],
+      "explanation": "Response time is the time taken from the submission of a request until the first response is produced."
+    },
+    {
+      "id": "CAO-ch7-q10",
+      "question": "What is the definition of 'Turnaround Time'?",
+      "type": "single",
+      "options": [
+        { "text": "The time it takes for the CPU to switch contexts.", "isCorrect": false },
+        { "text": "The total time between process submission and its completion.", "isCorrect": true },
+        { "text": "The time a process spends waiting in the ready queue.", "isCorrect": false },
+        { "text": "The time taken to install the operating system.", "isCorrect": false }
+      ],
+      "explanation": "Turnaround time is the total interval from the time of submission of a process to the time of its completion."
+    },
+    {
+      "id": "CAO-ch7-q11",
+      "question": "What does 'Throughput' measure in a scheduling context?",
+      "type": "single",
+      "options": [
+        { "text": "The number of processes completed within a given time period.", "isCorrect": true },
+        { "text": "The amount of data transferred over the internet.", "isCorrect": false },
+        { "text": "The speed of the system bus.", "isCorrect": false },
+        { "text": "The capacity of the RAM modules.", "isCorrect": false }
+      ],
+      "explanation": "Throughput is defined as the number of jobs or processes completed within a specific unit of time."
+    },
+    {
+      "id": "CAO-ch7-q12",
+      "question": "Which criteria should be MAXIMIZED in CPU scheduling?",
+      "type": "single",
+      "options": [
+        { "text": "CPU Utilization and Throughput.", "isCorrect": true },
+        { "text": "Waiting Time and Response Time.", "isCorrect": false },
+        { "text": "Turnaround Time and Starvation.", "isCorrect": false },
+        { "text": "Context Switching and Interrupts.", "isCorrect": false }
+      ],
+      "explanation": "A good scheduling algorithm should maximize CPU Utilization and Throughput ."
+    },
+    {
+      "id": "CAO-ch7-q13",
+      "question": "Which criteria should be MINIMIZED in CPU scheduling?",
+      "type": "single",
+      "options": [
+        { "text": "CPU Utilization.", "isCorrect": false },
+        { "text": "Turnaround time, Waiting time, and Response time.", "isCorrect": true },
+        { "text": "Throughput and Fairness.", "isCorrect": false },
+        { "text": "Process Priority.", "isCorrect": false }
+      ],
+      "explanation": "Scheduling aims to minimize Turnaround time, Waiting time, and Response time."
+    },
+    {
+      "id": "CAO-ch7-q14",
+      "question": "What does a 'Process State' represent?",
+      "type": "single",
+      "options": [
+        { "text": "The geographical location of the server running the process.", "isCorrect": false },
+        { "text": "The current activity of a process during its lifetime.", "isCorrect": true },
+        { "text": "The size of the process in the hard disk.", "isCorrect": false },
+        { "text": "The programming language used to write the process.", "isCorrect": false }
+      ],
+      "explanation": "A process state indicates the current activity of the process, such as whether it is running, waiting, or ready."
+    },
+    {
+      "id": "CAO-ch7-q15",
+      "question": "Which of the following is a valid list of main process states?",
+      "type": "single",
+      "options": [
+        { "text": "New, Ready, Running, Waiting, Terminated.", "isCorrect": true },
+        { "text": "Start, Pause, Stop, Rewind, Play.", "isCorrect": false },
+        { "text": "Input, Processing, Storage, Output, Error.", "isCorrect": false },
+        { "text": "Booting, Loading, Crashing, Updating, Saving.", "isCorrect": false }
+      ],
+      "explanation": "The standard process states are New, Ready, Running, Waiting (or Blocked), and Terminated ."
+    },
+    {
+      "id": "CAO-ch7-q16",
+      "question": "What is occurring when a process is in the 'New' state?",
+      "type": "single",
+      "options": [
+        { "text": "The process is being created.", "isCorrect": true },
+        { "text": "The process is executing instructions.", "isCorrect": false },
+        { "text": "The process is waiting for I/O.", "isCorrect": false },
+        { "text": "The process has finished execution.", "isCorrect": false }
+      ],
+      "explanation": "The 'New' state represents the initial state where the process is being created."
+    },
+    {
+      "id": "CAO-ch7-q17",
+      "question": "What defines the 'Ready' state?",
+      "type": "single",
+      "options": [
+        { "text": "The process has been admitted and is waiting to be assigned to the CPU.", "isCorrect": true },
+        { "text": "The process is currently using the CPU.", "isCorrect": false },
+        { "text": "The process is waiting for a user input.", "isCorrect": false },
+        { "text": "The process is being removed from memory.", "isCorrect": false }
+      ],
+      "explanation": "In the 'Ready' state, the process is loaded in main memory and is waiting to be dispatched to the CPU for execution."
+    },
+    {
+      "id": "CAO-ch7-q18",
+      "question": "What is happening during the 'Running' state?",
+      "type": "single",
+      "options": [
+        { "text": "The process is paused.", "isCorrect": false },
+        { "text": "The process is waiting for an event.", "isCorrect": false },
+        { "text": "The process instructions are being executed on the CPU.", "isCorrect": true },
+        { "text": "The process is waiting in the long-term scheduler.", "isCorrect": false }
+      ],
+      "explanation": "The 'Running' state means the process currently holds the CPU and its instructions are being executed."
+    },
+    {
+      "id": "CAO-ch7-q19",
+      "question": "What characterizes the 'Waiting' (or Blocked) state?",
+      "type": "single",
+      "options": [
+        { "text": "The process is actively computing data.", "isCorrect": false },
+        { "text": "The process is waiting for an I/O operation or event to complete.", "isCorrect": true },
+        { "text": "The process has completed and is exiting.", "isCorrect": false },
+        { "text": "The process is in the job queue waiting for admission.", "isCorrect": false }
+      ],
+      "explanation": "In the 'Waiting' state, the process cannot execute until a specific event occurs, such as an I/O completion."
+    },
+    {
+      "id": "CAO-ch7-q20",
+      "question": "What signifies the 'Terminated' state?",
+      "type": "single",
+      "options": [
+        { "text": "The process is suspended temporarily.", "isCorrect": false },
+        { "text": "The process has finished execution and is removed.", "isCorrect": true },
+        { "text": "The process is waiting for the CPU.", "isCorrect": false },
+        { "text": "The process is being swapped to disk.", "isCorrect": false }
+      ],
+      "explanation": "The 'Terminated' state indicates that the process has finished execution."
+    },
+    {
+      "id": "CAO-ch7-q21",
+      "question": "What event causes a process to transition from 'Running' to 'Waiting'?",
+      "type": "single",
+      "options": [
+        { "text": "The scheduler dispatches the process.", "isCorrect": false },
+        { "text": "An interrupt occurs.", "isCorrect": false },
+        { "text": "An I/O request or event wait is issued.", "isCorrect": true },
+        { "text": "The process finishes execution.", "isCorrect": false }
+      ],
+      "explanation": "A process moves from Running to Waiting if it needs to wait for an I/O operation or another event."
+    },
+    {
+      "id": "CAO-ch7-q22",
+      "question": "What event causes a process to transition from 'Running' to 'Ready'?",
+      "type": "single",
+      "options": [
+        { "text": "I/O completion.", "isCorrect": false },
+        { "text": "An interrupt or time slice expiration.", "isCorrect": true },
+        { "text": "Process termination.", "isCorrect": false },
+        { "text": "Admission to the system.", "isCorrect": false }
+      ],
+      "explanation": "An interrupt (like a timer expiry) will cause a running process to be preempted and moved back to the Ready queue."
+    },
+    {
+      "id": "CAO-ch7-q23",
+      "question": "What is 'Preemptive Scheduling'?",
+      "type": "single",
+      "options": [
+        { "text": "A method where a process keeps the CPU until it finishes.", "isCorrect": false },
+        { "text": "A method where the OS never intervenes.", "isCorrect": false },
+        { "text": "A method where a running process can be temporarily suspended by the scheduler.", "isCorrect": true },
+        { "text": "A method used only in batch systems.", "isCorrect": false }
+      ],
+      "explanation": "Preemptive scheduling allows a running process to be temporarily suspended (preempted) if a higher priority process arrives or a time slice ends."
+    },
+    {
+      "id": "CAO-ch7-q24",
+      "question": "Which of the following algorithms is typically PREEMPTIVE?",
+      "type": "single",
+      "options": [
+        { "text": "First Come First Serve (FCFS).", "isCorrect": false },
+        { "text": "Round Robin (RR).", "isCorrect": true },
+        { "text": "Standard Shortest Job First (non-preemptive).", "isCorrect": false },
+        { "text": "Batch Processing.", "isCorrect": false }
+      ],
+      "explanation": "Round Robin is a classic preemptive scheduling algorithm that uses time slices."
+    },
+    {
+      "id": "CAO-ch7-q25",
+      "question": "What is 'Non-preemptive Scheduling'?",
+      "type": "single",
+      "options": [
+        { "text": "The OS forces processes to stop randomly.", "isCorrect": false },
+        { "text": "A process releases the CPU only after completion or waiting.", "isCorrect": true },
+        { "text": "Processes share the CPU in small time slots.", "isCorrect": false },
+        { "text": "It is used in modern real-time systems exclusively.", "isCorrect": false }
+      ],
+      "explanation": "In non-preemptive scheduling, once a process gets the CPU, it keeps it until it terminates or switches to a waiting state."
+    },
+    {
+      "id": "CAO-ch7-q26",
+      "question": "Which algorithm is an example of NON-PREEMPTIVE scheduling?",
+      "type": "single",
+      "options": [
+        { "text": "Round Robin.", "isCorrect": false },
+        { "text": "First Come First Serve (FCFS).", "isCorrect": true },
+        { "text": "Multilevel Feedback Queue.", "isCorrect": false },
+        { "text": "SRTF (Shortest Remaining Time First).", "isCorrect": false }
+      ],
+      "explanation": "FCFS is a non-preemptive algorithm; the first process to arrive runs to completion before the next one starts."
+    },
+    {
+      "id": "CAO-ch7-q27",
+      "question": "How does FCFS (First Come First Serve) scheduling work?",
+      "type": "single",
+      "options": [
+        { "text": "It schedules processes based on their size.", "isCorrect": false },
+        { "text": "It schedules processes in the order they arrive in the ready queue.", "isCorrect": true },
+        { "text": "It schedules processes based on priority.", "isCorrect": false },
+        { "text": "It randomly selects a process.", "isCorrect": false }
+      ],
+      "explanation": "FCFS schedules processes simply by the order of their arrival time in the ready queue."
+    },
+    {
+      "id": "CAO-ch7-q28",
+      "question": "Is FCFS Preemptive or Non-preemptive?",
+      "type": "single",
+      "options": [
+        { "text": "Preemptive.", "isCorrect": false },
+        { "text": "Non-preemptive.", "isCorrect": true },
+        { "text": "Both.", "isCorrect": false },
+        { "text": "Neither.", "isCorrect": false }
+      ],
+      "explanation": "FCFS is strictly non-preemptive."
+    },
+    {
+      "id": "CAO-ch7-q29",
+      "question": "What is 'Burst Time' (TB)?",
+      "type": "single",
+      "options": [
+        { "text": "The time a process arrives.", "isCorrect": false },
+        { "text": "The amount of time a process requires to execute on the CPU.", "isCorrect": true },
+        { "text": "The time a process spends waiting.", "isCorrect": false },
+        { "text": "The time the CPU is idle.", "isCorrect": false }
+      ],
+      "explanation": "Burst time (or CPU burst) is the amount of time the process needs the CPU to complete its execution."
+    },
+    {
+      "id": "CAO-ch7-q30",
+      "question": "What defines 'Arrival Time' (TA)?",
+      "type": "single",
+      "options": [
+        { "text": "The time at which a process enters the ready queue.", "isCorrect": true },
+        { "text": "The time a process leaves the system.", "isCorrect": false },
+        { "text": "The time a process is terminated.", "isCorrect": false },
+        { "text": "The time the CPU starts executing the process.", "isCorrect": false }
+      ],
+      "explanation": "Arrival time is the specific time when a process enters the ready queue."
+    },
+    {
+      "id": "CAO-ch7-q31",
+      "question": "What is 'Completion Time' (CT)?",
+      "type": "single",
+      "options": [
+        { "text": "The time when a process is created.", "isCorrect": false },
+        { "text": "The time at which a process finishes execution.", "isCorrect": true },
+        { "text": "The time the process is interrupted.", "isCorrect": false },
+        { "text": "The total duration of the burst.", "isCorrect": false }
+      ],
+      "explanation": "Completion time is the point in time when the process finishes its execution completely."
+    },
+    {
+      "id": "CAO-ch7-q32",
+      "question": "What is the formula for Turnaround Time (TT)?",
+      "type": "single",
+      "options": [
+        { "text": "TT = Completion Time - Arrival Time.", "isCorrect": true },
+        { "text": "TT = Arrival Time - Burst Time.", "isCorrect": false },
+        { "text": "TT = Completion Time + Waiting Time.", "isCorrect": false },
+        { "text": "TT = Burst Time - Waiting Time.", "isCorrect": false }
+      ],
+      "explanation": "Turnaround time is calculated as Completion Time minus Arrival Time (TT = CT - AT), or Waiting Time plus Burst Time."
+    },
+    {
+      "id": "CAO-ch7-q33",
+      "question": "What is the formula for Waiting Time (TW)?",
+      "type": "single",
+      "options": [
+        { "text": "TW = Arrival Time + Burst Time.", "isCorrect": false },
+        { "text": "TW = Completion Time - Waiting Time.", "isCorrect": false },
+        { "text": "TW = Turnaround Time - Burst Time.", "isCorrect": true },
+        { "text": "TW = Response Time + Arrival Time.", "isCorrect": false }
+      ],
+      "explanation": "Waiting time is the total Turnaround Time minus the Burst Time (TW = TT - TB)."
+    },
+    {
+      "id": "CAO-ch7-q34",
+      "question": "How is Response Time (RT) calculated?",
+      "type": "single",
+      "options": [
+        { "text": "RT = Completion Time - Arrival Time.", "isCorrect": false },
+        { "text": "RT = First CPU allocation time - Arrival time.", "isCorrect": true },
+        { "text": "RT = Burst Time - Waiting Time.", "isCorrect": false },
+        { "text": "RT = Waiting Time + Burst Time.", "isCorrect": false }
+      ],
+      "explanation": "Response time is the time from arrival until the first time the CPU is allocated to the process."
+    },
+    {
+      "id": "CAO-ch7-q35",
+      "question": "How is Average Turnaround Time calculated?",
+      "type": "single",
+      "options": [
+        { "text": "Sum of all burst times divided by 2.", "isCorrect": false },
+        { "text": "Sum of turnaround times of all processes divided by the number of processes.", "isCorrect": true },
+        { "text": "The turnaround time of the last process.", "isCorrect": false },
+        { "text": "The average of arrival times.", "isCorrect": false }
+      ],
+      "explanation": "The average is found by summing the Turnaround Times of all processes and dividing by the total count of processes."
+    },
+    {
+      "id": "CAO-ch7-q36",
+      "question": "How is Average Waiting Time calculated?",
+      "type": "single",
+      "options": [
+        { "text": "Sum of waiting times of all processes divided by the number of processes.", "isCorrect": true },
+        { "text": "Wait time of the first process divided by the last.", "isCorrect": false },
+        { "text": "Sum of burst times minus sum of arrival times.", "isCorrect": false },
+        { "text": "Total completion time divided by process count.", "isCorrect": false }
+      ],
+      "explanation": "The average is found by summing the Waiting Times of all processes and dividing by the total count of processes."
+    },
+    {
+      "id": "CAO-ch7-q37",
+      "question": "What is the function of the Long-term Scheduler?",
+      "type": "single",
+      "options": [
+        { "text": "It decides which processes are admitted into the ready queue.", "isCorrect": true },
+        { "text": "It switches the CPU between processes every millisecond.", "isCorrect": false },
+        { "text": "It handles interrupts from I/O devices.", "isCorrect": false },
+        { "text": "It removes processes from memory.", "isCorrect": false }
+      ],
+      "explanation": "The long-term scheduler determines which programs are admitted to the system for processing (New -> Ready) ."
+    },
+    {
+      "id": "CAO-ch7-q38",
+      "question": "What is the function of the Short-term Scheduler?",
+      "type": "single",
+      "options": [
+        { "text": "It creates new processes.", "isCorrect": false },
+        { "text": "It selects which ready process executes next on the CPU.", "isCorrect": true },
+        { "text": "It manages the hard disk storage.", "isCorrect": false },
+        { "text": "It saves process data to a log file.", "isCorrect": false }
+      ],
+      "explanation": "The short-term scheduler (or CPU scheduler) selects a process from the ready queue to execute on the CPU."
+    },
+    {
+      "id": "CAO-ch7-q39",
+      "question": "What is the function of the Medium-term Scheduler?",
+      "type": "single",
+      "options": [
+        { "text": "It formats the hard drive.", "isCorrect": false },
+        { "text": "It suspends and resumes processes (swapping) to manage memory.", "isCorrect": true },
+        { "text": "It schedules the booting of the OS.", "isCorrect": false },
+        { "text": "It controls the speed of the mouse.", "isCorrect": false }
+      ],
+      "explanation": "The medium-term scheduler removes processes from memory (swapping out) and reintroduces them (swapping in) to manage the degree of multiprogramming."
+    },
+    {
+      "id": "CAO-ch7-q40",
+      "question": "Why is efficient process management important?",
+      "type": "single",
+      "options": [
+        { "text": "It allows the computer to run without a power source.", "isCorrect": false },
+        { "text": "It eliminates the need for antivirus software.", "isCorrect": false },
+        { "text": "It enables multitasking, efficient CPU usage, responsiveness, and stability.", "isCorrect": true },
+        { "text": "It increases the physical clock speed of the processor.", "isCorrect": false }
+      ],
+      "explanation": "Process management is crucial for enabling multitasking, ensuring the CPU is used efficiently, providing system responsiveness, and maintaining stability."
+    },
+    {
+      "id": "CAO-ch7-q41",
+      "question": "What is the main drawback of FCFS scheduling?",
+      "type": "single",
+      "options": [
+        { "text": "It is too complex to implement.", "isCorrect": false },
+        { "text": "It causes high context switching overhead.", "isCorrect": false },
+        { "text": "It never allows a process to finish.", "isCorrect": false },
+        { "text": "It may cause long waiting times (convoy effect) for short processes.", "isCorrect": true }
+      ],
+      "explanation": "FCFS can result in the 'convoy effect', where short processes get stuck waiting behind a long process, leading to high average waiting times."
+    }
+  ]
+}

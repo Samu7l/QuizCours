@@ -1,0 +1,608 @@
+{
+  "id": "CAO-ch4",
+  "type": "module",
+  "title": "Chapter 4 - Memory, Storage and Endianness",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "CAO-ch4-q1",
+      "question": "What is the fundamental definition of computer memory?",
+      "type": "single",
+      "options": [
+        { "text": "A physical mechanism that generates the system clock.", "isCorrect": false },
+        { "text": "A combination of memory cells, where each cell is 8 bits long and stores data as 0s and 1s.", "isCorrect": true },
+        { "text": "A continuous analog signal storage system used for audio processing.", "isCorrect": false },
+        { "text": "The central processing unit's arithmetic logic circuitry.", "isCorrect": false }
+      ],
+      "explanation": "Computer memory is a combination of memory cells. Each cell length is 8 bits, and every data stored follows bit data such as 0s and 1s."
+    },
+    {
+      "id": "CAO-ch4-q2",
+      "question": "In what form is data stored within computer memory?",
+      "type": "single",
+      "options": [
+        { "text": "Decimal numbers (0-9).", "isCorrect": false },
+        { "text": "Hexadecimal codes directly.", "isCorrect": false },
+        { "text": "Binary form using bits (0s and 1s).", "isCorrect": true },
+        { "text": "ASCII characters directly.", "isCorrect": false }
+      ],
+      "explanation": "Every data item stored in computer memory follows bit data, specifically represented as 0s and 1s."
+    },
+    {
+      "id": "CAO-ch4-q3",
+      "question": "What are the two main types of computer memory?",
+      "type": "single",
+      "options": [
+        { "text": "Input Memory and Output Memory.", "isCorrect": false },
+        { "text": "Primary Memory and Secondary Memory.", "isCorrect": true },
+        { "text": "Volatile Memory and Flash Memory.", "isCorrect": false },
+        { "text": "Static Memory and Dynamic Memory.", "isCorrect": false }
+      ],
+      "explanation": "The breakdown of Computer Memory includes two main branches: Primary Memory and Secondary Memory ."
+    },
+    {
+      "id": "CAO-ch4-q4",
+      "question": "What is the Memory Hierarchy?",
+      "type": "single",
+      "options": [
+        { "text": "The physical sequence of chips on the motherboard.", "isCorrect": false },
+        { "text": "An organization of memory levels based on speed, cost, and capacity.", "isCorrect": true },
+        { "text": "The order in which the operating system loads drivers.", "isCorrect": false },
+        { "text": "A file system structure used for organizing folders.", "isCorrect": false }
+      ],
+      "explanation": "Memory hierarchy organizes storage based on fundamental properties where fast storage costs more and has less capacity, while slower storage is cheaper and larger ."
+    },
+    {
+      "id": "CAO-ch4-q5",
+      "question": "The memory hierarchy is divided into which two main categories?",
+      "type": "single",
+      "options": [
+        { "text": "Internal (Primary) and External (Secondary).", "isCorrect": true },
+        { "text": "Online and Offline storage.", "isCorrect": false },
+        { "text": "Fast Access and Slow Access.", "isCorrect": false },
+        { "text": "Digital and Analog memory.", "isCorrect": false }
+      ],
+      "explanation": "The hierarchy design is divided into Internal Memory (Primary) and External Memory (Secondary) ."
+    },
+    {
+      "id": "CAO-ch4-q6",
+      "question": "Which components are considered part of Internal (Primary) Memory?",
+      "type": "single",
+      "options": [
+        { "text": "Hard Disk, SSD, and Flash Memory.", "isCorrect": false },
+        { "text": "CPU Registers, Cache Memory, and Main Memory.", "isCorrect": true },
+        { "text": "Optical Disk, Magnetic Tape, and Cloud Storage.", "isCorrect": false },
+        { "text": "Keyboard buffer, Mouse buffer, and Printer spool.", "isCorrect": false }
+      ],
+      "explanation": "Internal Memory comprises Main Memory, Cache Memory, and CPU registers. These are directly accessible by the processor."
+    },
+    {
+      "id": "CAO-ch4-q7",
+      "question": "Which components are included in External (Secondary) Memory?",
+      "type": "single",
+      "options": [
+        { "text": "L1, L2, and L3 Cache.", "isCorrect": false },
+        { "text": "Registers and Accumulators.", "isCorrect": false },
+        { "text": "RAM and ROM.", "isCorrect": false },
+        { "text": "Magnetic Disks, Optical Disks, and Magnetic Tapes.", "isCorrect": true }
+      ],
+      "explanation": "External Memory comprises Magnetic Disk, Optical Disk, Magnetic Tape, and other peripheral storage devices."
+    },
+    {
+      "id": "CAO-ch4-q8",
+      "question": "What is the primary role of a Register in the memory hierarchy?",
+      "type": "single",
+      "options": [
+        { "text": "To store the operating system permanently.", "isCorrect": false },
+        { "text": "A small storage location in the CPU to temporarily hold data and addresses.", "isCorrect": true },
+        { "text": "To backup data in case of power failure.", "isCorrect": false },
+        { "text": "To manage the file system directory structure.", "isCorrect": false }
+      ],
+      "explanation": "A register is a small permanent storage location within a CPU used to store or hold data, information, and addresses temporarily."
+    },
+    {
+      "id": "CAO-ch4-q9",
+      "question": "Do CPU registers store data permanently?",
+      "type": "single",
+      "options": [
+        { "text": "Yes, they retain data even when the computer is off.", "isCorrect": false },
+        { "text": "No, data stored is temporary and not permanent.", "isCorrect": true },
+        { "text": "Yes, but only General Purpose Registers.", "isCorrect": false },
+        { "text": "Yes, they are a type of non-volatile ROM.", "isCorrect": false }
+      ],
+      "explanation": "Data in registers is not stored permanently. Registers hold information temporarily for processing."
+    },
+    {
+      "id": "CAO-ch4-q10",
+      "question": "What are the two main types of registers?",
+      "type": "single",
+      "options": [
+        { "text": "Volatile and Non-Volatile Registers.", "isCorrect": false },
+        { "text": "Static and Dynamic Registers.", "isCorrect": false },
+        { "text": "General Purpose Registers and Special Purpose Registers.", "isCorrect": true },
+        { "text": "Primary and Secondary Registers.", "isCorrect": false }
+      ],
+      "explanation": "There are two types of registers: General Purpose Registers and Special Purpose Registers."
+    },
+    {
+      "id": "CAO-ch4-q11",
+      "question": "What describes Cache Memory best?",
+      "type": "single",
+      "options": [
+        { "text": "One of the slowest memories used for archival.", "isCorrect": false },
+        { "text": "One of the fastest memories, residing between CPU and Main Memory.", "isCorrect": true },
+        { "text": "External memory used for large file storage.", "isCorrect": false },
+        { "text": "Memory located on the network card for internet buffering.", "isCorrect": false }
+      ],
+      "explanation": "Cache memory is one of the fastest memories. It resides between the CPU and main memory and stores frequently used data."
+    },
+    {
+      "id": "CAO-ch4-q12",
+      "question": "What happens to the content of Cache Memory when the computer is turned off?",
+      "type": "single",
+      "options": [
+        { "text": "It is saved to the hard disk automatically.", "isCorrect": false },
+        { "text": "It remains in the cache for 24 hours.", "isCorrect": false },
+        { "text": "It is cleared automatically.", "isCorrect": true },
+        { "text": "It is compressed into the BIOS chip.", "isCorrect": false }
+      ],
+      "explanation": "Once the computer gets turned off, the cache memory will be cleared automatically."
+    },
+    {
+      "id": "CAO-ch4-q13",
+      "question": "Which cache levels are typically supported in modern computer systems?",
+      "type": "single",
+      "options": [
+        { "text": "L1, L2, and L3.", "isCorrect": true },
+        { "text": "Primary and Secondary only.", "isCorrect": false },
+        { "text": "A, B, and C levels.", "isCorrect": false },
+        { "text": "Alpha, Beta, and Gamma.", "isCorrect": false }
+      ],
+      "explanation": "Nowadays, modern computer systems support L1, L2, and L3 caches ."
+    },
+    {
+      "id": "CAO-ch4-q14",
+      "question": "What is the definition of Main Memory?",
+      "type": "single",
+      "options": [
+        { "text": "External storage connected via USB.", "isCorrect": false },
+        { "text": "A small buffer inside the CPU logic unit.", "isCorrect": false },
+        { "text": "Internal storage availed to store data and programs temporarily or permanently.", "isCorrect": true },
+        { "text": "A type of magnetic tape used for backups.", "isCorrect": false }
+      ],
+      "explanation": "Main memory is an internal storage area in a computer, which is availed to store data and programs either permanently or temporarily."
+    },
+    {
+      "id": "CAO-ch4-q15",
+      "question": "Why is Main Memory considered a critical component?",
+      "type": "single",
+      "options": [
+        { "text": "It must scale in size, efficiency, and cost to maintain performance growth.", "isCorrect": true },
+        { "text": "It is the only component that requires cooling.", "isCorrect": false },
+        { "text": "It provides power to the CPU.", "isCorrect": false },
+        { "text": "It is the only permanent storage in a computer.", "isCorrect": false }
+      ],
+      "explanation": "Main memory is critical for all systems (server, mobile, etc.) and must scale in size, technology, efficiency, and cost to maintain performance benefits."
+    },
+    {
+      "id": "CAO-ch4-q16",
+      "question": "How does the CPU connects to Main Memory?",
+      "type": "single",
+      "options": [
+        { "text": "Via a direct wireless link.", "isCorrect": false },
+        { "text": "Through a memory bus (Address and Data buses).", "isCorrect": true },
+        { "text": "Through the SATA interface.", "isCorrect": false },
+        { "text": "Using the USB controller.", "isCorrect": false }
+      ],
+      "explanation": "Main memory is connected to the CPU via a memory bus, which actually consists of an address bus and a data bus."
+    },
+    {
+      "id": "CAO-ch4-q17",
+      "question": "What is the first step the CPU takes to access data in Main Memory?",
+      "type": "single",
+      "options": [
+        { "text": "It sends the data directly through the data bus.", "isCorrect": false },
+        { "text": "It sends a memory address through the address bus.", "isCorrect": true },
+        { "text": "It waits for the memory to signal availability.", "isCorrect": false },
+        { "text": "It clears the cache memory.", "isCorrect": false }
+      ],
+      "explanation": "The CPU firstly sends a number through an address bus, a number called memory address, that indicates the desired location of data."
+    },
+    {
+      "id": "CAO-ch4-q18",
+      "question": "Main memory is principally divided into which two types?",
+      "type": "single",
+      "options": [
+        { "text": "Cache and Register.", "isCorrect": false },
+        { "text": "HDD and SSD.", "isCorrect": false },
+        { "text": "Virtual and Physical.", "isCorrect": false },
+        { "text": "RAM and ROM.", "isCorrect": true }
+      ],
+      "explanation": "Main memory is divided into RAM (Random Access Memory) and ROM (Read Only Memory) ."
+    },
+    {
+      "id": "CAO-ch4-q19",
+      "question": "What defines Secondary Storage?",
+      "type": "single",
+      "options": [
+        { "text": "Storage that is volatile and extremely fast.", "isCorrect": false },
+        { "text": "Small storage located directly on the CPU die.", "isCorrect": false },
+        { "text": "Non-volatile storage outside primary memory, large and inexpensive.", "isCorrect": true },
+        { "text": "Direct access memory used for active program execution.", "isCorrect": false }
+      ],
+      "explanation": "Secondary storage is anything outside of primary memory. It is non-volatile, large, cheap, and does not permit direct instruction execution."
+    },
+    {
+      "id": "CAO-ch4-q20",
+      "question": "Why is secondary storage referred to as 'non-volatile'?",
+      "type": "single",
+      "options": [
+        { "text": "It does not lose data when the device is powered down.", "isCorrect": true },
+        { "text": "It loses data instantly when power is lost.", "isCorrect": false },
+        { "text": "It requires a constant power supply to retain data.", "isCorrect": false },
+        { "text": "It can never be erased.", "isCorrect": false }
+      ],
+      "explanation": "Secondary storage does not lose the data when the device is powered down, making it non-volatile."
+    },
+    {
+      "id": "CAO-ch4-q21",
+      "question": "How does the computer access data from secondary storage?",
+      "type": "single",
+      "options": [
+        { "text": "Via direct load/store instructions from the CPU.", "isCorrect": false },
+        { "text": "Through I/O channels, transferring data to an intermediate area in primary storage.", "isCorrect": true },
+        { "text": "By connecting the storage device directly to the L1 cache.", "isCorrect": false },
+        { "text": "Using wireless transmission to the ALU.", "isCorrect": false }
+      ],
+      "explanation": "The computer uses input/output channels to access secondary storage and transfers the desired data using an intermediate area in primary storage."
+    },
+    {
+      "id": "CAO-ch4-q22",
+      "question": "What is the purpose of a file system in secondary storage?",
+      "type": "single",
+      "options": [
+        { "text": "To cool down the storage device.", "isCorrect": false },
+        { "text": "To organize data into files/directories and provide metadata.", "isCorrect": true },
+        { "text": "To increase the physical speed of the disk rotation.", "isCorrect": false },
+        { "text": "To convert AC power to DC for the drive.", "isCorrect": false }
+      ],
+      "explanation": "The file system provides the abstraction necessary to organize data into files and directories and provides metadata like owner, access time, and permissions."
+    },
+    {
+      "id": "CAO-ch4-q23",
+      "question": "What are the two main types of RAM?",
+      "type": "single",
+      "options": [
+        { "text": "Flash and Optical.", "isCorrect": false },
+        { "text": "SRAM and DRAM.", "isCorrect": true },
+        { "text": "DDR and QDR.", "isCorrect": false },
+        { "text": "Prom and Eprom.", "isCorrect": false }
+      ],
+      "explanation": "The RAM family includes two important memory devices: Static RAM (SRAM) and Dynamic RAM (DRAM)."
+    },
+    {
+      "id": "CAO-ch4-q24",
+      "question": "How long does SRAM retain its data?",
+      "type": "single",
+      "options": [
+        { "text": "For about 4 milliseconds.", "isCorrect": false },
+        { "text": "As long as electrical power is applied to the chip.", "isCorrect": true },
+        { "text": "Forever, even without power.", "isCorrect": false },
+        { "text": "Only while the CPU is reading it.", "isCorrect": false }
+      ],
+      "explanation": "SRAM retains its contents as long as electrical power is applied to the chip."
+    },
+    {
+      "id": "CAO-ch4-q25",
+      "question": "What happens to the data in SRAM if power is lost?",
+      "type": "single",
+      "options": [
+        { "text": "It is automatically saved to the hard drive.", "isCorrect": false },
+        { "text": "It remains intact for a few hours.", "isCorrect": false },
+        { "text": "Its contents will be lost forever.", "isCorrect": true },
+        { "text": "It becomes read-only data.", "isCorrect": false }
+      ],
+      "explanation": "If the power is turned off or lost temporarily, the contents of SRAM will be lost forever."
+    },
+    {
+      "id": "CAO-ch4-q26",
+      "question": "What is the typical data lifetime of DRAM without refresh?",
+      "type": "single",
+      "options": [
+        { "text": "About 4 milliseconds.", "isCorrect": true },
+        { "text": "About 4 seconds.", "isCorrect": false },
+        { "text": "About 4 minutes.", "isCorrect": false },
+        { "text": "Indefinite.", "isCorrect": false }
+      ],
+      "explanation": "DRAM has an extremely short data lifetime, typically about four milliseconds, even when power is applied."
+    },
+    {
+      "id": "CAO-ch4-q27",
+      "question": "Why is DRAM useful despite its short data lifetime?",
+      "type": "single",
+      "options": [
+        { "text": "It doesn't need power.", "isCorrect": false },
+        { "text": "A controller refreshes the data before it expires.", "isCorrect": true },
+        { "text": "It is faster than SRAM.", "isCorrect": false },
+        { "text": "It is non-volatile.", "isCorrect": false }
+      ],
+      "explanation": "A DRAM controller is used to refresh the data before it expires, so the contents can be kept alive as long as needed."
+    },
+    {
+      "id": "CAO-ch4-q28",
+      "question": "What technique does DDR SDRAM use to improve performance?",
+      "type": "single",
+      "options": [
+        { "text": "It increases the voltage to the chip.", "isCorrect": false },
+        { "text": "It uses 'double pumping' to transfer data on both rising and falling clock edges.", "isCorrect": true },
+        { "text": "It eliminates the need for a clock signal entirely.", "isCorrect": false },
+        { "text": "It uses flash memory cells instead of capacitors.", "isCorrect": false }
+      ],
+      "explanation": "The DDR interface uses double pumping (transferring data on both the rising and falling edges of the clock signal)."
+    },
+    {
+      "id": "CAO-ch4-q29",
+      "question": "What is a key advantage of the DDR SDRAM interface?",
+      "type": "single",
+      "options": [
+        { "text": "It allows the clock frequency to be lowered, improving signal integrity.", "isCorrect": true },
+        { "text": "It requires double the power voltage.", "isCorrect": false },
+        { "text": "It makes the memory non-volatile.", "isCorrect": false },
+        { "text": "It removes the need for a memory controller.", "isCorrect": false }
+      ],
+      "explanation": "Keeping the clock frequency down reduces the signal integrity requirements on the circuit board."
+    },
+    {
+      "id": "CAO-ch4-q30",
+      "question": "How does DDR2 differ from standard DDR SDRAM regarding data transfers?",
+      "type": "single",
+      "options": [
+        { "text": "It performs four transfers per clock instead of two.", "isCorrect": true },
+        { "text": "It performs one transfer per clock.", "isCorrect": false },
+        { "text": "It transfers data only on the rising edge.", "isCorrect": false },
+        { "text": "It uses a slower internal bus.", "isCorrect": false }
+      ],
+      "explanation": "While DDR transfers data two times per clock, DDR2 SDRAM can perform four transfers per clock."
+    },
+    {
+      "id": "CAO-ch4-q31",
+      "question": "What technique allows DDR2 to double the bandwidth without increasing cell frequency?",
+      "type": "single",
+      "options": [
+        { "text": "Overclocking.", "isCorrect": false },
+        { "text": "Multiplexing with a wider internal bus.", "isCorrect": true },
+        { "text": "Liquid cooling.", "isCorrect": false },
+        { "text": "Using SRAM cells.", "isCorrect": false }
+      ],
+      "explanation": "DDR2 uses a bus that is twice as wide and I/O buffers that perform multiplexing to increase bandwidth without increasing operational frequency."
+    },
+    {
+      "id": "CAO-ch4-q32",
+      "question": "What is the defining characteristic of Read Only Memory (ROM)?",
+      "type": "single",
+      "options": [
+        { "text": "It is volatile and fast.", "isCorrect": false },
+        { "text": "It is non-volatile and data stored cannot be easily modified.", "isCorrect": true },
+        { "text": "It requires constant refreshing.", "isCorrect": false },
+        { "text": "It is used primarily for user file storage.", "isCorrect": false }
+      ],
+      "explanation": "ROM is non-volatile; it holds programs/data permanently when switched off, and stored data cannot be modified (in standard ROM)."
+    },
+    {
+      "id": "CAO-ch4-q33",
+      "question": "What critical program is typically stored in ROM?",
+      "type": "single",
+      "options": [
+        { "text": "The Microsoft Office suite.", "isCorrect": false },
+        { "text": "The Bootstrap Loader.", "isCorrect": true },
+        { "text": "The User's Desktop configuration.", "isCorrect": false },
+        { "text": "The Internet Browser cache.", "isCorrect": false }
+      ],
+      "explanation": "ROM stores a program called the bootstrap loader that helps start up the computer."
+    },
+    {
+      "id": "CAO-ch4-q34",
+      "question": "Which of the following is a type of ROM?",
+      "type": "single",
+      "options": [
+        { "text": "DDR3", "isCorrect": false },
+        { "text": "SRAM", "isCorrect": false },
+        { "text": "SDRAM", "isCorrect": false },
+        { "text": "EEPROM", "isCorrect": true }
+      ],
+      "explanation": "Types of ROM include PROM, EPROM, EEPROM, and Flash ROM."
+    },
+    {
+      "id": "CAO-ch4-q35",
+      "question": "What describes PROM (Programmable Read Only Memory)?",
+      "type": "single",
+      "options": [
+        { "text": "It can be erased by sunlight.", "isCorrect": false },
+        { "text": "It is empty when manufactured and can be permanently programmed by the user once.", "isCorrect": true },
+        { "text": "It is reprogrammable multiple times via software.", "isCorrect": false },
+        { "text": "It loses data when power is off.", "isCorrect": false }
+      ],
+      "explanation": "PROM is empty of data when manufactured and may be permanently programmed by the user."
+    },
+    {
+      "id": "CAO-ch4-q36",
+      "question": "How is an EPROM (Erasable Programmable ROM) erased?",
+      "type": "single",
+      "options": [
+        { "text": "By applying a high voltage electrical signal.", "isCorrect": false },
+        { "text": "By shining ultra-violet light through a small window on the chip.", "isCorrect": true },
+        { "text": "By formatting it in the operating system.", "isCorrect": false },
+        { "text": "By removing the battery.", "isCorrect": false }
+      ],
+      "explanation": "The EPROM chip has a small window allowing it to be erased by shining ultra-violet light on it."
+    },
+    {
+      "id": "CAO-ch4-q37",
+      "question": "What distinguishes EEPROM from EPROM?",
+      "type": "single",
+      "options": [
+        { "text": "It uses magnets to store data.", "isCorrect": false },
+        { "text": "It is reprogrammed electrically without using UV light.", "isCorrect": true },
+        { "text": "It is volatile.", "isCorrect": false },
+        { "text": "It cannot be reprogrammed.", "isCorrect": false }
+      ],
+      "explanation": "EEPROM is reprogrammed electrically without using Ultraviolet light."
+    },
+    {
+      "id": "CAO-ch4-q38",
+      "question": "What is Flash ROM?",
+      "type": "single",
+      "options": [
+        { "text": "A type of memory that requires a camera flash to program.", "isCorrect": false },
+        { "text": "Similar to EEPROM but can be reprogrammed while still in the computer.", "isCorrect": true },
+        { "text": "A volatile memory used for graphics.", "isCorrect": false },
+        { "text": "A storage device made of moving parts.", "isCorrect": false }
+      ],
+      "explanation": "Flash ROM is similar to EEPROM but can be reprogrammed while still in the computer, making upgrades easier."
+    },
+    {
+      "id": "CAO-ch4-q39",
+      "question": "Which of the following is NOT a core characteristic used to differentiate storage technologies?",
+      "type": "single",
+      "options": [
+        { "text": "Volatility.", "isCorrect": false },
+        { "text": "Accessibility.", "isCorrect": false },
+        { "text": "Color.", "isCorrect": true },
+        { "text": "Mutability.", "isCorrect": false }
+      ],
+      "explanation": "Core characteristics include Volatility, Differentiation, Accessibility, Addressability, and Mutability."
+    },
+    {
+      "id": "CAO-ch4-q40",
+      "question": "Which set represents the four types of computer storage devices mentioned?",
+      "type": "single",
+      "options": [
+        { "text": "RAM, ROM, Cache, Register.", "isCorrect": false },
+        { "text": "Magnetic, Optical, Flash, and Online Cloud Storage.", "isCorrect": true },
+        { "text": "Keyboard, Monitor, Printer, Mouse.", "isCorrect": false },
+        { "text": "USB, Firewire, Thunderbolt, Ethernet.", "isCorrect": false }
+      ],
+      "explanation": "The four types listed are Magnetic Storage, Optical Storage, Flash Memory, and Online Cloud Storage devices."
+    },
+    {
+      "id": "CAO-ch4-q41",
+      "question": "What is the smallest unit of computer memory?",
+      "type": "single",
+      "options": [
+        { "text": "Byte.", "isCorrect": false },
+        { "text": "Nibble.", "isCorrect": false },
+        { "text": "Bit.", "isCorrect": true },
+        { "text": "Word.", "isCorrect": false }
+      ],
+      "explanation": "The bit is defined as the smallest unit of computer memory."
+    },
+    {
+      "id": "CAO-ch4-q42",
+      "question": "How many bits constitute one Byte?",
+      "type": "single",
+      "options": [
+        { "text": "4 bits.", "isCorrect": false },
+        { "text": "8 bits.", "isCorrect": true },
+        { "text": "16 bits.", "isCorrect": false },
+        { "text": "32 bits.", "isCorrect": false }
+      ],
+      "explanation": "1 Byte = 8 bits."
+    },
+    {
+      "id": "CAO-ch4-q43",
+      "question": "How many bytes are in 1 Kilobyte (KB)?",
+      "type": "single",
+      "options": [
+        { "text": "1000 bytes.", "isCorrect": false },
+        { "text": "1024 bytes.", "isCorrect": true },
+        { "text": "512 bytes.", "isCorrect": false },
+        { "text": "2048 bytes.", "isCorrect": false }
+      ],
+      "explanation": "1 Kilobyte = 1024 bytes."
+    },
+    {
+      "id": "CAO-ch4-q44",
+      "question": "What is the definition of 'Endianness'?",
+      "type": "single",
+      "options": [
+        { "text": "The speed of data transfer on the bus.", "isCorrect": false },
+        { "text": "The physical size of the memory chip.", "isCorrect": false },
+        { "text": "The order in which bytes are arranged within a digital word.", "isCorrect": true },
+        { "text": "The error-checking capability of RAM.", "isCorrect": false }
+      ],
+      "explanation": "Endianness refers to the order in which bytes are arranged within a larger data type (digital word) in memory."
+    },
+    {
+      "id": "CAO-ch4-q45",
+      "question": "What defines Big Endian format?",
+      "type": "single",
+      "options": [
+        { "text": "The Least Significant Byte is at the smallest address.", "isCorrect": false },
+        { "text": "The Most Significant Byte is at the smallest memory address.", "isCorrect": true },
+        { "text": "Bytes are arranged randomly.", "isCorrect": false },
+        { "text": "Nibbles are swapped within each byte.", "isCorrect": false }
+      ],
+      "explanation": "In Big Endian, the Most Significant Byte (MSB) is stored at the smallest memory address."
+    },
+    {
+      "id": "CAO-ch4-q46",
+      "question": "What defines Little Endian format?",
+      "type": "single",
+      "options": [
+        { "text": "The Most Significant Byte is at the smallest address.", "isCorrect": false },
+        { "text": "The Least Significant Byte (LSB) is stored at the smallest memory address.", "isCorrect": true },
+        { "text": "The middle bytes are stored first.", "isCorrect": false },
+        { "text": "The data is stored in reverse bit order.", "isCorrect": false }
+      ],
+      "explanation": "In Little Endian, the Least Significant Byte (LSB) is stored at the smallest memory address."
+    },
+    {
+      "id": "CAO-ch4-q47",
+      "question": "If the value 0x12345678 is stored in Big Endian at address 0x00, what is the byte sequence?",
+      "type": "single",
+      "options": [
+        { "text": "0x00: 78, 0x01: 56, 0x02: 34, 0x03: 12", "isCorrect": false },
+        { "text": "0x00: 12, 0x01: 34, 0x02: 56, 0x03: 78", "isCorrect": true },
+        { "text": "0x00: 56, 0x01: 78, 0x02: 12, 0x03: 34", "isCorrect": false },
+        { "text": "0x00: 34, 0x01: 12, 0x02: 78, 0x03: 56", "isCorrect": false }
+      ],
+      "explanation": "In Big Endian, the MSB (12) is first. The sequence is 12, 34, 56, 78 ."
+    },
+    {
+      "id": "CAO-ch4-q48",
+      "question": "If the value 0x12345678 is stored in Little Endian at address 0x00, what is the byte sequence?",
+      "type": "single",
+      "options": [
+        { "text": "0x00: 12, 0x01: 34, 0x02: 56, 0x03: 78", "isCorrect": false },
+        { "text": "0x00: 78, 0x01: 56, 0x02: 34, 0x03: 12", "isCorrect": true },
+        { "text": "0x00: 34, 0x01: 12, 0x02: 78, 0x03: 56", "isCorrect": false },
+        { "text": "0x00: 78, 0x01: 12, 0x02: 34, 0x03: 56", "isCorrect": false }
+      ],
+      "explanation": "In Little Endian, the LSB (78) is first. The sequence is 78, 56, 34, 12 ."
+    },
+    {
+      "id": "CAO-ch4-q49",
+      "question": "What fundamental principle governs the design of the memory hierarchy?",
+      "type": "single",
+      "options": [
+        { "text": "Faster storage technologies cost more per byte and have less capacity.", "isCorrect": true },
+        { "text": "All memory types cost the same but differ in size.", "isCorrect": false },
+        { "text": "Larger memory is always faster than smaller memory.", "isCorrect": false },
+        { "text": "Slower memory is more volatile than faster memory.", "isCorrect": false }
+      ],
+      "explanation": "Fast storage technologies cost more per byte and have less capacity, while slower technologies are cheaper and larger ."
+    },
+    {
+      "id": "CAO-ch4-q50",
+      "question": "Why is a memory hierarchy approach important?",
+      "type": "single",
+      "options": [
+        { "text": "It complicates the hardware design to increase cost.", "isCorrect": false },
+        { "text": "It balances speed, cost, and capacity to improve overall system performance.", "isCorrect": true },
+        { "text": "It ensures that all data is stored in volatile memory.", "isCorrect": false },
+        { "text": "It allows the CPU to access the Hard Disk directly.", "isCorrect": false }
+      ],
+      "explanation": "The memory hierarchy approach organizes memory to bridge the gap between CPU speed and memory speed, optimizing for performance and cost."
+    }
+  ]
+}
