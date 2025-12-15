@@ -10,14 +10,16 @@
     <div id="app-loader" class="loader-overlay hidden">
         <div class="spinner">Loading resources...</div>
     </div>
-
     <header class="app-header">
-        <div class="logo">Semester Portal</div>
+        <div class="logo">
+            <button id="mobile-menu-btn" onclick="app.toggleMobileMenu()" style="display:none; margin-right:10px; background:none; border:1px solid rgba(255,255,255,0.5); font-size:1.2rem; padding: 2px 8px;">☰</button>
+            Semester Portal
+        </div>
         <nav>
             <button onclick="app.showHome()">Dashboard</button>
             <button onclick="app.showCustomBuilder()">Global Custom Quiz</button>
         </nav>
-    </header>
+    </header>   
 
     <div class="layout-container">
         

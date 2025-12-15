@@ -678,6 +678,11 @@ const app = {
         localStorage.setItem('customQuizzes', JSON.stringify(saved));
         alert("Quiz saved to sidebar!");
         app.renderSavedCustom();
+    },
+
+    toggleMobileMenu: () => {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('mobile-visible');
     }
 };
 
