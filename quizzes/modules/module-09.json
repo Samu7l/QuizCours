@@ -1,0 +1,199 @@
+{
+  "id": "module-09",
+  "type": "module",
+  "title": "Module 9: System and Endpoint Protection",
+  "passPercentage": 70,
+  "questions": [
+    {
+      "id": "m9-q1",
+      "question": "Which antimalware software approach can recognize various characteristics of known malware files to detect a threat?",
+      "type": "single",
+      "options": [
+        { "text": "heuristics-based", "isCorrect": false },
+        { "text": "routing-based", "isCorrect": false },
+        { "text": "signature-based", "isCorrect": true },
+        { "text": "behavior-based", "isCorrect": false }
+      ],
+      "explanation": "Antimalware programs may detect viruses using three different approaches: <b>signature-based</b> - by recognizing various characteristics of known malware files<br><b>heuristics-based</b> - by recognizing general features shared by various types of malware<br><b>behavior-based</b> - through analysis of suspicious activities"
+    },
+    {
+      "id": "m9-q2",
+      "question": "Match the Apple system security feature to its purpose.",
+      "type": "match",
+      "pairs": [
+        { "left": "Allows only authentic signed software to run", "right": "Gatekeeper" },
+        { "left": "Encrypted storage", "right": "FileVault" },
+        { "left": "Antimalware technology", "right": "XProtect" },
+        { "left": "Allows the hard drive to be wiped remotely", "right": "Find My Mac" }
+      ],
+      "explanation": "<b>Gatekeeper</b> ensures signed software. <b>FileVault</b> handles encryption. <b>XProtect</b> is the built-in antimalware. <b>Find My Mac</b> allows remote wiping."
+    },
+    {
+      "id": "m9-q3",
+      "question": "Which device in a LAN infrastructure is susceptible to MAC address-table overflow and spoofing attacks?",
+      "type": "single",
+      "options": [
+        { "text": "server", "isCorrect": false },
+        { "text": "workstation", "isCorrect": false },
+        { "text": "firewall", "isCorrect": false },
+        { "text": "switch", "isCorrect": true }
+      ],
+      "explanation": "<b>Switches</b> are LAN infrastructure devices interconnecting endpoints. They are susceptible to LAN-related attacks including MAC address-table overflow attacks, spoofing attacks, and VLAN attacks."
+    },
+    {
+      "id": "m9-q4",
+      "question": "In most host-based security suites, which function provides robust logging of security-related events and sends logs to a central location?",
+      "type": "single",
+      "options": [
+        { "text": "safe browsing", "isCorrect": false },
+        { "text": "anti-phishing", "isCorrect": false },
+        { "text": "telemetry", "isCorrect": true },
+        { "text": "intrusion detection and prevention", "isCorrect": false }
+      ],
+      "explanation": "The <b>telemetry</b> functionality in most host-based security suites provides robust logging functionality and submits logs to a central location for analysis."
+    },
+    {
+      "id": "m9-q5",
+      "question": "Which technology might increase the security challenge to the implementation of IoT in an enterprise environment?",
+      "type": "single",
+      "options": [
+        { "text": "CPU processing speed", "isCorrect": false },
+        { "text": "cloud computing", "isCorrect": true },
+        { "text": "data storage", "isCorrect": false },
+        { "text": "network bandwidth", "isCorrect": false }
+      ],
+      "explanation": "With <b>cloud computing</b>, boundaries of enterprise networks are expanded to include locations on the Internet for which the enterprises are not responsible. Malicious software might access the internal network endpoints to attack internal networks."
+    },
+    {
+      "id": "m9-q6",
+      "question": "Which statement describes agentless antivirus protection?",
+      "type": "single",
+      "options": [
+        { "text": "The antivirus protection is provided by the ISP.", "isCorrect": false },
+        { "text": "Host-based antivirus systems provide agentless antivirus protection.", "isCorrect": false },
+        { "text": "Antivirus scans are performed on hosts from a centralized system.", "isCorrect": true },
+        { "text": "The antivirus protection is provided by the router that is connected to a cloud service.", "isCorrect": false }
+      ],
+      "explanation": "<b>Agentless antivirus protection</b> performs scans on hosts from a centralized system, whereas agent-based protection runs on every protected machine."
+    },
+    {
+      "id": "m9-q7",
+      "question": "Which HIDS is an open-source based product?",
+      "type": "single",
+      "options": [
+        { "text": "OSSEC", "isCorrect": true },
+        { "text": "AlienVault USM", "isCorrect": false },
+        { "text": "Tripwire", "isCorrect": false },
+        { "text": "Cisco AMP", "isCorrect": false }
+      ],
+      "explanation": "The Open Source HIDS SECurity (<b>OSSEC</b>) software is an <b>open-source HIDS</b> that uses a central manager server and agents that are installed on the hosts that are to be monitored."
+    },
+    {
+      "id": "m9-q8",
+      "question": "In Windows Firewall, when is the Domain profile applied?",
+      "type": "single",
+      "options": [
+        { "text": "when the host is connected to a trusted network such as an internal business network", "isCorrect": true },
+        { "text": "when the host accesses the Internet", "isCorrect": false },
+        { "text": "when the host checks emails from an enterprise email server", "isCorrect": false },
+        { "text": "when the host is connected to an isolated network from the Internet by another security device", "isCorrect": false }
+      ],
+      "explanation": "The <b>Domain profile</b> in Windows Firewall configuration is for connections to a trusted network, such as a business network, that is assumed to have an adequate security infrastructure."
+    },
+    {
+      "id": "m9-q9",
+      "question": "What is a host-based intrusion detection system (HIDS)?",
+      "type": "single",
+      "options": [
+        { "text": "It combines the functionalities of antimalware applications with firewall protection.", "isCorrect": true },
+        { "text": "It detects and stops potential direct attacks but does not scan for malware.", "isCorrect": false },
+        { "text": "It is an agentless system that scans files on a host for potential malware.", "isCorrect": false },
+        { "text": "It identifies potential attacks and sends alerts but does not stop the traffic.", "isCorrect": false }
+      ],
+      "explanation": "A current <b>HIDS</b> is a comprehensive security application that combines the functionalities of <b>antimalware applications with firewall protection</b>. It not only detects malware but also prevents it from executing."
+    },
+    {
+      "id": "m9-q10",
+      "question": "As described by the SANS Institute, which attack surface includes the exploitation of vulnerabilities in wired and wireless protocols used by IoT devices?",
+      "type": "single",
+      "options": [
+        { "text": "network attack surface", "isCorrect": true },
+        { "text": "human attack surface", "isCorrect": false },
+        { "text": "Internet attack surface", "isCorrect": false },
+        { "text": "software attack surface", "isCorrect": false }
+      ],
+      "explanation": "The SANS Institute describes three components of the attack surface: <b>Network Attack Surface</b> - exploitation of vulnerabilities in networks<br><b>Software Attack Surface</b> - exploitation of vulnerabilities in web, cloud, or host-based software applications<br><b>Human Attack Surface</b> - exploitation of weaknesses in user behavior"
+    },
+    {
+      "id": "m9-q11",
+      "question": "Which statement describes the term attack surface?",
+      "type": "single",
+      "options": [
+        { "text": "It is the total sum of vulnerabilities in a system that is accessible to an attacker.", "isCorrect": true },
+        { "text": "It is the group of hosts that experiences the same attack.", "isCorrect": false },
+        { "text": "It is the total number of attacks toward an organization within a day.", "isCorrect": false },
+        { "text": "It is the network interface where attacks originate.", "isCorrect": false }
+      ],
+      "explanation": "An <b>attack surface</b> is the <b>total sum of the vulnerabilities</b> in a system that is accessible to an attacker. It can consist of open ports, software, network protocols, and users."
+    },
+    {
+      "id": "m9-q12",
+      "question": "As described by the SANS Institute, which attack surface includes the use of social engineering?",
+      "type": "single",
+      "options": [
+        { "text": "network attack surface", "isCorrect": false },
+        { "text": "software attack surface", "isCorrect": false },
+        { "text": "human attack surface", "isCorrect": true },
+        { "text": "Internet attack surface", "isCorrect": false }
+      ],
+      "explanation": "The SANS Institute describes three components of the attack surface: <b>Network Attack Surface</b> - exploitation of vulnerabilities in networks<br><b>Software Attack Surface</b> - exploitation of vulnerabilities in web, cloud, or host-based software applications<br><b>Human Attack Surface</b> - exploitation of weaknesses in user behavior"
+    },
+    {
+      "id": "m9-q13",
+      "question": "Which security endpoint setting would be used by a security analyst to determine if a computer has been configured to prevent a particular application from running?",
+      "type": "single",
+      "options": [
+        { "text": "blacklisting", "isCorrect": true },
+        { "text": "services", "isCorrect": false },
+        { "text": "baselining", "isCorrect": false },
+        { "text": "whitelisting", "isCorrect": false }
+      ],
+      "explanation": "<b>Blacklists</b> are applications that are prevented from executing because they pose a security risk. They can be manually entered or obtained from a centralized security system."
+    },
+    {
+      "id": "m9-q14",
+      "question": "What can you do to ensure that network operating software remains secure? (Choose three correct answers)",
+      "type": "multiple",
+      "options": [
+        { "text": "Conduct software testing prior to launch", "isCorrect": true },
+        { "text": "Develop a policy to address application software and operating system updates", "isCorrect": true },
+        { "text": "Implement data classification standards", "isCorrect": false },
+        { "text": "Install patches and updates regularly", "isCorrect": true }
+      ],
+      "explanation": "To secure operating systems against threats, policies that address application system and operating system updates should be implemented so that <b>patches and updates are installed regularly</b>, and <b>software is tested</b>."
+    },
+    {
+      "id": "m9-q15",
+      "question": "Which type of technology can prevent malicious software from displaying unwanted popup ads on a device?",
+      "type": "single",
+      "options": [
+        { "text": "Antivirus protection", "isCorrect": false },
+        { "text": "Spyware protection", "isCorrect": false },
+        { "text": "Adware protection", "isCorrect": true }
+      ],
+      "explanation": "<b>Adware protection</b> is software that can be installed on a computer system to prevent popup ads from displaying."
+    },
+    {
+      "id": "m9-q16",
+      "question": "What type of lock is recommended to secure an office door?",
+      "type": "single",
+      "options": [
+        { "text": "Cipher lock", "isCorrect": true },
+        { "text": "Cable lock", "isCorrect": false },
+        { "text": "Security cage", "isCorrect": false },
+        { "text": "Keyed entry lock", "isCorrect": false }
+      ],
+      "explanation": "A <b>cipher lock</b> i.e. a lock that requires a code (keyless entry) is the most common and recommended lock to secure an office door."
+    }
+  ]
+}

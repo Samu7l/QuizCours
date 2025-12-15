@@ -1,0 +1,239 @@
+{
+  "modules": [
+    {
+      "id": "module-01",
+      "title": "Module 1: Cybersecurity Threats, Vulnerabilities, and Attacks",
+      "file": "modules/module-01.json",
+      "moduleNumber": 1
+    },
+    {
+      "id": "module-02",
+      "title": "Module 2: Securing Networks",
+      "file": "modules/module-02.json",
+      "moduleNumber": 2
+    },
+    {
+      "id": "module-03",
+      "title": "Module 3: Attacking the Foundation",
+      "file": "modules/module-03.json",
+      "moduleNumber": 3
+    },
+    {
+      "id": "module-04",
+      "title": "Module 4: Attacking what we do",
+      "file": "modules/module-04.json",
+      "moduleNumber": 4
+    },
+    {
+      "id": "module-05",
+      "title": "Module 5: Wireless Network Communication",
+      "file": "modules/module-05.json",
+      "moduleNumber": 5
+    },
+    {
+      "id": "module-06",
+      "title": "Module 6: Network Security Infrastructure",
+      "file": "modules/module-06.json",
+      "moduleNumber": 6
+    },
+    {
+      "id": "module-07",
+      "title": "Module 7: The Windows Operating System",
+      "file": "modules/module-07.json",
+      "moduleNumber": 7
+    },
+    {
+      "id": "module-08",
+      "title": "Module 8: Linux Overview",
+      "file": "modules/module-08.json",
+      "moduleNumber": 8
+    },
+    {
+      "id": "module-09",
+      "title": "Module 9: System and Endpoint Protection",
+      "file": "modules/module-09.json",
+      "moduleNumber": 9
+    },
+    {
+      "id": "module-10",
+      "title": "Module 10: Cybersecurity Principles, Practices and Processes",
+      "file": "modules/module-10.json",
+      "moduleNumber": 10
+    },
+    {
+      "id": "module-11",
+      "title": "Module 11: Understanding Defense",
+      "file": "modules/module-11.json",
+      "moduleNumber": 11
+    },
+    {
+      "id": "module-12",
+      "title": "Module 12: System and Network Defense",
+      "file": "modules/module-12.json",
+      "moduleNumber": 12
+    },
+    {
+      "id": "module-13",
+      "title": "Module 13: Access Control",
+      "file": "modules/module-13.json",
+      "moduleNumber": 13
+    },
+    {
+      "id": "module-14",
+      "title": "Module 14: Access Control Lists",
+      "file": "modules/module-14.json",
+      "moduleNumber": 14
+    },
+    {
+      "id": "module-15",
+      "title": "Module 15: Firewall Technologies",
+      "file": "modules/module-15.json",
+      "moduleNumber": 15
+    },
+    {
+      "id": "module-16",
+      "title": "Module 16: Zone Based Policy Firewalls",
+      "file": "modules/module-16.json",
+      "moduleNumber": 16
+    },
+    {
+      "id": "module-17",
+      "title": "Module 17: Cloud Security",
+      "file": "modules/module-17.json",
+      "moduleNumber": 17
+    },
+    {
+      "id": "module-18",
+      "title": "Module 18: Cryptography",
+      "file": "modules/module-18.json",
+      "moduleNumber": 18
+    },
+    {
+      "id": "module-19",
+      "title": "Module 19: Technologies and Protocols",
+      "file": "modules/module-19.json",
+      "moduleNumber": 19
+    },
+    {
+      "id": "module-20",
+      "title": "Module 20: Network Security Data",
+      "file": "modules/module-20.json",
+      "moduleNumber": 20
+    },
+    {
+      "id": "module-21",
+      "title": "Module 21: Evaluating Alerts",
+      "file": "modules/module-21.json",
+      "moduleNumber": 21
+    },
+    {
+      "id": "module-22",
+      "title": "Module 22: Governance and Compliance",
+      "file": "modules/module-22.json",
+      "moduleNumber": 22
+    },
+    {
+      "id": "module-23",
+      "title": "Module 23: Network Security Testing",
+      "file": "modules/module-23.json",
+      "moduleNumber": 23
+    },
+    {
+      "id": "module-24",
+      "title": "Module 24: Threat Intelligence",
+      "file": "modules/module-24.json",
+      "moduleNumber": 24
+    },
+    {
+      "id": "module-25",
+      "title": "Module 25: Endpoint Vulnerability Assessment",
+      "file": "modules/module-25.json",
+      "moduleNumber": 25
+    },
+    {
+      "id": "module-26",
+      "title": "Module 26: Risk Management and Security Controls",
+      "file": "modules/module-26.json",
+      "moduleNumber": 26
+    },
+    {
+      "id": "module-27",
+      "title": "Module 27: Digital Forensics and Incident Analysis and Response",
+      "file": "modules/module-27.json",
+      "moduleNumber": 27
+    }
+  ],
+  "checkpoints": [
+    {
+      "id": "checkpoint-01",
+      "title": "Checkpoint 1: Network Security",
+      "file": "checkpoint/checkpoint-01.json",
+      "moduleRange": [1, 6],
+      "description": "Covers Modules 1 through 6."
+    },
+    {
+      "id": "checkpoint-02",
+      "title": "Checkpoint 2: OS and Endpoint Security",
+      "file": "checkpoint/checkpoint-02.json",
+      "moduleRange": [7, 10],
+      "description": "Covers Modules 7 through 10."
+    },
+    {
+      "id": "checkpoint-03",
+      "title": "Checkpoint 3: Principles, Practices and Processes of Network Defense",
+      "file": "checkpoint/checkpoint-03.json",
+      "moduleRange": [11, 13],
+      "description": "Covers Modules 11 through 13."
+    },
+    {
+      "id": "checkpoint-04",
+      "title": "Checkpoint 4: Firewalls, Cryptography and Cloud Security",
+      "file": "checkpoint/checkpoint-04.json",
+      "moduleRange": [14, 18],
+      "description": "Covers Modules 14 through 18."
+    },
+    {
+      "id": "checkpoint-05",
+      "title": "Checkpoint 5: Evaluating Security Alerts",
+      "file": "checkpoint/checkpoint-05.json",
+      "moduleRange": [19, 21],
+      "description": "Covers Modules 19 through 21."
+    },
+    {
+      "id": "checkpoint-06",
+      "title": "Checkpoint 6: Vulnerability Assessment and Risk Management",
+      "file": "checkpoint/checkpoint-06.json",
+      "moduleRange": [22, 26],
+      "description": "Covers Modules 22 through 26."
+    },
+    {
+      "id": "checkpoint-07",
+      "title": "Checkpoint 7: Incident Response",
+      "file": "checkpoint/checkpoint-07.json",
+      "moduleRange": [27, 27],
+      "description": "Covers Module 27."
+    }
+  ],
+  "finalExams": [
+    {
+      "id": "final-v1",
+      "title": "Final Exam - V1 (GR)",
+      "file": "./final/final-exam-v1.json",
+      "description": "L'examen standard."
+    },
+    {
+      "id": "final-v2",
+      "title": "Final Exam - test",
+      "file": "./final/final-exam-v2.json",
+      "description": "Testeeeee"
+    },
+    {
+      "id": "final-v3",
+      "title": "Toute les questions",
+      "file": "./final/final-exam-v3.json",
+      "description": "Littéralement tout"
+    }
+  ],
+
+  "customSaved": []
+}
